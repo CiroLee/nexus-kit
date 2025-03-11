@@ -4,9 +4,13 @@
   },
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "editor.formatOnSave": true,
-  "cSpell.words": ["turbopack", "shiki"],
+  "cSpell.words": ["turbopack", "shiki", "tabler"],
   "eslint.format.enable": true,
   "eslint.options": {
     "overrideConfigFile": "eslint.config.mjs"
-  }
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(((?:[^()]|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(((?:[^()]|\\([^()]*\\))*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ]
 }

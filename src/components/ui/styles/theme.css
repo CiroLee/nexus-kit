@@ -1,0 +1,32 @@
+/* basic semantic colors  base on tailwindcss colors */
+:root {
+  --background: #fff;
+  --foreground: oklch(0.269 0 0);
+  --line: oklch(0.922 0 0);
+}
+
+[data-theme='dark'] {
+  --background: oklch(0.269 0 0);
+  --foreground: #fafafa;
+  --line: oklch(0.371 0 0);
+}
+
+@theme {
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --color-line: var(--line);
+
+  --color-primary: var(--color-blue-500);
+  --color-primary-active: var(--color-blue-600);
+  --color-danger: var(--color-red-500);
+  --color-danger-active: var(--color-red-600);
+  --color-success: var(--color-green-500);
+  --color-success-active: var(--color-green-600);
+  --color-warning: var(--color-orange-500);
+  --color-warning-active: var(--color-orange-600);
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+}

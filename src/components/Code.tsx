@@ -10,8 +10,8 @@ interface Props {
 export default async function Code({ code, lang = 'tsx', className }: Props) {
   const out = await codeToHtml(code, {
     lang,
-    theme: 'one-dark-pro',
+    theme: 'github-dark',
   });
 
-  return <div className={cn(className)} dangerouslySetInnerHTML={{ __html: out }} />;
+  return <div className={cn('relative w-full min-w-fit overflow-auto text-sm [&_pre]:p-3', className)} dangerouslySetInnerHTML={{ __html: out }}></div>;
 }
