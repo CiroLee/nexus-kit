@@ -14,7 +14,7 @@ const segmentItem = cva(`h-full flex gap-0.5 text-sm items-center justify-center
 });
 const segmentIndicator = cva(
   `h-full transition ease-linear rounded box-border  absolute top-0 z-1 shadow outline-none bg-white dark:bg-neutral-800
-  focus-visible:ring-2 focus-visible:ring-primary focus-visible:transition-none`,
+  focus-visible:ring-2 focus-visible:ring-primary/80 focus-visible:transition-none`,
 );
 
 interface SegmentProps {

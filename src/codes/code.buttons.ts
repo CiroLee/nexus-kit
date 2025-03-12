@@ -1,48 +1,118 @@
-export const sizeCode = `'use client';
-import { useState } from 'react';
-import { cn } from '@/lib/utils';
-import Segment from './ui/Segment';
-import Show from './Show';
-import { IconEye, IconCode } from '@tabler/icons-react';
-import type { Option } from './ui/styles/types/component';
+export const variantCode = `'use client';
 
-interface PreviewAndCodeProps {
-  children: React.ReactNode;
-  code: React.ReactNode;
-  className?: string;
-}
+import Button from '@/components/Button';
 
-const option: Option[] = [
-  {
-    label: (
-      <>
-        <IconEye size={18} />
-        Preview
-      </>
-    ),
-    value: 'preview',
-  },
-  {
-    label: (
-      <>
-        <IconCode size={18} />
-        Code
-      </>
-    ),
-    value: 'code',
-  },
-];
-export default function PreviewAndCode({ children, code, className }: PreviewAndCodeProps) {
-  const [value, setValue] = useState('preview');
+export default function Demo() {
   return (
-    <div className={cn(className)}>
-      <Segment defaultValue="preview" option={option} onChange={setValue} />
-      <div className="border-line h-96 overflow-auto rounded border">
-        <Show if={value === 'preview'} else={code}>
-          <div className="p-3">{children}</div>
-        </Show>
-      </div>
+    <div className="flex gap-4">
+      <Button variant="primary">Primary</Button>
+      <Button variant="success">Success</Button>
+      <Button variant="warning">Warning</Button>
+      <Button variant="danger">Danger</Button>
+      <Button variant="ghost">Ghost</Button>
     </div>
-  );
+  )
+}
+`;
+
+export const sizeCode = `'use client';
+
+import Button from '@/components/Button';
+
+export default function Demo() {
+  return (
+    <div className="flex items-center gap-4">
+      <Button size="xs">Button</Button>
+      <Button size="sm">Button</Button>
+      <Button size="md">Button</Button>
+      <Button size="lg">Button</Button>
+    </div>
+  )
+}
+`;
+
+export const iconCode = `'use client';
+
+import { IconUpload } from '@tabler/icons-react';
+import Button from '@/components/Button';
+
+export default function Demo() {
+  return (
+    <Button icon>
+      <IconUpload size={20} />
+    </Button>
+  )
+}
+`;
+
+export const borderedCode = `'use client';
+
+import Button from '@/components/Button';
+
+export default function Demo() {
+  return (
+    <div className="flex gap-4">
+      <Button bordered variant="primary">Primary</Button>
+      <Button bordered variant="success">Success</Button>
+      <Button bordered variant="warning">Warning</Button>
+      <Button bordered variant="danger">Danger</Button>
+      <Button bordered variant="ghost">Ghost</Button>
+    </div>
+  )
+}
+`;
+
+export const disabledCode = `'use client';
+
+import Button from '@/components/Button';
+
+export default function Demo() {
+  return (
+    <div className="flex gap-4">
+      <Button disabled variant="primary">Primary</Button>
+      <Button disabled variant="success">Success</Button>
+      <Button disabled variant="warning">Warning</Button>
+      <Button disabled variant="danger">Danger</Button>
+      <Button disabled variant="ghost">Ghost</Button>
+    </div>
+  )
+}
+`;
+
+export const withIconCode = `'use client';
+
+import { IconShoppingCart, IconArrowRight } from '@tabler/icons-react';
+import Button from '@/components/Button';
+
+export default function Demo() {
+  return (
+    <div className="flex gap-4">
+      <Button className="gap-1">
+        <IconShoppingCart size={20} />
+        Add to cart
+      </Button>
+      <Button className="gap-1">
+        Go Next
+        <IconArrowRight size={20} />
+      </Button>
+    </div>
+  )
+}
+`;
+
+export const loadingCode = `'use client';
+
+import { IconLoader } from '@tabler/icons-react';
+import Button from '@/components/Button';
+
+export default function Demo() {
+  return (
+    <div className="flex gap-4">
+      <Button loading className="gap-1">
+        <IconLoader className="animate-spin" size={18} />
+        Loading...
+      </Button>
+    </div>
+  )
 }
 `;

@@ -6,9 +6,8 @@ import { cn } from '@/lib/utils';
 export default function SideNavBar() {
   const pathname = usePathname();
 
-  console.log(pathname);
   return (
-    <aside className="h-full w-[300px] p-3">
+    <aside className="h-full w-[300px] overflow-auto px-3 py-5">
       {navConfig.map((nav) => (
         <div key={nav.key}>
           <h4>{nav.title}</h4>

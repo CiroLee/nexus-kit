@@ -13,5 +13,5 @@ export default async function Code({ code, lang = 'tsx', className }: Props) {
     theme: 'github-dark',
   });
 
-  return <div className={cn('relative w-full min-w-fit overflow-auto text-sm [&_pre]:p-3', className)} dangerouslySetInnerHTML={{ __html: out }}></div>;
+  return <div className={cn('relative h-full min-w-fit overflow-auto text-sm [&_pre]:h-full [&_pre]:p-3', className)} dangerouslySetInnerHTML={{ __html: out }}></div>;
 }
