@@ -23,7 +23,7 @@ interface HeadingProps {
 export default function Heading({ as: Tag, className, style, children }: HeadingProps) {
   const getLevel = () => {
     const match = Tag.match(/\d+/g);
-    return match ? Number(match[0]) : 6;
+    return match ? Number(match[0]) : 1;
   };
   return (
     <Tag className={cn(heading({ as: Tag, className }))} role="heading" aria-level={getLevel()} style={style}>

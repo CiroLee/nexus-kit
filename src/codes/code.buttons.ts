@@ -79,6 +79,22 @@ export default function Demo() {
 }
 `;
 
+export const roundedCode = `'use client';
+
+import Button from '@/components/Button';
+
+export default function Demo() {
+  return (
+    <div className="flex items-center gap-4">
+      <Button size="xs" rounded>Rounded</Button>
+      <Button size="sm" rounded>Rounded</Button>
+      <Button size="md" rounded>Rounded</Button>
+      <Button size="lg" rounded>Rounded</Button>
+    </div>
+  )
+}
+`;
+
 export const withIconCode = `'use client';
 
 import { IconShoppingCart, IconArrowRight } from '@tabler/icons-react';

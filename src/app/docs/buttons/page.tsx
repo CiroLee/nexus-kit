@@ -1,13 +1,13 @@
 import PreviewAndCode from '@/components/PreviewAndCode';
 import Button from '@/components/ui/Button';
 import Code from '@/components/Code';
-import { variantCode, sizeCode, iconCode, borderedCode, disabledCode, withIconCode, loadingCode } from '@/codes/code.buttons';
+import { variantCode, sizeCode, iconCode, borderedCode, disabledCode, withIconCode, loadingCode, roundedCode } from '@/codes/code.buttons';
 import SectionIntro from '../components/SectionIntro';
 import { IconUpload, IconShoppingCart, IconArrowRight, IconLoader } from '@tabler/icons-react';
 
 export default function ButtonsPage() {
   return (
-    <div>
+    <>
       <SectionIntro title="Button" description="Buttons are used to trigger actions" />
       <PreviewAndCode title="Variants" code={<Code code={variantCode} />}>
         <div className="flex gap-4">
@@ -69,6 +69,22 @@ export default function ButtonsPage() {
           </Button>
         </div>
       </PreviewAndCode>
+      <PreviewAndCode title="Rounded" code={<Code code={roundedCode} />}>
+        <div className="flex items-center gap-4">
+          <Button size="xs" rounded>
+            Rounded
+          </Button>
+          <Button size="sm" rounded>
+            Rounded
+          </Button>
+          <Button size="md" rounded>
+            Rounded
+          </Button>
+          <Button size="lg" rounded>
+            Rounded
+          </Button>
+        </div>
+      </PreviewAndCode>
       <PreviewAndCode title="With icon" code={<Code code={withIconCode} />}>
         <div className="flex gap-4">
           <Button className="gap-1">
@@ -89,6 +105,6 @@ export default function ButtonsPage() {
           </Button>
         </div>
       </PreviewAndCode>
-    </div>
+    </>
   );
 }

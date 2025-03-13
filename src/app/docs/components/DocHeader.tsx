@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { IconBrandGithub } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandX } from '@tabler/icons-react';
 import Button from '@/components/ui/Button';
 import ThemeSwitch from '@/components/ThemeSwitch';
 import Link from 'next/link';
@@ -15,6 +15,11 @@ export default function DocHeader() {
         <Button variant="ghost" icon asChild>
           <Link href="https://github.com/CiroLee/nexus-kit" target="_blank">
             <IconBrandGithub size={22} />
+          </Link>
+        </Button>
+        <Button asChild variant="ghost" icon>
+          <Link href="https://x.com/threeLoolipop" target="_blank">
+            <IconBrandX size={22} />
           </Link>
         </Button>
       </div>

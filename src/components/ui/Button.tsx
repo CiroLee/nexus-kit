@@ -10,9 +10,9 @@ const button = cva(
     variants: {
       size: {
         xs: 'px-2 rounded-sm h-6 text-xs',
-        sm: 'px-2 rounded h-8 text-sm',
+        sm: 'px-3 rounded h-8 text-sm',
         md: 'px-4 rounded-md h-10',
-        lg: 'px-4 rounded-lg h-11',
+        lg: 'px-5 rounded-lg h-12',
       },
       variant: {
         primary: 'bg-primary not-disabled:active:bg-primary-active focus-visible:ring-primary/50',
@@ -32,6 +32,9 @@ const button = cva(
       },
       loading: {
         true: 'cursor-not-default opacity-50',
+      },
+      rounded: {
+        true: 'rounded-full',
       },
     },
     compoundVariants: [
@@ -75,10 +78,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, Omi
   asChild?: boolean;
 }
 export default function Button(props: ButtonProps, ref?: React.Ref<HTMLButtonElement>) {
-  const { variant, size, icon, bordered, disabled, loading, className, asChild, children, ...rest } = props;
+  const { variant, size, icon, bordered, disabled, loading, rounded, className, asChild, children, ...rest } = props;
   const Component = asChild ? Slot : 'button';
   return (
-    <Component ref={ref} disabled={disabled || !!loading} className={cn(button({ variant, size, icon, bordered, disabled, loading, className }))} {...rest}>
+    <Component ref={ref} disabled={disabled || !!loading} className={cn(button({ variant, size, icon, bordered, disabled, loading, rounded, className }))} {...rest}>
       {children}
     </Component>
   );

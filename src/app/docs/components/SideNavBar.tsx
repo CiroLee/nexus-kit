@@ -12,16 +12,18 @@ export default function SideNavBar() {
         <div key={nav.key}>
           <h4>{nav.title}</h4>
           <div>
-            {nav.children.map((item) => (
-              <Link
-                className={cn('before:bg-line/80 relative flex items-center py-2 pl-3 text-sm before:absolute before:left-0 before:h-full before:w-0.5', {
-                  'before:bg-primary text-primary font-semibold': pathname === item.href,
-                })}
-                key={item.href}
-                href={item.href}>
-                {item.name}
-              </Link>
-            ))}
+            {nav.children
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map((item) => (
+                <Link
+                  className={cn('before:bg-line/80 relative flex items-center py-2 pl-3 text-sm before:absolute before:left-0 before:h-full before:w-0.5', {
+                    'before:bg-primary text-primary font-semibold': pathname === item.href,
+                  })}
+                  key={item.href}
+                  href={item.href}>
+                  {item.name}
+                </Link>
+              ))}
           </div>
         </div>
       ))}
