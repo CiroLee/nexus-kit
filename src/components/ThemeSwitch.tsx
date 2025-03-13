@@ -10,9 +10,9 @@ import { IconSun, IconMoon, IconDeviceDesktop } from '@tabler/icons-react';
 
 const item = cva('flex items-center gap-1 rounded p-2 cursor-default transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700');
 const themeMap = {
-  light: <IconSun size={20} />,
-  dark: <IconMoon size={18} />,
-  system: <IconDeviceDesktop size={18} />,
+  light: <IconSun size={22} />,
+  dark: <IconMoon size={20} />,
+  system: <IconDeviceDesktop size={20} />,
 };
 export default function ThemeSwitch() {
   const [open, setOpen] = useState(false);

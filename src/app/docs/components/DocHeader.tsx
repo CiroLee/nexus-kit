@@ -14,7 +14,7 @@ export default function DocHeader() {
         <ThemeSwitch />
         <Button variant="ghost" icon asChild>
           <Link href="https://github.com/CiroLee/nexus-kit" target="_blank">
-            <IconBrandGithub size={20} />
+            <IconBrandGithub size={22} />
           </Link>
         </Button>
       </div>

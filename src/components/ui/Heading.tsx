@@ -1,15 +1,15 @@
 import { cva } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
-const heading = cva('font-semibold', {
+const heading = cva('font-normal', {
   variants: {
     as: {
-      h1: 'text-[2.25rem] leading-[1.22]',
-      h2: 'text-[2rem] leading-[1.24]',
-      h3: 'text-[1.75rem] leading-[1.28]',
-      h4: 'text-[1.5rem] leading-[1.34]',
-      h5: 'text-[1.25rem] leading-[1.4]',
-      h6: 'text-[1rem] leading-[1.5]',
+      h1: 'text-[2.5rem]/[1.3] tracking-[0.5px] font-bold',
+      h2: 'text-[2rem]/[1.4] tracking-[0.3px] font-semibold',
+      h3: 'text-[1.75rem]/[1.5] tracking-[0.2px] font-semibold',
+      h4: 'text-[1.5rem]/[1,5] tracking-[0.1px] font-medium',
+      h5: 'text-[1,25rem]/[1.6] tracking-0 font-medium',
+      h6: 'text-[1rem]/[1.5] -tracking-[0.2px]',
     },
   },
 });
@@ -21,8 +21,12 @@ interface HeadingProps {
   children?: React.ReactNode;
 }
 export default function Heading({ as: Tag, className, style, children }: HeadingProps) {
+  const getLevel = () => {
+    const match = Tag.match(/\d+/g);
+    return match ? Number(match[0]) : 6;
+  };
   return (
-    <Tag className={cn(heading({ as: Tag, className }))} style={style}>
+    <Tag className={cn(heading({ as: Tag, className }))} role="heading" aria-level={getLevel()} style={style}>
       {children}
     </Tag>
   );

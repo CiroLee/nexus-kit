@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import Segment from './ui/Segment';
 import Show from './Show';
 import { IconEye, IconCode } from '@tabler/icons-react';
-import type { Option } from './ui/styles/types/component';
+import type { Option } from './ui/types/component';
 import Heading from './ui/Heading';
 
 interface PreviewAndCodeProps {
