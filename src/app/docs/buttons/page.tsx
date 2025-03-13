@@ -1,8 +1,8 @@
-import PreviewAndCode from '@/components/PreviewAndCode';
+import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Button from '@/components/ui/Button';
-import Code from '@/components/Code';
+import Code from '@/components/business/Code';
 import { variantCode, sizeCode, iconCode, borderedCode, disabledCode, withIconCode, loadingCode, roundedCode } from '@/codes/code.buttons';
-import SectionIntro from '../components/SectionIntro';
+import SectionIntro from '../../../components/business/SectionIntro';
 import { IconUpload, IconShoppingCart, IconArrowRight, IconLoader } from '@tabler/icons-react';
 
 export default function ButtonsPage() {

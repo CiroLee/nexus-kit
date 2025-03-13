@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
-import DocHeader from './components/DocHeader';
-import SideNavBar from './components/SideNavBar';
+import DocHeader from '@/components/business/DocHeader';
+import SideNavBar from '@/components/business/SideNavBar';
 export default function DocLayout({ children }: PropsWithChildren) {
   return (
     <section className="h-screen overflow-hidden">

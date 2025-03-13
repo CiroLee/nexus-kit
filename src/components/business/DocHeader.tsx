@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { IconBrandGithub, IconBrandX } from '@tabler/icons-react';
 import Button from '@/components/ui/Button';
-import ThemeSwitch from '@/components/ThemeSwitch';
+import ThemeSwitch from '@/components/business/ThemeSwitch';
 import Link from 'next/link';
 export default function DocHeader() {
   return (
@@ -11,7 +11,6 @@ export default function DocHeader() {
         Nexus Kit
       </div>
       <div className="flex h-full items-center gap-2">
-        <ThemeSwitch />
         <Button variant="ghost" icon asChild>
           <Link href="https://github.com/CiroLee/nexus-kit" target="_blank">
             <IconBrandGithub size={22} />
@@ -22,6 +21,7 @@ export default function DocHeader() {
             <IconBrandX size={22} />
           </Link>
         </Button>
+        <ThemeSwitch />
       </div>
     </header>
   );

@@ -1,11 +1,11 @@
 'use client';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
-import Segment from './ui/Segment';
+import Segment from '../ui/Segment';
 import Show from './Show';
 import { IconEye, IconCode } from '@tabler/icons-react';
-import type { Option } from './ui/types/component';
-import Heading from './ui/Heading';
+import type { Option } from '../ui/types/component';
+import Heading from '../ui/Heading';
 
 interface PreviewAndCodeProps {
   anchorId?: string;
@@ -39,7 +39,7 @@ export default function PreviewAndCode({ anchorId, title, children, code, classN
   const [value, setValue] = useState('preview');
   return (
     <div className={cn('mb-8', className)} id={anchorId}>
-      <Heading as="h2" className="mb-4">
+      <Heading as="h3" className="mb-4">
         {title}
       </Heading>
       <Segment defaultValue="preview" option={option} onChange={setValue} />

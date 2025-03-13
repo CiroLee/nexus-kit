@@ -4,7 +4,7 @@ import { useIsClient } from 'usehooks-ts';
 import { cva } from 'class-variance-authority';
 import { Popover } from 'radix-ui';
 import { AnimatePresence, motion } from 'motion/react';
-import Button from './ui/Button';
+import Button from '../ui/Button';
 import { useTheme } from 'next-themes';
 import { IconSun, IconMoon, IconDeviceDesktop } from '@tabler/icons-react';
 

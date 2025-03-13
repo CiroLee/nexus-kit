@@ -1,4 +1,6 @@
-export const asCode = `import Heading from "@/components/Heading";
+export const asCode = `'use client';
+
+import Heading from "@/components/Heading";
 
 export default function Page() {
   return (
