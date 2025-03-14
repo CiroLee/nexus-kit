@@ -1,7 +1,8 @@
+import Link from 'next/link';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Button from '@/components/ui/Button';
 import Code from '@/components/business/Code';
-import { variantCode, sizeCode, iconCode, borderedCode, disabledCode, withIconCode, loadingCode, roundedCode } from '@/codes/code.buttons';
+import { variantCode, sizeCode, iconCode, borderedCode, disabledCode, withIconCode, loadingCode, roundedCode, asChildCode } from '@/codes/code.buttons';
 import SectionIntro from '../../../components/business/SectionIntro';
 import { IconUpload, IconShoppingCart, IconArrowRight, IconLoader } from '@tabler/icons-react';
 
@@ -9,7 +10,7 @@ export default function ButtonsPage() {
   return (
     <>
       <SectionIntro title="Button" description="Buttons are used to trigger actions" />
-      <PreviewAndCode title="Variants" code={<Code code={variantCode} />}>
+      <PreviewAndCode title="variants" code={<Code code={variantCode} />}>
         <div className="flex gap-4">
           <Button variant="primary">Primary</Button>
           <Button variant="success">Success</Button>
@@ -26,12 +27,12 @@ export default function ButtonsPage() {
           <Button size="lg">Button</Button>
         </div>
       </PreviewAndCode>
-      <PreviewAndCode title="Icon" code={<Code code={iconCode} />}>
+      <PreviewAndCode title="icon" code={<Code code={iconCode} />}>
         <Button icon>
           <IconUpload size={18} />
         </Button>
       </PreviewAndCode>
-      <PreviewAndCode title="Bordered" code={<Code code={borderedCode} />}>
+      <PreviewAndCode title="bordered" code={<Code code={borderedCode} />}>
         <div className="flex gap-4">
           <Button bordered variant="primary">
             Primary
@@ -50,7 +51,7 @@ export default function ButtonsPage() {
           </Button>
         </div>
       </PreviewAndCode>
-      <PreviewAndCode title="Disabled" code={<Code code={disabledCode} />}>
+      <PreviewAndCode title="disabled" code={<Code code={disabledCode} />}>
         <div className="flex gap-4">
           <Button disabled variant="primary">
             Primary
@@ -69,7 +70,7 @@ export default function ButtonsPage() {
           </Button>
         </div>
       </PreviewAndCode>
-      <PreviewAndCode title="Rounded" code={<Code code={roundedCode} />}>
+      <PreviewAndCode title="rounded" code={<Code code={roundedCode} />}>
         <div className="flex items-center gap-4">
           <Button size="xs" rounded>
             Rounded
@@ -85,7 +86,7 @@ export default function ButtonsPage() {
           </Button>
         </div>
       </PreviewAndCode>
-      <PreviewAndCode title="With icon" code={<Code code={withIconCode} />}>
+      <PreviewAndCode title="with icon" code={<Code code={withIconCode} />}>
         <div className="flex gap-4">
           <Button className="gap-1">
             <IconShoppingCart size={18} />
@@ -97,13 +98,20 @@ export default function ButtonsPage() {
           </Button>
         </div>
       </PreviewAndCode>
-      <PreviewAndCode title="Loading" code={<Code code={loadingCode} />}>
+      <PreviewAndCode title="loading" code={<Code code={loadingCode} />}>
         <div className="flex gap-4">
           <Button loading className="gap-1">
             <IconLoader className="animate-spin" size={18} />
             Loading...
           </Button>
         </div>
+      </PreviewAndCode>
+      <PreviewAndCode title="asChild" code={<Code code={asChildCode} />}>
+        <Button asChild variant="ghost" className="hover:underline">
+          <Link href="https://tailwindcss.com/" target="_blank">
+            tailwindcss
+          </Link>
+        </Button>
       </PreviewAndCode>
     </>
   );

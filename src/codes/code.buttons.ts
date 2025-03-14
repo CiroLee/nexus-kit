@@ -132,3 +132,21 @@ export default function Demo() {
   )
 }
 `;
+
+export const asChildCode = `'use client';
+
+import Link from 'next/link';
+import Button from '@/components/Button';
+
+export default function Demo() {
+  return (
+    <>
+      <Button asChild variant="ghost" className="hover:underline">
+        <Link href="https://tailwindcss.com/" target="_blank">
+          tailwindcss
+        </Link>
+      </Button>
+    </>
+  )
+}
+`;
