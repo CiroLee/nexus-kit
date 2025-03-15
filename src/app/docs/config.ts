@@ -9,11 +9,15 @@ export const navConfig = [
       },
       {
         name: 'Heading',
-        href: '/docs/heading',
+        href: '/docs/headings',
       },
       {
         name: 'Button',
         href: '/docs/buttons',
+      },
+      {
+        name: 'Input',
+        href: '/docs/inputs',
       },
     ],
   },

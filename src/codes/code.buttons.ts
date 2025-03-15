@@ -1,6 +1,4 @@
-export const variantCode = `'use client';
-
-import Button from '@/components/Button';
+export const variantCode = `import Button from '@/components/Button';
 
 export default function Demo() {
   return (
@@ -15,9 +13,7 @@ export default function Demo() {
 }
 `;
 
-export const sizeCode = `'use client';
-
-import Button from '@/components/Button';
+export const sizeCode = `import Button from '@/components/Button';
 
 export default function Demo() {
   return (
@@ -31,9 +27,7 @@ export default function Demo() {
 }
 `;
 
-export const iconCode = `'use client';
-
-import { IconUpload } from '@tabler/icons-react';
+export const iconCode = `import { IconUpload } from '@tabler/icons-react';
 import Button from '@/components/Button';
 
 export default function Demo() {
@@ -45,9 +39,7 @@ export default function Demo() {
 }
 `;
 
-export const borderedCode = `'use client';
-
-import Button from '@/components/Button';
+export const borderedCode = `import Button from '@/components/Button';
 
 export default function Demo() {
   return (
@@ -62,9 +54,7 @@ export default function Demo() {
 }
 `;
 
-export const disabledCode = `'use client';
-
-import Button from '@/components/Button';
+export const disabledCode = `import Button from '@/components/Button';
 
 export default function Demo() {
   return (
@@ -79,9 +69,7 @@ export default function Demo() {
 }
 `;
 
-export const roundedCode = `'use client';
-
-import Button from '@/components/Button';
+export const roundedCode = `import Button from '@/components/Button';
 
 export default function Demo() {
   return (
@@ -95,9 +83,7 @@ export default function Demo() {
 }
 `;
 
-export const withIconCode = `'use client';
-
-import { IconShoppingCart, IconArrowRight } from '@tabler/icons-react';
+export const withIconCode = `import { IconShoppingCart, IconArrowRight } from '@tabler/icons-react';
 import Button from '@/components/Button';
 
 export default function Demo() {
@@ -116,9 +102,7 @@ export default function Demo() {
 }
 `;
 
-export const loadingCode = `'use client';
-
-import { IconLoader } from '@tabler/icons-react';
+export const loadingCode = `import { IconLoader } from '@tabler/icons-react';
 import Button from '@/components/Button';
 
 export default function Demo() {
@@ -133,9 +117,7 @@ export default function Demo() {
 }
 `;
 
-export const asChildCode = `'use client';
-
-import Link from 'next/link';
+export const asChildCode = `import Link from 'next/link';
 import Button from '@/components/Button';
 
 export default function Demo() {
