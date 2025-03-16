@@ -10,12 +10,12 @@ const inputWrap = cva(
       size: {
         xs: 'rounded-sm h-6 text-xs px-2',
         sm: 'rounded h-8 text-sm',
-        md: 'rounded-md h-10',
+        md: 'rounded-md h-10 text-sm',
         lg: 'rounded-lg h-12',
       },
       state: {
-        warning: 'not-disabled:has-focus:border-orange-400 border-warning not-data-[disabled]:hover:border-orange-400 not-disabled:has-focus-visible:ring-orange-400/30',
-        error: 'not-disabled:has-focus:border-danger border-danger not-data-[disabled]:hover:border-danger not-disabled:has-focus-visible:ring-danger/30',
+        warning: 'not-disabled:has-focus:border-warning border-warning not-data-[disabled]:hover:border-warning not-disabled:has-focus-visible:ring-warning/40',
+        error: 'not-disabled:has-focus:border-danger border-danger not-data-[disabled]:hover:border-danger not-disabled:has-focus-visible:ring-danger/40',
       },
       disabled: {
         true: 'cursor-not-allowed opacity-70 [&_input]:cursor-not-allowed',
@@ -43,9 +43,9 @@ interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, '
 export default function Input(props: InputProps) {
   const { size, state, prefix, suffix, disabled, rounded, className, style, ...rest } = props;
   return (
-    <div data-disabled={disabled} className={cn('input-group', inputWrap({ size, state, disabled, rounded, className }))} style={style}>
+    <div data-disabled={disabled} className={cn(inputWrap({ size, state, disabled, rounded, className }))} style={style}>
       {prefix ? <>{prefix}</> : null}
-      <input type="text" className={input()} disabled={!!disabled} {...rest} />
+      <input className={input()} disabled={!!disabled} {...rest} />
       {suffix ? <>{suffix}</> : null}
     </div>
   );

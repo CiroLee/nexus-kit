@@ -19,6 +19,10 @@ export const navConfig = [
         name: 'Input',
         href: '/docs/inputs',
       },
+      {
+        name: 'Textarea',
+        href: '/docs/textarea',
+      },
     ],
   },
 ];
