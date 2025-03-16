@@ -3,7 +3,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 const textareaWrap = cva(
   `relative flex border w-fit border-line outline-none not-disabled:has-focus:border-primary transition-colors items-center rounded-md 
-  min-w-80 not-data-[disabled]:hover:border-primary not-disabled:has-focus-visible:ring-3 not-disabled:has-focus-visible:ring-primary/30`,
+  not-data-[disabled]:hover:border-primary not-disabled:has-focus-visible:ring-3 not-disabled:has-focus-visible:ring-primary/30`,
   {
     variants: {
       state: {
@@ -36,8 +36,8 @@ interface TextareaProps extends Omit<React.TextareaHTMLAttributes<HTMLTextAreaEl
 export default function Textarea(props: TextareaProps) {
   const { state, disabled, className, style, resize = 'horizontal', rows = 3, ...rest } = props;
   return (
-    <div data-disabled={disabled} className={cn(textareaWrap({ state, disabled, className }))} style={style}>
-      <textarea rows={rows} className={textarea({ resize })} disabled={!!disabled} {...rest} />
+    <div data-disabled={disabled} className={cn(textareaWrap({ state, disabled }))} style={style}>
+      <textarea rows={rows} className={textarea({ resize, className })} disabled={!!disabled} {...rest} />
     </div>
   );
 }

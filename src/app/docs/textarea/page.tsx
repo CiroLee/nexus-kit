@@ -9,23 +9,23 @@ export default function TextareaPage() {
     <>
       <SectionIntro title="Textarea" description="Inputs allow users to enter large texts, they usually appear in forms" />
       <PreviewAndCode title="default" code={<Code code={defaultCode} />}>
-        <Textarea placeholder="enter texts here" />
+        <Textarea className="w-80" placeholder="enter texts here" />
       </PreviewAndCode>
       <PreviewAndCode title="state" code={<Code code={stateCode} />}>
         <div className="space-y-5">
-          <Textarea state="warning" placeholder="warning state" />
-          <Textarea state="error" placeholder="error state" />
+          <Textarea className="w-80" state="warning" placeholder="warning state" />
+          <Textarea className="w-80" state="error" placeholder="error state" />
         </div>
       </PreviewAndCode>
       <PreviewAndCode title="disabled" code={<Code code={disabledCode} />}>
-        <Textarea disabled placeholder="enter texts here" />
+        <Textarea className="w-80" disabled placeholder="enter texts here" />
       </PreviewAndCode>
       <PreviewAndCode title="resize" code={<Code code={resizeCode} />}>
         <div className="space-y-5">
-          <Textarea resize="both" placeholder="resize both" />
-          <Textarea resize="horizontal" placeholder="resize horizontal" />
-          <Textarea resize="vertical" placeholder="resize vertical" />
-          <Textarea resize="none" placeholder="not allow resize" />
+          <Textarea className="w-80" resize="both" placeholder="resize both" />
+          <Textarea className="w-80" resize="horizontal" placeholder="resize horizontal" />
+          <Textarea className="w-80" resize="vertical" placeholder="resize vertical" />
+          <Textarea className="w-80" resize="none" placeholder="not allow resize" />
         </div>
       </PreviewAndCode>
     </>
