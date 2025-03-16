@@ -19,9 +19,9 @@ export default function ClientCopyButton({ text, className }: { text: string; cl
     }, 2000);
   };
   return (
-    <Button size="sm" icon variant="ghost" className={cn('group', className)} onClick={handleCopy}>
-      <Show if={!copied} else={<IconCheck size={18} className="opacity-50 group-hover:opacity-100" />}>
-        <IconCopy size={18} className="opacity-50 group-hover:opacity-100" />
+    <Button size="sm" icon variant="light" colors="neutral" className={cn('group', className)} onClick={handleCopy}>
+      <Show if={!copied} else={<IconCheck size={18} className="group" />}>
+        <IconCopy size={18} className="text-white opacity-50 group-hover:opacity-100" />
       </Show>
     </Button>
   );
