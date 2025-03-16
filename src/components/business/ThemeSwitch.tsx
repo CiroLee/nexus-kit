@@ -8,7 +8,7 @@ import Button from '../ui/Button';
 import { useTheme } from 'next-themes';
 import { IconSun, IconMoon, IconDeviceDesktop } from '@tabler/icons-react';
 
-const item = cva('flex items-center gap-1 rounded p-2 cursor-default transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700');
+const item = cva('flex items-center gap-1 rounded p-2 cursor-default transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-700/40');
 const themeMap = {
   light: <IconSun size={22} />,
   dark: <IconMoon size={20} />,
@@ -28,14 +28,14 @@ export default function ThemeSwitch() {
   return (
     <Popover.Root open={open} onOpenChange={setOpen}>
       <Popover.Trigger asChild>
-        <Button variant="ghost" icon>
+        <Button variant="light" colors="neutral" icon>
           {themeMap[theme as keyof typeof themeMap]}
         </Button>
       </Popover.Trigger>
       <AnimatePresence>
         {open ? (
           <Popover.Portal forceMount>
-            <Popover.Content sideOffset={8} align="end" className="z-30">
+            <Popover.Content sideOffset={8} align="end" className="z-30 outline-none">
               <motion.div className="border-line bg-background rounded-md border p-1" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }}>
                 <div className={item()} onClick={() => handleSetTheme('light')}>
                   <IconSun size={20} />

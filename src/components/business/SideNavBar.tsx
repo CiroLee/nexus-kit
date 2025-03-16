@@ -7,7 +7,7 @@ export default function SideNavBar() {
   const pathname = usePathname();
 
   return (
-    <aside className="h-full w-[300px] overflow-auto px-3 py-5">
+    <aside className="bg-background absolute z-10 h-full w-[300px] overflow-auto px-3 py-5 sm:relative">
       {navConfig.map((nav) => (
         <div key={nav.key}>
           <h4>{nav.title}</h4>

@@ -3,11 +3,11 @@ export const variantCode = `import Button from '@/components/Button';
 export default function Demo() {
   return (
     <div className="flex gap-4">
-      <Button variant="primary">Primary</Button>
-      <Button variant="success">Success</Button>
-      <Button variant="warning">Warning</Button>
-      <Button variant="danger">Danger</Button>
-      <Button variant="ghost">Ghost</Button>
+      <Button colors="primary">Primary</Button>
+      <Button colors="success">Success</Button>
+      <Button colors="warning">Warning</Button>
+      <Button colors="danger">Danger</Button>
+      <Button colors="neutral">Neutral</Button>
     </div>
   )
 }
@@ -39,17 +39,26 @@ export default function Demo() {
 }
 `;
 
-export const borderedCode = `import Button from '@/components/Button';
+export const variantsCode = `import Button from '@/components/Button';
 
 export default function Demo() {
   return (
-    <div className="flex gap-4">
-      <Button bordered variant="primary">Primary</Button>
-      <Button bordered variant="success">Success</Button>
-      <Button bordered variant="warning">Warning</Button>
-      <Button bordered variant="danger">Danger</Button>
-      <Button bordered variant="ghost">Ghost</Button>
+    <>
+      <div className="flex gap-4 space-y-4">
+      <Button variant="bordered" colors="primary">Bordered</Button>
+      <Button variant="bordered" colors="success">Bordered</Button>
+      <Button variant="bordered" colors="warning">Bordered</Button>
+      <Button variant="bordered" colors="danger">Bordered</Button>
+      <Button variant="bordered" colors="neutral">Bordered</Button>
     </div>
+    <div className="flex gap-4">
+      <Button variant="light" colors="primary">Light</Button>
+      <Button variant="light" colors="success">Light</Button>
+      <Button variant="light" colors="warning">Light</Button>
+      <Button variant="light" colors="danger">Light</Button>
+      <Button variant="light" colors="neutral">Light</Button>
+    </div>
+    </>
   )
 }
 `;
@@ -63,7 +72,7 @@ export default function Demo() {
       <Button disabled variant="success">Success</Button>
       <Button disabled variant="warning">Warning</Button>
       <Button disabled variant="danger">Danger</Button>
-      <Button disabled variant="ghost">Ghost</Button>
+      <Button disabled colors="neutral">neutral</Button>
     </div>
   )
 }

@@ -11,12 +11,12 @@ export default function DocHeader() {
         Nexus Kit
       </div>
       <div className="flex h-full items-center gap-2">
-        <Button variant="ghost" icon asChild>
+        <Button variant="light" colors="neutral" icon asChild>
           <Link href="https://github.com/CiroLee/nexus-kit" target="_blank">
             <IconBrandGithub size={22} />
           </Link>
         </Button>
-        <Button asChild variant="ghost" icon>
+        <Button variant="light" asChild colors="neutral" icon>
           <Link href="https://x.com/threeLoolipop" target="_blank">
             <IconBrandX size={22} />
           </Link>
