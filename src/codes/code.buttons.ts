@@ -141,3 +141,17 @@ export default function Demo() {
   )
 }
 `;
+
+export const buttonGroupCode = `import Button from '@/components/Button';
+import ButtonGroup from '@/components/ButtonGroup';
+
+export default function Demo() {
+  return (
+    <ButtonGroup>
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+  )
+}
+`;

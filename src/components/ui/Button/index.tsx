@@ -4,7 +4,6 @@ import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { colors, colorsBorderedVariants, colorsLightVariants } from './cvaVariants';
 
-// TODO separate button styles out for decreasing file size
 const button = cva(
   `inline-flex items-center justify-center transition not-disabled:hover:opacity-80 box-border 
   text-white outline-none focus-visible:ring-3 focus-visible:transition-none`,

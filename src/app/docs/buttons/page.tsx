@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Button from '@/components/ui/Button';
+import ButtonGroup from '@/components/ui/ButtonGroup';
 import Code from '@/components/business/Code';
-import { variantCode, sizeCode, iconCode, variantsCode, disabledCode, withIconCode, loadingCode, roundedCode, asChildCode } from '@/codes/code.buttons';
+import { variantCode, sizeCode, iconCode, variantsCode, disabledCode, withIconCode, loadingCode, roundedCode, asChildCode, buttonGroupCode } from '@/codes/code.buttons';
 import SectionIntro from '../../../components/business/SectionIntro';
 import { IconUpload, IconShoppingCart, IconArrowRight, IconLoader } from '@tabler/icons-react';
 
@@ -129,6 +130,13 @@ export default function ButtonsPage() {
             tailwindcss
           </Link>
         </Button>
+      </PreviewAndCode>
+      <PreviewAndCode title="Button Group" code={<Code code={buttonGroupCode} />}>
+        <ButtonGroup>
+          <Button>One</Button>
+          <Button>Two</Button>
+          <Button>Three</Button>
+        </ButtonGroup>
       </PreviewAndCode>
     </>
   );
