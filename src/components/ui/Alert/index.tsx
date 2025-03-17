@@ -2,7 +2,7 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 import { IconAlertSquareRoundedFilled, IconInfoSquareRoundedFilled, IconSquareRoundedCheckFilled, IconCircleXFilled, IconNotification } from '@tabler/icons-react';
 import { cn } from '@/lib/utils';
-import Show from '../business/Show';
+import Show from '../../business/Show';
 import { useIsClient } from 'usehooks-ts';
 
 const alert = cva('rounded-lg p-4 flex border bg-background', {

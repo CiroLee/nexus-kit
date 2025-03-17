@@ -1,7 +1,7 @@
 'use client';
 import { cva } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
-import { Option } from './types/component';
+import { Option } from '../types/component';
 import { useCallback, useEffect, useRef, useState } from 'react';
 const segmentBase = cva('bg-neutral-100 inline-flex box-border relative h-10 rounded-md p-1 dark:bg-neutral-700');
 const segmentItem = cva(`h-full flex gap-0.5 text-sm items-center justify-center select-none z-2 transition rounded text-neutral-500 px-3`, {
