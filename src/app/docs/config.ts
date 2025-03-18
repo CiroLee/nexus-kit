@@ -23,6 +23,10 @@ export const navConfig = [
         name: 'Textarea',
         href: '/docs/textarea',
       },
+      {
+        name: 'Radio Group',
+        href: '/docs/radio-groups',
+      },
     ],
   },
 ];
