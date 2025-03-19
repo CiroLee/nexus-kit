@@ -11,25 +11,30 @@ export default function Page() {
 }
 `;
 
-export const orientationCode = `import { RadioGroup, Radio } from "@/components/RadioGroup";
+export const orientationHCode = `import { RadioGroup, Radio } from "@/components/RadioGroup";
 import Heading from '@/components/Heading';
 
 export default function Page() {
   return (
-    <div>
-      <Heading as="h4" className="mb-4">horizontal</Heading>
-      <RadioGroup orientation="horizontal">
-        <Radio value="banana" id="1">Banana</Radio>
-        <Radio value="apple" id="2">Apple</Radio>
-        <Radio value="orange" id="3">Orange</Radio>
-      </RadioGroup>
-      <Heading as="h4" className="my-4">vertical</Heading>
-      <RadioGroup orientation="vertical">
-        <Radio value="banana" id="4">Banana</Radio>
-        <Radio value="apple" id="5">Apple</Radio>
-        <Radio value="orange" id="6">Orange</Radio>
-      </RadioGroup>
-    </div>
+    <RadioGroup orientation="horizontal">
+      <Radio value="banana" id="1">Banana</Radio>
+      <Radio value="apple" id="2">Apple</Radio>
+      <Radio value="orange" id="3">Orange</Radio>
+    </RadioGroup>
+  )
+}
+`;
+
+export const orientationVCode = `import { RadioGroup, Radio } from "@/components/RadioGroup";
+import Heading from '@/components/Heading';
+
+export default function Page() {
+  return (
+    <RadioGroup orientation="vertical">
+      <Radio value="banana" id="4">Banana</Radio>
+      <Radio value="apple" id="5">Apple</Radio>
+      <Radio value="orange" id="6">Orange</Radio>
+    </RadioGroup>
   )
 }
 `;

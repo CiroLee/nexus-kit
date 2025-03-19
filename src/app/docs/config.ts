@@ -8,6 +8,10 @@ export const navConfig = [
         href: '/docs/alerts',
       },
       {
+        name: 'Avatar',
+        href: '/docs/avatars',
+      },
+      {
         name: 'Heading',
         href: '/docs/headings',
       },

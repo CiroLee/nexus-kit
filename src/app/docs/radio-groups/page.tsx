@@ -2,8 +2,7 @@ import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import { RadioGroup, Radio } from '@/components/ui/RadioGroup';
-import Heading from '@/components/ui/Heading';
-import { defaultCode, orientationCode, sizeCode, disabledCode, customContentCode } from '@/codes/code.radio-groups';
+import { defaultCode, orientationHCode, orientationVCode, sizeCode, disabledCode, customContentCode } from '@/codes/code.radio-groups';
 
 export default function RadioGroupPage() {
   return (
@@ -16,37 +15,31 @@ export default function RadioGroupPage() {
           <Radio value="orange">Orange</Radio>
         </RadioGroup>
       </PreviewAndCode>
-      <PreviewAndCode title="orientation" code={<Code code={orientationCode} />}>
-        <div>
-          <Heading as="h4" className="mb-4">
-            horizontal
-          </Heading>
-          <RadioGroup orientation="horizontal">
-            <Radio value="banana" id="1">
-              Banana
-            </Radio>
-            <Radio value="apple" id="2">
-              Apple
-            </Radio>
-            <Radio value="orange" id="3">
-              Orange
-            </Radio>
-          </RadioGroup>
-          <Heading as="h4" className="my-4">
-            vertical
-          </Heading>
-          <RadioGroup orientation="vertical">
-            <Radio value="banana" id="4">
-              Banana
-            </Radio>
-            <Radio value="apple" id="5">
-              Apple
-            </Radio>
-            <Radio value="orange" id="6">
-              Orange
-            </Radio>
-          </RadioGroup>
-        </div>
+      <PreviewAndCode title="orientation(horizontal)" code={<Code code={orientationHCode} />}>
+        <RadioGroup orientation="horizontal">
+          <Radio value="banana" id="1">
+            Banana
+          </Radio>
+          <Radio value="apple" id="2">
+            Apple
+          </Radio>
+          <Radio value="orange" id="3">
+            Orange
+          </Radio>
+        </RadioGroup>
+      </PreviewAndCode>
+      <PreviewAndCode title="orientation(vertical)" code={<Code code={orientationVCode} />}>
+        <RadioGroup orientation="vertical">
+          <Radio value="banana" id="4">
+            Banana
+          </Radio>
+          <Radio value="apple" id="5">
+            Apple
+          </Radio>
+          <Radio value="orange" id="6">
+            Orange
+          </Radio>
+        </RadioGroup>
       </PreviewAndCode>
       <PreviewAndCode title="size" code={<Code code={sizeCode} />}>
         <RadioGroup>
