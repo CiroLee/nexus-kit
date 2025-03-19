@@ -27,6 +27,10 @@ export const navConfig = [
         name: 'Radio Group',
         href: '/docs/radio-groups',
       },
+      {
+        name: 'Checkbox',
+        href: '/docs/checkboxes',
+      },
     ],
   },
 ];

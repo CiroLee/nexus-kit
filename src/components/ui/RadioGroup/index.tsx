@@ -28,7 +28,7 @@ const radioItem = cva(
   },
 );
 
-const label = cva('peer-has-disabled:cursor-not-allowed peer-has-disabled:opacity-50', {
+const label = cva('peer-disabled:cursor-not-allowed peer-disabled:opacity-50', {
   variants: {
     size: {
       sm: 'text-sm',
@@ -50,11 +50,9 @@ interface RadioProps extends React.ComponentPropsWithoutRef<typeof RadioGroupPri
 export function Radio({ id, size, children, className, ref, ...props }: RadioProps) {
   return (
     <div className="flex items-center space-x-2">
-      <div className="peer">
-        <RadioGroupPrimitive.Item ref={ref} id={id ?? props.value} className={cn(radioItem({ size, className }))} {...props}>
-          <RadioGroupPrimitive.Indicator className="bg-primary block size-[52%] rounded-full opacity-0 transition-opacity data-[state=checked]:opacity-100" />
-        </RadioGroupPrimitive.Item>
-      </div>
+      <RadioGroupPrimitive.Item ref={ref} id={id ?? props.value} className={cn('peer', radioItem({ size, className }))} {...props}>
+        <RadioGroupPrimitive.Indicator className="bg-primary block size-[52%] rounded-full opacity-0 transition-opacity data-[state=checked]:opacity-100" />
+      </RadioGroupPrimitive.Item>
       <label className={label({ size })} htmlFor={id ?? props.value}>
         {children}
       </label>
