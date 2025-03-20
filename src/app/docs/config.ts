@@ -39,6 +39,10 @@ export const navConfig = [
         name: 'Dialog',
         href: '/docs/dialogs',
       },
+      {
+        name: 'Switch',
+        href: '/docs/switches',
+      },
     ],
   },
 ];
