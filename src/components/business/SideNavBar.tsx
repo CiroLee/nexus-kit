@@ -1,13 +1,30 @@
 'use client';
 import Link from 'next/link';
+import { useMobile } from '@/hooks';
+import { useSidebar } from '@/contexts/doc-context';
 import { usePathname } from 'next/navigation';
 import { navConfig } from '@/app/docs/config';
 import { cn } from '@/lib/utils';
+
+const aside = cn(
+  `bg-background absolute z-10 h-full w-full -translate-y-full overflow-auto px-3 py-5 opacity-0 transition-all duration-200 ease-linear sm:relative sm:w-[300px] sm:translate-y-0 sm:opacity-100`,
+);
 export default function SideNavBar() {
   const pathname = usePathname();
+  const { isOpen, toggleSidebar } = useSidebar();
+  const isMobile = useMobile();
+
+  const handleCloseSidebar = () => {
+    if (isMobile) {
+      toggleSidebar();
+    }
+  };
 
   return (
-    <aside className="bg-background absolute z-10 h-full w-[300px] overflow-auto px-3 py-5 sm:relative">
+    <aside
+      className={cn(aside, {
+        'translate-y-0 opacity-100': isOpen,
+      })}>
       {navConfig.map((nav) => (
         <div key={nav.key}>
           <h4>{nav.title}</h4>
@@ -20,7 +37,8 @@ export default function SideNavBar() {
                     'before:bg-primary text-primary font-semibold': pathname === item.href,
                   })}
                   key={item.href}
-                  href={item.href}>
+                  href={item.href}
+                  onClick={handleCloseSidebar}>
                   {item.name}
                 </Link>
               ))}

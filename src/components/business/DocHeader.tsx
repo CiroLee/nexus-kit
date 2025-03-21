@@ -1,9 +1,12 @@
 import Image from 'next/image';
-import { IconBrandGithub, IconBrandX } from '@tabler/icons-react';
+import Link from 'next/link';
+import { useSidebar } from '@/contexts/doc-context';
+import { IconBrandGithub, IconBrandX, IconMenu } from '@tabler/icons-react';
 import Button from '@/components/ui/Button';
 import ThemeSwitch from '@/components/business/ThemeSwitch';
-import Link from 'next/link';
+
 export default function DocHeader() {
+  const { toggleSidebar } = useSidebar();
   return (
     <header className="bg-background/80 border-line fixed top-0 left-0 z-20 flex h-16 w-full items-center justify-between border-b px-4 backdrop-blur-sm">
       <Link href="/" className="flex h-full items-center gap-1.5 text-lg font-semibold">
@@ -22,6 +25,9 @@ export default function DocHeader() {
           </Link>
         </Button>
         <ThemeSwitch />
+        <Button variant="light" colors="neutral" icon onClick={toggleSidebar}>
+          <IconMenu size={22} />
+        </Button>
       </div>
     </header>
   );
