@@ -37,7 +37,7 @@ export default function AvatarPage() {
           <Avatar alt="avatar 3" fallbackClassName="!bg-orange-400" fallback={<IconUserFilled size={20} />} />
         </div>
       </PreviewAndCode>
-      <PreviewAndCode title="avatar group(orientation='horizontal')" code={<Code code={orientationHCode} />}>
+      <PreviewAndCode title="avatar group" description="orientation='horizontal'" code={<Code code={orientationHCode} />}>
         <AvatarGroup orientation="horizontal">
           <Avatar bordered src="/images/avatar-1.png" alt="avatar 1" />
           <Avatar bordered src="/images/avatar-2.png" alt="avatar 2" />
@@ -46,7 +46,7 @@ export default function AvatarPage() {
           <Avatar bordered alt="more" fallback="+2" />
         </AvatarGroup>
       </PreviewAndCode>
-      <PreviewAndCode title="avatar group(orientation='vertical')" code={<Code code={orientationVCode} />}>
+      <PreviewAndCode title="avatar group" description="orientation='vertical'" code={<Code code={orientationVCode} />}>
         <AvatarGroup orientation="vertical">
           <Avatar bordered src="/images/avatar-1.png" alt="avatar 1" />
           <Avatar bordered src="/images/avatar-2.png" alt="avatar 2" />

@@ -10,6 +10,7 @@ import Heading from '../ui/Heading';
 interface PreviewAndCodeProps {
   anchorId?: string;
   title: React.ReactNode;
+  description?: string;
   children: React.ReactNode;
   code: React.ReactNode;
   className?: string;
@@ -35,13 +36,14 @@ const option: Option[] = [
     value: 'code',
   },
 ];
-export default function PreviewAndCode({ anchorId, title, children, code, className }: PreviewAndCodeProps) {
+export default function PreviewAndCode({ anchorId, title, description, children, code, className }: PreviewAndCodeProps) {
   const [value, setValue] = useState('preview');
   return (
     <div className={cn('mb-8', className)} id={anchorId}>
-      <Heading as="h3" className="mb-4">
+      <Heading as="h3" className="whitespace-pre-wrap">
         {title}
       </Heading>
+      <p className="mb-4 text-gray-400">{description}</p>
       <Segment defaultValue="preview" option={option} onChange={setValue} />
       <div className="border-line mt-4 overflow-auto rounded-md border">
         <Show if={value === 'preview'} else={<div className="max-h-80">{code}</div>}>
