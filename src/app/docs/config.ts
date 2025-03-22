@@ -35,6 +35,14 @@ export const navConfig = [
         name: 'Checkbox',
         href: '/docs/checkboxes',
       },
+      {
+        name: 'Dialog',
+        href: '/docs/dialogs',
+      },
+      {
+        name: 'Switch',
+        href: '/docs/switches',
+      },
     ],
   },
 ];
