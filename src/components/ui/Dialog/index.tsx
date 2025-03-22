@@ -8,9 +8,9 @@ const dialogContent = cva(
   {
     variants: {
       size: {
-        sm: 'w-100',
-        md: 'sm:w-150',
-        lg: 'sm:w-240',
+        sm: 'w-[76%] sm:w-100',
+        md: 'w-[86%] sm:w-150',
+        lg: 'w-[96%] sm:w-240',
       },
     },
     defaultVariants: {
