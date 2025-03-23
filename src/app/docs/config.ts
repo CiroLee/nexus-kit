@@ -43,6 +43,10 @@ export const navConfig = [
         name: 'Switch',
         href: '/docs/switches',
       },
+      {
+        name: 'Tag',
+        href: '/docs/tags',
+      },
     ],
   },
 ];
