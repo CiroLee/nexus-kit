@@ -47,6 +47,10 @@ export const navConfig = [
         name: 'Tag',
         href: '/docs/tags',
       },
+      {
+        name: 'Badge',
+        href: '/docs/badges',
+      },
     ],
   },
 ];
