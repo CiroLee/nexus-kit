@@ -47,9 +47,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, Omi
   className?: string;
   style?: React.CSSProperties;
   asChild?: boolean;
+  ref?: React.Ref<HTMLButtonElement>;
 }
-export default function Button(props: ButtonProps, ref?: React.Ref<HTMLButtonElement>) {
-  const { colors, size, icon, variant, disabled, loading, rounded, className, asChild, children, ...rest } = props;
+export default function Button(props: ButtonProps) {
+  const { colors, size, icon, variant, disabled, loading, rounded, className, asChild, children, ref, ...rest } = props;
   const Component = asChild ? Slot : 'button';
   return (
     <Component ref={ref} disabled={disabled || !!loading} className={cn(button({ colors, size, icon, variant, disabled, loading, rounded, className }))} {...rest}>

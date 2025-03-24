@@ -34,12 +34,13 @@ interface BadgeProps extends Omit<React.HTMLAttributes<HTMLSpanElement>, 'conten
   style?: React.CSSProperties;
   content?: React.ReactNode;
   children?: React.ReactNode;
+  ref?: React.Ref<HTMLSpanElement>;
 }
-export default function Badge({ className, asDot, placement, content, children, size, ...props }: BadgeProps) {
+export default function Badge({ className, asDot, placement, content, children, size, ref, ...props }: BadgeProps) {
   return (
     <div className="relative inline-flex shrink-0">
       {children}
-      <span className={cn(badge({ size, placement, asDot, className }))} {...props}>
+      <span ref={ref} className={cn(badge({ size, placement, asDot, className }))} {...props}>
         {asDot ? null : content}
       </span>
     </div>

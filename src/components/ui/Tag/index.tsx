@@ -27,10 +27,11 @@ interface TagProps extends React.HTMLAttributes<HTMLSpanElement>, TagVariants {
   className?: string;
   style?: React.CSSProperties;
   children?: React.ReactNode;
+  ref?: React.Ref<HTMLSpanElement>;
 }
-export default function Tag({ className, colors, bordered, rounded, children, ...props }: TagProps) {
+export default function Tag({ className, colors, bordered, rounded, children, ref, ...props }: TagProps) {
   return (
-    <span tabIndex={0} className={cn(tag({ colors, bordered, rounded, className }))} {...props}>
+    <span ref={ref} tabIndex={0} className={cn(tag({ colors, bordered, rounded, className }))} {...props}>
       {children}
     </span>
   );

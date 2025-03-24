@@ -42,17 +42,18 @@ interface DialogProps extends React.ComponentPropsWithoutRef<typeof DialogPrimit
   className?: string;
   cancelText?: string;
   confirmText?: string;
+  ref?: React.Ref<HTMLDivElement>;
 }
 
 export const DialogClose = ({ children }: { children: React.ReactNode }) => <DialogPrimitive.Close asChild>{children}</DialogPrimitive.Close>;
 
-export function Dialog({ trigger, size, className, title, description, footer, hideFooter, cancelText = 'Cancel', confirmText = 'Confirm', backdrop, children, ...props }: DialogProps) {
+export function Dialog({ trigger, size, className, title, description, footer, hideFooter, cancelText = 'Cancel', confirmText = 'Confirm', backdrop, children, ref, ...props }: DialogProps) {
   return (
     <DialogPrimitive.Root {...props}>
       <DialogPrimitive.Trigger asChild>{trigger}</DialogPrimitive.Trigger>
       <DialogPrimitive.Portal>
         <DialogPrimitive.Overlay className={dialogOverlay({ backdrop })} />
-        <DialogPrimitive.Content className={cn(dialogContent({ size, className }))}>
+        <DialogPrimitive.Content ref={ref} className={cn(dialogContent({ size, className }))}>
           <DialogPrimitive.Close asChild className="absolute top-1.5 right-1.5">
             <Button icon colors="neutral" size="sm" rounded variant="light" className="group text-lg">
               <CloseIcon className="opacity-40 transition-colors group-hover:opacity-100" />

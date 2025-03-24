@@ -55,10 +55,10 @@ interface SwitchProps extends React.ComponentPropsWithoutRef<typeof SwitchPrimit
   ref?: React.Ref<HTMLButtonElement>;
 }
 
-export default function Switch({ size, className, id, children, ...props }: SwitchProps) {
+export default function Switch({ size, className, id, children, ref, ...props }: SwitchProps) {
   return (
     <div className="inline-flex items-center gap-2.5">
-      <SwitchPrimitive.Root id={id} className={cn(switchRoot({ className, size }))} {...props}>
+      <SwitchPrimitive.Root ref={ref} id={id} className={cn(switchRoot({ className, size }))} {...props}>
         <SwitchPrimitive.Thumb className={switchThumb({ size })} />
       </SwitchPrimitive.Root>
       <label htmlFor={id} className={cn(labelStyle({ size }))}>

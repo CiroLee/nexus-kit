@@ -1,6 +1,7 @@
 'use client';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
+import React from 'react';
 
 const inputWrap = cva(
   `relative px-3 border border-line outline-none not-disabled:has-focus:border-primary transition-colors flex gap-2 items-center 
@@ -39,13 +40,14 @@ interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, '
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
   style?: React.CSSProperties;
+  ref?: React.Ref<HTMLInputElement>;
 }
 export default function Input(props: InputProps) {
-  const { size, state, prefix, suffix, disabled, rounded, className, style, ...rest } = props;
+  const { size, state, prefix, suffix, disabled, rounded, className, style, ref, ...rest } = props;
   return (
     <div data-disabled={disabled} className={cn(inputWrap({ size, state, disabled, rounded, className }))} style={style}>
       {prefix ? <>{prefix}</> : null}
-      <input className={input()} disabled={!!disabled} {...rest} />
+      <input ref={ref} className={input()} disabled={!!disabled} {...rest} />
       {suffix ? <>{suffix}</> : null}
     </div>
   );

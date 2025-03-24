@@ -33,7 +33,7 @@ export default function Home() {
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:mx-auto xl:max-w-7xl xl:grid-cols-4">
           <ShowCard
             icon={<IconComponents size={28} />}
-            title={`${componentsAmounts}+ Free components`}
+            title={`${componentsAmounts}+ components`}
             description={`more than ${componentsAmounts} practical and beautiful components, they are FREE`}
             className="w-full"
           />
