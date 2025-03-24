@@ -3,7 +3,7 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import { Avatar, AvatarGroup } from '@/components/ui/Avatar';
 import { IconUserFilled } from '@tabler/icons-react';
-import { defaultCode, sizeCode, borderedCode, fallbackCode, orientationHCode, orientationVCode } from '@/codes/code.avatars';
+import { defaultCode, sizeCode, borderedCode, fallbackCode, orientationHCode, orientationVCode } from '@/codes/demos/code.avatars';
 
 export default function AvatarPage() {
   return (

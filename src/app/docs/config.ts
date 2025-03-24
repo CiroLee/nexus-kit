@@ -51,6 +51,10 @@ export const navConfig = [
         name: 'Badge',
         href: '/docs/badges',
       },
+      {
+        name: 'Drawer',
+        href: '/docs/drawers',
+      },
     ],
   },
 ];

@@ -2,7 +2,7 @@ import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import Checkbox from '@/components/ui/Checkbox';
-import { defaultCode, sizeCode, disabledCode, verticalCode, customContentCode } from '@/codes/code.checkboxes';
+import { defaultCode, sizeCode, disabledCode, verticalCode, customContentCode } from '@/codes/demos/code.checkboxes';
 
 export default function CheckboxPage() {
   return (

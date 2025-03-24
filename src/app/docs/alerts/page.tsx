@@ -3,7 +3,7 @@ import { IconTimezone } from '@tabler/icons-react';
 import SectionIntro from '@/components/business/SectionIntro';
 import Code from '@/components/business/Code';
 import { Alert, AlertTitle } from '@/components/ui/Alert';
-import { stateCode, showIconCode, customIcon } from '@/codes/code.alerts';
+import { stateCode, showIconCode, customIcon } from '@/codes/demos/code.alerts';
 
 export default function HeadingPage() {
   return (

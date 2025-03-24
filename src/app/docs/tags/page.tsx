@@ -2,7 +2,7 @@ import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import Tag from '@/components/ui/Tag';
-import { colorsCode, borderedCode, roundedCode } from '@/codes/code.tags';
+import { colorsCode, borderedCode, roundedCode } from '@/codes/demos/code.tags';
 
 export default function Page() {
   return (

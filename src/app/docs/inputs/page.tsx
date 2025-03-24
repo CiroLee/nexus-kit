@@ -3,7 +3,7 @@ import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import Input from '@/components/ui/Input';
-import { sizeCode, stateCode, preAndSuffixCode, disabledCode } from '@/codes/code.inputs';
+import { sizeCode, stateCode, preAndSuffixCode, disabledCode } from '@/codes/demos/code.inputs';
 export default function InputPage() {
   return (
     <>

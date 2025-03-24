@@ -2,7 +2,7 @@ import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import { RadioGroup, Radio } from '@/components/ui/RadioGroup';
-import { defaultCode, orientationHCode, orientationVCode, sizeCode, disabledCode, customContentCode } from '@/codes/code.radio-groups';
+import { defaultCode, orientationHCode, orientationVCode, sizeCode, disabledCode, customContentCode } from '@/codes/demos/code.radio-groups';
 
 export default function RadioGroupPage() {
   return (

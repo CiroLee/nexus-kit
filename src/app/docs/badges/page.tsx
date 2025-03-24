@@ -4,7 +4,7 @@ import Code from '@/components/business/Code';
 import Badge from '@/components/ui/Badge';
 import { Avatar } from '@/components/ui/Avatar';
 import { IconBellFilled } from '@tabler/icons-react';
-import { defaultCode, sizeCode, placementCode, contentCode, asDotCode } from '@/codes/code.badges';
+import { defaultCode, sizeCode, placementCode, contentCode, asDotCode } from '@/codes/demos/code.badges';
 
 export default function Page() {
   return (

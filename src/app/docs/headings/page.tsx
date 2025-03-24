@@ -2,7 +2,7 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import SectionIntro from '../../../components/business/SectionIntro';
 import Code from '@/components/business/Code';
 import Heading from '@/components/ui/Heading';
-import { asCode } from '@/codes/code.headings';
+import { asCode } from '@/codes/demos/code.headings';
 
 export default function HeadingPage() {
   return (

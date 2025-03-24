@@ -2,7 +2,7 @@ import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import Switch from '@/components/ui/Switch';
-import { defaultCode, labelCode, sizeCode, disabledCode } from '@/codes/code.switches';
+import { defaultCode, labelCode, sizeCode, disabledCode } from '@/codes/demos/code.switches';
 
 export default function SwitchPage() {
   return (

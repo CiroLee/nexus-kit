@@ -3,7 +3,7 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Button from '@/components/ui/Button';
 import ButtonGroup from '@/components/ui/ButtonGroup';
 import Code from '@/components/business/Code';
-import { variantCode, sizeCode, iconCode, variantsCode, disabledCode, withIconCode, loadingCode, roundedCode, asChildCode, buttonGroupCode } from '@/codes/code.buttons';
+import { variantCode, sizeCode, iconCode, variantsCode, disabledCode, withIconCode, loadingCode, roundedCode, asChildCode, buttonGroupCode } from '@/codes/demos/code.buttons';
 import SectionIntro from '../../../components/business/SectionIntro';
 import { IconUpload, IconShoppingCart, IconArrowRight, IconLoader } from '@tabler/icons-react';
 

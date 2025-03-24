@@ -3,7 +3,7 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import Button from '@/components/ui/Button';
 import { Dialog, DialogClose } from '@/components/ui/Dialog';
-import { defaultCode, backdropCode, hiddenCode, sizeCode, scrollCode } from '@/codes/code.dialogs';
+import { defaultCode, backdropCode, hiddenCode, sizeCode, scrollCode } from '@/codes/demos/code.dialogs';
 
 export default function DialogPage() {
   return (

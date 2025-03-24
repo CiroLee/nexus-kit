@@ -2,7 +2,7 @@ import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import Textarea from '@/components/ui/Textarea';
-import { defaultCode, stateCode, disabledCode, resizeCode } from '@/codes/code.textarea';
+import { defaultCode, stateCode, disabledCode, resizeCode } from '@/codes/demos/code.textarea';
 
 export default function TextareaPage() {
   return (
