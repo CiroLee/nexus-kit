@@ -6,12 +6,15 @@ import Button from '@/components/ui/Button';
 import { Drawer, DrawerClose } from '@/components/ui/Drawer';
 import Heading from '@/components/ui/Heading';
 import { placementCode, backdropCode, widthCode, heightCode, contentCode } from '@/codes/demos/code.drawers';
+import sourceCode from '@/codes/sources/source.drawer';
+import CodeDrawer from '@/components/business/CodeDrawer';
 
 export default function DrawerPage() {
   return (
     <>
       <SectionIntro title="Drawer" description="Drawers are used to display additional content on top of the main content." />
-      <PreviewAndCode title="placement" code={<Code code={placementCode} />}>
+      <CodeDrawer code={sourceCode} />
+      <PreviewAndCode codeText={placementCode} title="placement" code={<Code code={placementCode} />}>
         <div className="flex gap-4">
           <Drawer placement="top" trigger={<Button variant="bordered">top</Button>}>
             content...
@@ -27,7 +30,7 @@ export default function DrawerPage() {
           </Drawer>
         </div>
       </PreviewAndCode>
-      <PreviewAndCode title="backdrop" code={<Code code={backdropCode} />}>
+      <PreviewAndCode codeText={backdropCode} title="backdrop" code={<Code code={backdropCode} />}>
         <div className="flex gap-4">
           <Drawer placement="right" backdrop="opaque" trigger={<Button variant="bordered">opaque</Button>}>
             content...
@@ -40,17 +43,17 @@ export default function DrawerPage() {
           </Drawer>
         </div>
       </PreviewAndCode>
-      <PreviewAndCode title="custom width" code={<Code code={widthCode} />}>
+      <PreviewAndCode codeText={widthCode} title="custom width" code={<Code code={widthCode} />}>
         <Drawer placement="right" width="60%" trigger={<Button variant="bordered">Open Drawer</Button>}>
           width=60%
         </Drawer>
       </PreviewAndCode>
-      <PreviewAndCode title="custom height" code={<Code code={heightCode} />}>
+      <PreviewAndCode codeText={heightCode} title="custom height" code={<Code code={heightCode} />}>
         <Drawer placement="bottom" height="60%" trigger={<Button variant="bordered">Open Drawer</Button>}>
           height=60%
         </Drawer>
       </PreviewAndCode>
-      <PreviewAndCode title="custom content" code={<Code code={contentCode} />}>
+      <PreviewAndCode codeText={contentCode} title="custom content" code={<Code code={contentCode} />}>
         <Drawer trigger={<Button variant="bordered">Open Drawer</Button>}>
           <div className="flex items-center justify-between">
             <Heading as="h4">Title</Heading>

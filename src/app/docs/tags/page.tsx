@@ -3,12 +3,15 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import Tag from '@/components/ui/Tag';
 import { colorsCode, borderedCode, roundedCode } from '@/codes/demos/code.tags';
+import sourceCode from '@/codes/sources/source.tag';
+import CodeDrawer from '@/components/business/CodeDrawer';
 
 export default function Page() {
   return (
     <>
       <SectionIntro title="Tags" description="Tags are used to categorize content" />
-      <PreviewAndCode title="colors" code={<Code code={colorsCode} />}>
+      <CodeDrawer code={sourceCode} />
+      <PreviewAndCode title="colors" codeText={colorsCode} code={<Code code={colorsCode} />}>
         <div className="flex gap-4">
           <Tag colors="primary">primary</Tag>
           <Tag colors="success">success</Tag>
@@ -17,7 +20,7 @@ export default function Page() {
           <Tag colors="neutral">neutral</Tag>
         </div>
       </PreviewAndCode>
-      <PreviewAndCode title="bordered" code={<Code code={borderedCode} />}>
+      <PreviewAndCode title="bordered" codeText={borderedCode} code={<Code code={borderedCode} />}>
         <div className="flex gap-4">
           <Tag bordered colors="primary">
             Primary
@@ -36,7 +39,7 @@ export default function Page() {
           </Tag>
         </div>
       </PreviewAndCode>
-      <PreviewAndCode title="rounded" code={<Code code={roundedCode} />}>
+      <PreviewAndCode title="rounded" codeText={roundedCode} code={<Code code={roundedCode} />}>
         <div className="flex gap-4">
           <Tag bordered rounded colors="primary">
             Tag

@@ -3,19 +3,22 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import { RadioGroup, Radio } from '@/components/ui/RadioGroup';
 import { defaultCode, orientationHCode, orientationVCode, sizeCode, disabledCode, customContentCode } from '@/codes/demos/code.radio-groups';
+import sourceCode from '@/codes/sources/source.radio-group';
+import CodeDrawer from '@/components/business/CodeDrawer';
 
 export default function RadioGroupPage() {
   return (
     <>
       <SectionIntro title="RadioGroup" description="RadioGroup is a group of radio buttons" />
-      <PreviewAndCode title="default" code={<Code code={defaultCode} />}>
+      <CodeDrawer code={sourceCode} />
+      <PreviewAndCode title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
         <RadioGroup defaultValue="apple">
           <Radio value="banana">Banana</Radio>
           <Radio value="apple">Apple</Radio>
           <Radio value="orange">Orange</Radio>
         </RadioGroup>
       </PreviewAndCode>
-      <PreviewAndCode title="orientation(horizontal)" code={<Code code={orientationHCode} />}>
+      <PreviewAndCode title="orientation(horizontal)" codeText={orientationHCode} code={<Code code={orientationHCode} />}>
         <RadioGroup orientation="horizontal">
           <Radio value="banana" id="1">
             Banana
@@ -28,7 +31,7 @@ export default function RadioGroupPage() {
           </Radio>
         </RadioGroup>
       </PreviewAndCode>
-      <PreviewAndCode title="orientation(vertical)" code={<Code code={orientationVCode} />}>
+      <PreviewAndCode title="orientation(vertical)" codeText={orientationVCode} code={<Code code={orientationVCode} />}>
         <RadioGroup orientation="vertical">
           <Radio value="banana" id="4">
             Banana
@@ -41,14 +44,14 @@ export default function RadioGroupPage() {
           </Radio>
         </RadioGroup>
       </PreviewAndCode>
-      <PreviewAndCode title="size" code={<Code code={sizeCode} />}>
+      <PreviewAndCode title="size" codeText={sizeCode} code={<Code code={sizeCode} />}>
         <RadioGroup>
           <Radio size="sm" value="banana" id="7" />
           <Radio size="md" value="apple" id="8" />
           <Radio size="lg" value="orange" id="9" />
         </RadioGroup>
       </PreviewAndCode>
-      <PreviewAndCode title="disabled" code={<Code code={disabledCode} />}>
+      <PreviewAndCode title="disabled" codeText={disabledCode} code={<Code code={disabledCode} />}>
         <RadioGroup disabled defaultValue="apple">
           <Radio value="banana" id="10">
             Banana
@@ -61,7 +64,7 @@ export default function RadioGroupPage() {
           </Radio>
         </RadioGroup>
       </PreviewAndCode>
-      <PreviewAndCode title="custom content" code={<Code code={customContentCode} />}>
+      <PreviewAndCode title="custom content" codeText={customContentCode} code={<Code code={customContentCode} />}>
         <RadioGroup>
           <Radio value="apple" id="apple-juice">
             <p className="font-bold">🍎 Apple Juice</p>

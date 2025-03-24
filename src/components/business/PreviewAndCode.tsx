@@ -6,6 +6,7 @@ import Show from './Show';
 import { IconEye, IconCode } from '@tabler/icons-react';
 import type { Option } from '../ui/types/component';
 import Heading from '../ui/Heading';
+import ClientCopyButton from './ClientCopyButton';
 
 interface PreviewAndCodeProps {
   anchorId?: string;
@@ -13,6 +14,7 @@ interface PreviewAndCodeProps {
   description?: string;
   children: React.ReactNode;
   code: React.ReactNode;
+  codeText?: string;
   className?: string;
 }
 
@@ -36,16 +38,19 @@ const option: Option[] = [
     value: 'code',
   },
 ];
-export default function PreviewAndCode({ anchorId, title, description, children, code, className }: PreviewAndCodeProps) {
+export default function PreviewAndCode({ anchorId, title, description, codeText = '', children, code, className }: PreviewAndCodeProps) {
   const [value, setValue] = useState('preview');
   return (
-    <div className={cn('mb-8', className)} id={anchorId}>
+    <div className={cn('mb-8 w-[calc(100vw_-_32px)] overflow-hidden sm:w-auto', className)} id={anchorId}>
       <Heading as="h3" className="whitespace-pre-wrap">
         {title}
       </Heading>
       <p className="mb-4 text-gray-400">{description}</p>
-      <Segment defaultValue="preview" option={option} onChange={setValue} />
-      <div className="border-line mt-4 overflow-auto rounded-md border">
+      <div className="flex items-center justify-between">
+        <Segment defaultValue="preview" option={option} onChange={setValue} />
+        <ClientCopyButton text={codeText} />
+      </div>
+      <div className={cn('border-line mt-4 overflow-auto rounded-md border', { 'bg-[#24292e]': value === 'code' })}>
         <Show if={value === 'preview'} else={<div className="max-h-80">{code}</div>}>
           <div className="p-3">{children}</div>
         </Show>

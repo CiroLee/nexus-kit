@@ -30,7 +30,7 @@ export default function Home() {
         <Heading as="h3" className="mt-10 text-center">
           Get Started for Free
         </Heading>
-        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:mx-auto xl:max-w-7xl xl:grid-cols-4">
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:mx-auto xl:max-w-7xl">
           <ShowCard
             icon={<IconComponents size={28} />}
             title={`${componentsAmounts}+ components`}

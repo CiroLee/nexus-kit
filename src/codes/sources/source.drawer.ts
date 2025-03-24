@@ -1,8 +1,8 @@
-import { Dialog as DrawerPrimitive } from 'radix-ui';
+const code = `import { Dialog as DrawerPrimitive } from 'radix-ui';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 
-const drawerContent = cva(`fixed z-50 bg-background overflow-auto p-4 border-line`, {
+const drawerContent = cva('fixed z-50 bg-background overflow-auto p-4 border-line', {
   variants: {
     placement: {
       top: 'border-b top-0 left-0 w-full min-h-80 data-[state=open]:animate-slide-in-from-top data-[state=closed]:animate-slide-out-to-top',
@@ -55,3 +55,5 @@ export function Drawer({ trigger, width, height, style, className, backdrop, pla
     </DrawerPrimitive.Root>
   );
 }
+`;
+export default code;

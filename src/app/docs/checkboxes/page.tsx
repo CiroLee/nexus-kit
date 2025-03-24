@@ -3,17 +3,20 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import Checkbox from '@/components/ui/Checkbox';
 import { defaultCode, sizeCode, disabledCode, verticalCode, customContentCode } from '@/codes/demos/code.checkboxes';
+import sourceCode from '@/codes/sources/source.checkbox';
+import CodeDrawer from '@/components/business/CodeDrawer';
 
 export default function CheckboxPage() {
   return (
     <>
       <SectionIntro title="Checkbox" description="Checkboxes allow user to select multiple items from a list, or mark on item as selected" />
-      <PreviewAndCode title="default" code={<Code code={defaultCode} />}>
+      <CodeDrawer code={sourceCode} />
+      <PreviewAndCode codeText={defaultCode} title="default" code={<Code code={defaultCode} />}>
         <Checkbox defaultChecked value="one">
           One
         </Checkbox>
       </PreviewAndCode>
-      <PreviewAndCode title="size" code={<Code code={sizeCode} />}>
+      <PreviewAndCode codeText={sizeCode} title="size" code={<Code code={sizeCode} />}>
         <div className="flex items-center gap-2.5">
           <Checkbox size="sm" value="small">
             Small
@@ -26,19 +29,19 @@ export default function CheckboxPage() {
           </Checkbox>
         </div>
       </PreviewAndCode>
-      <PreviewAndCode title="disabled" code={<Code code={disabledCode} />}>
+      <PreviewAndCode codeText={disabledCode} title="disabled" code={<Code code={disabledCode} />}>
         <Checkbox value="cookies" defaultChecked disabled>
           Accept All Cookies
         </Checkbox>
       </PreviewAndCode>
-      <PreviewAndCode title="orientation-vertical" code={<Code code={verticalCode} />}>
+      <PreviewAndCode codeText={verticalCode} title="orientation-vertical" code={<Code code={verticalCode} />}>
         <div className="grid gap-2.5">
           <Checkbox value="android">Android</Checkbox>
           <Checkbox value="ios">IOS</Checkbox>
           <Checkbox value="harmonyOS">HarmonyOS</Checkbox>
         </div>
       </PreviewAndCode>
-      <PreviewAndCode title="custom content" code={<Code code={customContentCode} />}>
+      <PreviewAndCode codeText={customContentCode} title="custom content" code={<Code code={customContentCode} />}>
         <div className="flex items-center gap-2.5">
           <Checkbox value="0.2-sugar">
             <p className="font-bold">Less Sugar</p>
