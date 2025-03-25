@@ -1,5 +1,15 @@
 export const navConfig = [
   {
+    title: 'Get Started',
+    key: 'get-started',
+    children: [
+      {
+        name: 'Installation',
+        href: '/docs',
+      },
+    ],
+  },
+  {
     title: 'Base Components',
     key: 'base',
     children: [

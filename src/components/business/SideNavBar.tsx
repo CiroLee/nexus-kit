@@ -28,7 +28,7 @@ export default function SideNavBar() {
         'translate-y-0 opacity-100': isOpen,
       })}>
       {navConfig.map((nav) => (
-        <div key={nav.key}>
+        <div key={nav.key} className="not-last:mb-4">
           <h4>{nav.title}</h4>
           <div>
             {nav.children
