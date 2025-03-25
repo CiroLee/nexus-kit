@@ -38,7 +38,7 @@ export default function Home() {
             className="w-full"
           />
           <ShowCard icon={<IconMoonStars size={28} />} title="Dark Mode" description="All components support dark mode" className="w-full" />
-          <ShowCard icon={<IconBrandTailwind size={28} />} title="Tailwindcss v4" description="Lightweight, all components are based on tailwindcss v4, no other plugins" className="w-full" />
+          <ShowCard icon={<IconBrandTailwind size={28} />} title="Tailwindcss v4" description="support the latest tailwindcss v4" className="w-full" />
         </ul>
       </section>
     </div>
