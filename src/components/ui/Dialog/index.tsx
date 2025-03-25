@@ -55,7 +55,7 @@ export function Dialog({ trigger, size, className, title, description, footer, h
         <DialogPrimitive.Overlay className={dialogOverlay({ backdrop })} />
         <DialogPrimitive.Content ref={ref} className={cn(dialogContent({ size, className }))}>
           <DialogPrimitive.Close asChild className="absolute top-1.5 right-1.5">
-            <Button icon colors="neutral" size="sm" rounded variant="light" className="group text-lg">
+            <Button icon colors="neutral" size="sm" pill variant="light" className="group text-lg">
               <CloseIcon className="opacity-40 transition-colors group-hover:opacity-100" />
             </Button>
           </DialogPrimitive.Close>
