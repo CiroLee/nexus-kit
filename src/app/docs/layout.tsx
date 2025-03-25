@@ -10,7 +10,7 @@ export default function DocLayout({ children }: PropsWithChildren) {
         <Header showToggleSidebar />
         <div className="relative mt-16 flex h-[calc(100vh_-_64px)]">
           <SideNavBar />
-          <main className="h-full flex-1 overflow-auto p-4">{children}</main>
+          <main className="doc-main h-full flex-1 overflow-auto p-4">{children}</main>
         </div>
       </SidebarProvider>
     </section>

@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import { IconComponents, IconMoonStars } from '@tabler/icons-react';
+import { IconComponents, IconMoonStars, IconBrandTailwind } from '@tabler/icons-react';
 import Button from '@/components/ui/Button';
 import Heading from '@/components/ui/Heading';
 import Header from '@/components/business/Header';
@@ -30,14 +30,15 @@ export default function Home() {
         <Heading as="h3" className="mt-10 text-center">
           Get Started for Free
         </Heading>
-        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:mx-auto xl:max-w-7xl xl:grid-cols-4">
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:mx-auto xl:max-w-7xl">
           <ShowCard
             icon={<IconComponents size={28} />}
-            title={`${componentsAmounts}+ Free components`}
-            description={`more than ${componentsAmounts} practical and beautiful components, they are FREE`}
+            title={`${componentsAmounts}+ components`}
+            description={`More than ${componentsAmounts} practical and beautiful components, they are FREE`}
             className="w-full"
           />
-          <ShowCard icon={<IconMoonStars size={28} />} title="Dark Mode" description="all components support dark mode" className="w-full" />
+          <ShowCard icon={<IconMoonStars size={28} />} title="Dark Mode" description="All components support dark mode" className="w-full" />
+          <ShowCard icon={<IconBrandTailwind size={28} />} title="Tailwindcss v4" description="support the latest tailwindcss v4" className="w-full" />
         </ul>
       </section>
     </div>

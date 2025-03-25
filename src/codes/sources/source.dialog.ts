@@ -1,10 +1,10 @@
-import { Dialog as DialogPrimitive } from 'radix-ui';
+const code = `import { Dialog as DialogPrimitive } from 'radix-ui';
 import Button from '../Button';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 const dialogContent = cva(
-  `fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[90%] sm:max-w-[90%] bg-background py-3.5 
-  rounded-lg border border-line shadow-lg overflow-hidden data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out`,
+  \`fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[90%] sm:max-w-[90%] bg-background py-3.5 rounded-lg 
+  border border-line shadow-lg overflow-hidden data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out\`,
   {
     variants: {
       size: {
@@ -107,3 +107,5 @@ function CloseIcon({ className }: { className?: string }) {
     </svg>
   );
 }
+`;
+export default code;

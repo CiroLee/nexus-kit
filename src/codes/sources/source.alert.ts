@@ -1,6 +1,12 @@
-'use client';
+const code = `'use client';
 import { cva, type VariantProps } from 'class-variance-authority';
-import { IconAlertSquareRoundedFilled, IconInfoSquareRoundedFilled, IconSquareRoundedCheckFilled, IconCircleXFilled, IconNotification } from '@tabler/icons-react';
+import { 
+  IconAlertSquareRoundedFilled, 
+  IconInfoSquareRoundedFilled, 
+  IconSquareRoundedCheckFilled, 
+  IconCircleXFilled, 
+  IconNotification 
+} from '@tabler/icons-react';
 import { cn } from '@/lib/utils';
 
 const alert = cva('rounded-lg p-4 flex border bg-background', {
@@ -48,3 +54,6 @@ export function Alert({ className, state = 'info', showIcon = true, icon, childr
 export function AlertTitle({ children, className }: { className?: string; children?: React.ReactNode }) {
   return <p className={cn('text-lg font-semibold', className)}>{children}</p>;
 }
+`;
+
+export default code;

@@ -1,4 +1,4 @@
-export const variantCode = `import Button from '@/components/Button';
+export const colorsCode = `import Button from '@/components/Button';
 
 export default function Demo() {
   return (

@@ -1,10 +1,10 @@
-import { Switch as SwitchPrimitive } from 'radix-ui';
+const code = `import { Switch as SwitchPrimitive } from 'radix-ui';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 const switchRoot = cva(
-  `peer rounded-full dark:bg-neutral-700 bg-neutral-200 p-1 transition-colors not-disabled:focus-visible:ring-3 focus-visible:ring-primary/50 
-  data-[state=checked]:bg-primary outline-none not-disabled:cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed`,
+  \`peer rounded-full dark:bg-neutral-700 bg-neutral-200 p-1 transition-colors not-disabled:focus-visible:ring-3 focus-visible:ring-primary/50 
+  data-[state=checked]:bg-primary outline-none not-disabled:cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed\`,
   {
     variants: {
       size: {
@@ -20,8 +20,7 @@ const switchRoot = cva(
 );
 
 const switchThumb = cva(
-  `flex items-center justify-center rounded-full bg-white transition-transform will-change-transform shadow-md
-   data-[disabled]:cursor-not-allowed`,
+  'flex items-center justify-center rounded-full bg-white transition-transform will-change-transform shadow-md data-[disabled]:cursor-not-allowed',
   {
     variants: {
       size: {
@@ -67,3 +66,5 @@ export default function Switch({ size, className, id, children, ref, ...props }:
     </div>
   );
 }
+`;
+export default code;

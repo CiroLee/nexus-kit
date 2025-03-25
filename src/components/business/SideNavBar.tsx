@@ -8,7 +8,8 @@ import { cn } from '@/lib/utils';
 import { useCallback } from 'react';
 
 const aside = cn(
-  `bg-background absolute z-10 h-full w-full -translate-y-full overflow-auto px-3 py-5 opacity-0 transition-all duration-300 ease-linear sm:relative sm:w-[300px] sm:translate-y-0 sm:opacity-100`,
+  `bg-background absolute z-10 h-full w-full -translate-y-full overflow-auto px-3 py-5 opacity-0 transition-[opacity,transform] duration-300 ease-linear sm:relative sm:w-[300px]
+   sm:translate-y-0 sm:opacity-100`,
 );
 export default function SideNavBar() {
   const pathname = usePathname();

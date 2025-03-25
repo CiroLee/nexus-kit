@@ -1,4 +1,4 @@
-import { cva } from 'class-variance-authority';
+const code = `import { cva } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const heading = cva('font-normal', {
@@ -32,3 +32,5 @@ export default function Heading({ as: Tag, className, style, children, ref }: He
     </Tag>
   );
 }
+`;
+export default code;

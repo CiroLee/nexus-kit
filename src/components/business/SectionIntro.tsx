@@ -7,7 +7,7 @@ interface SectionIntro {
 }
 export default function SectionIntro({ title, description, className }: SectionIntro) {
   return (
-    <div className={cn('mb-10', className)}>
+    <div className={cn('mb-4 pb-6', className)}>
       <Heading as="h1" className="mb-3">
         {title}
       </Heading>

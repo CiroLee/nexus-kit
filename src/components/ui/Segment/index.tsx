@@ -22,10 +22,11 @@ interface SegmentProps {
   option: Option[];
   className?: string;
   style?: React.CSSProperties;
+  ref?: React.Ref<HTMLDivElement>;
   onChange?: (value: Option['value']) => void;
 }
-export default function Segment(props: SegmentProps, ref?: React.Ref<HTMLDivElement>) {
-  const { defaultValue, option, className, style, onChange } = props;
+export default function Segment(props: SegmentProps) {
+  const { defaultValue, option, className, style, ref, onChange } = props;
   const [activeValue, setActiveValue] = useState(defaultValue ?? option[0].value);
   const segmentRef = useRef<HTMLDivElement>(null);
   const indicatorRef = useRef<HTMLDivElement>(null);
