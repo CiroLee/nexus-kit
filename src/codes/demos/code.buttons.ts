@@ -78,15 +78,15 @@ export default function Demo() {
 }
 `;
 
-export const roundedCode = `import Button from '@/components/Button';
+export const pillCode = `import Button from '@/components/Button';
 
 export default function Demo() {
   return (
     <div className="flex items-center gap-4">
-      <Button size="xs" rounded>Rounded</Button>
-      <Button size="sm" rounded>Rounded</Button>
-      <Button size="md" rounded>Rounded</Button>
-      <Button size="lg" rounded>Rounded</Button>
+      <Button size="xs" pill>Rounded</Button>
+      <Button size="sm" pill>Rounded</Button>
+      <Button size="md" pill>Rounded</Button>
+      <Button size="lg" pill>Rounded</Button>
     </div>
   )
 }

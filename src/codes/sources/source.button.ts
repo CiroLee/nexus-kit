@@ -29,7 +29,7 @@ const button = cva(
       loading: {
         true: 'cursor-not-default opacity-50',
       },
-      rounded: {
+      pill: {
         true: 'rounded-full',
       },
     },
@@ -49,10 +49,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, Omi
   ref?: React.Ref<HTMLButtonElement>;
 }
 export default function Button(props: ButtonProps) {
-  const { colors, size, icon, variant, disabled, loading, rounded, className, asChild, children, ref, ...rest } = props;
+  const { colors, size, icon, variant, disabled, loading, pill, className, asChild, children, ref, ...rest } = props;
   const Component = asChild ? Slot : 'button';
   return (
-    <Component ref={ref} disabled={disabled || !!loading} className={cn(button({ colors, size, icon, variant, disabled, loading, rounded, className }))} {...rest}>
+    <Component ref={ref} disabled={disabled || !!loading} className={cn(button({ colors, size, icon, variant, disabled, loading, pill, className }))} {...rest}>
       {children}
     </Component>
   );

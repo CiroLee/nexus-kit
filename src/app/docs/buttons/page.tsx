@@ -3,7 +3,7 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Button from '@/components/ui/Button';
 import ButtonGroup from '@/components/ui/ButtonGroup';
 import Code from '@/components/business/Code';
-import { colorsCode, sizeCode, iconCode, variantsCode, disabledCode, withIconCode, loadingCode, roundedCode, asChildCode, buttonGroupCode } from '@/codes/demos/code.buttons';
+import { colorsCode, sizeCode, iconCode, variantsCode, disabledCode, withIconCode, loadingCode, pillCode, asChildCode, buttonGroupCode } from '@/codes/demos/code.buttons';
 import SectionIntro from '../../../components/business/SectionIntro';
 import { IconUpload, IconShoppingCart, IconArrowRight, IconLoader } from '@tabler/icons-react';
 import sourceCode from '@/codes/sources/source.button';
@@ -32,8 +32,8 @@ const navList: AnchorItem[] = [
     label: 'disabled',
   },
   {
-    anchorId: 'rounded',
-    label: 'rounded',
+    anchorId: 'pill',
+    label: 'pill shape',
   },
   {
     anchorId: 'with-icon',
@@ -135,18 +135,18 @@ export default function ButtonsPage() {
             </Button>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="rounded" codeText={roundedCode} title="rounded" code={<Code code={roundedCode} />}>
+        <PreviewAndCode anchorId="pill" codeText={pillCode} title="pill shape" code={<Code code={pillCode} />}>
           <div className="flex items-center gap-4">
-            <Button size="xs" rounded>
+            <Button size="xs" pill>
               Rounded
             </Button>
-            <Button size="sm" rounded>
+            <Button size="sm" pill>
               Rounded
             </Button>
-            <Button size="md" rounded>
+            <Button size="md" pill>
               Rounded
             </Button>
-            <Button size="lg" rounded>
+            <Button size="lg" pill>
               Rounded
             </Button>
           </div>

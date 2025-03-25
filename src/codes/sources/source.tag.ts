@@ -10,7 +10,7 @@ const tag = cva('h-6 inline-flex items-center px-2 text-sm rounded-sm outline-no
       danger: 'text-danger border-danger bg-red-50 dark:border-red-800 dark:text-foreground dark:bg-red-950 ring-danger/20',
       neutral: 'text-foreground border-neutral-300 bg-neutral-100 dark:border-neutral-600 dark:bg-neutral-700 ring-neutral-300/40 dark:ring-neutral-700/60',
     },
-    rounded: {
+    pill: {
       true: 'rounded-full',
     },
     bordered: {
@@ -29,9 +29,9 @@ interface TagProps extends React.HTMLAttributes<HTMLSpanElement>, TagVariants {
   children?: React.ReactNode;
   ref?: React.Ref<HTMLSpanElement>;
 }
-export default function Tag({ className, colors, bordered, rounded, children, ref, ...props }: TagProps) {
+export default function Tag({ className, colors, bordered, pill, children, ref, ...props }: TagProps) {
   return (
-    <span ref={ref} tabIndex={0} className={cn(tag({ colors, bordered, rounded, className }))} {...props}>
+    <span ref={ref} tabIndex={0} className={cn(tag({ colors, bordered, pill, className }))} {...props}>
       {children}
     </span>
   );

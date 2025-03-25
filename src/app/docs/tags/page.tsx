@@ -2,7 +2,7 @@ import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import Tag from '@/components/ui/Tag';
-import { colorsCode, borderedCode, roundedCode } from '@/codes/demos/code.tags';
+import { colorsCode, borderedCode, pillCode } from '@/codes/demos/code.tags';
 import sourceCode from '@/codes/sources/source.tag';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
@@ -17,8 +17,8 @@ const navList: AnchorItem[] = [
     label: 'bordered',
   },
   {
-    anchorId: 'rounded',
-    label: 'rounded',
+    anchorId: 'pill',
+    label: 'pill shape',
   },
 ];
 
@@ -56,21 +56,21 @@ export default function Page() {
             </Tag>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="rounded" title="rounded" codeText={roundedCode} code={<Code code={roundedCode} />}>
+        <PreviewAndCode anchorId="pill" title="pill shape" codeText={pillCode} code={<Code code={pillCode} />}>
           <div className="flex gap-4">
-            <Tag bordered rounded colors="primary">
+            <Tag bordered pill colors="primary">
               Tag
             </Tag>
-            <Tag bordered rounded colors="success">
+            <Tag bordered pill colors="success">
               Tag
             </Tag>
-            <Tag bordered rounded colors="warning">
+            <Tag bordered pill colors="warning">
               Tag
             </Tag>
-            <Tag bordered rounded colors="danger">
+            <Tag bordered pill colors="danger">
               Tag
             </Tag>
-            <Tag bordered rounded colors="neutral">
+            <Tag bordered pill colors="neutral">
               Tag
             </Tag>
           </div>
