@@ -47,6 +47,10 @@ const navList: AnchorItem[] = [
     anchorId: 'asChild',
     label: 'asChild',
   },
+  {
+    anchorId: 'button-group',
+    label: 'buttonGroup',
+  },
 ];
 export default function ButtonsPage() {
   return (
