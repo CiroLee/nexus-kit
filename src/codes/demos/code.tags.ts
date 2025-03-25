@@ -28,16 +28,16 @@ export default function Page() {
 }
 `;
 
-export const roundedCode = `import Tag from "@/components/Tag";
+export const pillCode = `import Tag from "@/components/Tag";
 
 export default function Page() {
   return (
     <div className="flex gap-4">
-      <Tag bordered rounded colors="primary">primary</Tag>
-      <Tag bordered rounded colors="success">success</Tag>
-      <Tag bordered rounded colors="warning">warning</Tag>
-      <Tag bordered rounded colors="danger">danger</Tag>
-      <Tag bordered rounded colors="neutral">neutral</Tag>
+      <Tag bordered pill colors="primary">primary</Tag>
+      <Tag bordered pill colors="success">success</Tag>
+      <Tag bordered pill colors="warning">warning</Tag>
+      <Tag bordered pill colors="danger">danger</Tag>
+      <Tag bordered pill colors="neutral">neutral</Tag>
     </div>
   )
 }
