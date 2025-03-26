@@ -26,7 +26,7 @@ export default function Page() {
   return (
     <div className="flex">
       <div className="flex-1 sm:mr-90">
-        <SectionIntro title="Tags" className="border-line border-b" description="Tags are used to categorize content" />
+        <SectionIntro title="Tags" description="Tags are used to categorize content" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<Code code={colorsCode} />}>
           <div className="flex gap-4">

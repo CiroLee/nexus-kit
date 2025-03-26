@@ -35,7 +35,7 @@ export default function Page() {
   return (
     <div className="flex">
       <div className="mr-90 flex-1">
-        <SectionIntro title="Badge" className="border-line border-b" description="Badges are used to display additional information, status, or counts in a compact visual format" />
+        <SectionIntro title="Badge" description="Badges are used to display additional information, status, or counts in a compact visual format" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<Code code={defaultCode} />}>
           <Badge content="2">

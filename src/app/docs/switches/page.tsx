@@ -30,19 +30,25 @@ export default function SwitchPage() {
   return (
     <div className="flex">
       <div className="flex-1 sm:mr-90">
-        <SectionIntro title="Switch" className="border-line border-b" description="Switches are used to toggle between two mutually exclusive states" />
+        <SectionIntro title="Switch" description="Switches are used to toggle between two mutually exclusive states" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Switch defaultChecked />
         </PreviewAndCode>
         <PreviewAndCode anchorId="width-icon" title="with label" codeText={labelCode} code={<Code code={labelCode} />}>
-          <Switch>Auto Translation</Switch>
+          <Switch id="auto-trans">Auto Translation</Switch>
         </PreviewAndCode>
         <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<Code code={sizeCode} />}>
           <div className="flex items-center gap-4">
-            <Switch size="sm">Small</Switch>
-            <Switch size="md">Medium</Switch>
-            <Switch size="lg">Large</Switch>
+            <Switch size="sm" id="small">
+              Small
+            </Switch>
+            <Switch size="md" id="medium">
+              Medium
+            </Switch>
+            <Switch size="lg" id="large">
+              Large
+            </Switch>
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<Code code={disabledCode} />}>

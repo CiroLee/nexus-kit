@@ -18,7 +18,7 @@ export default function HeadingPage() {
   return (
     <div className="flex">
       <div className="flex-1 sm:mr-90">
-        <SectionIntro title="Heading" className="border-line border-b" description="Headings are used to display the title content" />
+        <SectionIntro title="Heading" description="Headings are used to display the title content" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="as" codeText={asCode} title="as" code={<Code code={asCode} />}>
           <div className="space-y-3">

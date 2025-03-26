@@ -65,6 +65,10 @@ export const navConfig = [
         name: 'Drawer',
         href: '/docs/drawers',
       },
+      {
+        name: 'Card',
+        href: '/docs/cards',
+      },
     ],
   },
 ];
