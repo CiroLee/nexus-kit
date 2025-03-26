@@ -1,3 +1,5 @@
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 /* basic semantic colors  base on tailwindcss colors */
 :root {
   --background: #fff;
