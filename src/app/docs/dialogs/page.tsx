@@ -39,7 +39,7 @@ export default function DialogPage() {
   return (
     <div className="flex">
       <div className="flex-1 sm:mr-90">
-        <SectionIntro title="Dialog" className="border-line border-b" description="Dialogs are used to display custom content to the user via a modal" />
+        <SectionIntro title="Dialog" description="Dialogs are used to display custom content to the user via a modal" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<Code code={defaultCode} />}>
           <Dialog trigger={<Button variant="bordered">open dialog</Button>} title="dialog title" description="This a description...">

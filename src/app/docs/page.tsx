@@ -165,7 +165,7 @@ const guides: GuideItem[] = [
     description: 'Add the following necessary dependencies',
     content: (
       <div className="relative">
-        <ClientCopyButton size="sm" text={dependInstall} asIcon className="absolute top-1/2 right-1 z-10 -translate-y-1/2" />
+        <ClientCopyButton size="sm" text={dependInstall} asIcon className="absolute top-1/2 right-2 z-10 -translate-y-1/2" />
         <div className={contentWrap()}>
           <Code code={dependInstall} lang="bash" />
         </div>
@@ -192,13 +192,13 @@ const guides: GuideItem[] = [
           <p className="mt-2 text-sm">
             e.g <span className="italic">src/index.css</span>
           </p>
-          <ClientCopyButton size="sm" text={cssConfig} asIcon className="absolute top-8.5 right-1 z-10" />
+          <ClientCopyButton size="sm" text={cssConfig} asIcon className="absolute top-9 right-2 z-10" />
           <div className="border-line relative mt-2 h-fit max-h-80 overflow-auto rounded-md border bg-[#24292e]">
             <Code code={cssConfig} lang="css" />
           </div>
         </div>
         <div className="relative w-[82vw] sm:w-2xl">
-          <ClientCopyButton size="sm" text={cssConfig} asIcon className="absolute top-13.5 right-1 z-10" />
+          <ClientCopyButton size="sm" text={cssConfig} asIcon className="absolute top-14 right-2 z-10 sm:top-9" />
           <p className="mt-4 text-sm">add animation.css(optional) if you use Drawer, Dialog components</p>
           <div className="border-line relative mt-2 h-fit max-h-80 overflow-auto rounded-md border bg-[#24292e]">
             <Code code={animationConfig} lang="css" />
@@ -216,7 +216,7 @@ const guides: GuideItem[] = [
           <span className="italic">src/lib/utils.ts</span>
         </p>
         <div className="rounded-md bg-[#24292e]">
-          <ClientCopyButton size="sm" text={utils} asIcon className="absolute top-8.5 right-1 z-10" />
+          <ClientCopyButton size="sm" text={utils} asIcon className="absolute top-9 right-2 z-10" />
           <div className="border-line relative mt-2 h-fit max-h-80 overflow-auto rounded-[inherit] border">
             <Code code={utils} lang="ts" />
           </div>

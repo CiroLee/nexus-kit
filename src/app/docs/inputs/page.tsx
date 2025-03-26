@@ -30,7 +30,7 @@ export default function InputPage() {
   return (
     <div className="flex">
       <div className="flex-1 sm:mr-90">
-        <SectionIntro title="Input" className="border-line border-b" description="Inputs allow users to enter text, they usually appear in forms" />
+        <SectionIntro title="Input" description="Inputs allow users to enter text, they usually appear in forms" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="size" codeText={sizeCode} title="size" code={<Code code={sizeCode} />}>
           <div className="grid grid-cols-2 items-center gap-4">

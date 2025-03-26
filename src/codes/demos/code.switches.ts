@@ -11,7 +11,7 @@ export const labelCode = `import Switch from "@/components/Switch";
 
 export default function Page() {
   return (
-    <Switch>Auto Translation</Switch>
+    <Switch id="auto-trans">Auto Translation</Switch>
   )
 }
 `;
@@ -21,9 +21,9 @@ export const sizeCode = `import Switch from "@/components/Switch";
 export default function Page() {
   return (
     <div className="flex items-center gap-4">
-      <Switch size="sm">Small</Switch>
-      <Switch size="md">Medium</Switch>
-      <Switch size="lg">Large</Switch>
+      <Switch size="sm" id="small">Small</Switch>
+      <Switch size="md" id="medium">Medium</Switch>
+      <Switch size="lg" id="large">Large</Switch>
     </div>
   )
 }

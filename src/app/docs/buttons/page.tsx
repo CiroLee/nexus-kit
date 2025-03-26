@@ -56,7 +56,7 @@ export default function ButtonsPage() {
   return (
     <div className="flex">
       <div className="flex-1 sm:mr-90">
-        <SectionIntro title="Button" className="border-line border-b" description="Buttons are used to trigger actions" />
+        <SectionIntro title="Button" description="Buttons are used to trigger actions" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="colors" codeText={colorsCode} title="colors" code={<Code code={colorsCode} />}>
           <div className="flex gap-4">
