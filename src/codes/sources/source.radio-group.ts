@@ -12,7 +12,7 @@ export function RadioGroup({ orientation = 'horizontal', className, ref, ...prop
 }
 
 const radioItem = cva(
-  \`relative rounded-full flex items-center justify-center border-2 border-neutral-300 dark:border-neutral-600 transition-colors data-[state=checked]:border-primary outline-none
+  \`relative rounded-full flex shrink-0 items-center justify-center border-2 border-neutral-300 dark:border-neutral-600 transition-colors data-[state=checked]:border-primary outline-none
   focus-visible:ring-3 focus-visible:ring-primary/50 not-data-disabled:hover:border-primary disabled:opacity-50 disabled:cursor-not-allowed\`,
   {
     variants: {
