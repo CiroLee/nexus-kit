@@ -6,7 +6,7 @@ import ClientCopyButton from '@/components/business/ClientCopyButton';
 import OnThisPage from '@/components/business/OnThisPage';
 import Heading from '@/components/ui/Heading';
 
-const contentWrap = cva('border-line relative mt-2 w-[82vw] overflow-auto rounded-md border sm:w-2xl');
+const contentWrap = cva('border-line relative mt-2 w-[82vw] overflow-auto rounded-md border sm:w-2xl bg-[#24292e]');
 
 const dependInstall = 'npm install class-variance-authority clsx tailwind-merge @tabler/icons-react';
 const aliasConfig = `{
@@ -17,7 +17,9 @@ const aliasConfig = `{
   }
 }`;
 
-const cssConfig = `/* basic semantic colors  base on tailwindcss colors */
+const cssConfig = `@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/* basic semantic colors  base on tailwindcss colors */
 :root {
   --background: #fff;
   --foreground: oklch(0.269 0 0);
@@ -48,6 +50,92 @@ const cssConfig = `/* basic semantic colors  base on tailwindcss colors */
 body {
   color: var(--foreground);
   background-color: var(--background);
+}
+`;
+
+const animationConfig = `@theme {
+  --animate-fade-in: fade-in 0.15s ease-in;
+  --animate-fade-out: fade-out 0.15s ease-out;
+
+  --animate-slide-in-from-top: slide-in-from-top 0.2s linear;
+  --animate-slide-out-to-top: slide-out-to-top 0.2s linear;
+  --animate-slide-in-from-right: slide-in-from-right 0.2s linear;
+  --animate-slide-out-to-right: slide-out-to-right 0.2s linear;
+  --animate-slide-in-from-bottom: slide-in-from-bottom 0.2s linear;
+  --animate-slide-out-to-bottom: slide-out-to-bottom 0.2s linear;
+  --animate-slide-in-from-left: slide-in-from-left 0.2s linear;
+  --animate-slide-out-to-left: slide-out-to-left 0.2s linear;
+
+  /* fade animation */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  /* slide animation */
+  @keyframes slide-in-from-top {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  @keyframes slide-out-to-top {
+    to {
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes slide-in-from-right {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slide-out-to-right {
+    to {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes slide-in-from-bottom {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  @keyframes slide-out-to-bottom {
+    to {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes slide-in-from-left {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slide-out-to-left {
+    to {
+      transform: translateX(-100%);
+    }
+  }
 }
 `;
 
@@ -99,13 +187,22 @@ const guides: GuideItem[] = [
     title: 'Configure styles',
     description: 'styles are based on tailwindcss, no other style plugins are required. Add the following css in the root css file',
     content: (
-      <div className="relative w-[82vw] sm:w-2xl">
-        <p className="mt-2 text-sm">
-          e.g <span className="italic">src/index.css</span>
-        </p>
-        <ClientCopyButton size="sm" text={cssConfig} asIcon className="absolute top-8.5 right-1 z-10" />
-        <div className="border-line relative mt-2 h-fit max-h-80 overflow-auto rounded-md border">
-          <Code code={cssConfig} lang="css" />
+      <div className="relative">
+        <div className="relative w-[82vw] sm:w-2xl">
+          <p className="mt-2 text-sm">
+            e.g <span className="italic">src/index.css</span>
+          </p>
+          <ClientCopyButton size="sm" text={cssConfig} asIcon className="absolute top-8.5 right-1 z-10" />
+          <div className="border-line relative mt-2 h-fit max-h-80 overflow-auto rounded-md border bg-[#24292e]">
+            <Code code={cssConfig} lang="css" />
+          </div>
+        </div>
+        <div className="relative w-[82vw] sm:w-2xl">
+          <ClientCopyButton size="sm" text={cssConfig} asIcon className="absolute top-13.5 right-1 z-10" />
+          <p className="mt-4 text-sm">add animation.css(optional) if you use Drawer, Dialog components</p>
+          <div className="border-line relative mt-2 h-fit max-h-80 overflow-auto rounded-md border bg-[#24292e]">
+            <Code code={animationConfig} lang="css" />
+          </div>
         </div>
       </div>
     ),
@@ -118,9 +215,11 @@ const guides: GuideItem[] = [
         <p className="mt-2 text-sm">
           <span className="italic">src/lib/utils.ts</span>
         </p>
-        <ClientCopyButton size="sm" text={utils} asIcon className="absolute top-8.5 right-1 z-10" />
-        <div className="border-line relative mt-2 h-fit max-h-80 overflow-auto rounded-md border">
-          <Code code={utils} lang="ts" />
+        <div className="rounded-md bg-[#24292e]">
+          <ClientCopyButton size="sm" text={utils} asIcon className="absolute top-8.5 right-1 z-10" />
+          <div className="border-line relative mt-2 h-fit max-h-80 overflow-auto rounded-[inherit] border">
+            <Code code={utils} lang="ts" />
+          </div>
         </div>
       </div>
     ),
