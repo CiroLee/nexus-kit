@@ -5,7 +5,7 @@ import Heading from '@/components/ui/Heading';
 import Header from '@/components/business/Header';
 import Link from 'next/link';
 import { navConfig } from '@/app/docs/config';
-const componentsAmounts = navConfig[0].children.length;
+const componentsAmounts = navConfig?.filter((item) => item.key === 'base')[0].children.length;
 
 export default function Home() {
   return (
@@ -27,7 +27,7 @@ export default function Home() {
         </Button>
       </div>
       <section>
-        <Heading as="h3" className="mt-10 text-center">
+        <Heading as="h3" className="mt-16 text-center">
           Get Started for Free
         </Heading>
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:mx-auto xl:max-w-7xl">
