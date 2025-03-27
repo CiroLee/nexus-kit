@@ -51,7 +51,6 @@ const labelStyle = cva('peer-not-disabled:cursor-pointer peer-disabled:cursor-no
 
 type SwitchVariants = VariantProps<typeof switchRoot>;
 interface SwitchProps extends React.ComponentPropsWithoutRef<typeof SwitchPrimitive.Root>, SwitchVariants {
-  children?: React.ReactNode;
   ref?: React.Ref<HTMLButtonElement>;
 }
 

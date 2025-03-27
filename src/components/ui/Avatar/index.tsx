@@ -28,7 +28,6 @@ const fallbackStyle = cva('text-foreground relative flex size-full items-center 
 
 type AvatarVariants = VariantProps<typeof avatar>;
 interface AvatarProps extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>, AvatarVariants {
-  className?: string;
   src?: string;
   alt?: string;
   width?: number;

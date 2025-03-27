@@ -38,12 +38,12 @@ export default function ClientCopyButton({ text, size, asIcon, className }: Clie
     }, 2000);
   };
   return (
-    <Button variant="bordered" colors="neutral" size={size} icon={asIcon} className={cn('group', className)} onClick={handleCopy}>
+    <Button variant="bordered" colors="neutral" size={size} icon={asIcon} className={cn(className)} onClick={handleCopy}>
       <Show
         if={!copied}
         else={
           <div className="flex items-center gap-1">
-            <IconCheck size={iconSize} className="group" />
+            <IconCheck size={iconSize} />
             {asIcon ? null : ' Copied'}
           </div>
         }>

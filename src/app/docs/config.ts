@@ -73,6 +73,10 @@ export const navConfig = [
         name: 'Segment',
         href: '/docs/segments',
       },
+      {
+        name: 'Tabs',
+        href: '/docs/tabs',
+      },
     ],
   },
 ];

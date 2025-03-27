@@ -16,7 +16,7 @@ const segmentItem = cva(
     variants: {
       active: {
         true: 'text-neutral-800 dark:text-neutral-50',
-        false: 'hover:text-neutral-600 dark:hover:text-neutral-400',
+        false: 'not-disabled:hover:text-neutral-600 not-disabled:dark:hover:text-neutral-400',
       },
       equaledWidth: {
         true: 'flex-1',
@@ -26,7 +26,7 @@ const segmentItem = cva(
 );
 const segmentIndicator = cva(
   `h-full transition ease-linear rounded box-border  absolute top-0 z-1 shadow outline-none bg-white dark:bg-neutral-800 disabled:cursor-not-allowed
-  not-disabled:focus-visible:ring-3 not-disabled:focus-visible:ring-primary/30 not-disabled:focus-visible:transition-none`,
+  not-disabled:focus-visible:ring-3 not-disabled:focus-visible:ring-primary/50 not-disabled:focus-visible:transition-none`,
 );
 
 interface SegmentProps extends React.HTMLAttributes<HTMLDivElement> {

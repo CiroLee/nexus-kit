@@ -3,8 +3,6 @@ import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { RadioGroup as RadioGroupPrimitive } from 'radix-ui';
 interface RadioGroupProps extends React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root> {
-  children?: React.ReactNode;
-  className?: string;
   ref?: React.Ref<HTMLDivElement>;
 }
 export function RadioGroup({ orientation = 'horizontal', className, ref, ...props }: RadioGroupProps) {
@@ -43,7 +41,6 @@ const label = cva('peer-disabled:cursor-not-allowed peer-disabled:opacity-50', {
 
 type RadioItemVariants = VariantProps<typeof radioItem>;
 interface RadioProps extends React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>, RadioItemVariants {
-  children?: React.ReactNode;
   ref?: React.Ref<HTMLButtonElement>;
 }
 
