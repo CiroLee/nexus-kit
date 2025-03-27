@@ -48,7 +48,7 @@ export default function ClientCopyButton({ text, size, asIcon, className }: Clie
           </div>
         }>
         <div className="flex items-center gap-1">
-          <IconCopy size={18} className="text-white opacity-50 group-hover:opacity-100" />
+          <IconCopy size={16} />
           {asIcon ? null : ' Copy'}
         </div>
       </Show>
