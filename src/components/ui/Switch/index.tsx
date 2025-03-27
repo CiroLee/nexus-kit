@@ -50,14 +50,12 @@ const labelStyle = cva('peer-not-disabled:cursor-pointer peer-disabled:cursor-no
 });
 
 type SwitchVariants = VariantProps<typeof switchRoot>;
-interface SwitchProps extends React.ComponentPropsWithoutRef<typeof SwitchPrimitive.Root>, SwitchVariants {
-  ref?: React.Ref<HTMLButtonElement>;
-}
+interface SwitchProps extends React.ComponentPropsWithRef<typeof SwitchPrimitive.Root>, SwitchVariants {}
 
-export default function Switch({ size, className, id, children, ref, ...props }: SwitchProps) {
+export default function Switch({ size, className, id, children, ...props }: SwitchProps) {
   return (
     <div className="inline-flex items-center gap-2.5">
-      <SwitchPrimitive.Root ref={ref} id={id} className={cn(switchRoot({ className, size }))} {...props}>
+      <SwitchPrimitive.Root id={id} className={cn(switchRoot({ className, size }))} {...props}>
         <SwitchPrimitive.Thumb className={switchThumb({ size })} />
       </SwitchPrimitive.Root>
       <label htmlFor={id} className={cn(labelStyle({ size }))}>

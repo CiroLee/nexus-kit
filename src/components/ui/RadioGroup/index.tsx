@@ -2,11 +2,8 @@
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { RadioGroup as RadioGroupPrimitive } from 'radix-ui';
-interface RadioGroupProps extends React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root> {
-  ref?: React.Ref<HTMLDivElement>;
-}
-export function RadioGroup({ orientation = 'horizontal', className, ref, ...props }: RadioGroupProps) {
-  return <RadioGroupPrimitive.Root ref={ref} orientation={orientation} className={cn('flex flex-row gap-2.5', { 'flex-col': orientation === 'vertical' }, className)} {...props} />;
+export function RadioGroup({ orientation = 'horizontal', className, ...props }: React.ComponentPropsWithRef<typeof RadioGroupPrimitive.Root>) {
+  return <RadioGroupPrimitive.Root orientation={orientation} className={cn('flex flex-row gap-2.5', { 'flex-col': orientation === 'vertical' }, className)} {...props} />;
 }
 
 const radioItem = cva(
@@ -40,17 +37,15 @@ const label = cva('peer-disabled:cursor-not-allowed peer-disabled:opacity-50', {
 });
 
 type RadioItemVariants = VariantProps<typeof radioItem>;
-interface RadioProps extends React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>, RadioItemVariants {
-  ref?: React.Ref<HTMLButtonElement>;
-}
+interface RadioProps extends React.ComponentPropsWithRef<typeof RadioGroupPrimitive.Item>, RadioItemVariants {}
 
-export function Radio({ id, size, children, className, ref, ...props }: RadioProps) {
+export function Radio({ id, size, children, className, ...props }: RadioProps) {
   return (
     <div className="flex items-center space-x-2">
-      <RadioGroupPrimitive.Item ref={ref} id={id ?? props.value} className={cn('peer', radioItem({ size, className }))} {...props}>
+      <RadioGroupPrimitive.Item id={id} className={cn('peer', radioItem({ size, className }))} {...props}>
         <RadioGroupPrimitive.Indicator className="bg-primary block size-[52%] rounded-full opacity-0 transition-opacity data-[state=checked]:opacity-100" />
       </RadioGroupPrimitive.Item>
-      <label className={label({ size })} htmlFor={id ?? props.value}>
+      <label className={label({ size })} htmlFor={id}>
         {children}
       </label>
     </div>

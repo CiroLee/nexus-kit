@@ -27,18 +27,17 @@ const avatar = cva('relative block', {
 const fallbackStyle = cva('text-foreground relative flex size-full items-center justify-center rounded-[inherit] bg-neutral-300 dark:bg-neutral-700');
 
 type AvatarVariants = VariantProps<typeof avatar>;
-interface AvatarProps extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>, AvatarVariants {
+interface AvatarProps extends React.ComponentPropsWithRef<typeof AvatarPrimitive.Root>, AvatarVariants {
   src?: string;
   alt?: string;
   width?: number;
   height?: number;
   fallback?: React.ReactNode;
   fallbackClassName?: string;
-  ref?: React.Ref<HTMLDivElement>;
 }
-export function Avatar({ ref, src, alt, bordered, rounded, fallback, width, height, size, className, fallbackClassName, ...props }: AvatarProps) {
+export function Avatar({ src, alt, bordered, rounded, fallback, width, height, size, className, fallbackClassName, ...props }: AvatarProps) {
   return (
-    <AvatarPrimitive.Root ref={ref} className={cn(avatar({ size, bordered, rounded, className }))} {...props}>
+    <AvatarPrimitive.Root className={cn(avatar({ size, bordered, rounded, className }))} {...props}>
       <AvatarPrimitive.Image className="size-full rounded-[inherit]" alt={alt} width={width} height={height} src={src} />
       <AvatarPrimitive.Fallback className={cn(fallbackStyle({ className: fallbackClassName }))}>{fallback}</AvatarPrimitive.Fallback>
     </AvatarPrimitive.Root>

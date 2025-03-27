@@ -35,7 +35,7 @@ const dialogOverlay = cva('data-[state=open]:animate-fade-in data-[state=closed]
 });
 export type DialogOverlayVariants = VariantProps<typeof dialogOverlay>;
 
-interface DialogProps extends React.ComponentPropsWithoutRef<typeof DialogPrimitive.Root>, DialogOverlayVariants, DialogContentVariants {
+interface DialogProps extends React.ComponentPropsWithRef<typeof DialogPrimitive.Root>, DialogOverlayVariants, DialogContentVariants {
   trigger: React.ReactNode;
   title?: React.ReactNode;
   description?: React.ReactNode;
