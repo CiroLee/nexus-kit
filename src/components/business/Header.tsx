@@ -10,7 +10,7 @@ export default function DocHeader({ showToggleSidebar }: { showToggleSidebar?: b
   return (
     <header className="bg-background/80 border-line fixed top-0 left-0 z-20 flex h-16 w-full items-center justify-between border-b px-4 backdrop-blur-sm">
       <Link href="/" className="flex h-full shrink-0 items-center gap-1.5 text-lg font-semibold">
-        <Image src="/images/logo.svg" width={64} height={64} className="size-5 object-scale-down" alt="logo" />
+        <Image src="/images/logo.svg" width={64} height={64} className="size-6 object-scale-down" alt="logo" />
         Nexus Kit
       </Link>
       <div className="flex h-full items-center gap-1">
