@@ -36,7 +36,7 @@ const navList: AnchorItem[] = [
 export default function DrawerPage() {
   return (
     <div className="flex">
-      <div className="flex-1 sm:mr-90">
+      <div className="flex-1 xl:mr-90">
         <SectionIntro title="Drawer" description="Drawers are used to display additional content on top of the main content." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="placement" codeText={placementCode} title="placement" code={<Code code={placementCode} />}>

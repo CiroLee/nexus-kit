@@ -29,7 +29,7 @@ const navList: AnchorItem[] = [
 export default function TextareaPage() {
   return (
     <div className="flex">
-      <div className="flex-1 sm:mr-90">
+      <div className="flex-1 xl:mr-90">
         <SectionIntro title="Textarea" description="Inputs allow users to enter large texts, they usually appear in forms" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>

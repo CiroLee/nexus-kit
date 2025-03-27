@@ -55,7 +55,7 @@ const navList: AnchorItem[] = [
 export default function ButtonsPage() {
   return (
     <div className="flex">
-      <div className="flex-1 sm:mr-90">
+      <div className="flex-1 xl:mr-90">
         <SectionIntro title="Button" description="Buttons are used to trigger actions" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="colors" codeText={colorsCode} title="colors" code={<Code code={colorsCode} />}>

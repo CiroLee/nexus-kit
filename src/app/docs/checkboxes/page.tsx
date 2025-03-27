@@ -33,7 +33,7 @@ const navList: AnchorItem[] = [
 export default function CheckboxPage() {
   return (
     <div className="flex">
-      <div className="flex-1 sm:mr-90">
+      <div className="flex-1 xl:mr-90">
         <SectionIntro title="Checkbox" description="Checkboxes allow user to select multiple items from a list, or mark on item as selected" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<Code code={defaultCode} />}>
