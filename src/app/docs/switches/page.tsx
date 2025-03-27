@@ -29,7 +29,7 @@ const navList: AnchorItem[] = [
 export default function SwitchPage() {
   return (
     <div className="flex">
-      <div className="flex-1 sm:mr-90">
+      <div className="flex-1 xl:mr-90">
         <SectionIntro title="Switch" description="Switches are used to toggle between two mutually exclusive states" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>

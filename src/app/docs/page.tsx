@@ -6,7 +6,7 @@ import ClientCopyButton from '@/components/business/ClientCopyButton';
 import OnThisPage from '@/components/business/OnThisPage';
 import Heading from '@/components/ui/Heading';
 
-const contentWrap = cva('border-line relative mt-2 w-[82vw] overflow-auto rounded-md border sm:w-2xl bg-[#24292e]');
+const contentWrap = cva('border-line relative mt-2 overflow-auto rounded-md border bg-[#24292e]');
 
 const dependInstall = 'npm install class-variance-authority clsx tailwind-merge @tabler/icons-react';
 const aliasConfig = `{
@@ -164,7 +164,7 @@ const guides: GuideItem[] = [
     title: 'install dependencies',
     description: 'Add the following necessary dependencies',
     content: (
-      <div className="relative">
+      <div className="relative w-2xl max-w-[82vw]">
         <ClientCopyButton size="sm" text={dependInstall} asIcon className="absolute top-1/2 right-2 z-10 -translate-y-1/2" />
         <div className={contentWrap()}>
           <Code code={dependInstall} lang="bash" />
@@ -177,7 +177,7 @@ const guides: GuideItem[] = [
     title: 'Configure alias',
     description: 'add path alias in tsconfig.json',
     content: (
-      <div className={contentWrap()}>
+      <div className={contentWrap({ className: 'w-2xl max-w-[82vw]' })}>
         <Code code={aliasConfig} lang="json" />
       </div>
     ),
@@ -187,8 +187,8 @@ const guides: GuideItem[] = [
     title: 'Configure styles',
     description: 'styles are based on tailwindcss, no other style plugins are required. Add the following css in the root css file',
     content: (
-      <div className="relative">
-        <div className="relative w-[82vw] sm:w-2xl">
+      <div className="relative w-2xl max-w-[82vw]">
+        <div className="relative">
           <p className="mt-2 text-sm">
             e.g <span className="italic">src/index.css</span>
           </p>
@@ -197,7 +197,7 @@ const guides: GuideItem[] = [
             <Code code={cssConfig} lang="css" />
           </div>
         </div>
-        <div className="relative w-[82vw] sm:w-2xl">
+        <div className="relative">
           <ClientCopyButton size="sm" text={cssConfig} asIcon className="absolute top-14 right-2 z-10 sm:top-9" />
           <p className="mt-4 text-sm">add animation.css(optional) if you use Drawer, Dialog components</p>
           <div className="border-line relative mt-2 h-fit max-h-80 overflow-auto rounded-md border bg-[#24292e]">
@@ -211,7 +211,7 @@ const guides: GuideItem[] = [
     id: 'add-utils',
     description: 'add the necessary utils functions',
     content: (
-      <div className="relative w-[82vw] sm:w-2xl">
+      <div className="relative w-2xl max-w-[82vw]">
         <p className="mt-2 text-sm">
           <span className="italic">src/lib/utils.ts</span>
         </p>

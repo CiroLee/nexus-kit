@@ -24,7 +24,7 @@ export default function OnThisPage({ list, className }: OnThisPageProps) {
     }
   };
   return (
-    <div className={cn('absolute right-0 hidden h-full w-80 md:block', className)}>
+    <div className={cn('absolute right-0 hidden h-full w-70 xl:block', className)}>
       <p className="pb-3 text-sm font-semibold">On This Page</p>
       {list.map((item) => (
         <li
