@@ -2,6 +2,8 @@ const code = `import { Dialog as DialogPrimitive } from 'radix-ui';
 import Button from '../Button';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
+import { IconX } from '@tabler/icons-react';
+
 const dialogContent = cva(
   \`fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[90%] sm:max-w-[90%] bg-background py-3.5 rounded-lg 
   border border-line shadow-lg overflow-hidden data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out\`,
@@ -56,7 +58,7 @@ export function Dialog({ trigger, size, className, title, description, footer, h
         <DialogPrimitive.Content ref={ref} className={cn(dialogContent({ size, className }))}>
           <DialogPrimitive.Close asChild className="absolute top-1.5 right-1.5">
             <Button icon colors="neutral" size="sm" rounded variant="light" className="group text-lg">
-              <CloseIcon className="opacity-40 transition-colors group-hover:opacity-100" />
+              <IconX size={18} className="opacity-40 transition-colors group-hover:opacity-100" />
             </Button>
           </DialogPrimitive.Close>
           <DialogPrimitive.Title aria-label="dialog title" className={cn('dialog-title px-3.5 text-xl font-semibold', { hidden: !title })}>
@@ -85,26 +87,6 @@ export function Dialog({ trigger, size, className, title, description, footer, h
         </DialogPrimitive.Content>
       </DialogPrimitive.Portal>
     </DialogPrimitive.Root>
-  );
-}
-
-function CloseIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      width="1em"
-      height="1em"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M18 6l-12 12" />
-      <path d="M6 6l12 12" />
-    </svg>
   );
 }
 `;

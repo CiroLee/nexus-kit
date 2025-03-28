@@ -69,6 +69,18 @@ export const navConfig = [
         name: 'Card',
         href: '/docs/cards',
       },
+      {
+        name: 'Segment',
+        href: '/docs/segments',
+      },
+      {
+        name: 'Tabs',
+        href: '/docs/tabs',
+      },
+      {
+        name: 'Select',
+        href: '/docs/selects',
+      },
     ],
   },
 ];
