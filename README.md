@@ -8,4 +8,4 @@ Nexus-Kit is an open-source collection of UI components based on Tailwindcss and
 
 ## Documents
 
-visit [documents](https://github.com/CiroLee/nexus-kit)
+visit [documents](https://nexus-kit.vercel.app/)
