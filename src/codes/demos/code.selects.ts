@@ -58,7 +58,7 @@ const selectItems: SelectItem[] = [
 export default function Page() {
   return (
     <div className="grid items-center gap-4 md:grid-cols-3">
-      <Select disabled size="sm" placeholder="small size..." items={selectItems} />
+      <Select size="sm" placeholder="small size..." items={selectItems} />
       <Select size="md" placeholder="medium size..." items={selectItems} />
       <Select size="lg" placeholder="large size..." items={selectItems} />
     </div>
