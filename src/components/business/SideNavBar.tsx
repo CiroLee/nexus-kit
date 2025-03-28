@@ -7,10 +7,7 @@ import { navConfig } from '@/app/docs/config';
 import { cn } from '@/lib/utils';
 import { useCallback } from 'react';
 
-const aside = cn(
-  `bg-background absolute z-50 h-full w-full -translate-y-full overflow-auto px-3 py-5 opacity-0 transition-[opacity,transform] duration-300 ease-linear sm:relative sm:w-[300px]
-   sm:translate-y-0 sm:opacity-100`,
-);
+const aside = cn(`bg-background absolute z-10 h-full w-full overflow-auto px-3 py-5 sm:relative sm:w-[300px] sm:translate-y-0 sm:opacity-100`);
 export default function SideNavBar() {
   const pathname = usePathname();
   const { isOpen, toggleSidebar } = useSidebar();
@@ -25,7 +22,8 @@ export default function SideNavBar() {
   return (
     <aside
       className={cn(aside, {
-        'translate-y-0 opacity-100': isOpen,
+        'translate-y-0': isOpen,
+        '-translate-y-full': !isOpen,
       })}>
       {navConfig.map((nav) => (
         <div key={nav.key} className="not-last:mb-4">

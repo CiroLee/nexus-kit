@@ -2,7 +2,7 @@ import { Dialog as DrawerPrimitive } from 'radix-ui';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 
-const drawerContent = cva(`fixed z-50 bg-background overflow-auto p-4 border-line`, {
+const drawerContent = cva(`fixed z-(--popup) bg-background overflow-auto p-4 border-line`, {
   variants: {
     placement: {
       top: 'border-b top-0 left-0 w-full min-h-80 data-[state=open]:animate-slide-in-from-top data-[state=closed]:animate-slide-out-to-top',
@@ -16,7 +16,7 @@ const drawerContent = cva(`fixed z-50 bg-background overflow-auto p-4 border-lin
   },
 });
 type DrawerContentVariants = VariantProps<typeof drawerContent>;
-const dialogOverlay = cva('data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out fixed inset-0 z-50', {
+const dialogOverlay = cva('data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out fixed inset-0 z-(--popup)', {
   variants: {
     backdrop: {
       opaque: 'bg-black/30',

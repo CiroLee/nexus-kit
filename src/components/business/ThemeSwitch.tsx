@@ -35,7 +35,7 @@ export default function ThemeSwitch() {
       <AnimatePresence>
         {open ? (
           <Popover.Portal forceMount>
-            <Popover.Content sideOffset={8} align="end" className="z-30 outline-none">
+            <Popover.Content sideOffset={8} align="end" className="z-(--popup) outline-none">
               <motion.div className="border-line bg-background rounded-md border p-1" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }}>
                 <div className={item()} onClick={() => handleSetTheme('light')}>
                   <IconSun size={20} />

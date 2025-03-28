@@ -25,7 +25,7 @@ const segmentItem = cva(
   },
 );
 const segmentIndicator = cva(
-  `h-full transition ease-linear rounded box-border  absolute top-0 z-1 shadow outline-none bg-white dark:bg-neutral-800 disabled:cursor-not-allowed
+  `h-full transition ease-linear rounded box-border  absolute top-0 shadow outline-none bg-white dark:bg-neutral-800 disabled:cursor-not-allowed
   not-disabled:focus-visible:ring-3 not-disabled:focus-visible:ring-primary/50 not-disabled:focus-visible:transition-none`,
 );
 
