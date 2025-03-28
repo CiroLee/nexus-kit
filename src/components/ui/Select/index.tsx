@@ -34,7 +34,7 @@ const selectTrigger = cva(
 );
 
 const selectContent = cva(
-  `p-1 bg-background border z-50 border-line transition overflow-y-auto overflow-x-hidden data-[state=closed]:animate-fade-out data-[state=open]:animate-fade-in 
+  `p-1 bg-background border z-(--popup) border-line transition overflow-y-auto overflow-x-hidden data-[state=closed]:animate-fade-out data-[state=open]:animate-fade-in 
   origin-[--radix-select-content-transform-origin] max-h-[--radix-select-content-available-height]`,
   {
     variants: {

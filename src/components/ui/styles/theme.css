@@ -5,6 +5,8 @@
   --background: #fff;
   --foreground: oklch(0.269 0 0);
   --line: oklch(0.922 0 0);
+  /* semantic z-index */
+  --popup: 50;
 }
 
 [data-theme='dark'] {
