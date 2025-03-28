@@ -77,6 +77,10 @@ export const navConfig = [
         name: 'Tabs',
         href: '/docs/tabs',
       },
+      {
+        name: 'Select',
+        href: '/docs/selects',
+      },
     ],
   },
 ];
