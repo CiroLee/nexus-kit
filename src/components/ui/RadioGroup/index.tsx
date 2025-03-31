@@ -51,3 +51,29 @@ export function Radio({ id, size, children, className, ...props }: RadioProps) {
     </div>
   );
 }
+
+const radioButton = cva(
+  `relative border border-line not-data-disabled:hover:border-primary outline-none not-disabled:hover:bg-primary/10 transition data-[state=checked]:border-primary 
+  not-data-disabled:focus-visible:ring-3 focus-visible:ring-primary/50 data-disabled:opacity-50 data-disabled:cursor-not-allowed`,
+  {
+    variants: {
+      size: {
+        sm: 'size-8 rounded text-sm',
+        md: 'size-10 rounded-md',
+        lg: 'size-12 rounded-lg',
+      },
+    },
+    defaultVariants: {
+      size: 'md',
+    },
+  },
+);
+export function RadioButton({ id, size, children, className, ...props }: RadioProps) {
+  return (
+    <div className="flex items-center space-x-2">
+      <RadioGroupPrimitive.Item id={id} className={cn(radioButton({ size, className }))} {...props}>
+        <span className="flex size-full items-center justify-center">{children}</span>
+      </RadioGroupPrimitive.Item>
+    </div>
+  );
+}
