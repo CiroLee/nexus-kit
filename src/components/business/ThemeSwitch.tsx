@@ -28,7 +28,7 @@ export default function ThemeSwitch() {
   return (
     <Popover.Root open={open} onOpenChange={setOpen}>
       <Popover.Trigger asChild>
-        <Button variant="light" colors="neutral" icon>
+        <Button variant="light" colors="neutral" size="sm" icon>
           {themeMap[theme as keyof typeof themeMap]}
         </Button>
       </Popover.Trigger>

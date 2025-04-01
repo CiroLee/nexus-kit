@@ -20,7 +20,7 @@ export default function DocHeader({ showToggleSidebar }: { showToggleSidebar?: b
           </Link>
         </Button>
         <Button variant="light" size="sm" asChild colors="neutral" icon>
-          <Link href="https://x.com/threeLoolipop" target="_blank">
+          <Link href="https://x.com/threeLollipop" target="_blank">
             <IconBrandX size={20} />
           </Link>
         </Button>
