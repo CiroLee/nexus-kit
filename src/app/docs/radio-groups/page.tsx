@@ -1,8 +1,8 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
-import { RadioGroup, Radio } from '@/components/ui/RadioGroup';
-import { defaultCode, orientationHCode, orientationVCode, sizeCode, disabledCode, customContentCode } from '@/codes/demos/code.radio-groups';
+import { RadioGroup, Radio, RadioButton } from '@/components/ui/RadioGroup';
+import { defaultCode, orientationHCode, orientationVCode, sizeCode, disabledCode, customContentCode, radioButtonCode } from '@/codes/demos/code.radio-groups';
 import sourceCode from '@/codes/sources/source.radio-group';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
@@ -32,6 +32,10 @@ const navList: AnchorItem[] = [
     anchorId: 'custom-content',
     label: 'custom content',
   },
+  {
+    anchorId: 'radio-button',
+    label: 'Radio Button',
+  },
 ];
 
 export default function RadioGroupPage() {
@@ -42,9 +46,15 @@ export default function RadioGroupPage() {
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <RadioGroup defaultValue="apple">
-            <Radio value="banana">Banana</Radio>
-            <Radio value="apple">Apple</Radio>
-            <Radio value="orange">Orange</Radio>
+            <Radio value="banana" id="banana">
+              Banana
+            </Radio>
+            <Radio value="apple" id="apple">
+              Apple
+            </Radio>
+            <Radio value="orange" id="orange">
+              Orange
+            </Radio>
           </RadioGroup>
         </PreviewAndCode>
         <PreviewAndCode anchorId="orientation-horizontal" title="orientation horizontal" codeText={orientationHCode} code={<Code code={orientationHCode} />}>
@@ -107,6 +117,19 @@ export default function RadioGroupPage() {
               <p className="font-bold">🍊 Orange Juice</p>
               <p className="text-sm text-gray-400">30% sugar</p>
             </Radio>
+          </RadioGroup>
+        </PreviewAndCode>
+        <PreviewAndCode anchorId="radio-button" codeText={radioButtonCode} title="Radio Button" code={<Code code={radioButtonCode} />}>
+          <RadioGroup>
+            <RadioButton value="s" id="s">
+              S
+            </RadioButton>
+            <RadioButton value="m" id="m">
+              M
+            </RadioButton>
+            <RadioButton value="l" id="l">
+              L
+            </RadioButton>
           </RadioGroup>
         </PreviewAndCode>
       </div>

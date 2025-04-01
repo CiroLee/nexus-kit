@@ -162,7 +162,7 @@ const guides: GuideItem[] = [
     ),
   },
   {
-    id: 'install-dependencies',
+    id: 'Install-dependencies',
     title: 'install dependencies',
     description: 'Add the following necessary dependencies',
     content: (
@@ -211,7 +211,7 @@ const guides: GuideItem[] = [
   },
   {
     id: 'add-utils',
-    description: 'add the necessary utils functions',
+    description: 'Add the necessary utils functions',
     content: (
       <div className="relative w-2xl max-w-[82vw]">
         <p className="mt-2 text-sm">

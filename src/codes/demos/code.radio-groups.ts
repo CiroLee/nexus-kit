@@ -86,3 +86,15 @@ export default function Page() {
   )
 }
 `;
+
+export const radioButtonCode = `import { RadioGroup, RadioButton } from "@/components/RadioGroup";
+
+export default function Page() {
+  return (
+    <RadioGroup>
+      <RadioButton value="s" id="s">S</RadioButton>
+      <RadioButton value="m" id="m">M</RadioButton>
+      <RadioButton value="l" id="l">L</RadioButton>
+    </RadioGroup>
+  )
+}`;

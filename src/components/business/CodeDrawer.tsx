@@ -28,7 +28,7 @@ export default function CodeDrawer({ code, className }: CodeDrawerProps) {
           </DrawerClose>
           <ClientCopyButton text={code} />
         </div>
-        <div className="overflow-auto">
+        <div className="overflow-auto rounded-md">
           <Code code={code} />
         </div>
       </div>
