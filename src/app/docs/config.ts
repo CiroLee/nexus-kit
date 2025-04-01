@@ -81,6 +81,10 @@ export const navConfig = [
         name: 'Select',
         href: '/docs/selects',
       },
+      {
+        name: 'Divider',
+        href: '/docs/dividers',
+      },
     ],
   },
 ];

@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import { IconComponents, IconMoonStars, IconBrandTailwind } from '@tabler/icons-react';
+import { IconComponents, IconMoonStars, IconBrandTailwind, IconBrush } from '@tabler/icons-react';
 import Button from '@/components/ui/Button';
 import Heading from '@/components/ui/Heading';
 import Header from '@/components/business/Header';
@@ -30,7 +30,7 @@ export default function Home() {
         <Heading as="h3" className="mt-16 text-center">
           Get Started for Free
         </Heading>
-        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:mx-auto xl:max-w-7xl">
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:mx-auto xl:max-w-7xl">
           <ShowCard
             icon={<IconComponents size={28} />}
             title={`${componentsAmounts}+ components`}
@@ -39,6 +39,7 @@ export default function Home() {
           />
           <ShowCard icon={<IconMoonStars size={28} />} title="Dark Mode" description="All components support dark mode" className="w-full" />
           <ShowCard icon={<IconBrandTailwind size={28} />} title="Tailwindcss v4" description="support the latest tailwindcss v4" className="w-full" />
+          <ShowCard icon={<IconBrush size={28} />} title="Themes" description="easy to customize themes just by css" className="w-full" />
         </ul>
       </section>
     </div>
