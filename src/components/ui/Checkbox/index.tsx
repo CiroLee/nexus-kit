@@ -38,12 +38,12 @@ interface CheckboxProps extends React.ComponentPropsWithRef<typeof CheckboxPrimi
 export default function Checkbox({ className, id, size, children, ...props }: CheckboxProps) {
   return (
     <div className="relative flex items-center gap-2.5 select-none">
-      <CheckboxPrimitive.Root id={id ?? String(props.value)} className={cn('peer', checkbox({ size, className }))} {...props}>
+      <CheckboxPrimitive.Root id={id} className={cn('peer', checkbox({ size, className }))} {...props}>
         <CheckboxPrimitive.Indicator className={checkboxIndicator({ size })}>
           <IconCheck size="1em" />
         </CheckboxPrimitive.Indicator>
       </CheckboxPrimitive.Root>
-      <label className="cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-50" htmlFor={id ?? String(props.value)}>
+      <label className="cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-50" htmlFor={id}>
         {children}
       </label>
     </div>

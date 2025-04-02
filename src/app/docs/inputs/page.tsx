@@ -29,7 +29,7 @@ const navList: AnchorItem[] = [
 export default function InputPage() {
   return (
     <div className="flex">
-      <div className="flex-1 xl:mr-90">
+      <div className="main-container">
         <SectionIntro title="Input" description="Inputs allow users to enter text, they usually appear in forms" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="size" codeText={sizeCode} title="size" code={<Code code={sizeCode} />}>

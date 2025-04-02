@@ -34,7 +34,7 @@ const navList: AnchorItem[] = [
 export default function Page() {
   return (
     <div className="flex">
-      <div className="flex-1 xl:mr-90">
+      <div className="main-container">
         <SectionIntro title="Badge" description="Badges are used to display additional information, status, or counts in a compact visual format" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<Code code={defaultCode} />}>

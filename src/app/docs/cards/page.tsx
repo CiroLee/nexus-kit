@@ -18,7 +18,7 @@ const navList: AnchorItem[] = [
 export default function CardPage() {
   return (
     <div className="flex">
-      <div className="flex-1 xl:mr-90">
+      <div className="main-container">
         <SectionIntro title="Card" description="Cards are used to display related contents and actions" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<Code code={defaultCode} />}>
