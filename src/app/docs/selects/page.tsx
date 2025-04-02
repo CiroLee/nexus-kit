@@ -119,7 +119,7 @@ const groupedItems: SelectItem[] = [
 export default function SelectPage() {
   return (
     <div className="flex">
-      <div className="flex-1 xl:mr-90">
+      <div className="main-container">
         <SectionIntro title="Select" description="Selects are used to select one option from a list" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>

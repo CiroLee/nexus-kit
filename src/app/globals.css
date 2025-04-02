@@ -1,3 +1,13 @@
 @import 'tailwindcss';
 @import '../components/ui/styles/theme.css';
 @import '../components/ui/styles/animation.css';
+
+@utility main-container {
+  flex: 1;
+  width: 90%;
+  @media (width >= 80rem /* 1280px */) {
+    margin-right: calc(var(--spacing) * 90) /* 22.5rem = 360px */;
+    max-width: 54vw;
+    margin: unset;
+  }
+}

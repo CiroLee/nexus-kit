@@ -85,6 +85,10 @@ export const navConfig = [
         name: 'Divider',
         href: '/docs/dividers',
       },
+      {
+        name: 'Table',
+        href: '/docs/tables',
+      },
     ],
   },
 ];

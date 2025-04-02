@@ -17,7 +17,7 @@ const navList: AnchorItem[] = [
 export default function HeadingPage() {
   return (
     <div className="flex">
-      <div className="flex-1 xl:mr-90">
+      <div className="main-container">
         <SectionIntro title="Heading" description="Headings are used to display the title content" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="as" codeText={asCode} title="as" code={<Code code={asCode} />}>

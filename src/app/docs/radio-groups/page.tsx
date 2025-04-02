@@ -41,7 +41,7 @@ const navList: AnchorItem[] = [
 export default function RadioGroupPage() {
   return (
     <div className="flex">
-      <div className="flex-1 xl:mr-90">
+      <div className="main-container">
         <SectionIntro title="RadioGroup" description="RadioGroup is a group of radio buttons" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
