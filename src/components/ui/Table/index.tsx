@@ -1,3 +1,4 @@
+'use client';
 import { cn } from '@/lib/utils';
 
 interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
@@ -20,7 +21,7 @@ export function Table({ fixedHeader, className, ...props }: TableProps) {
 }
 
 export function TableHeader({ className, ...props }: React.HTMLAttributes<HTMLTableSectionElement> & { ref?: React.Ref<HTMLTableSectionElement> }) {
-  return <thead className={cn('w-full bg-neutral-100 text-sm shadow-[0_1px_0_0_rgb(229,229,229)] dark:bg-[#2e2e2e] dark:shadow-[0_1px_0_0_rgb(64,64,64)]', className)} {...props} />;
+  return <thead className={cn('w-full bg-neutral-100 text-sm shadow-[0_1px_0_0] shadow-[rgb(229,229,229)] dark:bg-[#2e2e2e] dark:shadow-[rgb(64,64,64)]', className)} {...props} />;
 }
 interface TableHeaderCellProps extends React.HTMLAttributes<HTMLTableCellElement> {
   ref?: React.Ref<HTMLTableCellElement>;

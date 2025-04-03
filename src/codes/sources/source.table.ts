@@ -1,4 +1,5 @@
-const code = `import { cn } from '@/lib/utils';
+const code = `'use client';
+import { cn } from '@/lib/utils';
 
 interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
   ref?: React.Ref<HTMLTableElement>;

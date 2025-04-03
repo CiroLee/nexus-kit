@@ -89,6 +89,10 @@ export const navConfig = [
         name: 'Table',
         href: '/docs/tables',
       },
+      {
+        name: 'Link',
+        href: '/docs/links',
+      },
     ],
   },
 ];
