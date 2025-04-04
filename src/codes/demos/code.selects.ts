@@ -1,4 +1,4 @@
-export const defaultCode = `import Select, { type SelectItem } from "@/components/Select";
+export const defaultCode = `import Select, { type SelectItem } from "@/components/ui/Select";
 
 const selectItems: SelectItem[] = [
   {
@@ -30,7 +30,7 @@ export default function Page() {
 }
 `;
 
-export const sizeCode = `import Select, { type SelectItem } from "@/components/Select";
+export const sizeCode = `import Select, { type SelectItem } from "@/components/ui/Select";
 
 const selectItems: SelectItem[] = [
   {
@@ -66,7 +66,7 @@ export default function Page() {
 }
 `;
 
-export const disabledCode = `import Select, { type SelectItem } from "@/components/Select";
+export const disabledCode = `import Select, { type SelectItem } from "@/components/ui/Select";
 
 const selectItems: SelectItem[] = [
   {
@@ -120,7 +120,7 @@ export default function Page() {
 }
 `;
 
-export const groupCode = `import Select, { type SelectItem } from "@/components/Select";
+export const groupCode = `import Select, { type SelectItem } from "@/components/ui/Select";
 
 const groupedItems: SelectItem[] = [
   {

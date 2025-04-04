@@ -1,4 +1,4 @@
-export const defaultCode = `import { Avatar } from "@/components/Avatar";
+export const defaultCode = `import { Avatar } from "@/components/ui/Avatar";
 
 export default function Page() {
   return (
@@ -10,7 +10,7 @@ export default function Page() {
 }
 `;
 
-export const sizeCode = `import { Avatar } from "@/components/Avatar";
+export const sizeCode = `import { Avatar } from "@/components/ui/Avatar";
 
 export default function Page() {
   return (
@@ -24,7 +24,7 @@ export default function Page() {
 }
 `;
 
-export const borderedCode = `import { Avatar } from "@/components/Avatar";
+export const borderedCode = `import { Avatar } from "@/components/ui/Avatar";
 
 export default function Page() {
   return (
@@ -37,7 +37,7 @@ export default function Page() {
 }
 `;
 
-export const fallbackCode = `import { Avatar } from "@/components/Avatar";
+export const fallbackCode = `import { Avatar } from "@/components/ui/Avatar";
 import { IconUserFilled } from '@tabler/icons-react';
 
 export default function Page() {
@@ -51,7 +51,7 @@ export default function Page() {
 }
 `;
 
-export const orientationHCode = `import { Avatar, AvatarGroup } from "@/components/Avatar";
+export const orientationHCode = `import { Avatar, AvatarGroup } from "@/components/ui/Avatar";
 
 export default function Page() {
   return (
@@ -66,7 +66,7 @@ export default function Page() {
 }
 `;
 
-export const orientationVCode = `import { Avatar, AvatarGroup } from "@/components/Avatar";
+export const orientationVCode = `import { Avatar, AvatarGroup } from "@/components/ui/Avatar";
 
 export default function Page() {
   return (

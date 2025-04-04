@@ -1,5 +1,5 @@
-export const defaultCode = `import Divider from '@/components/Divider';
-import Heading from '@/components/Heading';
+export const defaultCode = `import Divider from '@/components/ui/Divider';
+import Heading from '@/components/ui/Heading';
 
 export default function Page() {
   return (
@@ -19,7 +19,7 @@ export default function Page() {
 }
 `;
 
-export const withContentCode = `import Divider from '@/components/Divider';
+export const withContentCode = `import Divider from '@/components/ui/Divider';
 
 export default function Page() {
   return (

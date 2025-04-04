@@ -1,4 +1,4 @@
-export const defaultCode = `import Checkbox from "@/components/Checkbox";
+export const defaultCode = `import Checkbox from "@/components/ui/Checkbox";
 
 export default function Page() {
   return (
@@ -7,7 +7,7 @@ export default function Page() {
 }
 `;
 
-export const sizeCode = `import Checkbox from "@/components/Checkbox";
+export const sizeCode = `import Checkbox from "@/components/ui/Checkbox";
 
 export default function Page() {
   return (
@@ -20,7 +20,7 @@ export default function Page() {
 }
 `;
 
-export const disabledCode = `import Checkbox from "@/components/Checkbox";
+export const disabledCode = `import Checkbox from "@/components/ui/Checkbox";
 
 export default function Page() {
   return (
@@ -29,7 +29,7 @@ export default function Page() {
 }
 `;
 
-export const verticalCode = `import Checkbox from "@/components/Checkbox";
+export const verticalCode = `import Checkbox from "@/components/ui/Checkbox";
 
 export default function Page() {
   return (
@@ -42,7 +42,7 @@ export default function Page() {
 }
 `;
 
-export const customContentCode = `import Checkbox from "@/components/Checkbox";
+export const customContentCode = `import Checkbox from "@/components/ui/Checkbox";
 
 export default function Page() {
   return (

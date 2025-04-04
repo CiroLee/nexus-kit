@@ -1,4 +1,4 @@
-export const defaultCode = `import Link from "@/components/Link";
+export const defaultCode = `import Link from "@/components/ui/Link";
 
 export default function Page() {
   return (
@@ -7,7 +7,7 @@ export default function Page() {
 }
 `;
 
-export const disabledCode = `import Link from "@/components/Link";
+export const disabledCode = `import Link from "@/components/ui/Link";
 
 export default function Page() {
   return (
@@ -16,7 +16,7 @@ export default function Page() {
 }
 `;
 
-export const underlineCode = `import Link from "@/components/Link";
+export const underlineCode = `import Link from "@/components/ui/Link";
 
 export default function Page() {
   return (
@@ -25,7 +25,7 @@ export default function Page() {
 }
 `;
 
-export const externalCode = `import Link from "@/components/Link";
+export const externalCode = `import Link from "@/components/ui/Link";
 import { IconExternalLink } from '@tabler/icons-react';
 
 export default function Page() {

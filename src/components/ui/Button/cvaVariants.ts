@@ -1,7 +1,7 @@
 export const colors = {
   primary: 'bg-primary not-disabled:active:bg-primary-active focus-visible:ring-primary/50',
   danger: 'bg-danger not-disabled:active:bg-danger-active focus-visible:ring-danger/50',
-  success: 'bg-success not-disabled:active:bg-success-active focus-visible:ring-success/50',
+  secondary: 'bg-secondary not-disabled:active:bg-secondary-active focus-visible:ring-secondary/50',
   warning: 'bg-warning not-disabled:active:bg-warning-active focus-visible:ring-warning/50',
   neutral: `text-foreground bg-neutral-200 not-disabled:active:bg-neutral-300 focus-visible:ring-neutral-300/40 
   dark:bg-neutral-700 dark:not-disabled:active:bg-[#343333] dark:focus-visible:ring-neutral-700/60`,
@@ -20,9 +20,9 @@ export const colorsBorderedVariants: ComputedVariants[] = [
     className: 'border-primary text-primary not-disabled:hover:bg-primary/10 not-disabled:active:bg-primary/20',
   },
   {
-    colors: 'success',
+    colors: 'secondary',
     variant: 'bordered',
-    className: 'border-success text-success not-disabled:hover:bg-success/10 not-disabled:active:bg-success/20',
+    className: 'border-secondary text-secondary not-disabled:hover:bg-secondary/10 not-disabled:active:bg-secondary/20',
   },
   {
     colors: 'warning',
@@ -48,9 +48,9 @@ export const colorsLightVariants: ComputedVariants[] = [
     className: 'text-primary not-disabled:hover:bg-primary/15 not-disabled:active:bg-primary/25',
   },
   {
-    colors: 'success',
+    colors: 'secondary',
     variant: 'light',
-    className: 'text-success not-disabled:hover:bg-success/15 not-disabled:active:bg-success/25',
+    className: 'text-secondary not-disabled:hover:bg-secondary/15 not-disabled:active:bg-secondary/25',
   },
   {
     colors: 'warning',

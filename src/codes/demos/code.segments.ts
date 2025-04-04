@@ -1,4 +1,4 @@
-export const defaultCode = `import Segment, { type Option } from '@/components/Segment';
+export const defaultCode = `import Segment, { type Option } from '@/components/ui/Segment';
 
 const option: Option[] = [
   { label: 'React', value: 'react' },
@@ -13,7 +13,7 @@ export default function Page() {
 }
 `;
 
-export const equaledWidthCode = `import Segment, { type Option } from '@/components/Segment';
+export const equaledWidthCode = `import Segment, { type Option } from '@/components/ui/Segment';
 
 const option: Option[] = [
   { label: 'React', value: 'react' },
@@ -28,7 +28,7 @@ export default function Page() {
 }
 `;
 
-export const disabledCode = `import Segment, { type Option } from '@/components/Segment';
+export const disabledCode = `import Segment, { type Option } from '@/components/ui/Segment';
 
 const option: Option[] = [
   { label: 'React', value: 'react' },
@@ -43,7 +43,7 @@ export default function Page() {
 }
 `;
 
-export const widthIconCode = `import Segment, { type Option } from '@/components/Segment';
+export const widthIconCode = `import Segment, { type Option } from '@/components/ui/Segment';
 import { IconBrandReact, IconBrandVue, IconBrandAngular } from '@tabler/icons-react';
 
 const option: Option[] = [

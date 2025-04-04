@@ -1,5 +1,5 @@
-export const defaultCode = `import { Card, CardHeader, CardTitle, CardBody } from '@/components/Card';
-import Button from '@/components/Button';
+export const defaultCode = `import { Card, CardHeader, CardTitle, CardBody } from '@/components/ui/Card';
+import Button from '@/components/ui/Button';
 import { IconDots } from '@tabler/icons-react';
 
 export default function Page() {

@@ -13,7 +13,7 @@ const alert = cva('rounded-lg p-4 flex border bg-background', {
   variants: {
     state: {
       info: 'border-primary/70 [&_svg]:text-primary',
-      success: 'border-success/70 [&_svg]:text-success',
+      success: 'border-secondary/70 [&_svg]:text-secondary',
       warning: 'border-warning/70 [&_svg]:text-warning',
       danger: 'border-danger/70 [&_svg]:text-danger',
       default: 'border-line',

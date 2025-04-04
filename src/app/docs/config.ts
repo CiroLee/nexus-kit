@@ -93,6 +93,14 @@ export const navConfig = [
         name: 'Link',
         href: '/docs/links',
       },
+      {
+        name: 'Kbd',
+        href: '/docs/kbds',
+      },
+      {
+        name: 'Blockquote',
+        href: '/docs/blockquotes',
+      },
     ],
   },
 ];

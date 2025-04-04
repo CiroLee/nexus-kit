@@ -1,4 +1,4 @@
-export const defaultCode = `import { RadioGroup, Radio } from "@/components/RadioGroup";
+export const defaultCode = `import { RadioGroup, Radio } from "@/components/ui/RadioGroup";
 
 export default function Page() {
   return (
@@ -11,8 +11,8 @@ export default function Page() {
 }
 `;
 
-export const orientationHCode = `import { RadioGroup, Radio } from "@/components/RadioGroup";
-import Heading from '@/components/Heading';
+export const orientationHCode = `import { RadioGroup, Radio } from "@/components/ui/RadioGroup";
+import Heading from '@/components/ui/Heading';
 
 export default function Page() {
   return (
@@ -25,8 +25,8 @@ export default function Page() {
 }
 `;
 
-export const orientationVCode = `import { RadioGroup, Radio } from "@/components/RadioGroup";
-import Heading from '@/components/Heading';
+export const orientationVCode = `import { RadioGroup, Radio } from "@/components/ui/RadioGroup";
+import Heading from '@/components/ui/Heading';
 
 export default function Page() {
   return (
@@ -39,7 +39,7 @@ export default function Page() {
 }
 `;
 
-export const sizeCode = `import { RadioGroup, Radio } from "@/components/RadioGroup";
+export const sizeCode = `import { RadioGroup, Radio } from "@/components/ui/RadioGroup";
 
 export default function Page() {
   return (
@@ -52,7 +52,7 @@ export default function Page() {
 }
 `;
 
-export const disabledCode = `import { RadioGroup, Radio } from "@/components/RadioGroup";
+export const disabledCode = `import { RadioGroup, Radio } from "@/components/ui/RadioGroup";
 
 export default function Page() {
   return (
@@ -65,7 +65,7 @@ export default function Page() {
 }
 `;
 
-export const customContentCode = `import { RadioGroup, Radio } from "@/components/RadioGroup";
+export const customContentCode = `import { RadioGroup, Radio } from "@/components/ui/RadioGroup";
 
 export default function Page() {
   return (
@@ -87,7 +87,7 @@ export default function Page() {
 }
 `;
 
-export const radioButtonCode = `import { RadioGroup, RadioButton } from "@/components/RadioGroup";
+export const radioButtonCode = `import { RadioGroup, RadioButton } from "@/components/ui/RadioGroup";
 
 export default function Page() {
   return (

@@ -24,7 +24,7 @@ const selectTrigger = cva(
       size: {
         sm: 'rounded-sm text-sm h-8',
         md: 'rounded-md h-10 text-sm',
-        lg: 'rounded-lg h-12 text-base',
+        lg: 'rounded-lg h-12 px-2.5 text-base',
       },
     },
     defaultVariants: {
@@ -73,7 +73,7 @@ export default function Select({ placeholder, size, items, className, ...props }
               if (item.options?.length) {
                 return (
                   <Fragment key={item.id}>
-                    <SelectPrimitive.Group className="">
+                    <SelectPrimitive.Group>
                       {item.title ? <SelectPrimitive.Label className="p-2 text-sm text-neutral-500">{item.title}</SelectPrimitive.Label> : null}
                       {item.options.map((opt) => (
                         <SelectItem key={opt.id} value={opt.value || ''} size={size} disabled={opt.disabled}>
@@ -100,13 +100,13 @@ export default function Select({ placeholder, size, items, className, ...props }
 
 const selectItemStyle = cva(
   `cursor-default rounded-[inherit] flex justify-between items-center p-2 transition-colors data-disabled:opacity-50 data-disabled:cursor-not-allowed  
-  outline-none not-data-disabled:focus:bg-neutral-100 not-data-disabled:dark:focus:bg-neutral-700/40 relative`,
+  outline-none not-data-disabled:focus:text-white not-data-disabled:focus:bg-primary relative`,
   {
     variants: {
       size: {
-        sm: 'rounded-sm text-sm',
+        sm: 'rounded-sm text-sm p-1.5',
         md: 'rounded-sm text-sm',
-        lg: 'rounded-md text-base',
+        lg: 'rounded-md text-base p-2.5',
       },
     },
     defaultVariants: {
@@ -120,7 +120,7 @@ function SelectItem({ className, size, children, ...props }: SelectItemProps) {
   return (
     <SelectPrimitive.Item className={cn(selectItemStyle({ size, className }))} {...props}>
       <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
-      <SelectPrimitive.ItemIndicator className="text-primary">
+      <SelectPrimitive.ItemIndicator className="text-foreground">
         <IconCheck size="1em" />
       </SelectPrimitive.ItemIndicator>
     </SelectPrimitive.Item>

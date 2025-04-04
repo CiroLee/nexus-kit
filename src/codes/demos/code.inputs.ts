@@ -1,4 +1,4 @@
-export const sizeCode = `import Input from "@/components/Input";
+export const sizeCode = `import Input from "@/components/ui/Input";
 
 export default function Page() {
   return (
@@ -12,7 +12,7 @@ export default function Page() {
 }
 `;
 
-export const stateCode = `import Input from "@/components/Input";
+export const stateCode = `import Input from "@/components/ui/Input";
 
 export default function Page() {
   return (
@@ -25,7 +25,7 @@ export default function Page() {
 `;
 
 export const preAndSuffixCode = `import { IconUserFilled, IconLockFilled } from '@tabler/icons-react';
-import Input from "@/components/Input";
+import Input from "@/components/ui/Input";
 
 export default function Page() {
   return (
@@ -36,7 +36,7 @@ export default function Page() {
   )
 }
 `;
-export const disabledCode = `import Input from "@/components/Input";
+export const disabledCode = `import Input from "@/components/ui/Input";
 
 export default function Page() {
   return (

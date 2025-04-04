@@ -1,5 +1,5 @@
-export const defaultCode = `import Badge from "@/components/Badge";
-import { Avatar } from "@/components/Avatar
+export const defaultCode = `import Badge from "@/components/ui/Badge";
+import { Avatar } from "@/components/ui/Avatar
 
 export default function Page() {
   return (
@@ -10,8 +10,8 @@ export default function Page() {
 }
 `;
 
-export const sizeCode = `import Badge from "@/components/Badge";
-import { Avatar } from "@/components/Avatar
+export const sizeCode = `import Badge from "@/components/ui/Badge";
+import { Avatar } from "@/components/ui/Avatar
 
 export default function Page() {
   return (
@@ -30,8 +30,8 @@ export default function Page() {
 }
 `;
 
-export const placementCode = `import Badge from "@/components/Badge";
-import { Avatar } from "@/components/Avatar
+export const placementCode = `import Badge from "@/components/ui/Badge";
+import { Avatar } from "@/components/ui/Avatar
 
 export default function Page() {
   return (
@@ -53,8 +53,8 @@ export default function Page() {
 }
 `;
 
-export const contentCode = `import Badge from "@/components/Badge";
-import { Avatar } from "@/components/Avatar
+export const contentCode = `import Badge from "@/components/ui/Badge";
+import { Avatar } from "@/components/ui/Avatar
 
 export default function Page() {
   return (
@@ -62,7 +62,7 @@ export default function Page() {
       <Badge content={<IconBellFilled size={12} />}>
         <Avatar rounded src="/images/avatar-2.png" />
       </Badge>
-      <Badge content="99+" className="bg-success">
+      <Badge content="99+" className="bg-secondary">
         <Avatar rounded src="/images/avatar-2.png" />
       </Badge>
     </div>
@@ -70,8 +70,8 @@ export default function Page() {
 }
 `;
 
-export const asDotCode = `import Badge from "@/components/Badge";
-import { Avatar } from "@/components/Avatar
+export const asDotCode = `import Badge from "@/components/ui/Badge";
+import { Avatar } from "@/components/ui/Avatar
 
 export default function Page() {
   return (
