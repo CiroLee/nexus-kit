@@ -93,6 +93,10 @@ export const navConfig = [
         name: 'Link',
         href: '/docs/links',
       },
+      {
+        name: 'Kbd',
+        href: '/docs/kbds',
+      },
     ],
   },
 ];
