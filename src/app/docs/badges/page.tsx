@@ -76,7 +76,7 @@ export default function Page() {
             <Badge content={<IconBellFilled size={12} />}>
               <Avatar rounded src="/images/avatar-2.png" />
             </Badge>
-            <Badge content="99+" className="bg-success">
+            <Badge content="99+" className="bg-secondary">
               <Avatar rounded src="/images/avatar-2.png" />
             </Badge>
           </div>

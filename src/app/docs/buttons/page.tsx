@@ -61,7 +61,7 @@ export default function ButtonsPage() {
         <PreviewAndCode anchorId="colors" codeText={colorsCode} title="colors" code={<Code code={colorsCode} />}>
           <div className="flex gap-4">
             <Button colors="primary">Primary</Button>
-            <Button colors="success">Success</Button>
+            <Button colors="secondary">Secondary</Button>
             <Button colors="warning">Warning</Button>
             <Button colors="danger">Danger</Button>
             <Button colors="neutral">Neutral</Button>
@@ -81,38 +81,15 @@ export default function ButtonsPage() {
           </Button>
         </PreviewAndCode>
         <PreviewAndCode anchorId="variants" codeText={variantsCode} title="variants" code={<Code code={variantsCode} />}>
-          <div className="flex gap-4 space-y-4">
+          <div className="flex gap-4">
+            <Button variant="solid" colors="primary">
+              Solid
+            </Button>
             <Button variant="bordered" colors="primary">
               Bordered
             </Button>
-            <Button variant="bordered" colors="success">
-              Bordered
-            </Button>
-            <Button variant="bordered" colors="warning">
-              Bordered
-            </Button>
-            <Button variant="bordered" colors="danger">
-              Bordered
-            </Button>
-            <Button variant="bordered" colors="neutral">
-              Bordered
-            </Button>
-          </div>
-          <div className="flex gap-4">
             <Button variant="light" colors="primary">
-              Light
-            </Button>
-            <Button variant="light" colors="success">
-              Light
-            </Button>
-            <Button variant="light" colors="warning">
-              Light
-            </Button>
-            <Button variant="light" colors="danger">
-              Light
-            </Button>
-            <Button variant="light" colors="neutral">
-              Light
+              Bordered
             </Button>
           </div>
         </PreviewAndCode>
@@ -121,8 +98,8 @@ export default function ButtonsPage() {
             <Button disabled colors="primary">
               Primary
             </Button>
-            <Button disabled colors="success">
-              Success
+            <Button disabled colors="secondary">
+              Secondary
             </Button>
             <Button disabled colors="warning">
               Warning

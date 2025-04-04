@@ -31,7 +31,7 @@ export default function Page() {
         <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<Code code={colorsCode} />}>
           <div className="flex gap-4">
             <Tag colors="primary">primary</Tag>
-            <Tag colors="success">success</Tag>
+            <Tag colors="secondary">secondary</Tag>
             <Tag colors="warning">warning</Tag>
             <Tag colors="danger">danger</Tag>
             <Tag colors="neutral">neutral</Tag>
@@ -42,8 +42,8 @@ export default function Page() {
             <Tag bordered colors="primary">
               Primary
             </Tag>
-            <Tag bordered colors="success">
-              Success
+            <Tag bordered colors="secondary">
+              Secondary
             </Tag>
             <Tag bordered colors="warning">
               Warning
@@ -61,7 +61,7 @@ export default function Page() {
             <Tag bordered pill colors="primary">
               Tag
             </Tag>
-            <Tag bordered pill colors="success">
+            <Tag bordered pill colors="secondary">
               Tag
             </Tag>
             <Tag bordered pill colors="warning">

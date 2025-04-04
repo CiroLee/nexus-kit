@@ -13,9 +13,9 @@ const clientCopyBtn = cva('dark:text-foreground text-neutral-300');
 const dependInstall = 'npm install class-variance-authority clsx tailwind-merge @tabler/icons-react';
 const aliasConfig = `{
   compilerOptions: {
-  "paths": {
-        "@/*": ["./src/*"]
-      }
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   }
 }`;
 
@@ -43,8 +43,8 @@ const cssConfig = `@custom-variant dark (&:where([data-theme=dark], [data-theme=
   --color-primary-active: var(--color-blue-600);
   --color-danger: var(--color-red-500);
   --color-danger-active: var(--color-red-600);
-  --color-success: var(--color-green-500);
-  --color-success-active: var(--color-green-600);
+  --color-secondary: var(--color-green-500);
+  --color-secondary-active: var(--color-green-600);
   --color-warning: var(--color-orange-500);
   --color-warning-active: var(--color-orange-600);
 }

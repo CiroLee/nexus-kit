@@ -42,43 +42,43 @@ export default function DialogPage() {
         <SectionIntro title="Dialog" description="Dialogs are used to display custom content to the user via a modal" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<Code code={defaultCode} />}>
-          <Dialog trigger={<Button variant="bordered">open dialog</Button>} title="dialog title" description="This a description...">
+          <Dialog trigger={<Button>open dialog</Button>} title="dialog title" description="This a description...">
             content...
           </Dialog>
         </PreviewAndCode>
         <PreviewAndCode anchorId="backdrop" codeText={backdropCode} title="backdrop" code={<Code code={backdropCode} />}>
           <div className="flex gap-4">
-            <Dialog trigger={<Button variant="bordered">opaque</Button>} backdrop="opaque" title="dialog title" description="This a description...">
+            <Dialog trigger={<Button>opaque</Button>} backdrop="opaque" title="dialog title" description="This a description...">
               content...
             </Dialog>
-            <Dialog trigger={<Button variant="bordered">blur</Button>} backdrop="blur" title="dialog title" description="This a description...">
+            <Dialog trigger={<Button>blur</Button>} backdrop="blur" title="dialog title" description="This a description...">
               content...
             </Dialog>
-            <Dialog trigger={<Button variant="bordered">transparent</Button>} backdrop="transparent" title="dialog title" description="This a description...">
+            <Dialog trigger={<Button>transparent</Button>} backdrop="transparent" title="dialog title" description="This a description...">
               content...
             </Dialog>
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="hidden-title" codeText={hiddenCode} title="hidden title/description" code={<Code code={hiddenCode} />}>
-          <Dialog trigger={<Button variant="bordered">open dialog</Button>} title="Title">
+          <Dialog trigger={<Button>open dialog</Button>} title="Title">
             omitting title/description will not render
           </Dialog>
         </PreviewAndCode>
         <PreviewAndCode anchorId="size" codeText={sizeCode} title="size" code={<Code code={sizeCode} />}>
           <div className="flex gap-4">
-            <Dialog size="sm" trigger={<Button variant="bordered">small</Button>} title="dialog title" description="This a description...">
+            <Dialog size="sm" trigger={<Button>small</Button>} title="dialog title" description="This a description...">
               content...
             </Dialog>
-            <Dialog size="md" trigger={<Button variant="bordered">medium</Button>} title="dialog title" description="This a description...">
+            <Dialog size="md" trigger={<Button>medium</Button>} title="dialog title" description="This a description...">
               content...
             </Dialog>
-            <Dialog size="lg" trigger={<Button variant="bordered">large</Button>} title="dialog title" description="This a description...">
+            <Dialog size="lg" trigger={<Button>large</Button>} title="dialog title" description="This a description...">
               content...
             </Dialog>
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="content-scroll" codeText={scrollCode} title="content scroll" code={<Code code={scrollCode} />}>
-          <Dialog trigger={<Button variant="bordered">open dialog</Button>} title="dialog title" description="This a description...">
+          <Dialog trigger={<Button>open dialog</Button>} title="dialog title" description="This a description...">
             {new Array(30).fill(0).map((_, index) => (
               <p key={index}>this is text {index} ...</p>
             ))}
@@ -86,11 +86,11 @@ export default function DialogPage() {
         </PreviewAndCode>
         <PreviewAndCode anchorId="custom-footer" codeText={customFooter} title="custom footer" code={<Code code={customFooter} />}>
           <div className="flex gap-4">
-            <Dialog trigger={<Button variant="bordered">hide footer</Button>} title="dialog title" description="This a description..." hideFooter>
+            <Dialog trigger={<Button>hide footer</Button>} title="dialog title" description="This a description..." hideFooter>
               content...
             </Dialog>
             <Dialog
-              trigger={<Button variant="bordered">custom footer</Button>}
+              trigger={<Button>custom footer</Button>}
               title="dialog title"
               description="This a description..."
               footer={
