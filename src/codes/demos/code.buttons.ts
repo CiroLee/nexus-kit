@@ -1,4 +1,4 @@
-export const colorsCode = `import Button from '@/components/Button';
+export const colorsCode = `import Button from '@/components/ui/Button';
 
 export default function Demo() {
   return (
@@ -13,7 +13,7 @@ export default function Demo() {
 }
 `;
 
-export const sizeCode = `import Button from '@/components/Button';
+export const sizeCode = `import Button from '@/components/ui/Button';
 
 export default function Demo() {
   return (
@@ -28,7 +28,7 @@ export default function Demo() {
 `;
 
 export const iconCode = `import { IconUpload } from '@tabler/icons-react';
-import Button from '@/components/Button';
+import Button from '@/components/ui/Button';
 
 export default function Demo() {
   return (
@@ -39,7 +39,7 @@ export default function Demo() {
 }
 `;
 
-export const variantsCode = `import Button from '@/components/Button';
+export const variantsCode = `import Button from '@/components/ui/Button';
 
 export default function Demo() {
   return (
@@ -63,7 +63,7 @@ export default function Demo() {
 }
 `;
 
-export const disabledCode = `import Button from '@/components/Button';
+export const disabledCode = `import Button from '@/components/ui/Button';
 
 export default function Demo() {
   return (
@@ -78,7 +78,7 @@ export default function Demo() {
 }
 `;
 
-export const pillCode = `import Button from '@/components/Button';
+export const pillCode = `import Button from '@/components/ui/Button';
 
 export default function Demo() {
   return (
@@ -93,7 +93,7 @@ export default function Demo() {
 `;
 
 export const withIconCode = `import { IconShoppingCart, IconArrowRight } from '@tabler/icons-react';
-import Button from '@/components/Button';
+import Button from '@/components/ui/Button';
 
 export default function Demo() {
   return (
@@ -112,7 +112,7 @@ export default function Demo() {
 `;
 
 export const loadingCode = `import { IconLoader } from '@tabler/icons-react';
-import Button from '@/components/Button';
+import Button from '@/components/ui/Button';
 
 export default function Demo() {
   return (
@@ -127,7 +127,7 @@ export default function Demo() {
 `;
 
 export const asChildCode = `import Link from 'next/link';
-import Button from '@/components/Button';
+import Button from '@/components/ui/Button';
 
 export default function Demo() {
   return (
@@ -142,8 +142,8 @@ export default function Demo() {
 }
 `;
 
-export const buttonGroupCode = `import Button from '@/components/Button';
-import ButtonGroup from '@/components/ButtonGroup';
+export const buttonGroupCode = `import Button from '@/components/ui/Button';
+import ButtonGroup from '@/components/ui/ButtonGroup';
 
 export default function Demo() {
   return (

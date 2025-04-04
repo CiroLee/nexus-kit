@@ -1,4 +1,4 @@
-export const defaultCode = `import { Table, TableHeader, TableHeaderCell, TableBody, TableCell, TableRow } from '@/components/Table';
+export const defaultCode = `import { Table, TableHeader, TableHeaderCell, TableBody, TableCell, TableRow } from '@/components/ui/Table';
 
 export default function Page() {
   return (
@@ -32,7 +32,7 @@ export default function Page() {
 }
 `;
 
-export const fixedHeaderCode = `import { Table, TableHeader, TableHeaderCell, TableBody, TableCell, TableRow } from '@/components/ui/Table';
+export const fixedHeaderCode = `import { Table, TableHeader, TableHeaderCell, TableBody, TableCell, TableRow } from '@/components/ui/ui/Table';
 
 const foodData = [
   { name: 'Apple', price: 1.2, stock: 50, productionDate: '2023-10-01' },
@@ -82,7 +82,7 @@ export default function Page() {
 }
 `;
 
-export const stripedCode = `import { Table, TableHeader, TableHeaderCell, TableBody, TableCell, TableRow } from '@/components/ui/Table';
+export const stripedCode = `import { Table, TableHeader, TableHeaderCell, TableBody, TableCell, TableRow } from '@/components/ui/ui/Table';
 
 const foodData = [
   { name: 'Apple', price: 1.2, stock: 50, productionDate: '2023-10-01' },

@@ -1,4 +1,4 @@
-export const defaultCode = `import Textarea from "@/components/Textarea";
+export const defaultCode = `import Textarea from "@/components/ui/Textarea";
 
 export default function Page() {
   return (
@@ -7,7 +7,7 @@ export default function Page() {
 }
 `;
 
-export const stateCode = `import Textarea from "@/components/Textarea";
+export const stateCode = `import Textarea from "@/components/ui/Textarea";
 
 export default function Page() {
   return (
@@ -19,7 +19,7 @@ export default function Page() {
 }
 `;
 
-export const disabledCode = `import Textarea from "@/components/Textarea";
+export const disabledCode = `import Textarea from "@/components/ui/Textarea";
 
 export default function Page() {
   return (
@@ -27,7 +27,7 @@ export default function Page() {
   )
 }
 `;
-export const resizeCode = `import Textarea from "@/components/Textarea";
+export const resizeCode = `import Textarea from "@/components/ui/Textarea";
 
 export default function Page() {
   return (

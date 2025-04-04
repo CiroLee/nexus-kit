@@ -1,4 +1,4 @@
-export const defaultCode = `import { Tabs, TabsList, TabsItem, TabsContent } from '@/components/Tabs';
+export const defaultCode = `import { Tabs, TabsList, TabsItem, TabsContent } from '@/components/ui/Tabs';
 
 export default function Page() {
   return (
@@ -16,7 +16,7 @@ export default function Page() {
 }
 `;
 
-export const verticalCode = `import { Tabs, TabsList, TabsItem, TabsContent } from '@/components/Tabs';
+export const verticalCode = `import { Tabs, TabsList, TabsItem, TabsContent } from '@/components/ui/Tabs';
 
 export default function Page() {
   return (
@@ -34,7 +34,7 @@ export default function Page() {
 }
 `;
 
-export const disabledCode = `import { Tabs, TabsList, TabsItem, TabsContent } from '@/components/Tabs';
+export const disabledCode = `import { Tabs, TabsList, TabsItem, TabsContent } from '@/components/ui/Tabs';
 
 export default function Page() {
   return (
@@ -52,7 +52,7 @@ export default function Page() {
 }
 `;
 
-export const widthIconCode = `import { Tabs, TabsList, TabsItem, TabsContent } from '@/components/Tabs';
+export const widthIconCode = `import { Tabs, TabsList, TabsItem, TabsContent } from '@/components/ui/Tabs';
 import { IconMusic, IconVideo, IconPhoto } from '@tabler/icons-react';
 
 export default function Page() {

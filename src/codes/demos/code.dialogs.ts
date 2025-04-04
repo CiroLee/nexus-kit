@@ -1,5 +1,5 @@
-export const defaultCode = `import { Dialog } from "@/components/Dialog";
-import Button from "@/components/Button";
+export const defaultCode = `import { Dialog } from "@/components/ui/Dialog";
+import Button from "@/components/ui/Button";
 
 export default function Page() {
   return (
@@ -10,8 +10,8 @@ export default function Page() {
 }
 `;
 
-export const backdropCode = `import { Dialog } from "@/components/Dialog";
-import Button from "@/components/Button";
+export const backdropCode = `import { Dialog } from "@/components/ui/Dialog";
+import Button from "@/components/ui/Button";
 
 export default function Page() {
   return (
@@ -30,8 +30,8 @@ export default function Page() {
 }
 `;
 
-export const hiddenCode = `import { Dialog } from "@/components/Dialog";
-import Button from "@/components/Button";
+export const hiddenCode = `import { Dialog } from "@/components/ui/Dialog";
+import Button from "@/components/ui/Button";
 
 export default function Page() {
   return (
@@ -42,8 +42,8 @@ export default function Page() {
 }
 `;
 
-export const sizeCode = `import { Dialog } from "@/components/Dialog";
-import Button from "@/components/Button";
+export const sizeCode = `import { Dialog } from "@/components/ui/Dialog";
+import Button from "@/components/ui/Button";
 
 export default function Page() {
   return (
@@ -62,8 +62,8 @@ export default function Page() {
 }
 `;
 
-export const scrollCode = `import { Dialog } from "@/components/Dialog";
-import Button from "@/components/Button";
+export const scrollCode = `import { Dialog } from "@/components/ui/Dialog";
+import Button from "@/components/ui/Button";
 
 export default function Page() {
   return (
@@ -76,8 +76,8 @@ export default function Page() {
 }
 `;
 
-export const customFooter = `import { Dialog, DialogClose } from "@/components/Dialog";
-import Button from "@/components/Button";
+export const customFooter = `import { Dialog, DialogClose } from "@/components/ui/Dialog";
+import Button from "@/components/ui/Button";
 
 export default function Page() {
   return (

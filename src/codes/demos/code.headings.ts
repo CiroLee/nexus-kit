@@ -1,4 +1,4 @@
-export const asCode = `import Heading from "@/components/Heading";
+export const asCode = `import Heading from "@/components/ui/Heading";
 
 export default function Page() {
   return (

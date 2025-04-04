@@ -1,4 +1,4 @@
-export const defaultCode = `import Switch from "@/components/Switch";
+export const defaultCode = `import Switch from "@/components/ui/Switch";
 
 export default function Page() {
   return (
@@ -7,7 +7,7 @@ export default function Page() {
 }
 `;
 
-export const labelCode = `import Switch from "@/components/Switch";
+export const labelCode = `import Switch from "@/components/ui/Switch";
 
 export default function Page() {
   return (
@@ -16,7 +16,7 @@ export default function Page() {
 }
 `;
 
-export const sizeCode = `import Switch from "@/components/Switch";
+export const sizeCode = `import Switch from "@/components/ui/Switch";
 
 export default function Page() {
   return (
@@ -29,7 +29,7 @@ export default function Page() {
 }
 `;
 
-export const disabledCode = `import Switch from "@/components/Switch";
+export const disabledCode = `import Switch from "@/components/ui/Switch";
 
 export default function Page() {
   return (

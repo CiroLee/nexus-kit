@@ -1,4 +1,4 @@
-export const placementCode = `import { Drawer } from "@/components/Drawer";
+export const placementCode = `import { Drawer } from "@/components/ui/Drawer";
 
 export default function Page() {
 const [placement, setPlacement] = useState<Placement>('top');
@@ -21,7 +21,7 @@ const [placement, setPlacement] = useState<Placement>('top');
 }
 `;
 
-export const backdropCode = `import { Drawer } from "@/components/Drawer";
+export const backdropCode = `import { Drawer } from "@/components/ui/Drawer";
 
 export default function Page() {
 const [placement, setPlacement] = useState<Placement>('top');
@@ -41,7 +41,7 @@ const [placement, setPlacement] = useState<Placement>('top');
 }
 `;
 
-export const widthCode = `import { Drawer } from "@/components/Drawer";
+export const widthCode = `import { Drawer } from "@/components/ui/Drawer";
 
 export default function Page() {
 const [placement, setPlacement] = useState<Placement>('top');
@@ -53,7 +53,7 @@ const [placement, setPlacement] = useState<Placement>('top');
 }
 `;
 
-export const heightCode = `import { Drawer } from "@/components/Drawer";
+export const heightCode = `import { Drawer } from "@/components/ui/Drawer";
 
 export default function Page() {
 const [placement, setPlacement] = useState<Placement>('top');
@@ -66,7 +66,7 @@ const [placement, setPlacement] = useState<Placement>('top');
 `;
 
 export const contentCode = `import { IconX } from '@tabler/icons-react';
-import { Drawer, DrawerClose } from "@/components/Drawer";
+import { Drawer, DrawerClose } from "@/components/ui/Drawer";
 
 export default function Page() {
 const [placement, setPlacement] = useState<Placement>('top');

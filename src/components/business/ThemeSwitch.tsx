@@ -2,13 +2,13 @@
 import { useState } from 'react';
 import { useIsClient } from 'usehooks-ts';
 import { cva } from 'class-variance-authority';
-import { Popover } from 'radix-ui';
+import { DropdownMenu } from 'radix-ui';
 import { AnimatePresence, motion } from 'motion/react';
 import Button from '../ui/Button';
 import { useTheme } from 'next-themes';
 import { IconSun, IconMoon, IconDeviceDesktop } from '@tabler/icons-react';
 
-const item = cva('flex items-center gap-1 rounded p-2 cursor-default transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-700/40');
+const item = cva('flex items-center outline-none gap-1 text-sm rounded p-2 cursor-default transition-colors focus:bg-primary focus:text-white');
 const themeMap = {
   light: <IconSun size={22} />,
   dark: <IconMoon size={20} />,
@@ -26,34 +26,34 @@ export default function ThemeSwitch() {
 
   if (!isClient) return null;
   return (
-    <Popover.Root open={open} onOpenChange={setOpen}>
-      <Popover.Trigger asChild>
+    <DropdownMenu.Root open={open} onOpenChange={setOpen}>
+      <DropdownMenu.Trigger asChild>
         <Button variant="light" colors="neutral" size="sm" icon>
           {themeMap[theme as keyof typeof themeMap]}
         </Button>
-      </Popover.Trigger>
+      </DropdownMenu.Trigger>
       <AnimatePresence>
         {open ? (
-          <Popover.Portal forceMount>
-            <Popover.Content sideOffset={8} align="end" className="z-(--popup) outline-none">
+          <DropdownMenu.Portal forceMount>
+            <DropdownMenu.Content sideOffset={8} align="end" className="z-(--popup) outline-none">
               <motion.div className="border-line bg-background rounded-md border p-1" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }}>
-                <div className={item()} onClick={() => handleSetTheme('light')}>
-                  <IconSun size={20} />
+                <DropdownMenu.Item className={item()} onSelect={() => handleSetTheme('light')}>
+                  <IconSun size={18} />
                   Light
-                </div>
-                <div className={item()} onClick={() => handleSetTheme('dark')}>
+                </DropdownMenu.Item>
+                <DropdownMenu.Item className={item()} onClick={() => handleSetTheme('dark')}>
                   <IconMoon size={18} />
                   Dark
-                </div>
-                <div className={item()} onClick={() => handleSetTheme('system')}>
+                </DropdownMenu.Item>
+                <DropdownMenu.Item className={item()} onClick={() => handleSetTheme('system')}>
                   <IconDeviceDesktop size={18} />
                   System
-                </div>
+                </DropdownMenu.Item>
               </motion.div>
-            </Popover.Content>
-          </Popover.Portal>
+            </DropdownMenu.Content>
+          </DropdownMenu.Portal>
         ) : null}
       </AnimatePresence>
-    </Popover.Root>
+    </DropdownMenu.Root>
   );
 }

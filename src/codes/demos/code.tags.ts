@@ -1,4 +1,4 @@
-export const colorsCode = `import Tag from "@/components/Tag";
+export const colorsCode = `import Tag from "@/components/ui/Tag";
 
 export default function Page() {
   return (
@@ -13,7 +13,7 @@ export default function Page() {
 }
 `;
 
-export const borderedCode = `import Tag from "@/components/Tag";
+export const borderedCode = `import Tag from "@/components/ui/Tag";
 
 export default function Page() {
   return (
@@ -28,7 +28,7 @@ export default function Page() {
 }
 `;
 
-export const pillCode = `import Tag from "@/components/Tag";
+export const pillCode = `import Tag from "@/components/ui/Tag";
 
 export default function Page() {
   return (

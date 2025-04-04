@@ -1,6 +1,6 @@
 export const stateCode = `'use client';
 
-import { Alert, AlertTitle } from "@/components/Alert";
+import { Alert, AlertTitle } from "@/components/ui/Alert";
 
 export default function Page() {
   return (
@@ -32,7 +32,7 @@ export default function Page() {
 
 export const showIconCode = `'use client';
 
-import { Alert, AlertTitle } from "@/components/Alert";
+import { Alert, AlertTitle } from "@/components/ui/Alert";
 
 export default function Page() {
   return (
@@ -48,7 +48,7 @@ export default function Page() {
 
 export const customIcon = `'use client';
 
-import { Alert, AlertTitle } from "@/components/Alert";
+import { Alert, AlertTitle } from "@/components/ui/Alert";
 import { IconTimezone } from '@tabler/icons-react';
 
 export default function Page() {
