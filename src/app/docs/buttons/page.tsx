@@ -89,7 +89,7 @@ export default function ButtonsPage() {
               Bordered
             </Button>
             <Button variant="light" colors="primary">
-              Bordered
+              Light
             </Button>
           </div>
         </PreviewAndCode>

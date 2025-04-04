@@ -46,7 +46,7 @@ export default function Demo() {
     <div className="flex gap-4">
       <Button variant="solid" colors="primary">Solid</Button>
       <Button variant="bordered" colors="primary">Bordered</Button>
-      <Button variant="light" colors="primary">Bordered</Button>
+      <Button variant="light" colors="primary">Light</Button>
     </div>
   )
 }
