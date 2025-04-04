@@ -4,16 +4,16 @@ export default function Page() {
 const [placement, setPlacement] = useState<Placement>('top');
   return (
     <div className="flex gap-4">
-      <Drawer placement="top" trigger={<Button variant="bordered">top</Button>}>
+      <Drawer placement="top" trigger={<Button>top</Button>}>
         content...
       </Drawer>
-      <Drawer placement="right" trigger={<Button variant="bordered">right</Button>}>
+      <Drawer placement="right" trigger={<Button>right</Button>}>
         content...
       </Drawer>
-      <Drawer placement="bottom" trigger={<Button variant="bordered">bottom</Button>}>
+      <Drawer placement="bottom" trigger={<Button>bottom</Button>}>
         content...
       </Drawer>
-      <Drawer placement="left" trigger={<Button variant="bordered">left</Button>}>
+      <Drawer placement="left" trigger={<Button>left</Button>}>
         content...
       </Drawer>
     </div>
@@ -27,13 +27,13 @@ export default function Page() {
 const [placement, setPlacement] = useState<Placement>('top');
   return (
     <div className="flex gap-4">
-      <Drawer placement="right" backdrop="opaque" trigger={<Button variant="bordered">opaque</Button>}>
+      <Drawer placement="right" backdrop="opaque" trigger={<Button>opaque</Button>}>
         content...
       </Drawer>
-      <Drawer placement="right" backdrop="blur" trigger={<Button variant="bordered">blur</Button>}>
+      <Drawer placement="right" backdrop="blur" trigger={<Button>blur</Button>}>
         content...
       </Drawer>
-      <Drawer placement="right" backdrop="transparent" trigger={<Button variant="bordered">transparent</Button>}>
+      <Drawer placement="right" backdrop="transparent" trigger={<Button>transparent</Button>}>
         content...
       </Drawer>
     </div>
@@ -46,7 +46,7 @@ export const widthCode = `import { Drawer } from "@/components/ui/Drawer";
 export default function Page() {
 const [placement, setPlacement] = useState<Placement>('top');
   return (
-    <Drawer placement="right" width="60%" trigger={<Button variant="bordered">Open Drawer</Button>}>
+    <Drawer placement="right" width="60%" trigger={<Button>Open Drawer</Button>}>
       width=60%
     </Drawer>
   )
@@ -58,7 +58,7 @@ export const heightCode = `import { Drawer } from "@/components/ui/Drawer";
 export default function Page() {
 const [placement, setPlacement] = useState<Placement>('top');
   return (
-    <Drawer placement="bottom" height="60%" trigger={<Button variant="bordered">Open Drawer</Button>}>
+    <Drawer placement="bottom" height="60%" trigger={<Button>Open Drawer</Button>}>
       height=60%
     </Drawer>
   )
@@ -71,7 +71,7 @@ import { Drawer, DrawerClose } from "@/components/ui/Drawer";
 export default function Page() {
 const [placement, setPlacement] = useState<Placement>('top');
   return (
-    <Drawer trigger={<Button variant="bordered">Open Drawer</Button>}>
+    <Drawer trigger={<Button>Open Drawer</Button>}>
       <div className="flex items-center justify-between">
         <Heading as="h4">Title</Heading>
         <DrawerClose>
