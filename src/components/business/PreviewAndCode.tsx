@@ -44,7 +44,7 @@ export default function PreviewAndCode({ anchorId, title, description, codeText 
       <Heading as="h3" className="whitespace-pre-wrap">
         {title}
       </Heading>
-      <p className="mb-4 text-gray-400">{description}</p>
+      <p className="mb-4 text-sm text-gray-400">{description}</p>
       <div className="flex items-center justify-between">
         <Segment defaultValue="preview" option={option} onValueChange={setValue} />
         <ClientCopyButton text={codeText} />

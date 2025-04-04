@@ -41,45 +41,45 @@ export default function DrawerPage() {
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="placement" codeText={placementCode} title="placement" code={<Code code={placementCode} />}>
           <div className="flex gap-4">
-            <Drawer placement="top" trigger={<Button variant="bordered">top</Button>}>
+            <Drawer placement="top" trigger={<Button>top</Button>}>
               content...
             </Drawer>
-            <Drawer placement="right" trigger={<Button variant="bordered">right</Button>}>
+            <Drawer placement="right" trigger={<Button>right</Button>}>
               content...
             </Drawer>
-            <Drawer placement="bottom" trigger={<Button variant="bordered">bottom</Button>}>
+            <Drawer placement="bottom" trigger={<Button>bottom</Button>}>
               content...
             </Drawer>
-            <Drawer placement="left" trigger={<Button variant="bordered">left</Button>}>
+            <Drawer placement="left" trigger={<Button>left</Button>}>
               content...
             </Drawer>
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="backdrop" codeText={backdropCode} title="backdrop" code={<Code code={backdropCode} />}>
           <div className="flex gap-4">
-            <Drawer placement="right" backdrop="opaque" trigger={<Button variant="bordered">opaque</Button>}>
+            <Drawer placement="right" backdrop="opaque" trigger={<Button>opaque</Button>}>
               content...
             </Drawer>
-            <Drawer placement="right" backdrop="blur" trigger={<Button variant="bordered">blur</Button>}>
+            <Drawer placement="right" backdrop="blur" trigger={<Button>blur</Button>}>
               content...
             </Drawer>
-            <Drawer placement="right" backdrop="transparent" trigger={<Button variant="bordered">transparent</Button>}>
+            <Drawer placement="right" backdrop="transparent" trigger={<Button>transparent</Button>}>
               content...
             </Drawer>
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="custom-width" codeText={widthCode} title="custom width" code={<Code code={widthCode} />}>
-          <Drawer placement="right" width="60%" trigger={<Button variant="bordered">Open Drawer</Button>}>
+          <Drawer placement="right" width="60%" trigger={<Button>Open Drawer</Button>}>
             width=60%
           </Drawer>
         </PreviewAndCode>
         <PreviewAndCode anchorId="custom-height" codeText={heightCode} title="custom height" code={<Code code={heightCode} />}>
-          <Drawer placement="bottom" height="60%" trigger={<Button variant="bordered">Open Drawer</Button>}>
+          <Drawer placement="bottom" height="60%" trigger={<Button>Open Drawer</Button>}>
             height=60%
           </Drawer>
         </PreviewAndCode>
         <PreviewAndCode anchorId="custom-content" codeText={contentCode} title="custom content" code={<Code code={contentCode} />}>
-          <Drawer trigger={<Button variant="bordered">Open Drawer</Button>}>
+          <Drawer trigger={<Button>Open Drawer</Button>}>
             <div className="flex items-center justify-between">
               <Heading as="h4">Title</Heading>
               <DrawerClose>
