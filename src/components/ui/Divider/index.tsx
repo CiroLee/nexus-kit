@@ -11,7 +11,7 @@ const divider = cva('relative inline-flex items-center before:bg-line after:bg-l
     orientation: 'horizontal',
   },
 });
-const content = cva('', {
+const content = cva('whitespace-nowrap text-sm', {
   variants: {
     orientation: {
       horizontal: 'px-3',
