@@ -6,7 +6,7 @@ import { IconCheck } from '@tabler/icons-react';
 
 const checkbox = cva(
   \`relative flex items-center justify-center border-2 border-neutral-300 dark:border-neutral-600 transition cursor-pointer
-data-[state=checked]:border-primary not-disabled:hover:border-primary disabled:opacity-50 disabled:cursor-not-allowed\`,
+ data-[state=checked]:border-primary not-disabled:hover:border-primary disabled:opacity-50 disabled:cursor-not-allowed\`,
   {
     variants: {
       size: {
@@ -34,20 +34,16 @@ const checkboxIndicator = cva('relative size-full text-white flex items-center j
   },
 });
 type CheckboxVariants = VariantProps<typeof checkbox>;
-interface CheckboxProps extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>, CheckboxVariants {
-  children?: React.ReactNode;
-  className?: string;
-  ref?: React.Ref<HTMLButtonElement>;
-}
-export default function Checkbox({ className, ref, id, size, children, ...props }: CheckboxProps) {
+interface CheckboxProps extends React.ComponentPropsWithRef<typeof CheckboxPrimitive.Root>, CheckboxVariants {}
+export default function Checkbox({ className, id, size, children, ...props }: CheckboxProps) {
   return (
     <div className="relative flex items-center gap-2.5 select-none">
-      <CheckboxPrimitive.Root ref={ref} id={id ?? String(props.value)} className={cn('peer', checkbox({ size, className }))} {...props}>
+      <CheckboxPrimitive.Root id={id} className={cn('peer', checkbox({ size, className }))} {...props}>
         <CheckboxPrimitive.Indicator className={checkboxIndicator({ size })}>
           <IconCheck size="1em" />
         </CheckboxPrimitive.Indicator>
       </CheckboxPrimitive.Root>
-      <label className="cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-50" htmlFor={id ?? String(props.value)}>
+      <label className="cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-50" htmlFor={id}>
         {children}
       </label>
     </div>
