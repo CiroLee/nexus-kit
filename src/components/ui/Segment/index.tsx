@@ -33,7 +33,6 @@ interface SegmentProps extends React.HTMLAttributes<HTMLDivElement> {
   defaultValue?: Option['value'];
   equaledWidth?: boolean;
   option: Option[];
-  className?: string;
   ref?: React.Ref<HTMLDivElement>;
   onValueChange?: (value: Option['value']) => void;
 }

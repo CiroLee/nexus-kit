@@ -35,18 +35,15 @@ const input = cva('outline-none size-full');
 type InputWrapVariants = VariantProps<typeof inputWrap>;
 interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'type' | 'prefix' | 'disabled'>, InputWrapVariants {
   type?: 'text' | 'password' | 'email';
-  className?: string;
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
-  style?: React.CSSProperties;
   ref?: React.Ref<HTMLInputElement>;
 }
-export default function Input(props: InputProps) {
-  const { size, state, prefix, suffix, disabled, rounded, className, style, ref, ...rest } = props;
+export default function Input({ size, state, prefix, suffix, disabled, rounded, className, style, ...props }: InputProps) {
   return (
     <div data-disabled={disabled} className={cn(inputWrap({ size, state, disabled, rounded, className }))} style={style}>
       {prefix ? <>{prefix}</> : null}
-      <input ref={ref} className={input()} disabled={!!disabled} {...rest} />
+      <input className={input()} disabled={!!disabled} {...props} />
       {suffix ? <>{suffix}</> : null}
     </div>
   );

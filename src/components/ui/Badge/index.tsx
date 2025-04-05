@@ -26,10 +26,7 @@ const badge = cva(`rounded-full text-white p-0.5 box-border absolute flex items-
 
 type BadgeVariants = VariantProps<typeof badge>;
 interface BadgeProps extends Omit<React.HTMLAttributes<HTMLSpanElement>, 'content'>, BadgeVariants {
-  className?: string;
-  style?: React.CSSProperties;
   content?: React.ReactNode;
-  children?: React.ReactNode;
   ref?: React.Ref<HTMLSpanElement>;
 }
 export default function Badge({ className, asDot, placement, content, children, size, ref, ...props }: BadgeProps) {

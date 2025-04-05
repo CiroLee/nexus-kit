@@ -1,9 +1,6 @@
 import { cn } from '@/lib/utils';
 
-interface ButtonGroupProps {
-  className?: string;
-  style?: React.CSSProperties;
-  children: React.ReactNode;
+interface ButtonGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   ref?: React.Ref<HTMLDivElement>;
 }
 

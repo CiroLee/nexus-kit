@@ -24,9 +24,6 @@ const tag = cva('h-6 inline-flex items-center px-2 text-sm rounded-sm outline-no
 
 type TagVariants = VariantProps<typeof tag>;
 interface TagProps extends React.HTMLAttributes<HTMLSpanElement>, TagVariants {
-  className?: string;
-  style?: React.CSSProperties;
-  children?: React.ReactNode;
   ref?: React.Ref<HTMLSpanElement>;
 }
 export default function Tag({ className, colors, bordered, pill, children, ref, ...props }: TagProps) {

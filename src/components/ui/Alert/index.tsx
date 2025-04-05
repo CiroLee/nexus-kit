@@ -20,12 +20,9 @@ const alert = cva('rounded-lg p-4 flex border bg-background', {
 
 type AlertVariants = VariantProps<typeof alert>;
 
-interface AlertProps extends AlertVariants {
+interface AlertProps extends React.HTMLAttributes<HTMLDivElement>, AlertVariants {
   showIcon?: boolean;
   icon?: React.ReactNode;
-  className?: string;
-  children: React.ReactNode;
-  style?: React.CSSProperties;
   ref?: React.Ref<HTMLDivElement>;
 }
 

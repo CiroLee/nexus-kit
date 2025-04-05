@@ -1,7 +1,5 @@
 import { cn } from '@/lib/utils';
 interface CardGlobalProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string;
-  children?: React.ReactNode;
   ref?: React.Ref<HTMLDivElement>;
 }
 export function Card({ className, children, ref, ...props }: CardGlobalProps) {

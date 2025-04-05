@@ -42,8 +42,6 @@ const button = cva(`inline-flex items-center justify-center transition not-disab
 
 type ButtonVariants = VariantProps<typeof button>;
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, Omit<ButtonVariants, 'disabled'> {
-  className?: string;
-  style?: React.CSSProperties;
   asChild?: boolean;
   ref?: React.Ref<HTMLButtonElement>;
 }
