@@ -33,6 +33,19 @@ const checkboxIndicator = cva('relative size-full text-white flex items-center j
     size: 'md',
   },
 });
+
+const label = cva('cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-50', {
+  variants: {
+    size: {
+      sm: 'text-sm',
+      md: 'text-base',
+      lg: 'text-lg',
+    },
+  },
+  defaultVariants: {
+    size: 'md',
+  },
+});
 type CheckboxVariants = VariantProps<typeof checkbox>;
 interface CheckboxProps extends React.ComponentPropsWithRef<typeof CheckboxPrimitive.Root>, CheckboxVariants {}
 export default function Checkbox({ className, id, size, children, ...props }: CheckboxProps) {
@@ -43,7 +56,7 @@ export default function Checkbox({ className, id, size, children, ...props }: Ch
           <IconCheck size="1em" />
         </CheckboxPrimitive.Indicator>
       </CheckboxPrimitive.Root>
-      <label className="cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-50" htmlFor={id}>
+      <label className={label({ size })} htmlFor={id}>
         {children}
       </label>
     </div>
