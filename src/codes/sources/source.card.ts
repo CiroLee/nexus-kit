@@ -1,5 +1,4 @@
 const code = `import { cn } from '@/lib/utils';
-import { a } from 'motion/react-client';
 interface CardGlobalProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   children?: React.ReactNode;

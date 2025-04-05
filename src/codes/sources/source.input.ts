@@ -1,7 +1,6 @@
 const code = `'use client';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
-import React from 'react';
 
 const inputWrap = cva(
   \`relative px-3 border border-line outline-none not-disabled:has-focus:border-primary transition-colors flex gap-2 items-center 
