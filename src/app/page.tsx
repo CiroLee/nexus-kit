@@ -5,7 +5,7 @@ import Heading from '@/components/ui/Heading';
 import Header from '@/components/business/Header';
 import Link from 'next/link';
 import { navConfig } from '@/app/docs/config';
-const componentsAmounts = navConfig?.filter((item) => item.key === 'base')[0].children.length;
+const componentsAmounts = navConfig?.filter((item) => item.key === 'base')[0].children?.length;
 
 export default function Home() {
   return (

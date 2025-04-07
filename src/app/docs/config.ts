@@ -1,5 +1,10 @@
 export const navConfig = [
   {
+    title: 'Examples',
+    key: 'examples',
+    href: '/examples',
+  },
+  {
     title: 'Get Started',
     key: 'get-started',
     children: [

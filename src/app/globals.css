@@ -9,3 +9,10 @@
     max-width: 54vw;
   }
 }
+
+.diagnoal {
+  background-image: repeating-linear-gradient(-45deg, #e0e0e0, #e0e0e0 1px, #fefefe 1px, #fefefe 14px);
+}
+[data-theme='dark'] .diagnoal {
+  background-image: repeating-linear-gradient(-45deg, #4a4a4a, #4a4a4a 1px, rgb(61 61 61 / 50%) 1px, rgb(61 61 61 / 50%) 14px);
+}
