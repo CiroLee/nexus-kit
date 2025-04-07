@@ -20,7 +20,6 @@ export default async function Page({ params }: { params: Promise<{ repo: string 
           Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
           Accept: 'application/vnd.github.raw',
         },
-        next: { revalidate: 60 },
       });
 
       if (!response.ok) {
