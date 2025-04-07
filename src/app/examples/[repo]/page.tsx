@@ -58,6 +58,7 @@ export default async function Page({ params }: { params: Promise<{ repo: string 
             isDiagnoal
             className="[&_.preview-content]:p-0"
             title="create account"
+            codeText={codesArray[index] || ''}
             code={<Code code={codesArray[index] || ''} />}
             trail={
               <Button icon variant="bordered" colors="neutral" asChild>
