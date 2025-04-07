@@ -26,18 +26,22 @@ const cssConfig = `@custom-variant dark (&:where([data-theme=dark], [data-theme=
   --background: #fff;
   --foreground: oklch(0.269 0 0);
   --line: oklch(0.922 0 0);
+  --description: oklch(70.8% 0 0);
 }
 
 [data-theme='dark'] {
   --background: oklch(0.269 0 0);
   --foreground: #fafafa;
   --line: oklch(0.371 0 0);
+  --description: oklch(55.6% 0 0);
+  
 }
 
 @theme {
   --color-foreground: var(--foreground);
   --color-background: var(--background);
   --color-line: var(--line);
+  --color-description: var(--description);
 
   --color-primary: var(--color-blue-500);
   --color-primary-active: var(--color-blue-600);

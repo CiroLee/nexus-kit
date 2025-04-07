@@ -1,11 +1,11 @@
 'use client';
+import { useCallback } from 'react';
 import Link from 'next/link';
 import { useMobile } from '@/hooks';
 import { useSidebar } from '@/contexts/doc-context';
 import { usePathname } from 'next/navigation';
 import { navConfig } from '@/app/docs/config';
 import { cn } from '@/lib/utils';
-import { useCallback } from 'react';
 
 const aside = cn(`bg-background absolute z-10 h-full w-full overflow-auto px-3 py-5 sm:relative sm:w-[300px] sm:translate-y-0 sm:opacity-100`);
 export default function SideNavBar() {
@@ -27,10 +27,16 @@ export default function SideNavBar() {
       })}>
       {navConfig.map((nav) => (
         <div key={nav.key} className="not-last:mb-4">
-          <h4>{nav.title}</h4>
+          {nav.href ? (
+            <Link href={nav.href}>
+              <h4>{nav.title}</h4>
+            </Link>
+          ) : (
+            <h4>{nav.title}</h4>
+          )}
           <div>
             {nav.children
-              .sort((a, b) => a.name.localeCompare(b.name))
+              ?.sort((a, b) => a.name.localeCompare(b.name))
               .map((item) => (
                 <Link
                   className={cn('before:bg-line/80 relative flex items-center py-2 pl-3 text-sm before:absolute before:left-0 before:h-full before:w-0.5', {
