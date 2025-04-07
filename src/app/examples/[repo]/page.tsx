@@ -44,8 +44,8 @@ export default async function Page({ params }: { params: Promise<{ repo: string 
 
   return (
     <div className="relative mx-auto max-w-[90%] overflow-auto">
-      <Link href="/examples" className="absolute top-5 left-0">
-        <IconArrowLeft size={24} />
+      <Link href="/examples" className="absolute flex items-center gap-2">
+        <IconArrowLeft size={24} /> Back to examples
       </Link>
       <Heading as="h1" className="mt-12 mb-3 text-center">
         {title}

@@ -5,7 +5,7 @@ import './page.css';
 
 export default function Examples() {
   return (
-    <div className="example relative">
+    <div className="example relative overflow-auto">
       <Heading as="h1" className="mt-12 mb-3 text-center">
         Examples
       </Heading>
