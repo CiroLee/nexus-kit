@@ -12,8 +12,8 @@ interface ExampleCardProps {
 
 export default function ExampleCard({ cover, href, title, account, className }: ExampleCardProps) {
   return (
-    <Link href={href} className={cn('[&_svg]:aspect-video [&_svg]:h-40 [&_svg]:w-full', className)}>
-      <Card className="p-4">
+    <Link href={href} className={cn('group [&_svg]:aspect-video [&_svg]:h-40 [&_svg]:w-full', className)}>
+      <Card className="group-hover:border-primary p-4 transition-colors">
         <div className="relative bg-neutral-100/60 px-5 py-4 dark:bg-neutral-700/30">{cover}</div>
         <Heading as="h5" className="mt-3">
           {title}
