@@ -63,7 +63,7 @@ export default async function Page({ params }: { params: Promise<{ repo: string 
             trail={
               <Button icon variant="bordered" colors="neutral" asChild>
                 <Link href={`https://nexus-examples.vercel.app/${repo}/${item}`} target="_blank">
-                  <IconArrowUpRight />
+                  <IconArrowUpRight size={20} />
                 </Link>
               </Button>
             }>
