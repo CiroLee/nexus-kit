@@ -14,6 +14,8 @@ const eslintConfig = [
   {
     rules: {
       'max-len': ['error', { code: 200 }],
+      '@next/next/no-img-element': 'off',
+      'jsx-a11y/alt-text': 'off',
     },
   },
 ];

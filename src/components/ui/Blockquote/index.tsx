@@ -17,7 +17,7 @@ const blockquote = cva('relative w-fit flex-col gap-4 flex pl-4 border-l-4', {
   },
 });
 type BlockquoteVariants = VariantProps<typeof blockquote>;
-interface BlockquoteProps extends React.HTMLAttributes<HTMLQuoteElement>, BlockquoteVariants {
+interface BlockquoteProps extends React.ComponentPropsWithRef<'blockquote'>, BlockquoteVariants {
   cite?: string;
 }
 export default function Blockquote({ className, colors, children, cite, ...props }: BlockquoteProps) {

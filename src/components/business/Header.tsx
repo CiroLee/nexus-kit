@@ -11,6 +11,7 @@ import { cn } from '@/lib/utils';
 
 export default function DocHeader({ showToggleSidebar }: { showToggleSidebar?: boolean }) {
   const pathname = usePathname();
+
   return (
     <header className="bg-background/80 border-line fixed top-0 left-0 z-30 flex h-16 w-full items-center justify-between border-b px-4 backdrop-blur-sm">
       <Link href="/" className="flex h-full shrink-0 items-center gap-1.5 text-lg font-semibold">
@@ -18,7 +19,7 @@ export default function DocHeader({ showToggleSidebar }: { showToggleSidebar?: b
         Nexus Kit
       </Link>
       <div className="flex h-full items-center gap-2">
-        <Link href="/docs" className={cn('hover:text-primary hidden text-sm transition-colors', { block: !['/', '/docs'].includes(pathname) })}>
+        <Link href="/docs" className={cn('hover:text-primary block text-sm transition-colors', { hidden: pathname === '/' || pathname.startsWith('/docs') })}>
           Docs
         </Link>
         <Button variant="light" size="sm" colors="neutral" icon asChild>

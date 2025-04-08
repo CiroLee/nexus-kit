@@ -19,11 +19,7 @@ const link = cva('inline-flex items-center gap-0.5 text-primary transition-color
 });
 
 type LinkVariants = VariantProps<typeof link>;
-interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement>, LinkVariants {
-  href: string;
-  target?: '_blank' | '_self' | '_parent' | '_top';
-  ref?: React.Ref<HTMLAnchorElement>;
-}
+interface LinkProps extends React.ComponentPropsWithRef<'a'>, LinkVariants {}
 export default function Link({ className, underline, disabled, target, onClick, ...props }: LinkProps) {
   return (
     <a
