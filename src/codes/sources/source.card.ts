@@ -1,7 +1,5 @@
 const code = `import { cn } from '@/lib/utils';
 interface CardGlobalProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string;
-  children?: React.ReactNode;
   ref?: React.Ref<HTMLDivElement>;
 }
 export function Card({ className, children, ref, ...props }: CardGlobalProps) {
@@ -31,6 +29,14 @@ export function CardTitle({ className, children, ref, ...props }: CardGlobalProp
 export function CardBody({ children, className, ref, ...props }: CardGlobalProps) {
   return (
     <div ref={ref} className={cn('p-4', className)} {...props}>
+      {children}
+    </div>
+  );
+}
+
+export function CardFooter({ children, className, ref, ...props }: CardGlobalProps) {
+  return (
+    <div ref={ref} className={cn('flex items-center px-4', className)} {...props}>
       {children}
     </div>
   );

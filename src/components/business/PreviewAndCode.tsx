@@ -9,7 +9,7 @@ import ClientCopyButton from './ClientCopyButton';
 interface PreviewAndCodeProps {
   anchorId?: string;
   title: React.ReactNode;
-  description?: string;
+  description?: React.ReactNode;
   children: React.ReactNode;
   code: React.ReactNode;
   codeText?: string;
@@ -45,7 +45,7 @@ export default function PreviewAndCode({ anchorId, title, description, codeText 
       <Heading as="h3" className="whitespace-pre-wrap">
         {title}
       </Heading>
-      <p className="mb-4 text-sm text-gray-400">{description}</p>
+      <div className="mb-4 text-sm text-gray-400">{description}</div>
       <div className="flex items-center justify-between">
         <Segment defaultValue="preview" option={option} onValueChange={setValue} />
         <div className="flex gap-2">

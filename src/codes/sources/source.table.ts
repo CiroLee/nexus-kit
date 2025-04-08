@@ -1,8 +1,7 @@
 const code = `'use client';
 import { cn } from '@/lib/utils';
 
-interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
-  ref?: React.Ref<HTMLTableElement>;
+interface TableProps extends React.ComponentPropsWithRef<'table'> {
   fixedHeader?: boolean;
 }
 export function Table({ fixedHeader, className, ...props }: TableProps) {
@@ -20,12 +19,10 @@ export function Table({ fixedHeader, className, ...props }: TableProps) {
   );
 }
 
-export function TableHeader({ className, ...props }: React.HTMLAttributes<HTMLTableSectionElement> & { ref?: React.Ref<HTMLTableSectionElement> }) {
-  return <thead className={cn('w-full bg-neutral-100 text-sm shadow-[0_1px_0_0_rgb(229,229,229)] dark:bg-[#2e2e2e] dark:shadow-[0_1px_0_0_rgb(64,64,64)]', className)} {...props} />;
+export function TableHeader({ className, ...props }: React.ComponentPropsWithRef<'thead'>) {
+  return <thead className={cn('w-full bg-neutral-100 text-sm shadow-[0_1px_0_0] shadow-[rgb(229,229,229)] dark:bg-[#2e2e2e] dark:shadow-[rgb(64,64,64)]', className)} {...props} />;
 }
-interface TableHeaderCellProps extends React.HTMLAttributes<HTMLTableCellElement> {
-  ref?: React.Ref<HTMLTableCellElement>;
-}
+interface TableHeaderCellProps extends React.ComponentPropsWithRef<'th'> {}
 export function TableHeaderCell({ className, ...props }: TableHeaderCellProps) {
   return (
     <th
@@ -38,16 +35,15 @@ export function TableHeaderCell({ className, ...props }: TableHeaderCellProps) {
   );
 }
 
-export function TableRow({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement> & { ref?: React.Ref<HTMLTableRowElement> }) {
+export function TableRow({ className, ...props }: React.ComponentPropsWithRef<'tr'>) {
   return <tr className={cn('borer-b border-line border-b transition-colors group-data-striped:even:bg-neutral-50 dark:group-data-striped:even:bg-neutral-700/30', className)} {...props} />;
 }
 
-export function TableCell({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement> & { ref?: React.Ref<HTMLTableCellElement> }) {
+export function TableCell({ className, ...props }: React.ComponentPropsWithRef<'td'>) {
   return <td className={cn('p-3 text-sm', className)} {...props} />;
 }
 
-interface TableBodyProps extends React.HTMLAttributes<HTMLTableSectionElement> {
-  ref?: React.Ref<HTMLTableSectionElement>;
+interface TableBodyProps extends React.ComponentPropsWithRef<'tbody'> {
   striped?: boolean;
 }
 export function TableBody({ striped, className, ...props }: TableBodyProps) {
