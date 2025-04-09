@@ -10,7 +10,8 @@ import Link from 'next/link';
 export default async function Page({ params }: { params: Promise<{ repo: string }> }) {
   const { repo } = await params;
   const title = examplesConfig.find((item) => item.id === repo)?.title;
-  const filePaths = examplesConfig.find((item) => item.id === repo)?.children.map((child) => child.name);
+  const description = examplesConfig.find((item) => item.id === repo)?.description;
+  const children = examplesConfig.find((item) => item.id === repo)?.children;
 
   const getCode = async (filePath: string) => {
     const url = `https://api.github.com/repos/CiroLee/${process.env.GITHUB_REPO}/contents/src/app/${filePath}/page.tsx`;
@@ -40,7 +41,7 @@ export default async function Page({ params }: { params: Promise<{ repo: string 
     }
   };
 
-  const codesArray = await Promise.all(filePaths?.map((filePath) => getCode(`${repo}/${filePath}`)) || []);
+  const codesArray = await Promise.all(children?.map((child) => getCode(`${repo}/${child.name}`)) || []);
 
   return (
     <div className="relative mx-auto max-w-[90%] overflow-auto">
@@ -50,25 +51,25 @@ export default async function Page({ params }: { params: Promise<{ repo: string 
       <Heading as="h1" className="mt-12 mb-3 text-center">
         {title}
       </Heading>
-      <p className="text-description text-center">components about auths, such as create account, login</p>
+      <p className="text-description text-center">{description}</p>
       <div>
-        {filePaths?.map((item, index) => (
+        {children?.map((item, index) => (
           <PreviewAndCode
             key={index}
             isDiagnoal
             className="[&_.preview-content]:p-0"
-            title="create account"
+            title={item.title}
             codeText={codesArray[index] || ''}
             code={<Code code={codesArray[index] || ''} />}
             trail={
               <Button icon variant="bordered" colors="neutral" asChild>
-                <Link href={`https://nexus-examples.vercel.app/${repo}/${item}`} target="_blank">
+                <Link href={`https://nexus-examples.vercel.app/${repo}/${item.name}`} target="_blank">
                   <IconArrowUpRight size={20} />
                 </Link>
               </Button>
             }>
             <Resizable className="w-[90%]">
-              <iframe className="min-h-200 w-full" src={`https://nexus-examples.vercel.app/${repo}/${item}`}></iframe>
+              <iframe className="min-h-200 w-full" src={`https://nexus-examples.vercel.app/${repo}/${item.name}`}></iframe>
             </Resizable>
           </PreviewAndCode>
         ))}

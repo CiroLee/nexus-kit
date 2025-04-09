@@ -13,7 +13,17 @@ const eslintConfig = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
     rules: {
-      'max-len': ['error', { code: 200 }],
+      'max-len': [
+        'error',
+        {
+          code: 200,
+          ignorePattern: '^(\\s*<path\\s+d="[^"]+"|\\s*<svg\\s+[^>]+>)', // 同时忽略svg和path的长属性
+          ignoreUrls: true,
+          ignoreStrings: true, // 忽略长字符串
+          ignoreTemplateLiterals: true, // 忽略模板字符串
+          ignoreRegExpLiterals: true, // 忽略正则表达式
+        },
+      ],
       '@next/next/no-img-element': 'off',
       'jsx-a11y/alt-text': 'off',
     },
