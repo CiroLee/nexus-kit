@@ -44,7 +44,7 @@ export default async function Page({ params }: { params: Promise<{ repo: string 
   const codesArray = await Promise.all(children?.map((child) => getCode(`${repo}/${child.name}`)) || []);
 
   return (
-    <div className="relative mx-auto max-w-[90%] overflow-auto">
+    <div className="relative mx-auto overflow-auto sm:max-w-[90%]">
       <Link href="/examples" className="absolute flex items-center gap-2">
         <IconArrowLeft size={24} /> Back to examples
       </Link>
