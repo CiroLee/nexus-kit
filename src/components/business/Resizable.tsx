@@ -20,7 +20,7 @@ export default function Resizable(props: ResizeBoxProps) {
   const { children, className } = props;
   return (
     <PanelGroup direction="horizontal" className={cn('relative', className)}>
-      <Panel defaultSize={100} className="h-full">
+      <Panel defaultSize={100} className="h-full min-w-80">
         {children}
       </Panel>
       <ResizeHandler />

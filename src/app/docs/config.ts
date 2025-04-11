@@ -110,6 +110,10 @@ export const navConfig = [
         name: 'Image',
         href: '/docs/images',
       },
+      {
+        name: 'Tooltip',
+        href: '/docs/tooltips',
+      },
     ],
   },
 ];

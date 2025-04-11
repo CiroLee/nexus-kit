@@ -8,6 +8,7 @@
   --description: oklch(70.8% 0 0);
   /* semantic z-index */
   --popup: 50;
+  --tooltip: 40;
 }
 
 [data-theme='dark'] {

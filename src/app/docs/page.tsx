@@ -27,6 +27,9 @@ const cssConfig = `@custom-variant dark (&:where([data-theme=dark], [data-theme=
   --foreground: oklch(0.269 0 0);
   --line: oklch(0.922 0 0);
   --description: oklch(70.8% 0 0);
+  /* semantic z-index */
+  --popup: 50;
+  --tooltip: 40;
 }
 
 [data-theme='dark'] {
@@ -71,6 +74,9 @@ const animationConfig = `@theme {
   --animate-slide-out-to-bottom: slide-out-to-bottom 0.2s linear;
   --animate-slide-in-from-left: slide-in-from-left 0.2s linear;
   --animate-slide-out-to-left: slide-out-to-left 0.2s linear;
+
+  --animate-zoom-fade-in: zoom-fade-in 0.15s ease-in;
+  --animate-zoom-fade-out: zoom-fade-out 0.15s ease-out;
 
   /* fade animation */
   @keyframes fade-in {
@@ -142,6 +148,26 @@ const animationConfig = `@theme {
       transform: translateX(-100%);
     }
   }
+  @keyframes zoom-fade-in {
+    from {
+      opacity: 0;
+      transform: scale(0.94);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes zoom-fade-out {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.94);
+    }
+  }
 }
 `;
 
@@ -205,7 +231,9 @@ const guides: GuideItem[] = [
         </div>
         <div className="relative">
           <ClientCopyButton size="sm" text={cssConfig} asIcon className={cn(clientCopyBtn({ className: 'absolute top-14 right-2 z-1 sm:top-9' }))} />
-          <p className="mt-4 text-sm">add animation.css(optional) if you use Drawer, Dialog components</p>
+          <p className="mt-4 text-sm">
+            add <span className="italic">animation.css(optional)</span> if you use components such as Drawer, Dialog, Tooltip etc.
+          </p>
           <div className="border-line relative mt-2 h-fit max-h-80 overflow-auto rounded-md border bg-[#24292e]">
             <Code code={animationConfig} lang="css" />
           </div>
