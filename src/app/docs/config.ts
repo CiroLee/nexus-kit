@@ -114,6 +114,10 @@ export const navConfig = [
         name: 'Tooltip',
         href: '/docs/tooltips',
       },
+      {
+        name: 'StarRating',
+        href: '/docs/star-ratings',
+      },
     ],
   },
 ];
