@@ -22,7 +22,7 @@ import Button from "@/components/ui/Button";
 
 export default function Page() {
   return (
-    <ToolTip side="right" align="end" sideOffset={8} trigger={<Button>Hover Me</Button>}>tooltip</ToolTip>
+    <ToolTip side="right" align="end" sideOffset={10} trigger={<Button>Hover Me</Button>}>tooltip</ToolTip>
   )
 }
 `;
