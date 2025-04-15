@@ -47,7 +47,7 @@ export default function TooltipPage() {
           </ToolTip>
         </PreviewAndCode>
         <PreviewAndCode anchorId="offset" title="offset" description="use sideOffset and alignOffset props to change the offset of the tooltip" codeText={offsetCode} code={<Code code={offsetCode} />}>
-          <ToolTip side="right" align="end" sideOffset={8} trigger={<Button>Hover Me</Button>}>
+          <ToolTip side="right" align="end" sideOffset={10} trigger={<Button>Hover Me</Button>}>
             tooltip
           </ToolTip>
         </PreviewAndCode>

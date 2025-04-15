@@ -118,6 +118,10 @@ export const navConfig = [
         name: 'StarRating',
         href: '/docs/star-ratings',
       },
+      {
+        name: 'Popover',
+        href: '/docs/popovers',
+      },
     ],
   },
 ];
