@@ -6,10 +6,11 @@ import Segment, { type Option } from '@/components/ui/Segment';
 import { IconBrandReact, IconBrandVue, IconBrandAngular } from '@tabler/icons-react';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import sourceCode from '@/codes/sources/source.segment';
-import { defaultCode, equaledWidthCode, disabledCode, widthIconCode } from '@/codes/demos/code.segments';
+import { defaultCode, sizeCode, equaledWidthCode, disabledCode, widthIconCode } from '@/codes/demos/code.segments';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
+  { anchorId: 'size', label: 'size' },
   { anchorId: 'equaled-width', label: 'equaledWidth' },
   { anchorId: 'disabled-item', label: 'disabled' },
   { anchorId: 'with-icon', label: 'with icon' },
@@ -64,6 +65,13 @@ export default function SegmentPage() {
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Segment option={option} />
+        </PreviewAndCode>
+        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<Code code={sizeCode} />}>
+          <div className="flex items-center gap-4">
+            <Segment size="sm" option={option} />
+            <Segment size="md" option={option} />
+            <Segment size="lg" option={option} />
+          </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="equaled-width" title="equaledWidth" codeText={equaledWidthCode} code={<Code code={equaledWidthCode} />}>
           <Segment equaledWidth option={option} />

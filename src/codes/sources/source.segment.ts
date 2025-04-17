@@ -1,6 +1,6 @@
 const code = `'use client';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { cva } from 'class-variance-authority';
+import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 export interface Option {
@@ -9,35 +9,51 @@ export interface Option {
   disabled?: boolean;
 }
 
-const segmentBase = cva('bg-neutral-100 inline-flex box-border relative h-10 rounded-md p-1 dark:bg-neutral-700');
-const segmentItem = cva(
-  \`h-full flex gap-0.5 text-sm items-center justify-center select-none z-2 transition rounded text-neutral-500 disabled:cursor-not-allowed disabled:opacity-50 outline-none px-3\`,
-  {
-    variants: {
-      active: {
-        true: 'text-neutral-800 dark:text-neutral-50',
-        false: 'hover:text-neutral-600 dark:hover:text-neutral-400',
-      },
-      equaledWidth: {
-        true: 'flex-1',
-      },
+const segmentBase = cva('bg-neutral-100 inline-flex box-border relative h-10 rounded-md p-1 dark:bg-neutral-700', {
+  variants: {
+    size: {
+      sm: 'h-9',
+      md: 'h-10',
+      lg: 'h-11',
     },
   },
-);
+  defaultVariants: {
+    size: 'md',
+  },
+});
+const segmentItem = cva(\`h-full flex gap-0.5 items-center justify-center select-none z-2 transition rounded text-neutral-500 disabled:cursor-not-allowed disabled:opacity-50 outline-none px-3\`, {
+  variants: {
+    size: {
+      sm: 'text-sm',
+      md: 'text-sm',
+      lg: 'text-base',
+    },
+    active: {
+      true: 'text-neutral-800 dark:text-neutral-50',
+      false: 'not-disabled:hover:text-neutral-600 not-disabled:dark:hover:text-neutral-400',
+    },
+    equaledWidth: {
+      true: 'flex-1',
+    },
+  },
+  defaultVariants: {
+    size: 'md',
+  },
+});
 const segmentIndicator = cva(
-  \`h-full transition ease-linear rounded box-border  absolute top-0 z-1 shadow outline-none bg-white dark:bg-neutral-800 disabled:cursor-not-allowed
-  not-disabled:focus-visible:ring-3 not-disabled:focus-visible:ring-primary/30 not-disabled:focus-visible:transition-none\`,
+  \`h-full transition ease-linear rounded box-border  absolute top-0 shadow outline-none bg-white dark:bg-neutral-800 disabled:cursor-not-allowed
+  not-disabled:focus-visible:ring-3 not-disabled:focus-visible:ring-primary/50 not-disabled:focus-visible:transition-none\`,
 );
 
-interface SegmentProps extends React.HTMLAttributes<HTMLDivElement> {
+type SegmentBaseVariants = VariantProps<typeof segmentBase>;
+interface SegmentProps extends React.HTMLAttributes<HTMLDivElement>, SegmentBaseVariants {
   defaultValue?: Option['value'];
   equaledWidth?: boolean;
   option: Option[];
-  className?: string;
   ref?: React.Ref<HTMLDivElement>;
   onValueChange?: (value: Option['value']) => void;
 }
-export default function Segment({ defaultValue, option, equaledWidth, className, ref, onValueChange, ...props }: SegmentProps) {
+export default function Segment({ defaultValue, size, option, equaledWidth, className, ref, onValueChange, ...props }: SegmentProps) {
   const [activeValue, setActiveValue] = useState(defaultValue ?? option[0].value);
   const segmentRef = useRef<HTMLDivElement>(null);
   const indicatorRef = useRef<HTMLDivElement>(null);
@@ -61,10 +77,15 @@ export default function Segment({ defaultValue, option, equaledWidth, className,
   }, [activeValue, calcIndicatorStyle]);
 
   return (
-    <div ref={ref} className={cn(segmentBase({ className }))} {...props}>
-      <div ref={segmentRef} className={cn('relative flex w-full', { grid: equaledWidth })} style={{ gridTemplateColumns: \`repeat(\${option.length}, minmax(0, 1fr)\`}}>
+    <div ref={ref} className={cn(segmentBase({ size, className }))} {...props}>
+      <div ref={segmentRef} className={cn('relative flex w-full', { grid: equaledWidth })} style={{ gridTemplateColumns: \`repeat(\${option.length}, minmax(0, 1fr)\` }}>
         {option.map((opt, index) => (
-          <button key={index} data-segment-item="segment-item" disabled={opt.disabled} className={segmentItem({ equaledWidth, active: activeValue === opt.value })} onClick={() => clickHandler(opt)}>
+          <button
+            key={index}
+            data-segment-item="segment-item"
+            disabled={opt.disabled}
+            className={segmentItem({ size, equaledWidth, active: activeValue === opt.value })}
+            onClick={() => clickHandler(opt)}>
             {opt.label}
           </button>
         ))}

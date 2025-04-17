@@ -13,6 +13,25 @@ export default function Page() {
 }
 `;
 
+export const sizeCode = `import Segment, { type Option } from '@/components/ui/Segment';
+
+const option: Option[] = [
+  { label: 'React', value: 'react' },
+  { label: 'Vue', value: 'vue' },
+  { label: 'Angular', value: 'angular' },
+];
+
+export default function Page() {
+  return (
+     <div className="flex items-center gap-4">
+        <Segment size="sm" option={option} />
+        <Segment size="md" option={option} />
+        <Segment size="lg" option={option} />
+      </div>
+  )
+}
+`;
+
 export const equaledWidthCode = `import Segment, { type Option } from '@/components/ui/Segment';
 
 const option: Option[] = [
