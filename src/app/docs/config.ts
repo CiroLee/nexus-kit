@@ -122,6 +122,10 @@ export const navConfig = [
         name: 'Popover',
         href: '/docs/popovers',
       },
+      {
+        name: 'Progress',
+        href: '/docs/progresses',
+      },
     ],
   },
 ];
