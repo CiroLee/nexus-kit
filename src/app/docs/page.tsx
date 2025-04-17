@@ -28,6 +28,7 @@ const cssConfig = `@custom-variant dark (&:where([data-theme=dark], [data-theme=
   --line: oklch(0.922 0 0);
   --description: oklch(70.8% 0 0);
   /* semantic z-index */
+  --loading: 60;
   --popup: 50;
   --tooltip: 40;
 }

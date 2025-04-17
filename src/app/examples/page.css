@@ -2,10 +2,12 @@
   --example-skeleton-bg: #f1f1f1;
   --example-skeleton-item: #d9d9d9;
   --example-skeleton-tag: #adccfa;
+  --example-color: #333;
 }
 
 [data-theme='dark'] .example {
   --example-skeleton-bg: #4c4c4c;
   --example-skeleton-item: #414141;
   --example-skeleton-tag: #4b5564;
+  --example-color: #fff;
 }
