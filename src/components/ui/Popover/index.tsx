@@ -5,7 +5,7 @@ import { cva } from 'class-variance-authority';
 
 const popoverContent = cva(
   `text-foreground rounded-md bg-background border border-line p-2 z-(--popup) transition-all origin-[--radix-popover-content-transform-origin] 
-  animate-zoom-fade-in data-[state=closed]:animate-zoom-fade-out`,
+  animate-zoom-fade-in data-[state=closed]:animate-zoom-fade-out outline-none`,
 );
 
 interface PopoverProps extends React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Root>, React.ComponentPropsWithRef<typeof PopoverPrimitive.Content> {

@@ -126,6 +126,10 @@ export const navConfig = [
         name: 'Progress',
         href: '/docs/progresses',
       },
+      {
+        name: 'Slider',
+        href: '/docs/sliders',
+      },
     ],
   },
 ];
