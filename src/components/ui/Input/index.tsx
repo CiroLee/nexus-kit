@@ -33,8 +33,7 @@ const inputWrap = cva(
 const input = cva('outline-none size-full');
 
 type InputWrapVariants = VariantProps<typeof inputWrap>;
-interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'type' | 'prefix' | 'disabled'>, InputWrapVariants {
-  type?: 'text' | 'password' | 'email';
+interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix' | 'disabled'>, InputWrapVariants {
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
   ref?: React.Ref<HTMLInputElement>;
