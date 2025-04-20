@@ -1,8 +1,8 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
-import { RadioGroup, Radio, RadioButton } from '@/components/ui/RadioGroup';
-import { defaultCode, orientationHCode, orientationVCode, sizeCode, disabledCode, customContentCode, radioButtonCode } from '@/codes/demos/code.radio-groups';
+import { RadioGroup, Radio, RadioCard } from '@/components/ui/RadioGroup';
+import { defaultCode, orientationHCode, orientationVCode, sizeCode, disabledCode, customContentCode, radioCardCode, radioCardIconCode } from '@/codes/demos/code.radio-groups';
 import sourceCode from '@/codes/sources/source.radio-group';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
@@ -33,8 +33,12 @@ const navList: AnchorItem[] = [
     label: 'custom content',
   },
   {
-    anchorId: 'radio-button',
-    label: 'Radio Button',
+    anchorId: 'radio-card',
+    label: 'Radio Card',
+  },
+  {
+    anchorId: 'radio-card-icon',
+    label: 'Radio Card Icon',
   },
 ];
 
@@ -104,7 +108,7 @@ export default function RadioGroupPage() {
           </RadioGroup>
         </PreviewAndCode>
         <PreviewAndCode anchorId="custom-content" title="custom content" codeText={customContentCode} code={<Code code={customContentCode} />}>
-          <RadioGroup>
+          <RadioGroup className="flex-col md:flex-row">
             <Radio value="apple" id="apple-juice">
               <p className="font-bold">🍎 Apple Juice</p>
               <p className="text-sm text-gray-400">20% sugar</p>
@@ -119,17 +123,33 @@ export default function RadioGroupPage() {
             </Radio>
           </RadioGroup>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="radio-button" codeText={radioButtonCode} title="Radio Button" code={<Code code={radioButtonCode} />}>
+        <PreviewAndCode anchorId="radio-card" codeText={radioCardCode} title="Radio Card" code={<Code code={radioCardCode} />}>
+          <RadioGroup className="flex-col md:grid md:max-w-160 md:grid-cols-3 md:flex-row">
+            <RadioCard value="free" id="free" className="text-start">
+              <p className="font-bold">Free</p>
+              <p className="text-description text-sm">Up to 20 users</p>
+            </RadioCard>
+            <RadioCard value="Pro" id="pro" className="text-start">
+              <p className="font-bold">Pro</p>
+              <p className="text-description text-sm">Up to 50 users</p>
+            </RadioCard>
+            <RadioCard value="Enterprise" id="enterprise" className="text-start">
+              <p className="font-bold">Enterprise</p>
+              <p className="text-description text-sm">Unlimited, contact us to custom</p>
+            </RadioCard>
+          </RadioGroup>
+        </PreviewAndCode>
+        <PreviewAndCode anchorId="radio-card-icon" title="Radio Card Icon" codeText={radioCardIconCode} code={<Code code={radioCardIconCode} />}>
           <RadioGroup>
-            <RadioButton value="s" id="s">
+            <RadioCard value="s" id="s" className="size-9 p-0">
               S
-            </RadioButton>
-            <RadioButton value="m" id="m">
+            </RadioCard>
+            <RadioCard value="m" id="m" className="size-9 p-0">
               M
-            </RadioButton>
-            <RadioButton value="l" id="l">
+            </RadioCard>
+            <RadioCard value="l" id="l" className="size-9 p-0">
               L
-            </RadioButton>
+            </RadioCard>
           </RadioGroup>
         </PreviewAndCode>
       </div>

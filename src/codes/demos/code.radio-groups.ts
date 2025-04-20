@@ -69,7 +69,7 @@ export const customContentCode = `import { RadioGroup, Radio } from "@/component
 
 export default function Page() {
   return (
-    <RadioGroup>
+    <RadioGroup className="flex-col md:flex-row">
       <Radio value="apple" id="apple-juice">
         <p className="font-bold">🍎 Apple Juice</p>
         <p className="text-sm text-gray-400">20% sugar</p>
@@ -87,14 +87,35 @@ export default function Page() {
 }
 `;
 
-export const radioButtonCode = `import { RadioGroup, RadioButton } from "@/components/ui/RadioGroup";
+export const radioCardCode = `import { RadioGroup, RadioCard } from "@/components/ui/RadioGroup";
+
+export default function Page() {
+  return (
+    <RadioGroup className="flex-col md:grid md:max-w-160 md:grid-cols-3 md:flex-row">
+      <RadioCard value="free" id="free" className="text-start">
+        <p className="font-bold">Free</p>
+        <p className="text-description text-sm">Up to 20 users</p>
+      </RadioCard>
+      <RadioCard value="Pro" id="pro" className="text-start">
+        <p className="font-bold">Pro</p>
+        <p className="text-description text-sm">Up to 50 users</p>
+      </RadioCard>
+      <RadioCard value="Enterprise" id="enterprise" className="text-start">
+        <p className="font-bold">Enterprise</p>
+        <p className="text-description text-sm">Unlimited, contact us to custom</p>
+      </RadioCard>
+    </RadioGroup>
+  )
+}`;
+
+export const radioCardIconCode = `import { RadioGroup, RadioCard } from "@/components/ui/RadioGroup";
 
 export default function Page() {
   return (
     <RadioGroup>
-      <RadioButton value="s" id="s">S</RadioButton>
-      <RadioButton value="m" id="m">M</RadioButton>
-      <RadioButton value="l" id="l">L</RadioButton>
+      <RadioCard value="s" id="s" className="size-9 p-0">S</RadioCard>
+      <RadioCard value="m" id="m" className="size-9 p-0">M</RadioCard>
+      <RadioCard value="l" id="l" className="size-9 p-0">L</RadioCard>
     </RadioGroup>
   )
 }`;
