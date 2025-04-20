@@ -29,6 +29,10 @@ const navList: AnchorItem[] = [
     anchorId: 'custom-content',
     label: 'custom content',
   },
+  {
+    anchorId: 'checkbox-card',
+    label: 'checkbox card',
+  },
 ];
 
 export default function CheckboxPage() {
