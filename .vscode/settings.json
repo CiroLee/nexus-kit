@@ -4,7 +4,7 @@
   },
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "editor.formatOnSave": true,
-  "cSpell.words": ["turbopack", "shiki", "tabler", "usehooks", "diagnoal", "hoverable"],
+  "cSpell.words": ["turbopack", "shiki", "tabler", "usehooks", "diagnoal", "hoverable", "nuxtjs", "nuxt", "vuejs"],
   "eslint.format.enable": true,
   "eslint.options": {
     "overrideConfigFile": "eslint.config.mjs"

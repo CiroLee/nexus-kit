@@ -1,10 +1,11 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
-import Checkbox from '@/components/ui/Checkbox';
-import { defaultCode, sizeCode, disabledCode, verticalCode, customContentCode } from '@/codes/demos/code.checkboxes';
+import { Checkbox, CheckboxCard } from '@/components/ui/Checkbox';
+import { defaultCode, sizeCode, disabledCode, verticalCode, customContentCode, checkboxCardCode } from '@/codes/demos/code.checkboxes';
 import sourceCode from '@/codes/sources/source.checkbox';
 import CodeDrawer from '@/components/business/CodeDrawer';
+import { IconBrandNextjs, IconBrandNuxt, IconBrandVue, IconBrandReact } from '@tabler/icons-react';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 
 const navList: AnchorItem[] = [
@@ -91,6 +92,34 @@ export default function CheckboxPage() {
               <p className="font-bold">Milk</p>
               <p className="text-sm text-gray-400">0% sugar</p>
             </Checkbox>
+          </div>
+        </PreviewAndCode>
+        <PreviewAndCode anchorId="checkbox-card" title="Checkbox Card" codeText={checkboxCardCode} code={<Code code={checkboxCardCode} />}>
+          <div className="flex items-center gap-2.5">
+            <CheckboxCard value="nextjs" id="nextjs">
+              <div className="flex items-center gap-1">
+                <IconBrandNextjs size={20} />
+                Nextjs
+              </div>
+            </CheckboxCard>
+            <CheckboxCard value="nuxtjs" id="nuxtjs">
+              <div className="flex items-center gap-1">
+                <IconBrandNuxt size={20} />
+                Nuxtjs
+              </div>
+            </CheckboxCard>
+            <CheckboxCard value="vuejs" id="vuejs">
+              <div className="flex items-center gap-1">
+                <IconBrandVue size={20} />
+                Vuejs
+              </div>
+            </CheckboxCard>
+            <CheckboxCard value="react" id="react">
+              <div className="flex items-center gap-1">
+                <IconBrandReact size={20} />
+                React
+              </div>
+            </CheckboxCard>
           </div>
         </PreviewAndCode>
       </div>

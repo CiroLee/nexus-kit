@@ -1,4 +1,4 @@
-export const defaultCode = `import Checkbox from "@/components/ui/Checkbox";
+export const defaultCode = `import { Checkbox } from "@/components/ui/Checkbox";
 
 export default function Page() {
   return (
@@ -7,7 +7,7 @@ export default function Page() {
 }
 `;
 
-export const sizeCode = `import Checkbox from "@/components/ui/Checkbox";
+export const sizeCode = `import { Checkbox } from "@/components/ui/Checkbox";
 
 export default function Page() {
   return (
@@ -20,7 +20,7 @@ export default function Page() {
 }
 `;
 
-export const disabledCode = `import Checkbox from "@/components/ui/Checkbox";
+export const disabledCode = `import { Checkbox } from "@/components/ui/Checkbox";
 
 export default function Page() {
   return (
@@ -29,7 +29,7 @@ export default function Page() {
 }
 `;
 
-export const verticalCode = `import Checkbox from "@/components/ui/Checkbox";
+export const verticalCode = `import { Checkbox } from "@/components/ui/Checkbox";
 
 export default function Page() {
   return (
@@ -42,7 +42,7 @@ export default function Page() {
 }
 `;
 
-export const customContentCode = `import Checkbox from "@/components/ui/Checkbox";
+export const customContentCode = `import { Checkbox } from "@/components/ui/Checkbox";
 
 export default function Page() {
   return (
@@ -59,6 +59,40 @@ export default function Page() {
         <p className="font-bold">Milk</p>
         <p className="text-sm text-gray-400">0% sugar</p>
       </Checkbox>
+    </div>
+  )
+}
+`;
+
+export const checkboxCardCode = `import { CheckboxCard } from "@/components/ui/Checkbox";
+
+export default function Page() {
+  return (
+    <div className="flex items-center gap-2.5">
+      <CheckboxCard value="nextjs" id="nextjs">
+        <div className="flex items-center gap-1">
+          <IconBrandNextjs size={20} />
+          Nextjs
+        </div>
+      </CheckboxCard>
+      <CheckboxCard value="nuxtjs" id="nuxtjs">
+        <div className="flex items-center gap-1">
+          <IconBrandNuxt size={20} />
+          Nuxtjs
+        </div>
+      </CheckboxCard>
+      <CheckboxCard value="vuejs" id="vuejs">
+        <div className="flex items-center gap-1">
+          <IconBrandVue size={20} />
+          Vuejs
+        </div>
+      </CheckboxCard>
+      <CheckboxCard value="react" id="react">
+        <div className="flex items-center gap-1">
+          <IconBrandReact size={20} />
+          React
+        </div>
+      </CheckboxCard>
     </div>
   )
 }
