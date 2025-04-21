@@ -4,7 +4,6 @@ export const examplesConfig = [
     cover: <Authentication />,
     title: 'Authentication',
     description: 'Components about auths, such as create account, login',
-    account: 2,
     href: '/examples/auth',
     children: [
       {
@@ -23,7 +22,6 @@ export const examplesConfig = [
     cover: <Profile />,
     title: 'Profile',
     description: 'Components about user profiles',
-    account: 2,
     children: [
       {
         title: 'Profile 01',
@@ -41,7 +39,6 @@ export const examplesConfig = [
     cover: <Pricing />,
     title: 'Pricing',
     description: 'Components about pricing',
-    account: 2,
     children: [
       {
         title: 'Pricing 01',

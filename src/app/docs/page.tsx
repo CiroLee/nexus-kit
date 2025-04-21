@@ -79,6 +79,9 @@ const animationConfig = `@theme {
   --animate-zoom-fade-in: zoom-fade-in 0.15s ease-in;
   --animate-zoom-fade-out: zoom-fade-out 0.15s ease-out;
 
+  --animate-accordion-slide-down: accordion-slide-down 0.2s ease;
+  --animate-accordion-slide-up: accordion-slide-up 0.2s ease;
+
   /* fade animation */
   @keyframes fade-in {
     from {
@@ -167,6 +170,29 @@ const animationConfig = `@theme {
     to {
       opacity: 0;
       transform: scale(0.94);
+    }
+  }
+
+  /* accordion keyframes */
+  @keyframes accordion-slide-down {
+    from {
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-slide-up {
+    from {
+      opacity: 1;
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+      opacity: 0;
     }
   }
 }
