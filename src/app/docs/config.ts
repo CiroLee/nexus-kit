@@ -107,10 +107,6 @@ export const navConfig = [
         href: '/docs/blockquotes',
       },
       {
-        name: 'Image',
-        href: '/docs/images',
-      },
-      {
         name: 'Tooltip',
         href: '/docs/tooltips',
       },
