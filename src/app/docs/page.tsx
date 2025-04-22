@@ -294,7 +294,7 @@ const guides: GuideItem[] = [
           </div>
         </div>
         <div className="relative">
-          <ClientCopyButton size="sm" text={cssConfig} asIcon className={cn(clientCopyBtn({ className: 'absolute top-14 right-2 z-1 sm:top-9' }))} />
+          <ClientCopyButton size="sm" text={animationConfig} asIcon className={cn(clientCopyBtn({ className: 'absolute top-14 right-2 z-1 sm:top-9' }))} />
           <p className="mt-4 text-sm">
             add <span className="italic">animation.css(optional)</span> if you use components such as Drawer, Dialog, Tooltip etc.
           </p>
