@@ -134,6 +134,10 @@ export const navConfig = [
         name: 'Slider',
         href: '/docs/sliders',
       },
+      {
+        name: 'Skeleton',
+        href: '/docs/skeletons',
+      },
     ],
   },
 ];

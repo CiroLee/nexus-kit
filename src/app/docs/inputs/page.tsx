@@ -18,8 +18,12 @@ const navList: AnchorItem[] = [
     label: 'state',
   },
   {
-    anchorId: 'prefix-suffix',
-    label: 'prefix and suffix',
+    anchorId: 'prefix',
+    label: 'prefix',
+  },
+  {
+    anchorId: 'suffix',
+    label: 'suffix',
   },
   {
     anchorId: 'disabled',
@@ -45,10 +49,16 @@ export default function InputPage() {
             <Input state="error" placeholder="error message" />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="prefix-suffix" title="prefix and suffix" codeText={preAndSuffixCode} code={<Code code={preAndSuffixCode} />}>
+        <PreviewAndCode anchorId="prefix" title="prefix" codeText={preAndSuffixCode} code={<Code code={preAndSuffixCode} />}>
           <div className="grid grid-cols-2 gap-4">
             <Input prefix={<IconUserFilled size={20} color="gray" />} />
             <Input type="password" prefix={<IconLockFilled size={20} color="gray" />} />
+          </div>
+        </PreviewAndCode>
+        <PreviewAndCode anchorId="suffix" title="suffix" codeText={preAndSuffixCode} code={<Code code={preAndSuffixCode} />}>
+          <div className="grid grid-cols-2 gap-4">
+            <Input suffix={<div className="text-neutral-500">Kg</div>} />
+            <Input suffix={<div className="text-neutral-500">MB</div>} />
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<Code code={disabledCode} />}>
