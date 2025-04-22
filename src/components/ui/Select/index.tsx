@@ -120,7 +120,7 @@ function SelectItem({ className, size, children, ...props }: SelectItemProps) {
   return (
     <SelectPrimitive.Item className={cn(selectItemStyle({ size, className }))} {...props}>
       <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
-      <SelectPrimitive.ItemIndicator className="text-foreground">
+      <SelectPrimitive.ItemIndicator className="data-[state=unchecked]:text-foreground data-[state=checked]:text-white">
         <IconCheck size="1em" />
       </SelectPrimitive.ItemIndicator>
     </SelectPrimitive.Item>
