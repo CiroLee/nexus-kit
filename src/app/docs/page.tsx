@@ -21,7 +21,7 @@ const aliasConfig = `{
 
 const cssConfig = `@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-/* basic semantic colors  base on tailwindcss colors */
+/* basic semantic colors base on tailwindcss colors */
 :root {
   --background: #fff;
   --foreground: oklch(0.269 0 0);
@@ -79,8 +79,10 @@ const animationConfig = `@theme {
   --animate-zoom-fade-in: zoom-fade-in 0.15s ease-in;
   --animate-zoom-fade-out: zoom-fade-out 0.15s ease-out;
 
-  --animate-accordion-slide-down: accordion-slide-down 0.2s ease;
-  --animate-accordion-slide-up: accordion-slide-up 0.2s ease;
+  --animate-accordion-slide-down: accordion-slide-down 0.2s ease-in;
+  --animate-accordion-slide-up: accordion-slide-up 0.2s ease-out;
+  --animate-collapsible-slide-down: collapsible-slide-down 0.2s ease-in;
+  --animate-collapsible-slide-up: collapsible-slide-up 0.2s ease-out;
 
   /* fade animation */
   @keyframes fade-in {
@@ -179,6 +181,9 @@ const animationConfig = `@theme {
       height: 0;
       opacity: 0;
     }
+    90% {
+      opacity: 1;
+    }
     to {
       opacity: 1;
       height: var(--radix-accordion-content-height);
@@ -189,6 +194,38 @@ const animationConfig = `@theme {
     from {
       opacity: 1;
       height: var(--radix-accordion-content-height);
+    }
+    90% {
+      opacity: 0;
+    }
+    to {
+      height: 0;
+      opacity: 0;
+    }
+  }
+
+  /* collapsible keyframes */
+  @keyframes collapsible-slide-down {
+    from {
+      height: 0;
+      opacity: 0;
+    }
+    90% {
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+      height: var(--radix-collapsible-content-height);
+    }
+  }
+
+  @keyframes collapsible-slide-up {
+    from {
+      opacity: 1;
+      height: var(--radix-collapsible-content-height);
+    }
+    90% {
+      opacity: 0;
     }
     to {
       height: 0;
