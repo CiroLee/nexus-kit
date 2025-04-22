@@ -33,8 +33,7 @@ export default function InputPage() {
         <SectionIntro title="Input" description="Inputs allow users to enter text, they usually appear in forms" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="size" codeText={sizeCode} title="size" code={<Code code={sizeCode} />}>
-          <div className="grid grid-cols-2 items-center gap-4">
-            <Input size="xs" placeholder="xs size" />
+          <div className="flex items-center gap-4">
             <Input size="sm" placeholder="sm size" />
             <Input size="md" placeholder="md size" />
             <Input size="lg" placeholder="lg size" />
