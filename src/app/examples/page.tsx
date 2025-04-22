@@ -12,7 +12,7 @@ export default function Examples() {
       <p className="text-description text-center">Use the excellent examples code to assemble your project</p>
       <div className="mx-auto mt-10 grid gap-4 sm:mt-16 md:grid-cols-3 xl:max-w-7xl xl:grid-cols-4">
         {examplesConfig.map((example) => (
-          <ExampleCard key={example.id} title={example.title} href={example.href} cover={example.cover} account={example.account} />
+          <ExampleCard key={example.id} title={example.title} href={example.href} cover={example.cover} account={example.children.length} />
         ))}
       </div>
     </div>

@@ -19,12 +19,20 @@ export const navConfig = [
     key: 'base',
     children: [
       {
+        name: 'Accordion',
+        href: '/docs/accordions',
+      },
+      {
         name: 'Alert',
         href: '/docs/alerts',
       },
       {
         name: 'Avatar',
         href: '/docs/avatars',
+      },
+      {
+        name: 'Collapsible',
+        href: '/docs/collapsibles',
       },
       {
         name: 'Heading',
