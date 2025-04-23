@@ -13,11 +13,11 @@ const inputWrap = cva(
         lg: 'rounded-lg h-12',
       },
       state: {
-        warning: 'not-disabled:has-focus:border-warning border-warning not-data-[disabled]:hover:border-warning not-disabled:has-focus-visible:ring-warning/40',
-        error: 'not-disabled:has-focus:border-danger border-danger not-data-[disabled]:hover:border-danger not-disabled:has-focus-visible:ring-danger/40',
+        warning: 'not-disabled:has-focus:border-warning border-warning not-data-[disabled]:hover:border-warning not-disabled:has-focus-visible:ring-warning/30',
+        error: 'not-disabled:has-focus:border-danger border-danger not-data-[disabled]:hover:border-danger not-disabled:has-focus-visible:ring-danger/30',
       },
       disabled: {
-        true: 'cursor-not-allowed opacity-70 [&_input]:cursor-not-allowed',
+        true: 'opacity-50 cursor-not-allowed',
       },
       rounded: {
         true: 'rounded-full',
@@ -29,16 +29,16 @@ const inputWrap = cva(
   },
 );
 
-const input = cva('outline-none size-full');
+const input = cva('outline-none size-full disabled:cursor-not-allowed');
 
 type InputWrapVariants = VariantProps<typeof inputWrap>;
-interface InputProps extends Omit<React.ComponentProps<'input'>, 'size' | 'disabled' | 'prefix'>, InputWrapVariants {
+interface InputProps extends Omit<React.ComponentPropsWithRef<'input'>, 'size' | 'disabled' | 'prefix'>, InputWrapVariants {
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
 }
 export default function Input({ size, state, prefix, suffix, disabled, rounded, className, style, ...props }: InputProps) {
   return (
-    <div data-disabled={disabled} className={cn(inputWrap({ size, state, disabled, rounded, className }))} style={style}>
+    <div {...(disabled ? { 'data-disabled': '' } : {})} className={cn(inputWrap({ size, state, disabled, rounded, className }))} style={style}>
       {prefix ? <>{prefix}</> : null}
       <input className={input()} disabled={!!disabled} {...props} />
       {suffix ? <>{suffix}</> : null}

@@ -6,12 +6,13 @@ import { Breadcrumb, BreadcrumbItem } from '@/components/ui/Breadcrumb';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import sourceCode from '@/codes/sources/source.breadcrumb';
-import { defaultCode, variantsCode, sizeCode, separatorCode, iconCode } from '@/codes/demos/code.breadcrumbs';
+import { defaultCode, variantsCode, sizeCode, disabledCode, separatorCode, iconCode } from '@/codes/demos/code.breadcrumbs';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
   { anchorId: 'variant', label: 'variant' },
   { anchorId: 'size', label: 'size' },
+  { anchorId: 'disabled', label: 'disabled' },
   { anchorId: 'custom-separator', label: 'custom separator' },
   { anchorId: 'icon', label: 'icon' },
 ];
@@ -54,6 +55,15 @@ export default function BreadcrumbPage() {
               <BreadcrumbItem asCurrent>Breadcrumb</BreadcrumbItem>
             </Breadcrumb>
           </div>
+        </PreviewAndCode>
+        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<Code code={disabledCode} />}>
+          <Breadcrumb>
+            <BreadcrumbItem disabled href="/docs/buttons">
+              Button
+            </BreadcrumbItem>
+            <BreadcrumbItem href="/docs/avatars">Avatar</BreadcrumbItem>
+            <BreadcrumbItem asCurrent>Breadcrumb</BreadcrumbItem>
+          </Breadcrumb>
         </PreviewAndCode>
         <PreviewAndCode anchorId="custom-separator" title="custom separator" codeText={separatorCode} code={<Code code={separatorCode} />}>
           <Breadcrumb>

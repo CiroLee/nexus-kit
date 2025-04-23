@@ -24,6 +24,19 @@ export default function Page() {
 }
 `;
 
+export const disabledCode = `import { Breadcrumb, BreadcrumbItem } from "@/components/ui/Breadcrumb";
+
+export default function Page() {
+  return (
+    <Breadcrumb>
+      <BreadcrumbItem disabled href="/docs/buttons">Button</BreadcrumbItem>
+      <BreadcrumbItem href="/docs/avatars">Avatar</BreadcrumbItem>
+      <BreadcrumbItem asCurrent>Breadcrumb</BreadcrumbItem>
+    </Breadcrumb>
+  )
+}
+`;
+
 export const sizeCode = `import { Breadcrumb, BreadcrumbItem } from "@/components/ui/Breadcrumb";
 
 export default function Page() {
