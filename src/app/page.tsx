@@ -19,7 +19,10 @@ export default function Home() {
         <Heading as="h1" className="sm:text-7xl">
           Nexus-Kit
         </Heading>
-        <p className="mt-4 text-gray-600 dark:text-gray-200">A practical and beautiful component library, built based on radix-ui and tailwind css v4, just copy and paste</p>
+        <p className="mt-4 text-gray-600 dark:text-gray-200">
+          A practical and beautiful component library, built based on radix-ui and tailwind css v4, just <span className="font-bold">Copy</span> codes and <span className="font-bold">Paste</span> to
+          your project.
+        </p>
       </div>
       <div className="relative mx-4 mt-8 flex sm:justify-center">
         <Button className="w-full sm:w-fit" asChild>
