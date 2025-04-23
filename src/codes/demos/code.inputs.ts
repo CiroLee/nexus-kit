@@ -2,8 +2,7 @@ export const sizeCode = `import Input from "@/components/ui/Input";
 
 export default function Page() {
   return (
-    <div className="grid grid-cols-2 items-center gap-4">
-      <Input size="xs" placeholder="xs size" />
+    <div className="flex items-center gap-4">
       <Input size="sm" placeholder="sm size" />
       <Input size="md" placeholder="md size" />
       <Input size="lg" placeholder="lg size" />

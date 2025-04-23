@@ -31,6 +31,10 @@ export const navConfig = [
         href: '/docs/avatars',
       },
       {
+        name: 'Breadcrumb',
+        href: '/docs/breadcrumbs',
+      },
+      {
         name: 'Collapsible',
         href: '/docs/collapsibles',
       },
@@ -133,6 +137,10 @@ export const navConfig = [
       {
         name: 'Slider',
         href: '/docs/sliders',
+      },
+      {
+        name: 'Skeleton',
+        href: '/docs/skeletons',
       },
     ],
   },

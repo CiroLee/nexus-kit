@@ -8,7 +8,6 @@ const inputWrap = cva(
   {
     variants: {
       size: {
-        xs: 'rounded-sm h-6 text-xs px-2',
         sm: 'rounded h-8 text-sm',
         md: 'rounded-md h-10 text-sm',
         lg: 'rounded-lg h-12',

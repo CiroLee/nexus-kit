@@ -18,8 +18,12 @@ const navList: AnchorItem[] = [
     label: 'state',
   },
   {
-    anchorId: 'prefix-suffix',
-    label: 'prefix and suffix',
+    anchorId: 'prefix',
+    label: 'prefix',
+  },
+  {
+    anchorId: 'suffix',
+    label: 'suffix',
   },
   {
     anchorId: 'disabled',
@@ -33,8 +37,7 @@ export default function InputPage() {
         <SectionIntro title="Input" description="Inputs allow users to enter text, they usually appear in forms" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="size" codeText={sizeCode} title="size" code={<Code code={sizeCode} />}>
-          <div className="grid grid-cols-2 items-center gap-4">
-            <Input size="xs" placeholder="xs size" />
+          <div className="flex items-center gap-4">
             <Input size="sm" placeholder="sm size" />
             <Input size="md" placeholder="md size" />
             <Input size="lg" placeholder="lg size" />
@@ -46,10 +49,16 @@ export default function InputPage() {
             <Input state="error" placeholder="error message" />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="prefix-suffix" title="prefix and suffix" codeText={preAndSuffixCode} code={<Code code={preAndSuffixCode} />}>
+        <PreviewAndCode anchorId="prefix" title="prefix" codeText={preAndSuffixCode} code={<Code code={preAndSuffixCode} />}>
           <div className="grid grid-cols-2 gap-4">
             <Input prefix={<IconUserFilled size={20} color="gray" />} />
             <Input type="password" prefix={<IconLockFilled size={20} color="gray" />} />
+          </div>
+        </PreviewAndCode>
+        <PreviewAndCode anchorId="suffix" title="suffix" codeText={preAndSuffixCode} code={<Code code={preAndSuffixCode} />}>
+          <div className="grid grid-cols-2 gap-4">
+            <Input suffix={<div className="text-neutral-500">Kg</div>} />
+            <Input suffix={<div className="text-neutral-500">MB</div>} />
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<Code code={disabledCode} />}>

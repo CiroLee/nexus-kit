@@ -8,7 +8,6 @@ const inputWrap = cva(
   {
     variants: {
       size: {
-        xs: 'rounded-sm h-6 text-xs px-2',
         sm: 'rounded h-8 text-sm',
         md: 'rounded-md h-10 text-sm',
         lg: 'rounded-lg h-12',
@@ -33,10 +32,9 @@ const inputWrap = cva(
 const input = cva('outline-none size-full');
 
 type InputWrapVariants = VariantProps<typeof inputWrap>;
-interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix' | 'disabled'>, InputWrapVariants {
+interface InputProps extends Omit<React.ComponentProps<'input'>, 'size' | 'disabled' | 'prefix'>, InputWrapVariants {
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
-  ref?: React.Ref<HTMLInputElement>;
 }
 export default function Input({ size, state, prefix, suffix, disabled, rounded, className, style, ...props }: InputProps) {
   return (
