@@ -84,6 +84,9 @@ const animationConfig = `@theme {
   --animate-collapsible-slide-down: collapsible-slide-down 0.2s ease-in;
   --animate-collapsible-slide-up: collapsible-slide-up 0.2s ease-out;
 
+  --animate-flicker: flicker 2s infinite ease;
+  --animate-shimmer: shimmer 2s infinite linear;
+
   /* fade animation */
   @keyframes fade-in {
     from {
@@ -230,6 +233,20 @@ const animationConfig = `@theme {
     to {
       height: 0;
       opacity: 0;
+    }
+  }
+
+  @keyframes flicker {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+  @keyframes shimmer {
+    50% {
+      opacity: 0.5;
     }
   }
 }
