@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 const link = cva('inline-flex items-center gap-0.5 text-primary transition-colors outline-none', {
   variants: {
     underline: {
-      true: 'shadow-[0_1px_0_0] shadow-primary',
+      true: 'shadow-[0_1px_0_0] shadow-primary leading-[1em]',
     },
     disabled: {
       true: 'cursor-not-allowed opacity-50',
