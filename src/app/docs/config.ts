@@ -43,6 +43,10 @@ export const navConfig = [
         href: '/docs/headings',
       },
       {
+        name: 'Image',
+        href: '/docs/images',
+      },
+      {
         name: 'Button',
         href: '/docs/buttons',
       },
