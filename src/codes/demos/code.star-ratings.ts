@@ -2,7 +2,7 @@ export const starCode = `import { Star } from '@/components/ui/StarRating';";
 
 export default function Page() {
   return (
-    <Star score={0.4} />
+    <Star value={0.4} />
   )
 }
 `;
