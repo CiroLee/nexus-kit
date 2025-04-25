@@ -11,7 +11,7 @@ export const starRatingCode = `import { StarRating } from '@/components/ui/StarR
 
 export default function Page() {
   return (
-    <StarRating rating={3.4} maxStars={5} />
+    <StarRating value={3.4} max={5} />
   )
 }
 `;
@@ -20,7 +20,7 @@ export const sizeCode = `import { StarRating } from '@/components/ui/StarRating'
 
 export default function Page() {
   return (
-    <StarRating size={24} rating={3.4} maxStars={5} />
+    <StarRating size={24} value={3.4} max={5} />
   )
 }
 `;
@@ -29,7 +29,7 @@ export const customColorsCode = `import { StarRating } from '@/components/ui/Sta
 
 export default function Page() {
   return (
-    <StarRating defaultColor="gray" fillColor="red" rating={3.4} maxStars={5} />
+    <StarRating defaultColor="gray" fillColor="red" value={3.4} max={5} />
   )
 }
 `;

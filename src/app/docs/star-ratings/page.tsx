@@ -33,16 +33,16 @@ export default function StarRatingPage() {
         <SectionIntro title="StarRating" description="StarRating is a component that shows star ratings in a detailed way" />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="star" title="star" codeText={starCode} code={<Code code={starCode} />}>
-          <Star score={0.4} />
+          <Star value={0.4} />
         </PreviewAndCode>
         <PreviewAndCode anchorId="star-rating" title="StarRating" codeText={starRatingCode} code={<Code code={starRatingCode} />}>
-          <StarRating rating={3.4} maxStars={5} />
+          <StarRating value={3.4} max={5} />
         </PreviewAndCode>
         <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<Code code={sizeCode} />}>
-          <StarRating size={24} rating={3.4} maxStars={5} />
+          <StarRating size={24} value={3.4} max={5} />
         </PreviewAndCode>
         <PreviewAndCode anchorId="custom-colors" title="custom colors" codeText={customColorsCode} code={<Code code={customColorsCode} />}>
-          <StarRating defaultColor="gray" fillColor="red" rating={3.4} maxStars={5} />
+          <StarRating defaultColor="gray" fillColor="red" value={3.4} max={5} />
         </PreviewAndCode>
       </div>
       <OnThisPage list={navList} />

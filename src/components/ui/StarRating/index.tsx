@@ -2,31 +2,30 @@
 import { useId } from 'react';
 import { cn } from '@/lib/utils';
 
-interface StarRatingProps extends React.HTMLAttributes<HTMLDivElement>, Omit<IStar, 'score'> {
-  rating: number;
-  maxStars: number;
+interface StarRatingProps extends React.HTMLAttributes<HTMLDivElement>, IStar {
+  max: number;
   ref?: React.Ref<HTMLDivElement>;
 }
 
-export function StarRating({ rating, maxStars, className, ref, ...props }: StarRatingProps) {
+export function StarRating({ value, max, className, ref, ...props }: StarRatingProps) {
   return (
     <div ref={ref} className={cn('flex gap-1', className)}>
-      {Array.from({ length: maxStars }, (_, index) => (
-        <Star key={index} score={Math.min(1, Math.max(0, rating - index))} {...props} />
+      {Array.from({ length: max }, (_, index) => (
+        <Star key={index} value={Math.min(1, Math.max(0, value - index))} {...props} />
       ))}
     </div>
   );
 }
 
 export interface IStar {
-  score: number;
+  value: number;
   defaultColor?: string;
   fillColor?: string;
   size?: number;
 }
-export function Star({ score = 0, defaultColor = '#a7a7a7', fillColor = '#ff6900', size = 16 }: IStar) {
+export function Star({ value = 0, defaultColor = '#a7a7a7', fillColor = '#ff6900', size = 16 }: IStar) {
   // make sure the score is between 0 and 1
-  const clampedScore = Math.min(1, Math.max(0, score));
+  const clampedValue = Math.min(1, Math.max(0, value));
   const gradientId = useId(); // unique id for the gradient
 
   return (
@@ -34,8 +33,8 @@ export function Star({ score = 0, defaultColor = '#a7a7a7', fillColor = '#ff6900
       {/* define the gradient */}
       <defs>
         <linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="0">
-          <stop offset={`${clampedScore * 100}%`} stopColor={fillColor} />
-          <stop offset={`${clampedScore * 100}%`} stopColor={defaultColor} />
+          <stop offset={`${clampedValue * 100}%`} stopColor={fillColor} />
+          <stop offset={`${clampedValue * 100}%`} stopColor={defaultColor} />
         </linearGradient>
       </defs>
       <path
