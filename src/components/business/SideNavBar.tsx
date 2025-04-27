@@ -34,12 +34,12 @@ export default function SideNavBar() {
           ) : (
             <h4>{nav.title}</h4>
           )}
-          <div>
+          <div className="before:bg-line/80 relative h-fit space-y-1 before:absolute before:left-0 before:h-full before:w-0.5">
             {nav.children
               ?.sort((a, b) => a.name.localeCompare(b.name))
               .map((item) => (
                 <Link
-                  className={cn('before:bg-line/80 relative flex items-center py-2 pl-3 text-sm before:absolute before:left-0 before:h-full before:w-0.5', {
+                  className={cn('hover:before:bg-primary relative flex items-center rounded p-2 text-sm transition before:absolute before:left-0 before:h-full before:w-0.5', {
                     'before:bg-primary text-primary font-semibold': pathname === item.href,
                   })}
                   key={item.href}
