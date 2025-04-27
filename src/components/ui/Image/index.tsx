@@ -24,9 +24,9 @@ interface ImageProps extends React.ComponentPropsWithRef<'img'>, ImageVariants {
 export default function Image({ ref, fit, aspectRatio, className, style, ...props }: ImageProps) {
   return (
     <Avatar.Root asChild ref={ref} className={cn('relative', className)} style={{ aspectRatio, ...style }}>
-      <div>
+      <div className="rounded-[inherit]">
         <Avatar.Image className={cn(image({ fit }))} {...props} />
-        <Avatar.Fallback className="relative size-full">
+        <Avatar.Fallback asChild>
           <SkeletonBlock className="size-full rounded-[inherit]" />
         </Avatar.Fallback>
       </div>
