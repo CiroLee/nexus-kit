@@ -146,6 +146,10 @@ export const navConfig = [
         name: 'Skeleton',
         href: '/docs/skeletons',
       },
+      {
+        name: 'Highlight',
+        href: '/docs/highlights',
+      },
     ],
   },
 ];
