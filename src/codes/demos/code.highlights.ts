@@ -24,7 +24,7 @@ export const customCode = `import Heading from "@/components/ui/Heading";
 
 export default function Page() {
   return (
-    <Highlight query="emphasize" highLightClass="italic bg-primary">
+    <Highlight query="emphasize" highlightClassName="italic bg-primary">
       Using the Highlight component to emphasize content
     </Highlight>
   )

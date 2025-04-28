@@ -26,7 +26,7 @@ export default function HighlightPage() {
           <Highlight query={['component', 'emphasize']}>Using the Highlight component to emphasize content</Highlight>
         </PreviewAndCode>
         <PreviewAndCode anchorId="custom-style" title="custom highlight style" codeText={customCode} code={<Code code={customCode} />}>
-          <Highlight query="emphasize" highLightClass="italic bg-primary">
+          <Highlight query="emphasize" highlightClassName="italic bg-primary">
             Using the Highlight component to emphasize content
           </Highlight>
         </PreviewAndCode>

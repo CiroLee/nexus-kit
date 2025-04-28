@@ -5,10 +5,10 @@ import { cn } from '@/lib/utils';
 interface HighlightProps extends React.HTMLAttributes<HTMLSpanElement> {
   children: string;
   query: string | string[];
-  highLightClass?: string;
+  highlightClassName?: string;
 }
 
-export default function Highlight({ children, query, highLightClass, className, ...props }: HighlightProps) {
+export default function Highlight({ children, query, highlightClassName, className, ...props }: HighlightProps) {
   const highlightedText = useMemo(() => {
     const queries = Array.isArray(query) ? query : [query];
     let result: React.ReactNode[] = [children];
@@ -29,7 +29,7 @@ export default function Highlight({ children, query, highLightClass, className, 
           newResult.push(part);
           if (i < parts.length - 1) {
             newResult.push(
-              <span key={\`\${i}-\${q}\`} data-node="highlight" className={cn('bg-yellow-500', highLightClass)}>
+              <span key={\`\${i}-\${q}\`} data-node="highlight" className={cn('bg-yellow-500', highlightClassName)}>
                 {node.match(regex)?.[i] || ''}
               </span>,
             );
@@ -41,7 +41,7 @@ export default function Highlight({ children, query, highLightClass, className, 
     });
 
     return result;
-  }, [children, query, highLightClass]);
+  }, [children, query, highlightClassName]);
 
   return (
     <span className={className} {...props}>
