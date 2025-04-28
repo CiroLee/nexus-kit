@@ -53,7 +53,7 @@ export default function PopoverPage() {
         <PreviewAndCode
           anchorId="placement"
           title="placement"
-          description="use side and align props to change the position of the popover"
+          description="use side and align props to change the position of the Popover"
           codeText={placementCode}
           code={<Code code={placementCode} />}>
           <Popover side="right" align="end" trigger={<Button>Click Me</Button>}>
@@ -65,12 +65,7 @@ export default function PopoverPage() {
             popover content
           </Popover>
         </PreviewAndCode>
-        <PreviewAndCode
-          anchorId="hidden-arrow"
-          title="hidden arrow"
-          description="use sideOffset and alignOffset props to change the offset of the popover"
-          codeText={hiddenArrowCode}
-          code={<Code code={hiddenArrowCode} />}>
+        <PreviewAndCode anchorId="hidden-arrow" title="hidden arrow" codeText={hiddenArrowCode} code={<Code code={hiddenArrowCode} />}>
           <Popover hiddenArrow trigger={<Button>Click Me</Button>}>
             popover content
           </Popover>

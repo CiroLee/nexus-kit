@@ -150,6 +150,10 @@ export const navConfig = [
         name: 'Highlight',
         href: '/docs/highlights',
       },
+      {
+        name: 'HoverCard',
+        href: '/docs/hover-cards',
+      },
     ],
   },
 ];
