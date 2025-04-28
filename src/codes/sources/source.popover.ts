@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { cva } from 'class-variance-authority';
 
 const popoverContent = cva(
-  \`text-foreground rounded-md bg-background border border-line p-2 z-(--popup) transition-all origin-[--radix-popover-content-transform-origin] 
+  \`rounded-md bg-background border border-line p-2 z-(--popup) transition-all origin-[--radix-popover-content-transform-origin] 
   animate-zoom-fade-in data-[state=closed]:animate-zoom-fade-out outline-none\`,
 );
 
