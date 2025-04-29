@@ -1,6 +1,4 @@
-export const stateCode = `'use client';
-
-import { Alert, AlertTitle } from "@/components/ui/Alert";
+export const stateCode = `import { Alert, AlertTitle } from "@/components/ui/Alert";
 
 export default function Page() {
   return (
@@ -21,8 +19,8 @@ export default function Page() {
         <AlertTitle>danger - Alert Title</AlertTitle>
         your can add alert content here
       </Alert>
-      <Alert state="default">
-        <AlertTitle>default - Alert Title</AlertTitle>
+      <Alert state="neutral">
+        <AlertTitle>neutral - Alert Title</AlertTitle>
         your can add alert content here
       </Alert>
     </div>
@@ -30,17 +28,37 @@ export default function Page() {
 }
 `;
 
-export const showIconCode = `'use client';
-
-import { Alert, AlertTitle } from "@/components/ui/Alert";
+export const showIconCode = `import { Alert, AlertTitle } from "@/components/ui/Alert";
 
 export default function Page() {
   return (
     <div className="space-y-5">
-      <Alert showIcon={false} state="info">
+      <Alert hiddenIcon state="info">
         <AlertTitle>Alert Title</AlertTitle>
         your can add alert content here
       </Alert>
+    </div>
+  )
+}
+`;
+
+export const variantCode = `import { Alert, AlertTitle } from "@/components/ui/Alert";
+
+export default function Page() {
+  return (
+    <div className="space-y-5">
+      <Alert state="info" variant="solid">
+          <AlertTitle>solid - Alert Title</AlertTitle>
+          your can add alert content here
+        </Alert>
+        <Alert state="info" variant="bordered">
+          <AlertTitle>bordered - Alert Title</AlertTitle>
+          your can add alert content here
+        </Alert>
+        <Alert state="info" variant="light">
+          <AlertTitle>light - Alert Title</AlertTitle>
+          your can add alert content here
+        </Alert>
     </div>
   )
 }

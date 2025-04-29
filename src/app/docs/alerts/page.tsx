@@ -4,7 +4,7 @@ import SectionIntro from '@/components/business/SectionIntro';
 import Code from '@/components/business/Code';
 import { Alert, AlertTitle } from '@/components/ui/Alert';
 import OnThisPage, { type AnchorItem } from '@/components/business/OnThisPage';
-import { stateCode, showIconCode, customIcon } from '@/codes/demos/code.alerts';
+import { stateCode, showIconCode, variantCode, customIcon } from '@/codes/demos/code.alerts';
 import sourceCode from '@/codes/sources/source.alert';
 import CodeDrawer from '@/components/business/CodeDrawer';
 
@@ -12,6 +12,10 @@ const navList: AnchorItem[] = [
   {
     anchorId: 'state',
     label: 'state',
+  },
+  {
+    anchorId: 'variant',
+    label: 'variant',
   },
   {
     anchorId: 'hidden-icon',
@@ -47,20 +51,36 @@ export default function HeadingPage() {
               <AlertTitle>danger - Alert Title</AlertTitle>
               your can add alert content here
             </Alert>
-            <Alert state="default">
+            <Alert state="neutral">
               <AlertTitle>default - Alert Title</AlertTitle>
               your can add alert content here
             </Alert>
           </div>
         </PreviewAndCode>
+        <PreviewAndCode anchorId="variant" title="variant" codeText={variantCode} code={<Code code={variantCode} />}>
+          <div className="space-y-5">
+            <Alert state="info" variant="solid">
+              <AlertTitle>solid - Alert Title</AlertTitle>
+              your can add alert content here
+            </Alert>
+            <Alert state="info" variant="bordered">
+              <AlertTitle>bordered - Alert Title</AlertTitle>
+              your can add alert content here
+            </Alert>
+            <Alert state="info" variant="light">
+              <AlertTitle>light - Alert Title</AlertTitle>
+              your can add alert content here
+            </Alert>
+          </div>
+        </PreviewAndCode>
         <PreviewAndCode codeText={showIconCode} anchorId="hidden-icon" title="hidden icon" code={<Code code={showIconCode} />}>
-          <Alert showIcon={false}>
+          <Alert hiddenIcon>
             <AlertTitle>Alert Title</AlertTitle>
             your can add alert content here
           </Alert>
         </PreviewAndCode>
         <PreviewAndCode codeText={customIcon} anchorId="custom-icon" title="custom Icon" code={<Code code={customIcon} />}>
-          <Alert state="default" icon={<IconTimezone size={24} />}>
+          <Alert state="neutral" icon={<IconTimezone size={24} />}>
             <AlertTitle>Alert Title</AlertTitle>
             your can add alert content here
           </Alert>
