@@ -82,7 +82,7 @@ export default function Page() {
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="as-dot" codeText={asDotCode} title="asDot" code={<Code code={asDotCode} />}>
-          <Badge asDot>
+          <Badge asDot size="sm">
             <Avatar src="/images/avatar-2.png" />
           </Badge>
         </PreviewAndCode>

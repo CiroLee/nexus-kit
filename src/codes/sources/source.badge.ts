@@ -15,9 +15,26 @@ const badge = cva('rounded-full text-white p-0.5 box-border absolute flex items-
       'bottom-right': 'bottom-[10%] right-[10%] translate-x-1/2 translate-y-1/2',
     },
     asDot: {
-      true: 'min-w-[unset] w-3 h-3',
+      true: 'min-w-[unset]',
     },
   },
+  compoundVariants: [
+    {
+      asDot: true,
+      size: 'sm',
+      className: 'w-2.5 h-2.5',
+    },
+    {
+      asDot: true,
+      size: 'md',
+      className: 'w-3.5 h-3.5',
+    },
+    {
+      asDot: true,
+      size: 'lg',
+      className: 'w-4 h-4',
+    },
+  ],
   defaultVariants: {
     size: 'md',
     placement: 'top-right',
