@@ -1,7 +1,7 @@
 'use client';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
-const badge = cva(`rounded-full text-white p-0.5 box-border absolute flex items-center justify-center border-2 border-background whitespace-nowrap bg-red-500 `, {
+const badge = cva('rounded-full text-white p-0.5 box-border absolute flex items-center justify-center border-2 border-background whitespace-nowrap bg-red-500', {
   variants: {
     size: {
       sm: 'text-xs min-w-4 h-4',

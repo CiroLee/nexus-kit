@@ -9,8 +9,5 @@
   "eslint.options": {
     "overrideConfigFile": "eslint.config.mjs"
   },
-  "tailwindCSS.experimental.classRegex": [
-    ["cva\\(((?:[^()]|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["cn\\(((?:[^()]|\\([^()]*\\))*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-  ]
+  "tailwindCSS.classFunctions": ["cva", "cn"]
 }
