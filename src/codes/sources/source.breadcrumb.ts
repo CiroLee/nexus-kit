@@ -43,18 +43,29 @@ const breadcrumbLink = cva('flex items-center gap-1 transition-colors outline-no
   },
 });
 type BreadcrumbItemVariants = VariantProps<typeof breadcrumbItem>;
-interface BreadcrumbItemProps extends React.HTMLAttributes<HTMLLIElement>, BreadcrumbItemVariants {
+interface BreadcrumbItemProps extends React.HTMLAttributes<HTMLElement>, BreadcrumbItemVariants {
   disabled?: boolean;
   href?: string;
   asCurrent?: boolean;
   separator?: React.ReactNode;
 }
 
-export function BreadcrumbItem({ className, disabled, separator, href, asCurrent, children, ...props }: BreadcrumbItemProps) {
+export function BreadcrumbItem({ className, disabled, separator, href, asCurrent, children, onClick, ...props }: BreadcrumbItemProps) {
   return (
     <li className={cn(breadcrumbItem({ className }))} {...props}>
       {href && !asCurrent ? (
-        <a href={href} {...(disabled ? { 'data-disabled': '' } : {})} className={breadcrumbLink({ disabled })}>
+        <a
+          href={href}
+          {...(disabled ? { 'data-disabled': '' } : {})}
+          className={breadcrumbLink({ disabled })}
+          onClick={(e) => {
+            if (disabled) {
+              e.preventDefault();
+              e.stopPropagation();
+              return;
+            }
+            onClick?.(e);
+          }}>
           {children}
         </a>
       ) : (
