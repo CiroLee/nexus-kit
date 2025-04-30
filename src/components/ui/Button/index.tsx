@@ -32,7 +32,15 @@ const button = cva(`inline-flex items-center justify-center transition not-disab
       true: 'rounded-full',
     },
   },
-  compoundVariants: [...colorsBorderedVariants, ...colorsLightVariants],
+  compoundVariants: [
+    ...colorsBorderedVariants,
+    ...colorsLightVariants,
+    {
+      variant: 'solid',
+      colors: 'neutral',
+      className: 'text-foreground',
+    },
+  ],
   defaultVariants: {
     size: 'md',
     colors: 'primary',
