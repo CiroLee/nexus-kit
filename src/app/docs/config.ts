@@ -154,6 +154,10 @@ export const navConfig = [
         name: 'HoverCard',
         href: '/docs/hover-cards',
       },
+      {
+        name: 'Timeline',
+        href: '/docs/timelines',
+      },
     ],
   },
 ];
