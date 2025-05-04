@@ -28,8 +28,8 @@ export default function SideNavBar() {
       {navConfig.map((nav) => (
         <div key={nav.key} className="not-last:mb-4">
           {nav.href ? (
-            <Link href={nav.href}>
-              <h4>{nav.title}</h4>
+            <Link href={nav.href} className="hover:text-primary transition-colors">
+              {nav.title}
             </Link>
           ) : (
             <h4>{nav.title}</h4>
