@@ -45,7 +45,7 @@ export default function HoverCardPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="HoverCard" description="HoverCard is used to display content when hovering over an element" />
+        <SectionIntro title="HoverCard" description="HoverCard is used to display content when hovering over an element." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <HoverCard className="min-w-55" align="start" trigger={<HoverTrigger />}>

@@ -21,7 +21,7 @@ export default function BreadcrumbPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Breadcrumb" description="Breadcrumb is used to navigate to the current location" />
+        <SectionIntro title="Breadcrumb" description="Breadcrumb is used to navigate to the current location." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Breadcrumb>

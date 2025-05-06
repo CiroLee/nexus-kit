@@ -30,7 +30,7 @@ export default function StarRatingPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="StarRating" description="StarRating is a component that shows star ratings in a detailed way" />
+        <SectionIntro title="StarRating" description="StarRating is a component that shows star ratings in a detailed way." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="star" title="star" codeText={starCode} code={<Code code={starCode} />}>
           <Star value={0.4} />

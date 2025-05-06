@@ -31,7 +31,7 @@ export default function PopoverPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Popover" description="Popover is a component that displays a popup content when the user clicks on an element" />
+        <SectionIntro title="Popover" description="Popover is a component that displays a popup content when the user clicks on an element." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Popover side="top" align="start" trigger={<Button colors="danger">Delete</Button>}>

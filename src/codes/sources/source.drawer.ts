@@ -19,8 +19,8 @@ type DrawerContentVariants = VariantProps<typeof drawerContent>;
 const dialogOverlay = cva('data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out fixed inset-0 z-50', {
   variants: {
     backdrop: {
-      opaque: 'bg-black/30',
-      blur: 'bg-black/30 backdrop-blur',
+      opaque: 'bg-black/45 dark:bg-black/55',
+      blur: 'bg-black/45 dark:bg-black/55 backdrop-blur-sm',
       transparent: 'bg-transparent',
     },
   },

@@ -40,7 +40,7 @@ export default function SlidersPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Slider" description="Slider allows users to select values within a range" />
+        <SectionIntro title="Slider" description="Slider allows users to select values within a range." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Slider defaultValue={[40]} className="max-w-100" />

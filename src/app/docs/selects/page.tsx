@@ -120,7 +120,7 @@ export default function SelectPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Select" description="Selects are used to select one option from a list" />
+        <SectionIntro title="Select" description="Selects are used to select one option from a list." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Select className="w-60" placeholder="select sth..." items={selectItems} />

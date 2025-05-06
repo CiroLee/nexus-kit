@@ -31,7 +31,7 @@ export default function LinkPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Link" description="Links are used to navigate between pages or to external resources, providing interactive elements for user navigation" />
+        <SectionIntro title="Link" description="Links are used to navigate between pages or to external resources, providing interactive elements for user navigation." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Link href="#">Link</Link>

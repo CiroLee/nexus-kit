@@ -17,7 +17,7 @@ export default function HighlightPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Highlight" description="Highlight is used to highlight subsets of text" />
+        <SectionIntro title="Highlight" description="Highlight is used to highlight subsets of text." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Highlight query="emphasize">Using the Highlight component to emphasize content</Highlight>

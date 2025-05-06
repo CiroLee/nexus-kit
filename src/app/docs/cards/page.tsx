@@ -24,7 +24,7 @@ export default function CardPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Card" description="Cards are used to display related contents and actions" />
+        <SectionIntro title="Card" description="Cards are used to display related contents and actions." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<Code code={defaultCode} />}>
           <Card className="sm:w-80">

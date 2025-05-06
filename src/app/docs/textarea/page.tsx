@@ -30,7 +30,7 @@ export default function TextareaPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Textarea" description="Inputs allow users to enter large texts, they usually appear in forms" />
+        <SectionIntro title="Textarea" description="Inputs allow users to enter large texts, they usually appear in forms." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Textarea className="w-80" placeholder="enter texts here" />

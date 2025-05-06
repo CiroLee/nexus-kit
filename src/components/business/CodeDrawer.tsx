@@ -3,13 +3,15 @@ import Button from '../ui/Button';
 import { Drawer, DrawerClose } from '../ui/Drawer';
 import { IconX } from '@tabler/icons-react';
 import Code from './Code';
+import ClientCode from './ClientCode';
 import ClientCopyButton from './ClientCopyButton';
 
 interface CodeDrawerProps {
   code: string;
   className?: string;
+  isClient?: boolean;
 }
-export default function CodeDrawer({ code, className }: CodeDrawerProps) {
+export default function CodeDrawer({ code, isClient, className }: CodeDrawerProps) {
   return (
     <Drawer
       placement="right"
@@ -28,9 +30,7 @@ export default function CodeDrawer({ code, className }: CodeDrawerProps) {
           </DrawerClose>
           <ClientCopyButton text={code} />
         </div>
-        <div className="overflow-auto rounded-md">
-          <Code code={code} />
-        </div>
+        <div className="overflow-auto rounded-md">{isClient ? <ClientCode code={code} /> : <Code code={code} />}</div>
       </div>
     </Drawer>
   );

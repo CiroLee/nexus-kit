@@ -31,7 +31,7 @@ export default function HeadingPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Alert" description="Alerts are used to display brief messages" />
+        <SectionIntro title="Alert" description="Alerts are used to display brief messages." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode codeText={stateCode} anchorId="state" title="state" className="space-y-3" code={<Code code={stateCode} />}>
           <div className="space-y-5">

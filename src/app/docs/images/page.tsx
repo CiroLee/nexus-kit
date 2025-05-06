@@ -18,7 +18,7 @@ export default function ImagePage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Image" description="Image is used to display the image content" />
+        <SectionIntro title="Image" description="Image is used to display the image content." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Image src="https://dub.sh/mUoRWra" className="h-70 w-50" alt="demo image" />

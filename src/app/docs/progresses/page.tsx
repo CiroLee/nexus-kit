@@ -18,7 +18,7 @@ export default function ProgressPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Progress" description="Progress is a component that displays the progress of an operation" />
+        <SectionIntro title="Progress" description="Progress is a component that displays the progress of an operation." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Progress value={65} className="max-w-100" />

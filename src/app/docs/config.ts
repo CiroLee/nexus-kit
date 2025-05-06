@@ -15,7 +15,7 @@ export const navConfig = [
     ],
   },
   {
-    title: 'Base Components',
+    title: 'Components',
     key: 'base',
     children: [
       {
@@ -157,6 +157,10 @@ export const navConfig = [
       {
         name: 'Timeline',
         href: '/docs/timelines',
+      },
+      {
+        name: 'Loading',
+        href: '/docs/loadings',
       },
     ],
   },

@@ -17,7 +17,7 @@ export default function SkeletonPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Skeleton" description="Skeleton is a placeholder component that is used to display a loading state" />
+        <SectionIntro title="Skeleton" description="Skeleton is a placeholder component that is used to display a loading state." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <SkeletonText className="max-w-100" />

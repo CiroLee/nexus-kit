@@ -20,7 +20,7 @@ export default function TimelinePage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Timeline" description="Timeline is used to display a series of events in chronological order" />
+        <SectionIntro title="Timeline" description="Timeline is used to display a series of events in chronological order." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Timeline className="max-w-120">

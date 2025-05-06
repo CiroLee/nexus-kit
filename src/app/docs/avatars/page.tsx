@@ -39,7 +39,7 @@ export default function AvatarPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Avatar" description="Avatars are used to represent a user, and the profile picture" />
+        <SectionIntro title="Avatar" description="Avatars are used to represent a user, and the profile picture." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<Code code={defaultCode} />}>
           <div className="flex items-center gap-3.5">

@@ -22,7 +22,7 @@ export default function KbdPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Kbd" description="Kbd is a component that displays keyboard shortcuts" />
+        <SectionIntro title="Kbd" description="Kbd is a component that displays keyboard shortcuts." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <div className="flex gap-4">

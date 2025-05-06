@@ -61,7 +61,7 @@ export default function SegmentPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Segment" description="Segment is a controller to switch between different options" />
+        <SectionIntro title="Segment" description="Segment is a controller to switch between different options." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Segment option={option} />

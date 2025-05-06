@@ -31,7 +31,7 @@ export default function TooltipPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Tooltip" description="Tooltip is a floating text that appears when a user hovers over an element" />
+        <SectionIntro title="Tooltip" description="Tooltip is a floating text that appears when a user hovers over an element." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <ToolTip trigger={<Button>Hover Me</Button>}>tooltip</ToolTip>

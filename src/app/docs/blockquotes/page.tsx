@@ -21,7 +21,7 @@ export default function BlockquotePage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Blockquote" description="Blockquote is used to highlight and emphasize text from another source" />
+        <SectionIntro title="Blockquote" description="Blockquote is used to highlight and emphasize text from another source." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Blockquote cite="—— Thomas Edison">

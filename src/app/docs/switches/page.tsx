@@ -30,7 +30,7 @@ export default function SwitchPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Switch" description="Switches are used to toggle between two mutually exclusive states" />
+        <SectionIntro title="Switch" description="Switches are used to toggle between two mutually exclusive states." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Switch defaultChecked />

@@ -48,7 +48,7 @@ export default function TablePage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Table" description="A table is a set of data that is presented in a grid format, with rows and columns" />
+        <SectionIntro title="Table" description="A table is a set of data that is presented in a grid format, with rows and columns." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Table>

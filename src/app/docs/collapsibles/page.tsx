@@ -14,7 +14,7 @@ export default function CollapsiblePage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Collapsible" description="Collapsible is an interactive element that toggles a panel's visibility" />
+        <SectionIntro title="Collapsible" description="Collapsible is an interactive element that toggles a panel's visibility." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Collapsible className="pt-4" trigger={<Button>toggle</Button>}>
