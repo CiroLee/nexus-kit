@@ -35,7 +35,7 @@ const dialogOverlay = cva('data-[state=open]:animate-fade-in data-[state=closed]
 });
 export type DialogOverlayVariants = VariantProps<typeof dialogOverlay>;
 
-interface DialogProps extends React.ComponentPropsWithRef<typeof DialogPrimitive.Root>, DialogOverlayVariants, DialogContentVariants {
+interface DialogProps extends React.ComponentPropsWithoutRef<typeof DialogPrimitive.Root>, DialogOverlayVariants, DialogContentVariants {
   trigger: React.ReactNode;
   title?: React.ReactNode;
   description?: React.ReactNode;
@@ -61,10 +61,10 @@ export function Dialog({ trigger, size, className, title, description, footer, h
               <IconX size={18} className="opacity-40 transition-colors group-hover:opacity-100" />
             </Button>
           </DialogPrimitive.Close>
-          <DialogPrimitive.Title aria-label="dialog title" className={cn('dialog-title px-3.5 text-xl font-semibold', { hidden: !title })}>
+          <DialogPrimitive.Title data-node="dialog-title" aria-label="dialog title" className={cn('px-3.5 text-xl font-semibold', { hidden: !title })}>
             {title}
           </DialogPrimitive.Title>
-          <DialogPrimitive.Description aria-label="dialog description" className={cn('text-foreground/60 mt-2 mb-3 px-3.5', { hidden: !description })}>
+          <DialogPrimitive.Description data-node="dialog-description" aria-label="dialog description" className={cn('text-foreground/60 mt-2 mb-3 px-3.5', { hidden: !description })}>
             {description}
           </DialogPrimitive.Description>
           <div className="max-h-[65vh] overflow-auto px-3.5">{children}</div>
