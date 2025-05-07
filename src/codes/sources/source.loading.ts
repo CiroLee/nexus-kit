@@ -4,19 +4,22 @@ import { IconLoader2 } from '@tabler/icons-react';
 import { cn } from '@/lib/utils';
 import { cva, VariantProps } from 'class-variance-authority';
 
-const mask = cva('absolute inset-0', {
+const loading = cva('absolute inset-0 z-(--loading) flex items-center justify-center', {
   variants: {
     backdrop: {
       opaque: 'bg-black/45 dark:bg-black/55',
       blur: 'bg-black/45 dark:bg-black/55 backdrop-blur-sm',
-      transparent: 'bg-transparent',,
+      transparent: 'bg-transparent',
+    },
+    isFullscreen: {
+      true: 'fixed',
     },
   },
   defaultVariants: {
     backdrop: 'opaque',
   },
 });
-interface LoadingProps extends VariantProps<typeof mask> {
+interface LoadingProps extends VariantProps<typeof loading> {
   className?: string;
   style?: React.CSSProperties;
   open?: boolean;
@@ -27,14 +30,14 @@ interface LoadingProps extends VariantProps<typeof mask> {
 }
 export default function Loading({ className, open, backdrop, indicator, isFullscreen, children, ...props }: LoadingProps) {
   const [visible, setVisible] = useState(false);
-  const maskRef = useRef<HTMLDivElement>(null);
+  const loadingRef = useRef<HTMLDivElement>(null);
   const animation = useRef<Animation>(null);
   useEffect(() => {
     if (open) {
       setVisible(true);
       document.body.setAttribute('style', 'overflow: hidden');
-      if (maskRef.current) {
-        animation.current = maskRef.current.animate(
+      if (loadingRef.current) {
+        animation.current = loadingRef.current.animate(
           { opacity: [0, 1] },
           {
             duration: 200,
@@ -43,7 +46,7 @@ export default function Loading({ className, open, backdrop, indicator, isFullsc
           },
         );
       }
-    } else if (maskRef.current && animation.current) {
+    } else if (loadingRef.current && animation.current) {
       animation.current.reverse();
       animation.current.onfinish = () => {
         setVisible(false);
@@ -55,8 +58,7 @@ export default function Loading({ className, open, backdrop, indicator, isFullsc
     <div className="relative">
       {children}
       {visible || open ? (
-        <div className={cn('absolute inset-0 z-(--loading) flex items-center justify-center', { fixed: isFullscreen }, className)} {...props}>
-          <div ref={maskRef} className={mask({ backdrop })}></div>
+        <div ref={loadingRef} className={cn(loading({ backdrop, isFullscreen, className }))} {...props}>
           <div data-node="loading-indicator" className="z-2">
             {indicator ? <>{indicator}</> : <IconLoader2 className="text-primary animate-spin" size={36} />}
           </div>
