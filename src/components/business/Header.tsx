@@ -20,7 +20,7 @@ export default function DocHeader({ showToggleSidebar }: { showToggleSidebar?: b
       </Link>
       <div className="flex h-full items-center gap-2">
         <Link href="/docs" className={cn('hover:text-primary block text-sm transition-colors', { hidden: pathname === '/' || pathname.startsWith('/docs') })}>
-          Docs
+          Documents
         </Link>
         <Button variant="light" size="sm" colors="neutral" icon asChild>
           <Link href="https://github.com/CiroLee/nexus-kit" target="_blank">

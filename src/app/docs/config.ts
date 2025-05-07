@@ -27,6 +27,10 @@ export const navConfig = [
         href: '/docs/alerts',
       },
       {
+        name: 'AlertDialog',
+        href: '/docs/alertdialogs',
+      },
+      {
         name: 'Avatar',
         href: '/docs/avatars',
       },
