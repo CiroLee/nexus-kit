@@ -6,9 +6,11 @@ import './page.css';
 import Link from '@/components/ui/Link';
 
 export default function Examples() {
+  const totalChildrenCount = examplesConfig.reduce((acc, cur) => acc + (cur.children?.length || 0), 0);
   return (
     <div className="example relative overflow-auto">
-      <Heading as="h1" className="mt-12 mb-3 text-center">
+      <p className="to-primary mt-12 mb-3 bg-gradient-to-r from-purple-400 from-20% bg-clip-text text-center text-5xl font-bold text-transparent">{totalChildrenCount}+</p>
+      <Heading as="h1" className="mb-3 text-center">
         Examples
       </Heading>
       <p className="text-description text-center">Use the excellent examples code to assemble your project</p>

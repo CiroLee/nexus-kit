@@ -101,6 +101,23 @@ export const examplesConfig = [
       },
     ],
   },
+  {
+    id: 'blog',
+    href: '/examples/blog',
+    cover: <Blog />,
+    title: 'Blog',
+    description: 'Components about blog',
+    children: [
+      {
+        title: 'Blog 01',
+        name: 'blog-01',
+      },
+      {
+        title: 'Blog 02',
+        name: 'blog-02',
+      },
+    ],
+  },
 ];
 function Authentication({ className }: { className?: string }) {
   return (
@@ -246,6 +263,21 @@ function Payment() {
       />
       <rect y="85" width="209" height="12" rx="2.41611" fill="var(--example-skeleton-item)" />
       <rect y="109" width="142" height="12" rx="2.41611" fill="var(--example-skeleton-item)" />
+    </svg>
+  );
+}
+
+function Blog() {
+  return (
+    <svg width="280" height="68" viewBox="0 0 280 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="104" y="5" width="69" height="8" rx="2.41611" fill="var(--example-skeleton-item)" />
+      <rect x="104" y="24" width="176" height="8" rx="2.41611" fill="var(--example-skeleton-item)" />
+      <rect x="104" y="36" width="142" height="8" rx="2.41611" fill="var(--example-skeleton-item)" />
+      <rect width="92" height="68" rx="4" fill="var(--example-skeleton-item)" />
+      <path
+        d="M32.6667 20.6667H59.3333V47.3334H32.6667V20.6667ZM35.3333 44.6667H53.448L42 33.2187L35.3333 39.8854V44.6667ZM56.6667 44.1147V23.3334H35.3333V36.1147L42 29.4481L56.6667 44.1147ZM50.7293 27.3334C50.3757 27.3334 50.0366 27.4739 49.7865 27.7239C49.5365 27.974 49.396 28.3131 49.396 28.6667C49.396 29.0204 49.5365 29.3595 49.7865 29.6096C50.0366 29.8596 50.3757 30.0001 50.7293 30.0001C51.0829 30.0001 51.4221 29.8596 51.6721 29.6096C51.9222 29.3595 52.0627 29.0204 52.0627 28.6667C52.0627 28.3131 51.9222 27.974 51.6721 27.7239C51.4221 27.4739 51.0829 27.3334 50.7293 27.3334ZM46.7293 28.6667C46.7293 27.6059 47.1507 26.5885 47.9009 25.8383C48.651 25.0882 49.6685 24.6667 50.7293 24.6667C51.7902 24.6667 52.8076 25.0882 53.5577 25.8383C54.3079 26.5885 54.7293 27.6059 54.7293 28.6667C54.7293 29.7276 54.3079 30.745 53.5577 31.4952C52.8076 32.2453 51.7902 32.6667 50.7293 32.6667C49.6685 32.6667 48.651 32.2453 47.9009 31.4952C47.1507 30.745 46.7293 29.7276 46.7293 28.6667Z"
+        fill="var(--example-skeleton-stroke)"
+      />
     </svg>
   );
 }

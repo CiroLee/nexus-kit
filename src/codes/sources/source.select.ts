@@ -18,7 +18,7 @@ export interface SelectItem extends SelectOption {
 
 const selectTrigger = cva(
   \`inline-flex border border-line items-center justify-between px-2 focus:ring-3 focus:border-primary focus:ring-primary/30 outline-none 
-  disabled:opacity-50 disabled:cursor-not-allowed\`,
+  disabled:opacity-50 disabled:cursor-not-allowed data-placeholder:text-description\`,
   {
     variants: {
       size: {
