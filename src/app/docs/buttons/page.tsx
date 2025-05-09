@@ -7,6 +7,7 @@ import { colorsCode, sizeCode, iconCode, variantsCode, disabledCode, withIconCod
 import SectionIntro from '../../../components/business/SectionIntro';
 import { IconUpload, IconShoppingCart, IconArrowRight, IconLoader } from '@tabler/icons-react';
 import sourceCode from '@/codes/sources/source.button';
+import buttonVariantsCode from '@/codes/sources/source.buttonVariants';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 
@@ -57,7 +58,12 @@ export default function ButtonsPage() {
     <div className="flex">
       <div className="main-container">
         <SectionIntro title="Button" description="Buttons are used to trigger actions." />
-        <CodeDrawer code={sourceCode} />
+        <CodeDrawer
+          codeTabs={[
+            { id: 'index', label: 'index.tsx', content: sourceCode },
+            { id: 'variant', label: 'buttonVariants.ts', content: buttonVariantsCode },
+          ]}
+        />
         <PreviewAndCode anchorId="colors" codeText={colorsCode} title="colors" code={<Code code={colorsCode} />}>
           <div className="flex gap-4">
             <Button colors="primary">Primary</Button>
