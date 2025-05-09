@@ -39,8 +39,8 @@ export default function Page() {
   return (
      <HoverCard
         className="min-w-55"
-        side="top"
-        align="start"
+        side="top" 
+        align="center"
         trigger={
           <Link href="#">
             Sam John

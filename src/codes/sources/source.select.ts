@@ -35,7 +35,7 @@ const selectTrigger = cva(
 
 const selectContent = cva(
   \`p-1 bg-background border z-(--popup) border-line transition overflow-y-auto overflow-x-hidden data-[state=closed]:animate-fade-out data-[state=open]:animate-fade-in 
-  origin-[--radix-select-content-transform-origin] max-h-[--radix-select-content-available-height]\`,
+  origin-(--radix-select-content-transform-origin) max-h-(--radix-select-content-available-height) min-w-(--radix-select-trigger-width)\`,
   {
     variants: {
       size: {
@@ -63,11 +63,14 @@ export default function Select({ placeholder, size, items, className, ...props }
       <SelectPrimitive.Trigger className={cn('group', selectTrigger({ size, className }))}>
         <SelectPrimitive.Value placeholder={placeholder} />
         <SelectPrimitive.Icon asChild className="transition-transform group-data-[state=closed]:rotate-0 group-data-[state=open]:rotate-180">
-          <IconChevronDown size="1em" />
+          <IconChevronDown size="14px" />
         </SelectPrimitive.Icon>
       </SelectPrimitive.Trigger>
       <SelectPrimitive.Portal>
-        <SelectPrimitive.Content position="popper" sideOffset={8} className={cn('min-w-(--radix-select-trigger-width)', selectContent({ size }))}>
+        <SelectPrimitive.Content position="popper" sideOffset={8} className={selectContent({ size })}>
+          <SelectPrimitive.ScrollUpButton className="flex cursor-default items-center justify-center py-1">
+            <IconChevronDown className="rotate-180" size="1em" />
+          </SelectPrimitive.ScrollUpButton>
           <SelectPrimitive.Viewport>
             {items.map((item) => {
               if (item.options?.length) {
@@ -92,6 +95,9 @@ export default function Select({ placeholder, size, items, className, ...props }
               );
             })}
           </SelectPrimitive.Viewport>
+          <SelectPrimitive.ScrollDownButton className="flex cursor-default items-center justify-center py-1">
+            <IconChevronDown size="14px" />
+          </SelectPrimitive.ScrollDownButton>
         </SelectPrimitive.Content>
       </SelectPrimitive.Portal>
     </SelectPrimitive.Root>

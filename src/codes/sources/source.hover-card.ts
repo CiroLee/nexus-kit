@@ -3,7 +3,7 @@ import { cva } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const hoverCardContent = cva(
-  \`rounded-md bg-background drop-shadow-[0_-1px_0,1px_0_0,0_1px_0,-1px_0_0] drop-shadow-line p-2 z-(--popup) transition-all origin-[--radix-hover-card-content-transform-origin] 
+  \`rounded-md bg-background drop-shadow-[0_-1px_0,1px_0_0,0_1px_0,-1px_0_0] drop-shadow-line p-2 z-(--popup) transition-all origin-(--radix-hover-card-content-transform-origin) 
   animate-zoom-fade-in data-[state=closed]:animate-zoom-fade-out outline-none\`,
 );
 

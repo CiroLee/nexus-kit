@@ -155,7 +155,7 @@ export const navConfig = [
         href: '/docs/highlights',
       },
       {
-        name: 'HoverCard',
+        name: 'Hover Card',
         href: '/docs/hover-cards',
       },
       {

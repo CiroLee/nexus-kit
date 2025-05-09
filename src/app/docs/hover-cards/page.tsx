@@ -58,7 +58,7 @@ export default function HoverCardPage() {
           description="use side and align props to change the position of the HoverCard"
           codeText={placementCode}
           code={<Code code={placementCode} />}>
-          <HoverCard className="min-w-55" side="top" align="start" trigger={<HoverTrigger />}>
+          <HoverCard className="min-w-55" side="top" align="center" trigger={<HoverTrigger />}>
             <HoverCardContent />
           </HoverCard>
         </PreviewAndCode>
