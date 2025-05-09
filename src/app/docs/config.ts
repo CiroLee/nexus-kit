@@ -43,6 +43,10 @@ export const navConfig = [
         href: '/docs/collapsibles',
       },
       {
+        name: 'Calendar',
+        href: '/docs/calendars',
+      },
+      {
         name: 'Heading',
         href: '/docs/headings',
       },
