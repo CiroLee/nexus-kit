@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { cva } from 'class-variance-authority';
 
 const tooltipContent = cva(
-  `bg-foreground text-sm text-background rounded-md px-2 py-1 z-(--tooltip) transition-all origin-[--radix-tooltip-content-transform-origin] 
+  `bg-foreground text-sm text-background rounded-md px-2 py-1 z-(--tooltip) transition-all origin-(--radix-tooltip-content-transform-origin) 
   animate-zoom-fade-in data-[state=closed]:animate-zoom-fade-out`,
 );
 type TooltipPrimitiveProvider = Omit<React.ComponentPropsWithRef<typeof TooltipPrimitive.Provider>, 'children'>;
