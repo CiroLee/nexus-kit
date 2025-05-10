@@ -71,7 +71,7 @@ export default function CalendarPage() {
           <Calendar showCenterMark markType="month" />
         </PreviewAndCode>
         <PreviewAndCode anchorId="default-value" title="defaultValue" codeText={defaultValueCode} code={<ClientCode code={defaultValueCode} />}>
-          <Calendar showCenterMark defaultValue={new Date('2020-1-2')} />
+          <Calendar showCenterMark defaultValue={new Date('2020/1/2')} />
         </PreviewAndCode>
         <PreviewAndCode anchorId="controlled" title="controlled" codeText={controlledCode} code={<ClientCode code={controlledCode} />}>
           <div>
@@ -116,7 +116,7 @@ export default function CalendarPage() {
                 </div>
               ) : null
             }
-            defaultValue={new Date('2020-1-2')}
+            defaultValue={new Date('2020/1/2')}
           />
         </PreviewAndCode>
       </div>
