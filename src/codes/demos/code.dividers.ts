@@ -16,8 +16,7 @@ export default function Page() {
       </div>
     </div>
   )
-}
-`;
+}`;
 
 export const withContentCode = `import Divider from '@/components/ui/Divider';
 
@@ -32,5 +31,4 @@ export default function Page() {
       </div>
     </div>
 )
-}
-`;
+}`;

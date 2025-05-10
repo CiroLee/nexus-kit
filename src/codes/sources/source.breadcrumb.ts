@@ -74,6 +74,5 @@ export function BreadcrumbItem({ className, disabled, separator, href, asCurrent
       {separator ? <span className="text-[1em] group-last:hidden">{separator}</span> : <IconChevronRight size="1em" className="group-last:hidden" />}
     </li>
   );
-}
-`;
+}`;
 export default code;

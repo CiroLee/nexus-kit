@@ -40,6 +40,5 @@ export function CardFooter({ children, className, ref, ...props }: CardGlobalPro
       {children}
     </div>
   );
-}
-`;
+}`;
 export default code;

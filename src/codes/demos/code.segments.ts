@@ -10,8 +10,7 @@ export default function Page() {
   return (
      <Segment option={option} />
   )
-}
-`;
+}`;
 
 export const sizeCode = `import Segment, { type Option } from '@/components/ui/Segment';
 
@@ -29,8 +28,7 @@ export default function Page() {
         <Segment size="lg" option={option} />
       </div>
   )
-}
-`;
+}`;
 
 export const equaledWidthCode = `import Segment, { type Option } from '@/components/ui/Segment';
 
@@ -44,8 +42,7 @@ export default function Page() {
   return (
      <Segment equaledWidth option={option} />
   )
-}
-`;
+}`;
 
 export const disabledCode = `import Segment, { type Option } from '@/components/ui/Segment';
 
@@ -59,8 +56,7 @@ export default function Page() {
   return (
      <Segment defaultValue="react" option={option} />
   )
-}
-`;
+}`;
 
 export const widthIconCode = `import Segment, { type Option } from '@/components/ui/Segment';
 import { IconBrandReact, IconBrandVue, IconBrandAngular } from '@tabler/icons-react';
@@ -99,5 +95,4 @@ export default function Page() {
   return (
      <Segment option={option} />
   )
-}
-`;
+}`;

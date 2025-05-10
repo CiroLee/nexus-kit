@@ -54,6 +54,5 @@ export function Drawer({ trigger, width, height, style, className, backdrop, pla
       </DrawerPrimitive.Portal>
     </DrawerPrimitive.Root>
   );
-}
-`;
+}`;
 export default code;

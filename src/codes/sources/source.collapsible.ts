@@ -12,6 +12,5 @@ export default function Collapsible({ trigger, children, className, ...props }: 
       </CollapsiblePrimitive.Content>
     </CollapsiblePrimitive.Root>
   );
-}
-`;
+}`;
 export default code;

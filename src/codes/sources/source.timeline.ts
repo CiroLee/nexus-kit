@@ -22,7 +22,7 @@ export function TimelineItem({ className, style, ...props }: React.HTMLAttribute
 }
 
 const timelineIndicator = cva(
-  \`relative rounded-full flex shrink-0 items-center justify-center before:absolute before:top-[calc(100%_+_4px)] before:w-px before:bg-line 
+  \`relative rounded-full flex shrink-0 items-center justify-center before:absolute before:top-[calc(100%_+_4px)] before:w-px before:bg-line
    before:h-[calc(var(--timeline-item-height)_-_var(--timeline-indicator-height)_-_8px)] before:-translate-x-1/2 before:left-1/2 group-last:before:w-0\`,
   {
     variants: {
@@ -72,6 +72,5 @@ export function TimelineTitle({ className, ...props }: React.HTMLAttributes<HTML
 }
 export function TimelineContent({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return <div data-node="timeline-content" className={cn('flex flex-col gap-2 pb-6', className)} {...props} />;
-}
-`;
+}`;
 export default code;

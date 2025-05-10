@@ -93,7 +93,6 @@ export default function Segment({ defaultValue, size, option, equaledWidth, clas
       </div>
     </div>
   );
-}
-`;
+}`;
 
 export default code;

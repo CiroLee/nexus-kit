@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { IconX } from '@tabler/icons-react';
 
 const dialogContent = cva(
-  \`fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-(--popup) w-[90%] sm:max-w-[90%] bg-background py-3.5 
+  \`fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-(--popup) w-[90%] sm:max-w-[90%] bg-background py-3.5
   rounded-lg border border-line shadow-lg overflow-hidden data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out\`,
   {
     variants: {
@@ -88,6 +88,5 @@ export function Dialog({ trigger, size, className, title, description, footer, h
       </DialogPrimitive.Portal>
     </DialogPrimitive.Root>
   );
-}
-`;
+}`;
 export default code;

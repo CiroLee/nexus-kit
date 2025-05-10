@@ -25,8 +25,7 @@ export default function Page() {
       </Alert>
     </div>
   )
-}
-`;
+}`;
 
 export const showIconCode = `import { Alert, AlertTitle } from "@/components/ui/Alert";
 
@@ -39,8 +38,7 @@ export default function Page() {
       </Alert>
     </div>
   )
-}
-`;
+}`;
 
 export const variantCode = `import { Alert, AlertTitle } from "@/components/ui/Alert";
 
@@ -61,8 +59,7 @@ export default function Page() {
         </Alert>
     </div>
   )
-}
-`;
+}`;
 
 export const customIcon = `'use client';
 
@@ -78,5 +75,4 @@ export default function Page() {
       </Alert>
     </div>
   )
-}
-`;
+}`;

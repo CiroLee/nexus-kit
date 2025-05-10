@@ -55,7 +55,6 @@ export default function Badge({ className, asDot, placement, content, children, 
       </span>
     </div>
   );
-}
-`;
+}`;
 
 export default code;

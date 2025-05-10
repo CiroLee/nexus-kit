@@ -20,8 +20,7 @@ export default function Page() {
       </div>
     </Popover>
   )
-}
-`;
+}`;
 
 export const placementCode = `import { Popover } from '@/components/ui/Popover';
 
@@ -29,8 +28,7 @@ export default function Page() {
   return (
     <Popover side="right" align="end" trigger={<Button>Click Me</Button>}>popover content</Popover>
   )
-}
-`;
+}`;
 
 export const offsetCode = `import { Popover } from '@/components/ui/Popover';
 
@@ -38,8 +36,7 @@ export default function Page() {
   return (
     <Popover sideOffset={10} trigger={<Button>Click Me</Button>}>popover content</Popover>
   )
-}
-`;
+}`;
 
 export const hiddenArrowCode = `import { Popover } from '@/components/ui/Popover';
 
@@ -47,5 +44,4 @@ export default function Page() {
   return (
    <Popover hiddenArrow trigger={<Button>Click Me</Button>}>popover content</Popover>
   )
-}
-`;
+}`;

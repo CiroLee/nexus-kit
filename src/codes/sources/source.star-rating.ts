@@ -44,7 +44,6 @@ export function Star({ value = 0, defaultColor = '#a7a7a7', fillColor = '#ff6900
       />
     </svg>
   );
-}
-`;
+}`;
 
 export default code;

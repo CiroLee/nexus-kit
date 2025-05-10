@@ -45,8 +45,8 @@ interface TabsItemProps extends React.ComponentPropsWithoutRef<typeof TabsPrimit
 }
 
 const tabItem = cva(
-  \`data-[state=active]:border-primary flex items-center gap-0.5 disabled:opacity-50 disabled:cursor-not-allowed data-[state=active]:text-primary border-transparent px-2 transition outline-none 
-  data-[orientation=horizontal]:border-b-2 focus-visible:rounded focus-visible:ring-primary focus-visible:border-none focus-visible:ring-2 data-[orientation=vertical]:h-8 
+  \`data-[state=active]:border-primary flex items-center gap-0.5 disabled:opacity-50 disabled:cursor-not-allowed data-[state=active]:text-primary border-transparent px-2 transition outline-none
+  data-[orientation=horizontal]:border-b-2 focus-visible:rounded focus-visible:ring-primary focus-visible:border-none focus-visible:ring-2 data-[orientation=vertical]:h-8
   data-[orientation=vertical]:border-r-2\`,
 );
 export function TabsItem({ className, children, ref, ...props }: TabsItemProps) {
@@ -66,7 +66,6 @@ export function TabsContent({ className, children, ref, ...props }: TabsContentP
       {children}
     </TabsPrimitive.Content>
   );
-}
-`;
+}`;
 
 export default code;

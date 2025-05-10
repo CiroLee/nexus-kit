@@ -54,6 +54,5 @@ interface AvatarGroupProps {
 
 export function AvatarGroup({ children, className, orientation = 'horizontal' }: AvatarGroupProps) {
   return <div className={cn('flex flex-row -space-x-2', { 'flex-col -space-y-2 space-x-0': orientation === 'vertical' }, className)}>{children}</div>;
-}
-`;
+}`;
 export default code;

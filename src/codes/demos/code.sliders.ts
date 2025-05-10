@@ -4,8 +4,7 @@ export default function Page() {
   return (
     <Slider defaultValue={[40]} className="max-w-100" />
   )
-}
-`;
+}`;
 
 export const disabledCode = `import Slider from '@/components/ui/Slider';
 
@@ -13,8 +12,7 @@ export default function Page() {
   return (
     <Slider defaultValue={[40]} disabled className="max-w-100" />
   )
-}
-`;
+}`;
 
 export const stepCode = `import Slider from '@/components/ui/Slider';
 
@@ -22,8 +20,7 @@ export default function Page() {
   return (
     <Slider defaultValue={[40]} step={20} className="max-w-100" />
   )
-}
-`;
+}`;
 
 export const colorsCode = `import Slider from '@/components/ui/Slider';
 
@@ -37,8 +34,7 @@ export default function Page() {
       <Slider defaultValue={[40]} colors="neutral" className="max-w-100" />
     </div>
   )
-}
-`;
+}`;
 
 export const sizeCode = `import Slider from '@/components/ui/Slider';
 
@@ -50,16 +46,14 @@ export default function Page() {
       <Slider defaultValue={[40]} size="lg" className="max-w-100" />
     </div>
   )
-}
-`;
+}`;
 export const verticalCode = `import Slider from '@/components/ui/Slider';
 
 export default function Page() {
   return (
     <Slider defaultValue={[40]} orientation="vertical" className="h-60" />
   )
-}
-`;
+}`;
 
 export const rangeCode = `import Slider from '@/components/ui/Slider';
 
@@ -67,5 +61,4 @@ export default function Page() {
   return (
     <Slider defaultValue={[40, 80]} className="max-w-100" />
   )
-}
-`;
+}`;

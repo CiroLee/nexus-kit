@@ -50,6 +50,5 @@ export default function Highlight({ children, query, highlightClassName, classNa
       ))}
     </span>
   );
-}
-`;
+}`;
 export default code;

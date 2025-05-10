@@ -18,8 +18,7 @@ const [placement, setPlacement] = useState<Placement>('top');
       </Drawer>
     </div>
   )
-}
-`;
+}`;
 
 export const backdropCode = `import { Drawer } from "@/components/ui/Drawer";
 
@@ -38,8 +37,7 @@ const [placement, setPlacement] = useState<Placement>('top');
       </Drawer>
     </div>
   )
-}
-`;
+}`;
 
 export const widthCode = `import { Drawer } from "@/components/ui/Drawer";
 
@@ -50,8 +48,7 @@ const [placement, setPlacement] = useState<Placement>('top');
       width=60%
     </Drawer>
   )
-}
-`;
+}`;
 
 export const heightCode = `import { Drawer } from "@/components/ui/Drawer";
 
@@ -62,8 +59,7 @@ const [placement, setPlacement] = useState<Placement>('top');
       height=60%
     </Drawer>
   )
-}
-`;
+}`;
 
 export const contentCode = `import { IconX } from '@tabler/icons-react';
 import { Drawer, DrawerClose } from "@/components/ui/Drawer";
@@ -83,5 +79,4 @@ const [placement, setPlacement] = useState<Placement>('top');
       <section className="py-4">content...</section>
     </Drawer>
   )
-}
-`;
+}`;

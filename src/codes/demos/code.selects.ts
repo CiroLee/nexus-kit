@@ -27,8 +27,7 @@ export default function Page() {
   return (
     <Select className="w-60" placeholder="select sth..." items={selectItems} />
   )
-}
-`;
+}`;
 
 export const sizeCode = `import Select, { type SelectItem } from "@/components/ui/Select";
 
@@ -63,8 +62,7 @@ export default function Page() {
       <Select size="lg" placeholder="large size..." items={selectItems} />
     </div>
   )
-}
-`;
+}`;
 
 export const disabledCode = `import Select, { type SelectItem } from "@/components/ui/Select";
 
@@ -117,8 +115,7 @@ export default function Page() {
       <Select placeholder="item disabled" items={selectItems2} />
     </div>
   )
-}
-`;
+}`;
 
 export const groupCode = `import Select, { type SelectItem } from "@/components/ui/Select";
 
@@ -176,5 +173,4 @@ export default function Page() {
   return (
     <Select className="min-w-70" placeholder="select you what like" items={groupedItems} />
   )
-}
-`;
+}`;

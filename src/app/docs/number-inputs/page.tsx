@@ -24,7 +24,7 @@ export default function NumberInputPage() {
         <SectionIntro title="NumberInput" description="NumberInput is used to enter a number, and increase or decrease the value using the stepper buttons." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
-          <NumberInput className="max-w-80" />
+          <NumberInput className="max-w-80" defaultValue={2} />
         </PreviewAndCode>
         <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<Code code={sizeCode} />}>
           <div className="flex items-center gap-4">

@@ -2,29 +2,25 @@ export const defaultCode = `import Calendar from '@/components/ui/Calendar';
 
 export default function Page() {
   return <Calendar />;
-}
-`;
+}`;
 
 export const startOnSunday = `import Calendar from '@/components/ui/Calendar';
 
 export default function Page() {
   return <Calendar startWeekOnSunday />;
-}
-`;
+}`;
 
 export const centerMark = `import Calendar from '@/components/ui/Calendar';
 
 export default function Page() {
   return <Calendar showCenterMark markType="month" />;
-}
-`;
+}`;
 
 export const defaultValueCode = `import Calendar from '@/components/ui/Calendar';
 
 export default function Page() {
   return <Calendar showCenterMark defaultValue={new Date('2020-1-2')} />;
-}
-`;
+}`;
 
 export const controlledCode = `import { useState } from 'react';
 import Calendar from '@/components/ui/Calendar';
@@ -86,8 +82,7 @@ export default function Page() {
       />
     </div>
   );
-}
-`;
+}`;
 
 export const cellContentCode = `import Calendar from '@/components/ui/Calendar';
 
@@ -109,8 +104,7 @@ export default function Page() {
           </div>
         ) : null
       }
-      defaultValue={new Date('2020-1-2')} 
+      defaultValue={new Date('2020-1-2')}
     />
   );
-}
-`;
+}`;

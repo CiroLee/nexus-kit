@@ -10,8 +10,7 @@ export default function Page() {
       <Tag colors="neutral">neutral</Tag>
     </div>
   )
-}
-`;
+}`;
 
 export const borderedCode = `import Tag from "@/components/ui/Tag";
 
@@ -25,8 +24,7 @@ export default function Page() {
       <Tag bordered colors="neutral">neutral</Tag>
     </div>
   )
-}
-`;
+}`;
 
 export const pillCode = `import Tag from "@/components/ui/Tag";
 
@@ -40,5 +38,4 @@ export default function Page() {
       <Tag bordered pill colors="neutral">neutral</Tag>
     </div>
   )
-}
-`;
+}`;

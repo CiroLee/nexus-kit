@@ -3,7 +3,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const inputWrap = cva(
-  \`relative px-3 border border-line outline-none not-disabled:has-focus:border-primary transition-colors flex gap-2 items-center 
+  \`relative px-3 border border-line outline-none not-disabled:has-focus:border-primary transition-colors flex gap-2 items-center
   not-data-[disabled]:hover:border-primary not-disabled:has-focus-visible:ring-3 not-disabled:has-focus-visible:ring-primary/30\`,
   {
     variants: {
@@ -32,18 +32,18 @@ const inputWrap = cva(
 const input = cva('outline-none size-full disabled:cursor-not-allowed');
 
 type InputWrapVariants = VariantProps<typeof inputWrap>;
-interface InputProps extends Omit<React.ComponentPropsWithRef<'input'>, 'size' | 'disabled' | 'prefix'>, InputWrapVariants {
+interface InputProps extends Omit<React.ComponentPropsWithoutRef<'input'>, 'size' | 'disabled' | 'prefix'>, InputWrapVariants {
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
+  ref?: React.Ref<HTMLDivElement>;
 }
-export default function Input({ size, state, prefix, suffix, disabled, rounded, className, style, ...props }: InputProps) {
+export default function Input({ size, state, prefix, suffix, disabled, rounded, className, style, ref, ...props }: InputProps) {
   return (
-    <div {...(disabled ? { 'data-disabled': '' } : {})} className={cn(inputWrap({ size, state, disabled, rounded, className }))} style={style}>
+    <div ref={ref} {...(disabled ? { 'data-disabled': '' } : {})} className={cn(inputWrap({ size, state, disabled, rounded, className }))} style={style}>
       {prefix ? <>{prefix}</> : null}
       <input className={input()} disabled={!!disabled} {...props} />
       {suffix ? <>{suffix}</> : null}
     </div>
   );
-}
-`;
+}`;
 export default code;

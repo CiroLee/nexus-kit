@@ -8,8 +8,7 @@ export default function Page() {
       <Input size="lg" placeholder="lg size" />
     </div>
   )
-}
-`;
+}`;
 
 export const stateCode = `import Input from "@/components/ui/Input";
 
@@ -20,8 +19,7 @@ export default function Page() {
       <Input state="error" placeholder="error message" />
     </div>
   )
-}
-`;
+}`;
 
 export const preAndSuffixCode = `import { IconUserFilled, IconLockFilled } from '@tabler/icons-react';
 import Input from "@/components/ui/Input";
@@ -33,13 +31,11 @@ export default function Page() {
       <Input type="password" prefix={<IconLockFilled size={20} color="gray" />} />
     </div>
   )
-}
-`;
+}`;
 export const disabledCode = `import Input from "@/components/ui/Input";
 
 export default function Page() {
   return (
     <Input placeholder="disabled input" disabled />
   )
-}
-`;
+}`;

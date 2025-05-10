@@ -4,8 +4,7 @@ export default function Page() {
   return (
     <SkeletonText className="max-w-100" />
   )
-}
-`;
+}`;
 
 export const variantCode = `import { SkeletonText } from "@/components/ui/Skeleton";
 
@@ -13,8 +12,7 @@ export default function Page() {
   return (
     <SkeletonText variant="shimmer" className="max-w-100" />
   )
-}
-`;
+}`;
 
 export const combineCode = `import { SkeletonText, SkeletonBlock, SkeletonCircle } from "@/components/ui/Skeleton";
 

@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import Button from '../Button';
 
 const alertDialogContent = cva(
-  \`fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-(--popup) w-[90%] sm:max-w-[90%] bg-background py-3.5 
+  \`fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-(--popup) w-[90%] sm:max-w-[90%] bg-background py-3.5
   rounded-lg border border-line shadow-lg overflow-hidden data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out\`,
   {
     variants: {
@@ -79,6 +79,5 @@ export default function AlertDialog({ trigger, size, className, title, descripti
 }
 
 export const AlertDialogCancel = ({ children }: { children: React.ReactNode }) => <AlertDialogPrimitive.Cancel asChild>{children}</AlertDialogPrimitive.Cancel>;
-export const AlertDialogAction = ({ children }: { children: React.ReactNode }) => <AlertDialogPrimitive.Action asChild>{children}</AlertDialogPrimitive.Action>;
-`;
+export const AlertDialogAction = ({ children }: { children: React.ReactNode }) => <AlertDialogPrimitive.Action asChild>{children}</AlertDialogPrimitive.Action>;`;
 export default code;

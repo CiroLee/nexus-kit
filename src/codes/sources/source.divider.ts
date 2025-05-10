@@ -31,7 +31,6 @@ export default function Divider({ className, orientation, children, ...props }: 
       {children ? <span className={cn(content({ orientation }))}>{children}</span> : null}
     </div>
   );
-}
-`;
+}`;
 
 export default code;

@@ -102,7 +102,6 @@ export function Alert({ className, state = 'info', variant, hiddenIcon, icon, ch
 
 export function AlertTitle({ children, className }: { className?: string; children?: React.ReactNode }) {
   return <p className={cn('text-lg font-semibold', className)}>{children}</p>;
-}
-`;
+}`;
 
 export default code;

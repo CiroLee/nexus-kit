@@ -32,13 +32,14 @@ const inputWrap = cva(
 const input = cva('outline-none size-full disabled:cursor-not-allowed');
 
 type InputWrapVariants = VariantProps<typeof inputWrap>;
-interface InputProps extends Omit<React.ComponentPropsWithRef<'input'>, 'size' | 'disabled' | 'prefix'>, InputWrapVariants {
+interface InputProps extends Omit<React.ComponentPropsWithoutRef<'input'>, 'size' | 'disabled' | 'prefix'>, InputWrapVariants {
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
+  ref?: React.Ref<HTMLDivElement>;
 }
-export default function Input({ size, state, prefix, suffix, disabled, rounded, className, style, ...props }: InputProps) {
+export default function Input({ size, state, prefix, suffix, disabled, rounded, className, style, ref, ...props }: InputProps) {
   return (
-    <div {...(disabled ? { 'data-disabled': '' } : {})} className={cn(inputWrap({ size, state, disabled, rounded, className }))} style={style}>
+    <div ref={ref} {...(disabled ? { 'data-disabled': '' } : {})} className={cn(inputWrap({ size, state, disabled, rounded, className }))} style={style}>
       {prefix ? <>{prefix}</> : null}
       <input className={input()} disabled={!!disabled} {...props} />
       {suffix ? <>{suffix}</> : null}

@@ -7,5 +7,4 @@ export default function Page() {
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquet nisl, eu aliquam nisl nunc eu nisl.
     </Collapsible>
   )
-}
-`;
+}`;

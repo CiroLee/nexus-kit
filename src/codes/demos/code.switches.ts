@@ -4,8 +4,7 @@ export default function Page() {
   return (
     <Switch defaultChecked />
   )
-}
-`;
+}`;
 
 export const labelCode = `import Switch from "@/components/ui/Switch";
 
@@ -13,8 +12,7 @@ export default function Page() {
   return (
     <Switch id="auto-trans">Auto Translation</Switch>
   )
-}
-`;
+}`;
 
 export const sizeCode = `import Switch from "@/components/ui/Switch";
 
@@ -26,8 +24,7 @@ export default function Page() {
       <Switch size="lg" id="large">Large</Switch>
     </div>
   )
-}
-`;
+}`;
 
 export const disabledCode = `import Switch from "@/components/ui/Switch";
 
@@ -35,5 +32,4 @@ export default function Page() {
   return (
     <Switch disabled>disabled</Switch>
   )
-}
-`;
+}`;

@@ -18,8 +18,7 @@ export default function Page() {
       </CardBody>
     </Card>
   )
-}
-`;
+}`;
 
 export const widthFooterCode = `import { Card, CardHeader, CardTitle, CardBody, CardFooter } from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
@@ -50,5 +49,4 @@ export default function Page() {
       </CardFooter>
     </Card>
   )
-}
-`;
+}`;

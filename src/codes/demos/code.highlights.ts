@@ -6,8 +6,7 @@ export default function Page() {
        Using the Highlight component to emphasize content
      </Highlight>
   )
-}
-`;
+}`;
 
 export const multipleCode = `import Heading from "@/components/ui/Heading";
 
@@ -17,8 +16,7 @@ export default function Page() {
        Using the Highlight component to emphasize content
      </Highlight>
   )
-}
-`;
+}`;
 
 export const customCode = `import Heading from "@/components/ui/Heading";
 
@@ -28,5 +26,4 @@ export default function Page() {
       Using the Highlight component to emphasize content
     </Highlight>
   )
-}
-`;
+}`;

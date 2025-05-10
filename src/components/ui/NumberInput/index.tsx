@@ -54,9 +54,10 @@ const innerSpin = cva(
 );
 
 type InputWrapVariants = VariantProps<typeof inputWrap>;
-interface InputProps extends Omit<React.ComponentPropsWithoutRef<'input'>, 'size' | 'disabled' | 'prefix' | 'type'>, InputWrapVariants {
+interface InputProps extends Omit<React.ComponentPropsWithoutRef<'input'>, 'size' | 'disabled' | 'prefix' | 'type' | 'defaultValue'>, InputWrapVariants {
+  defaultValue?: number;
   prefix?: React.ReactNode;
-  ref?: React.Ref<HTMLInputElement>;
+  ref?: React.Ref<HTMLDivElement>;
   onStepperAction?: (action: 'up' | 'down', value: number) => void;
 }
 export default function NumberInput({ size, state, prefix, disabled, rounded, className, style, onStepperAction, ref, ...props }: InputProps) {

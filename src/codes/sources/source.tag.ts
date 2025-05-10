@@ -35,6 +35,5 @@ export default function Tag({ className, colors, bordered, pill, children, ref, 
       {children}
     </span>
   );
-}
-`;
+}`;
 export default code;

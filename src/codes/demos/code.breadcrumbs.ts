@@ -8,8 +8,7 @@ export default function Page() {
       <BreadcrumbItem asCurrent>Breadcrumb</BreadcrumbItem>
     </Breadcrumb>
   )
-}
-`;
+}`;
 
 export const variantsCode = `import { Breadcrumb, BreadcrumbItem } from "@/components/ui/Breadcrumb";
 
@@ -21,8 +20,7 @@ export default function Page() {
       <BreadcrumbItem asCurrent>Breadcrumb</BreadcrumbItem>
     </Breadcrumb>
   )
-}
-`;
+}`;
 
 export const disabledCode = `import { Breadcrumb, BreadcrumbItem } from "@/components/ui/Breadcrumb";
 
@@ -34,8 +32,7 @@ export default function Page() {
       <BreadcrumbItem asCurrent>Breadcrumb</BreadcrumbItem>
     </Breadcrumb>
   )
-}
-`;
+}`;
 
 export const sizeCode = `import { Breadcrumb, BreadcrumbItem } from "@/components/ui/Breadcrumb";
 
@@ -59,8 +56,7 @@ export default function Page() {
       </Breadcrumb>
     </div>
   )
-}
-`;
+}`;
 
 export const separatorCode = `import { Breadcrumb, BreadcrumbItem } from "@/components/ui/Breadcrumb";
 
@@ -72,8 +68,7 @@ export default function Page() {
       <BreadcrumbItem asCurrent>Breadcrumb</BreadcrumbItem>
     </Breadcrumb>
   )
-}
-`;
+}`;
 
 export const iconCode = `import { Breadcrumb, BreadcrumbItem } from "@/components/ui/Breadcrumb";
 import { IconHome, IconDashboard } from '@tabler/icons-react';
@@ -92,5 +87,4 @@ export default function Page() {
       <BreadcrumbItem asCurrent>Data</BreadcrumbItem>
     </Breadcrumb>
   )
-}
-`;
+}`;

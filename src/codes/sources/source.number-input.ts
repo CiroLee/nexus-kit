@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const inputWrap = cva(
-  \`relative pl-3 border border-line outline-none not-disabled:has-focus:border-primary transition-colors flex gap-2 items-center 
+  \`relative pl-3 border border-line outline-none not-disabled:has-focus:border-primary transition-colors flex gap-2 items-center
   not-data-[disabled]:hover:border-primary not-disabled:has-focus-visible:ring-3 not-disabled:has-focus-visible:ring-primary/30\`,
   {
     variants: {
@@ -33,7 +33,7 @@ const inputWrap = cva(
 
 const input = cva('peer outline-none size-full disabled:cursor-not-allowed [&::-webkit-inner-spin-button]:appearance-none [-moz-appearance:textfield]');
 const innerSpin = cva(
-  \`relative flex flex-1 items-center justify-center border-l border-line first:border-b transition-colors 
+  \`relative flex flex-1 items-center justify-center border-l border-line first:border-b transition-colors
   not-disabled:hover:bg-primary/10 disabled:cursor-not-allowed\`,
   {
     variants: {
@@ -54,9 +54,10 @@ const innerSpin = cva(
 );
 
 type InputWrapVariants = VariantProps<typeof inputWrap>;
-interface InputProps extends Omit<React.ComponentPropsWithoutRef<'input'>, 'size' | 'disabled' | 'prefix' | 'type'>, InputWrapVariants {
+interface InputProps extends Omit<React.ComponentPropsWithoutRef<'input'>, 'size' | 'disabled' | 'prefix' | 'type' | 'defaultValue'>, InputWrapVariants {
+  defaultValue?: number;
   prefix?: React.ReactNode;
-  ref?: React.Ref<HTMLInputElement>;
+  ref?: React.Ref<HTMLDivElement>;
   onStepperAction?: (action: 'up' | 'down', value: number) => void;
 }
 export default function NumberInput({ size, state, prefix, disabled, rounded, className, style, onStepperAction, ref, ...props }: InputProps) {
@@ -83,6 +84,5 @@ export default function NumberInput({ size, state, prefix, disabled, rounded, cl
       </div>
     </div>
   );
-}
-`;
+}`;
 export default code;

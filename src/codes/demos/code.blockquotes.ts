@@ -7,8 +7,7 @@ export default function Page() {
       I want to bring out the secrets of nature and apply them for the happiness of man. I don’t know of any better service to offer for the short time we are in the world.
     </Blockquote>
   )
-}
-`;
+}`;
 
 export const colorsCode = `import Blockquote from "@/components/ui/Blockquote";
 import { Avatar } from "@/components/ui/Avatar
@@ -33,5 +32,4 @@ export default function Page() {
       </Blockquote>
     </div>
   )
-}
-`;
+}`;

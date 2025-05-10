@@ -4,8 +4,7 @@ export default function Page() {
   return (
     <Textarea placeholder="enter texts here" />
   )
-}
-`;
+}`;
 
 export const stateCode = `import Textarea from "@/components/ui/Textarea";
 
@@ -16,8 +15,7 @@ export default function Page() {
       <Textarea state="error" placeholder="error state" />
     </div>
   )
-}
-`;
+}`;
 
 export const disabledCode = `import Textarea from "@/components/ui/Textarea";
 
@@ -25,8 +23,7 @@ export default function Page() {
   return (
     <Textarea disabled placeholder="enter texts here" />
   )
-}
-`;
+}`;
 export const resizeCode = `import Textarea from "@/components/ui/Textarea";
 
 export default function Page() {
@@ -38,5 +35,4 @@ export default function Page() {
       <Textarea resize="none" placeholder="not allow resize" />
     </div>
   )
-}
-`;
+}`;
