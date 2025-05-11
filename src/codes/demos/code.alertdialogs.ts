@@ -7,8 +7,7 @@ export default function Page() {
       <AlertDialog trigger={<Button>delete item</Button>} title="Warning" description="Are you sure you want to delete this item?" />
     </>
   )
-}
-`;
+}`;
 
 export const backdropCode = `import AlertDialog from '@/components/ui/AlertDialog';
 import Button from '@/components/ui/Button';
@@ -21,8 +20,7 @@ export default function Page() {
       <AlertDialog backdrop="transparent" trigger={<Button>transparent</Button>} title="Warning" description="Are you sure you want to delete this item?" />
     </div>
   )
-}
-`;
+}`;
 
 export const sizeCode = `import AlertDialog from '@/components/ui/AlertDialog';
 import Button from '@/components/ui/Button';
@@ -35,8 +33,7 @@ export default function Page() {
       <AlertDialog size="lg" trigger={<Button>large</Button>} title="Warning" description="Are you sure you want to delete this item?" />
     </div>
   )
-}
-`;
+}`;
 
 export const customFooterCode = `import AlertDialog, { AlertDialogAction, AlertDialogCancel } from '@/components/ui/AlertDialog';
 import Button from '@/components/ui/Button';
@@ -63,5 +60,4 @@ export default function Page() {
       />
     </>
   )
-}
-`;
+}`;

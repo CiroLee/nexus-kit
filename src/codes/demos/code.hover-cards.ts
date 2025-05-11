@@ -27,8 +27,7 @@ export default function Page() {
         </div>
       </HoverCard>
   )
-}
-`;
+}`;
 
 export const placementCode = `import HoverCard from "@/components/ui/HoverCard";
 import Avatar from "@/components/ui/Avatar";
@@ -39,7 +38,7 @@ export default function Page() {
   return (
      <HoverCard
         className="min-w-55"
-        side="top" 
+        side="top"
         align="center"
         trigger={
           <Link href="#">
@@ -60,8 +59,7 @@ export default function Page() {
         </div>
       </HoverCard>
   )
-}
-`;
+}`;
 
 export const offsetCode = `import HoverCard from "@/components/ui/HoverCard";
 import Avatar from "@/components/ui/Avatar";
@@ -93,8 +91,7 @@ export default function Page() {
         </div>
       </HoverCard>
   )
-}
-`;
+}`;
 
 export const hiddenArrowCode = `import HoverCard from "@/components/ui/HoverCard";
 import Avatar from "@/components/ui/Avatar";
@@ -126,5 +123,4 @@ export default function Page() {
         </div>
       </HoverCard>
   )
-}
-`;
+}`;

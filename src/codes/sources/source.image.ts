@@ -32,6 +32,5 @@ export default function Image({ ref, fit, aspectRatio, className, style, ...prop
       </div>
     </Avatar.Root>
   );
-}
-`;
+}`;
 export default code;

@@ -10,6 +10,20 @@
   }
 }
 
+code {
+  counter-reset: line;
+}
+
+code > span.line::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1rem;
+  margin-right: 1rem;
+  text-align: right;
+  @apply text-zinc-500;
+}
+
 .diagnoal {
   background-image: repeating-linear-gradient(-45deg, #e0e0e0, #e0e0e0 1px, #fefefe 1px, #fefefe 14px);
 }

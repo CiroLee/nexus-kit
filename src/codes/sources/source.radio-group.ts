@@ -53,7 +53,7 @@ export function Radio({ id, size, children, className, ...props }: RadioProps) {
 }
 
 const radioCard = cva(
-  \`relative border border-line rounded-md p-2 cursor-pointer not-data-disabled:hover:border-primary outline-none transition data-[state=checked]:border-primary 
+  \`relative border border-line rounded-md p-2 cursor-pointer not-data-disabled:hover:border-primary outline-none transition data-[state=checked]:border-primary
   not-data-disabled:focus-visible:ring-3 focus-visible:ring-primary/50 data-disabled:opacity-50 data-disabled:cursor-not-allowed\`,
 );
 export function RadioCard({ id, children, className, ...props }: Omit<RadioProps, 'size'>) {
@@ -62,6 +62,5 @@ export function RadioCard({ id, children, className, ...props }: Omit<RadioProps
       {children}
     </RadioGroupPrimitive.Item>
   );
-}
-`;
+}`;
 export default code;

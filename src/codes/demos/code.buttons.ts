@@ -10,8 +10,7 @@ export default function Demo() {
       <Button colors="neutral">Neutral</Button>
     </div>
   )
-}
-`;
+}`;
 
 export const sizeCode = `import Button from '@/components/ui/Button';
 
@@ -24,8 +23,7 @@ export default function Demo() {
       <Button size="lg">Button</Button>
     </div>
   )
-}
-`;
+}`;
 
 export const iconCode = `import { IconUpload } from '@tabler/icons-react';
 import Button from '@/components/ui/Button';
@@ -36,8 +34,7 @@ export default function Demo() {
       <IconUpload size={20} />
     </Button>
   )
-}
-`;
+}`;
 
 export const variantsCode = `import Button from '@/components/ui/Button';
 
@@ -49,8 +46,7 @@ export default function Demo() {
       <Button variant="light" colors="primary">Light</Button>
     </div>
   )
-}
-`;
+}`;
 
 export const disabledCode = `import Button from '@/components/ui/Button';
 
@@ -64,8 +60,7 @@ export default function Demo() {
       <Button disabled colors="neutral">neutral</Button>
     </div>
   )
-}
-`;
+}`;
 
 export const pillCode = `import Button from '@/components/ui/Button';
 
@@ -78,8 +73,7 @@ export default function Demo() {
       <Button size="lg" pill>Rounded</Button>
     </div>
   )
-}
-`;
+}`;
 
 export const withIconCode = `import { IconShoppingCart, IconArrowRight } from '@tabler/icons-react';
 import Button from '@/components/ui/Button';
@@ -97,8 +91,7 @@ export default function Demo() {
       </Button>
     </div>
   )
-}
-`;
+}`;
 
 export const loadingCode = `import { IconLoader } from '@tabler/icons-react';
 import Button from '@/components/ui/Button';
@@ -112,8 +105,7 @@ export default function Demo() {
       </Button>
     </div>
   )
-}
-`;
+}`;
 
 export const asChildCode = `import Link from 'next/link';
 import Button from '@/components/ui/Button';
@@ -128,8 +120,7 @@ export default function Demo() {
       </Button>
     </>
   )
-}
-`;
+}`;
 
 export const buttonGroupCode = `import Button from '@/components/ui/Button';
 import ButtonGroup from '@/components/ui/ButtonGroup';
@@ -142,5 +133,4 @@ export default function Demo() {
       <Button>Three</Button>
     </ButtonGroup>
   )
-}
-`;
+}`;

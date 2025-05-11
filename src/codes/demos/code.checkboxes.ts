@@ -4,8 +4,7 @@ export default function Page() {
   return (
     <Checkbox defaultChecked value="one" id="one">One</Checkbox>
   )
-}
-`;
+}`;
 
 export const sizeCode = `import { Checkbox } from "@/components/ui/Checkbox";
 
@@ -17,8 +16,7 @@ export default function Page() {
       <Checkbox size="lg" value="large" id="large">Large</Checkbox>
     </div>
   )
-}
-`;
+}`;
 
 export const disabledCode = `import { Checkbox } from "@/components/ui/Checkbox";
 
@@ -26,8 +24,7 @@ export default function Page() {
   return (
     <Checkbox value="cookies" defaultChecked disabled>Accept All Cookies</Checkbox>
   )
-}
-`;
+}`;
 
 export const verticalCode = `import { Checkbox } from "@/components/ui/Checkbox";
 
@@ -39,8 +36,7 @@ export default function Page() {
       <Checkbox value="harmonyOS" id="harmonyOS">HarmonyOS</Checkbox>
     </div>
   )
-}
-`;
+}`;
 
 export const customContentCode = `import { Checkbox } from "@/components/ui/Checkbox";
 
@@ -61,8 +57,7 @@ export default function Page() {
       </Checkbox>
     </div>
   )
-}
-`;
+}`;
 
 export const checkboxCardCode = `import { CheckboxCard } from "@/components/ui/Checkbox";
 
@@ -95,5 +90,4 @@ export default function Page() {
       </CheckboxCard>
     </div>
   )
-}
-`;
+}`;

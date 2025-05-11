@@ -31,6 +31,5 @@ export default function Heading({ as: Tag, className, style, children, ref }: He
       {children}
     </Tag>
   );
-}
-`;
+}`;
 export default code;

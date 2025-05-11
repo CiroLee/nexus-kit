@@ -47,7 +47,6 @@ interface TableBodyProps extends React.ComponentPropsWithRef<'tbody'> {
 }
 export function TableBody({ striped, className, ...props }: TableBodyProps) {
   return <tbody {...(striped ? { 'data-striped': '' } : {})} className={cn('group', className)} {...props} />;
-}
-`;
+}`;
 
 export default code;

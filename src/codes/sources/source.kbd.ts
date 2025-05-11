@@ -68,6 +68,5 @@ export default function Kbd({ keys, size, className, children, ...props }: KbdPr
       {children ? <span>{children}</span> : null}
     </div>
   );
-}
-`;
+}`;
 export default code;

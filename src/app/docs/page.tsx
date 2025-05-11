@@ -38,7 +38,7 @@ const cssConfig = `@custom-variant dark (&:where([data-theme=dark], [data-theme=
   --foreground: #fafafa;
   --line: oklch(0.371 0 0);
   --description: oklch(55.6% 0 0);
-  
+
 }
 
 @theme {
@@ -60,8 +60,7 @@ const cssConfig = `@custom-variant dark (&:where([data-theme=dark], [data-theme=
 body {
   color: var(--foreground);
   background-color: var(--background);
-}
-`;
+}`;
 
 const animationConfig = `@theme {
   --animate-fade-in: fade-in 0.15s ease-in;
@@ -249,15 +248,13 @@ const animationConfig = `@theme {
       opacity: 0.5;
     }
   }
-}
-`;
+}`;
 
 const utils = `import { twMerge } from 'tailwind-merge';
 import { ClassValue, clsx } from 'clsx';
 export function cn(...classnames: ClassValue[]): string {
   return twMerge(clsx(classnames));
-}
-`;
+}`;
 
 const guides: GuideItem[] = [
   {

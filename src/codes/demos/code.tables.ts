@@ -29,8 +29,7 @@ export default function Page() {
       </TableBody>
     </Table>
   )
-}
-`;
+}`;
 
 export const fixedHeaderCode = `import { Table, TableHeader, TableHeaderCell, TableBody, TableCell, TableRow } from '@/components/ui/ui/Table';
 
@@ -79,8 +78,7 @@ export default function Page() {
       </TableBody>
     </Table>
   )
-}
-`;
+}`;
 
 export const stripedCode = `import { Table, TableHeader, TableHeaderCell, TableBody, TableCell, TableRow } from '@/components/ui/ui/Table';
 
@@ -129,5 +127,4 @@ export default function Page() {
       </TableBody>
     </Table>
   )
-}
-`;
+}`;

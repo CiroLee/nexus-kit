@@ -9,8 +9,7 @@ export default function Page() {
       <Kbd>Command + D</Kbd>
     </div>
   )
-}
-`;
+}`;
 
 export const sizeCode = `import Kbd from "@/components/ui/Kbd";
 
@@ -22,5 +21,4 @@ export default function Page() {
       <Kbd keys={['command']} size="lg">K</Kbd>
     </div>
   )
-}
-`;
+}`;

@@ -28,6 +28,5 @@ export default function Accordion({ className, items, ...props }: AccordionProps
       ))}
     </AccordionPrimitive.Root>
   );
-}
-`;
+}`;
 export default code;

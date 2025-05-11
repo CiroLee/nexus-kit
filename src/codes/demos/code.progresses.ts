@@ -4,8 +4,7 @@ export default function Page() {
   return (
     <Progress value={65} className="max-w-100" />
   )
-}
-`;
+}`;
 
 export const sizeCode = `import Progress from "@/components/ui/Progress";
 
@@ -17,8 +16,7 @@ export default function Page() {
       <Progress value={65} size="lg" className="max-w-100" />
     </div>
   )
-}
-`;
+}`;
 
 export const colorsCode = `import Progress from "@/components/ui/Progress";
 
@@ -32,8 +30,7 @@ export default function Page() {
       <Progress value={65} colors="neutral" className="max-w-100" />
     </div>
   )
-}
-`;
+}`;
 
 export const stripedCode = `import Progress from "@/components/ui/Progress";
 
@@ -47,5 +44,4 @@ export default function Page() {
       <Progress value={65} striped colors="neutral" className="max-w-100" />
     </div>
   )
-}
-`;
+}`;

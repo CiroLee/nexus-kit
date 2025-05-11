@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 const switchRoot = cva(
-  \`peer rounded-full dark:bg-neutral-700 bg-neutral-200 p-1 transition-colors not-disabled:focus-visible:ring-3 focus-visible:ring-primary/50 
+  \`peer rounded-full dark:bg-neutral-700 bg-neutral-200 p-1 transition-colors not-disabled:focus-visible:ring-3 focus-visible:ring-primary/50
   data-[state=checked]:bg-primary outline-none not-disabled:cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed\`,
   {
     variants: {
@@ -65,6 +65,5 @@ export default function Switch({ size, className, id, children, ref, ...props }:
       </label>
     </div>
   );
-}
-`;
+}`;
 export default code;

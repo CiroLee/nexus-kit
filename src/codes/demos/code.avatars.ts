@@ -7,8 +7,7 @@ export default function Page() {
       <Avatar src="/images/avatar-2.png" alt="avatar 2" rounded />
     </div>
   )
-}
-`;
+}`;
 
 export const sizeCode = `import { Avatar } from "@/components/ui/Avatar";
 
@@ -21,8 +20,7 @@ export default function Page() {
       <Avatar size="xl" src="/images/avatar-4.png" alt="avatar 4" />
     </div>
   )
-}
-`;
+}`;
 
 export const borderedCode = `import { Avatar } from "@/components/ui/Avatar";
 
@@ -34,8 +32,7 @@ export default function Page() {
       <Avatar bordered src="/images/avatar-3.png" alt="avatar 3" />
     </div>
   )
-}
-`;
+}`;
 
 export const fallbackCode = `import { Avatar } from "@/components/ui/Avatar";
 import { IconUserFilled } from '@tabler/icons-react';
@@ -48,8 +45,7 @@ export default function Page() {
     <Avatar alt="avatar 3" fallbackClassName="!bg-orange-400" fallback={<IconUserFilled size={20} />} />
   </div>
   )
-}
-`;
+}`;
 
 export const orientationHCode = `import { Avatar, AvatarGroup } from "@/components/ui/Avatar";
 
@@ -63,8 +59,7 @@ export default function Page() {
       <Avatar bordered alt="more" fallback="+2" />
     </AvatarGroup>
   )
-}
-`;
+}`;
 
 export const orientationVCode = `import { Avatar, AvatarGroup } from "@/components/ui/Avatar";
 
@@ -78,5 +73,4 @@ export default function Page() {
       <Avatar bordered alt="more" fallback="+2" />
     </AvatarGroup>
   )
-}
-`;
+}`;

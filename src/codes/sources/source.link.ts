@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 const link = cva(
-  \`inline-flex items-center gap-0.5 text-primary transition-colors outline-none leading-[1em] 
+  \`inline-flex items-center gap-0.5 text-primary transition-colors outline-none leading-[1em]
   not-data-disabled:focus-visible:ring-primary/50 not-data-disabled:focus-visible:ring-3 not-data-disabled:focus-visible:rounded-xs\`,
   {
     variants: {
@@ -45,7 +45,6 @@ export default function Link({ className, underline, disabled, target, onClick, 
       {...props}
     />
   );
-}
-`;
+}`;
 
 export default code;

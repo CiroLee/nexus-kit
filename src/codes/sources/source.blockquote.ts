@@ -29,6 +29,5 @@ export default function Blockquote({ className, colors, children, cite, ...props
       {cite ? <cite className="text-foreground/60 text-sm not-italic">{cite}</cite> : null}
     </figure>
   );
-}
-`;
+}`;
 export default code;

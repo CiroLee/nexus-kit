@@ -64,7 +64,7 @@ export function Checkbox({ className, id, size, children, ...props }: CheckboxPr
 }
 
 const checkboxCard = cva(
-  \`has-[*:focus-visible]:ring-primary/50 relative flex items-center gap-2.5 rounded-md border p-2 select-none 
+  \`has-[*:focus-visible]:ring-primary/50 relative flex items-center gap-2.5 rounded-md border p-2 select-none
   has-[*:focus-visible]:ring-3 has-[*:disabled]:cursor-not-allowed border-line has-[*:disabled]:opacity-50\`,
 );
 export function CheckboxCard({ className, id, size, children, ...props }: CheckboxProps) {
@@ -80,7 +80,6 @@ export function CheckboxCard({ className, id, size, children, ...props }: Checkb
       </label>
     </div>
   );
-}
-`;
+}`;
 
 export default code;

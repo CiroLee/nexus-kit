@@ -7,8 +7,7 @@ export default function Page() {
       <Avatar src="/images/avatar-2.png" />
     </Badge>
   )
-}
-`;
+}`;
 
 export const sizeCode = `import Badge from "@/components/ui/Badge";
 import { Avatar } from "@/components/ui/Avatar
@@ -27,8 +26,7 @@ export default function Page() {
       </Badge>
     </div>
   )
-}
-`;
+}`;
 
 export const placementCode = `import Badge from "@/components/ui/Badge";
 import { Avatar } from "@/components/ui/Avatar
@@ -50,8 +48,7 @@ export default function Page() {
       </Badge>
     </div>
   )
-}
-`;
+}`;
 
 export const contentCode = `import Badge from "@/components/ui/Badge";
 import { Avatar } from "@/components/ui/Avatar
@@ -67,8 +64,7 @@ export default function Page() {
       </Badge>
     </div>
   )
-}
-`;
+}`;
 
 export const asDotCode = `import Badge from "@/components/ui/Badge";
 import { Avatar } from "@/components/ui/Avatar
@@ -79,5 +75,4 @@ export default function Page() {
       <Avatar src="/images/avatar-2.png" />
     </Badge>
   )
-}
-`;
+}`;

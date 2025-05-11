@@ -4,8 +4,8 @@ import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 const sliderRoot = cva(
-  \`relative flex touch-none select-none data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50 
-  data-[orientation=horizontal]:items-center data-[orientation=vertical]:w-fit data-[orientation=vertical]:items-start 
+  \`relative flex touch-none select-none data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50
+  data-[orientation=horizontal]:items-center data-[orientation=vertical]:w-fit data-[orientation=vertical]:items-start
   data-[orientation=vertical]:justify-center\`,
 );
 const sliderTrack = cva('rounded-full relative grow bg-neutral-200 dark:bg-neutral-700 data-[orientation=vertical]:h-full', {
@@ -21,7 +21,7 @@ const sliderTrack = cva('rounded-full relative grow bg-neutral-200 dark:bg-neutr
   },
 });
 const sliderRange = cva(
-  \`absolute data-[orientation=vertical]:w-full data-[orientation=horizontal]:h-full 
+  \`absolute data-[orientation=vertical]:w-full data-[orientation=horizontal]:h-full
   data-[orientation=vertical]:rounded-b-full data-[orientation=horizontal]:rounded-l-full\`,
   {
     variants: {
@@ -74,6 +74,5 @@ export default function Slider({ size, defaultValue, value, colors, className, .
       ))}
     </SliderPrimitive.Root>
   );
-}
-`;
+}`;
 export default code;

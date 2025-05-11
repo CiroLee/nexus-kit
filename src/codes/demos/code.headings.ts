@@ -11,5 +11,4 @@ export default function Page() {
       <Heading as="h6">I think therefore I am</Heading>
     </>
   )
-}
-`;
+}`;

@@ -50,7 +50,6 @@ export default class CalendarGenerator {
   private getDaysInMonth(month: number, year: number) {
     return new Date(year, month, 0).getDate();
   }
-}
-`;
+}`;
 
 export default code;

@@ -13,8 +13,7 @@ export default function Page() {
       <TabsContent value="tab-3">tab-3 content...</TabsContent>
     </Tabs>
   )
-}
-`;
+}`;
 
 export const verticalCode = `import { Tabs, TabsList, TabsItem, TabsContent } from '@/components/ui/Tabs';
 
@@ -31,8 +30,7 @@ export default function Page() {
       <TabsContent value="tab-3">tab-3 content...</TabsContent>
     </Tabs>
   )
-}
-`;
+}`;
 
 export const disabledCode = `import { Tabs, TabsList, TabsItem, TabsContent } from '@/components/ui/Tabs';
 
@@ -49,8 +47,7 @@ export default function Page() {
       <TabsContent value="tab-3">tab-3 content...</TabsContent>
     </Tabs>
   )
-}
-`;
+}`;
 
 export const widthIconCode = `import { Tabs, TabsList, TabsItem, TabsContent } from '@/components/ui/Tabs';
 import { IconMusic, IconVideo, IconPhoto } from '@tabler/icons-react';
@@ -77,5 +74,4 @@ export default function Page() {
       <TabsContent value="photo">view photos</TabsContent>
     </Tabs>
   )
-}
-`;
+}`;

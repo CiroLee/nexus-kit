@@ -7,8 +7,7 @@ export default function Page() {
       content...
     </Dialog>
   )
-}
-`;
+}`;
 
 export const backdropCode = `import { Dialog } from "@/components/ui/Dialog";
 import Button from "@/components/ui/Button";
@@ -27,8 +26,7 @@ export default function Page() {
       </Dialog>
     </div>
   )
-}
-`;
+}`;
 
 export const hiddenCode = `import { Dialog } from "@/components/ui/Dialog";
 import Button from "@/components/ui/Button";
@@ -39,8 +37,7 @@ export default function Page() {
       omitting title/description will not render
     </Dialog>
   )
-}
-`;
+}`;
 
 export const sizeCode = `import { Dialog } from "@/components/ui/Dialog";
 import Button from "@/components/ui/Button";
@@ -59,8 +56,7 @@ export default function Page() {
       </Dialog>
     </div>
   )
-}
-`;
+}`;
 
 export const scrollCode = `import { Dialog } from "@/components/ui/Dialog";
 import Button from "@/components/ui/Button";
@@ -73,8 +69,7 @@ export default function Page() {
       ))}
     </Dialog>
   )
-}
-`;
+}`;
 
 export const customFooter = `import { Dialog, DialogClose } from "@/components/ui/Dialog";
 import Button from "@/components/ui/Button";
@@ -105,5 +100,4 @@ export default function Page() {
       </Dialog>
     </div>
   )
-}
-`;
+}`;

@@ -4,8 +4,7 @@ export default function Page() {
   return (
     <Link href="#">Link</Link>
   )
-}
-`;
+}`;
 
 export const disabledCode = `import Link from "@/components/ui/Link";
 
@@ -13,8 +12,7 @@ export default function Page() {
   return (
     <Link href="#" disabled>Link</Link>
   )
-}
-`;
+}`;
 
 export const underlineCode = `import Link from "@/components/ui/Link";
 
@@ -22,8 +20,7 @@ export default function Page() {
   return (
     <Link href="#" underline>Link</Link>
   )
-}
-`;
+}`;
 
 export const externalCode = `import Link from "@/components/ui/Link";
 import { IconExternalLink } from '@tabler/icons-react';
@@ -39,5 +36,4 @@ export default function Page() {
       </Link>
     </div>
   )
-}
-`;
+}`;

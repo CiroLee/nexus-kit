@@ -28,8 +28,7 @@ const timer = useRef<ReturnType<typeof setTimeout>>(null);
       <Loading isFullscreen open={isLoading} />
     </div>
   )
-}
-`;
+}`;
 
 export const backdropCode = `import { useState } from 'react';
 import Loading from "@/components/ui/Loading";
@@ -91,8 +90,7 @@ export default function Page() {
         <Loading isFullscreen open={isLoading} />
       </>
     )
-}
-`;
+}`;
 
 export const containLoadingCode = `import { useState } from 'react';
 import Loading from "@/components/ui/Loading";
@@ -131,8 +129,7 @@ const timer = useRef<ReturnType<typeof setTimeout>>(null);
       </Loading>
     </div>
   )
-}
-`;
+}`;
 
 export const customIndicatorCode = `import { useState } from 'react';
 import { IconLoader } from '@tabler/icons-react';
@@ -178,5 +175,4 @@ const timer = useRef<ReturnType<typeof setTimeout>>(null);
       />
     </div>
   )
-}
-`;
+}`;

@@ -8,8 +8,7 @@ export default function Page() {
       <Radio value="orange">Orange</Radio>
     </RadioGroup>
   )
-}
-`;
+}`;
 
 export const orientationHCode = `import { RadioGroup, Radio } from "@/components/ui/RadioGroup";
 import Heading from '@/components/ui/Heading';
@@ -22,8 +21,7 @@ export default function Page() {
       <Radio value="orange" id="3">Orange</Radio>
     </RadioGroup>
   )
-}
-`;
+}`;
 
 export const orientationVCode = `import { RadioGroup, Radio } from "@/components/ui/RadioGroup";
 import Heading from '@/components/ui/Heading';
@@ -36,8 +34,7 @@ export default function Page() {
       <Radio value="orange" id="6">Orange</Radio>
     </RadioGroup>
   )
-}
-`;
+}`;
 
 export const sizeCode = `import { RadioGroup, Radio } from "@/components/ui/RadioGroup";
 
@@ -49,8 +46,7 @@ export default function Page() {
       <Radio size="lg" value="orange" id="9" />
     </RadioGroup>
   )
-}
-`;
+}`;
 
 export const disabledCode = `import { RadioGroup, Radio } from "@/components/ui/RadioGroup";
 
@@ -62,8 +58,7 @@ export default function Page() {
       <Radio value="orange" id="12">Orange</Radio>
     </RadioGroup>
   )
-}
-`;
+}`;
 
 export const customContentCode = `import { RadioGroup, Radio } from "@/components/ui/RadioGroup";
 
@@ -84,8 +79,7 @@ export default function Page() {
       </Radio>
     </RadioGroup>
   )
-}
-`;
+}`;
 
 export const radioCardCode = `import { RadioGroup, RadioCard } from "@/components/ui/RadioGroup";
 

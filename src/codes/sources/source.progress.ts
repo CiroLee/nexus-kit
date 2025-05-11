@@ -42,6 +42,5 @@ export default function Progress({ size, colors, value, max = 100, striped, clas
       <ProgressPrimitive.Indicator className={cn(progressIndicator({ colors, striped }))} style={{ transform: \`translateX(-\${100 - (value || 0)}%)\` }} />
     </ProgressPrimitive.Root>
   );
-}
-`;
+}`;
 export default code;

@@ -66,6 +66,5 @@ export default function Loading({ className, open, backdrop, indicator, isFullsc
       ) : null}
     </div>
   );
-}
-`;
+}`;
 export default code;

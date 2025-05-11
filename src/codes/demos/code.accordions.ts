@@ -22,8 +22,7 @@ export default function Page() {
   return (
     <Accordion type="single" collapsible items={accordionItems} className="max-w-100" />
   )
-}
-`;
+}`;
 
 export const multipleCode = `import Accordion, { type AccordionItem } from "@/components/ui/Accordion";
 
@@ -49,8 +48,7 @@ export default function Page() {
   return (
     <Accordion type="multiple" items={accordionItems} className="max-w-100" />
   )
-}
-`;
+}`;
 
 export const disabledCode = `import Accordion, { type AccordionItem } from "@/components/ui/Accordion";
 
@@ -77,8 +75,7 @@ export default function Page() {
   return (
     <Accordion type="single" collapsible items={accordionItems} className="max-w-100" />
   )
-}
-`;
+}`;
 
 export const withIconCode = `import Accordion, { type AccordionItem } from "@/components/ui/Accordion";
 import { IconAccessible, IconAlarm, IconArmchair } from '@tabler/icons-react';
@@ -120,5 +117,4 @@ export default function Page() {
   return (
     <Accordion type="single" collapsible items={accordionItems} className="max-w-100" />
   )
-}
-`;
+}`;

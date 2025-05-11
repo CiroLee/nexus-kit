@@ -35,8 +35,7 @@ export default function Page() {
       </TimelineItem>
     </Timeline>
   )
-}
-`;
+}`;
 
 export const colorsCode = `import { Timeline, TimelineIndicator, TimelineItem, TimelineContent, TimelineTitle } from '@/components/ui/Timeline';
 
@@ -75,8 +74,7 @@ export default function Page() {
       </TimelineItem>
     </Timeline>
   )
-}
-`;
+}`;
 
 export const customIndicatorCode = `import { Timeline, TimelineIndicator, TimelineItem, TimelineContent, TimelineTitle } from '@/components/ui/Timeline';
 import { IconCheck } from '@tabler/icons-react';
@@ -132,5 +130,4 @@ export default function Page() {
       </TimelineItem>
     </Timeline>
   )
-}
-`;
+}`;
