@@ -6,7 +6,7 @@ import Code from '@/components/business/Code';
 import Resizable from '@/components/business/Resizable';
 import Button from '@/components/ui/Button';
 import Link from 'next/link';
-import { getExampleCode } from '@/api/github';
+import { getExampleCode } from '@/app/api/github';
 
 export default async function Page({ params }: { params: Promise<{ repo: string }> }) {
   const { repo } = await params;
