@@ -4,8 +4,8 @@ import Code from '@/components/business/Code';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import { SkeletonCircle, SkeletonBlock, SkeletonText } from '@/components/ui/Skeleton';
 import CodeDrawer from '@/components/business/CodeDrawer';
-import sourceCode from '@/codes/sources/source.skeleton';
 import { defaultCode, variantCode, combineCode } from '@/codes/demos/code.skeletons';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -13,7 +13,8 @@ const navList: AnchorItem[] = [
   { anchorId: 'skeleton-combine', label: 'combination' },
 ];
 
-export default function SkeletonPage() {
+export default async function SkeletonPage() {
+  const sourceCode = await getSourceCode('Skeleton/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

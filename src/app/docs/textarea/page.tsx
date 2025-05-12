@@ -3,9 +3,9 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import Textarea from '@/components/ui/Textarea';
 import { defaultCode, stateCode, disabledCode, resizeCode } from '@/codes/demos/code.textarea';
-import sourceCode from '@/codes/sources/source.textarea';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -26,7 +26,8 @@ const navList: AnchorItem[] = [
   },
 ];
 
-export default function TextareaPage() {
+export default async function TextareaPage() {
+  const sourceCode = await getSourceCode('Textarea/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

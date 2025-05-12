@@ -1,59 +1,29 @@
 import Link from 'next/link';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Button from '@/components/ui/Button';
-import ButtonGroup from '@/components/ui/ButtonGroup';
 import Code from '@/components/business/Code';
-import { colorsCode, sizeCode, iconCode, variantsCode, disabledCode, withIconCode, loadingCode, pillCode, asChildCode, buttonGroupCode } from '@/codes/demos/code.buttons';
+import { colorsCode, sizeCode, iconCode, variantsCode, disabledCode, withIconCode, loadingCode, pillCode, asChildCode } from '@/codes/demos/code.buttons';
 import SectionIntro from '../../../components/business/SectionIntro';
 import { IconUpload, IconShoppingCart, IconArrowRight, IconLoader } from '@tabler/icons-react';
-import sourceCode from '@/codes/sources/source.button';
-import buttonVariantsCode from '@/codes/sources/source.buttonVariants';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
-  {
-    anchorId: 'colors',
-    label: 'colors',
-  },
-  {
-    anchorId: 'size',
-    label: 'size',
-  },
-  {
-    anchorId: 'icon',
-    label: 'icon',
-  },
-  {
-    anchorId: 'variants',
-    label: 'variants',
-  },
-  {
-    anchorId: 'disabled',
-    label: 'disabled',
-  },
-  {
-    anchorId: 'pill',
-    label: 'pill shape',
-  },
-  {
-    anchorId: 'with-icon',
-    label: 'with icon',
-  },
-  {
-    anchorId: 'loading',
-    label: 'loading',
-  },
-  {
-    anchorId: 'asChild',
-    label: 'asChild',
-  },
-  {
-    anchorId: 'button-group',
-    label: 'buttonGroup',
-  },
+  { anchorId: 'colors', label: 'colors' },
+  { anchorId: 'size', label: 'size' },
+  { anchorId: 'icon', label: 'icon' },
+  { anchorId: 'variants', label: 'variants' },
+  { anchorId: 'disabled', label: 'disabled' },
+  { anchorId: 'pill', label: 'pill shape' },
+  { anchorId: 'with-icon', label: 'with icon' },
+  { anchorId: 'loading', label: 'loading' },
+  { anchorId: 'asChild', label: 'asChild' },
 ];
-export default function ButtonsPage() {
+
+export default async function ButtonsPage() {
+  const sourceCode = await getSourceCode('Button/index.tsx');
+  const buttonVariantsCode = await getSourceCode('Button/buttonVariants.ts');
   return (
     <div className="flex">
       <div className="main-container">
@@ -160,13 +130,6 @@ export default function ButtonsPage() {
               tailwindcss
             </Link>
           </Button>
-        </PreviewAndCode>
-        <PreviewAndCode anchorId="button-group" codeText={buttonGroupCode} title="Button Group" code={<Code code={buttonGroupCode} />}>
-          <ButtonGroup>
-            <Button>One</Button>
-            <Button>Two</Button>
-            <Button>Three</Button>
-          </ButtonGroup>
         </PreviewAndCode>
       </div>
       <OnThisPage list={navList} />

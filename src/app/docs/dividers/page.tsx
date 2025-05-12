@@ -4,9 +4,9 @@ import Code from '@/components/business/Code';
 import OnThisPage, { type AnchorItem } from '@/components/business/OnThisPage';
 import Divider from '@/components/ui/Divider';
 import Heading from '@/components/ui/Heading';
-import sourceCode from '@/codes/sources/source.divider';
 import { defaultCode, withContentCode } from '@/codes/demos/code.dividers';
 import CodeDrawer from '@/components/business/CodeDrawer';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -19,7 +19,8 @@ const navList: AnchorItem[] = [
   },
 ];
 
-export default function DividerPage() {
+export default async function DividerPage() {
+  const sourceCode = await getSourceCode('Divider/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

@@ -1,9 +1,10 @@
+'use client';
 import { Switch as SwitchPrimitive } from 'radix-ui';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 const switchRoot = cva(
-  `peer rounded-full dark:bg-neutral-700 bg-neutral-200 p-1 transition-colors not-disabled:focus-visible:ring-3 focus-visible:ring-primary/50 
+  `peer rounded-full dark:bg-neutral-700 bg-neutral-200 p-1 transition-colors not-disabled:focus-visible:ring-3 focus-visible:ring-primary/50
   data-[state=checked]:bg-primary outline-none not-disabled:cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed`,
   {
     variants: {
@@ -54,7 +55,7 @@ interface SwitchProps extends React.ComponentPropsWithRef<typeof SwitchPrimitive
 
 export default function Switch({ size, className, id, children, ...props }: SwitchProps) {
   return (
-    <div className="inline-flex items-center gap-2.5">
+    <div className={cn('inline-flex items-center', { 'gap-2': children })}>
       <SwitchPrimitive.Root id={id} className={cn(switchRoot({ className, size }))} {...props}>
         <SwitchPrimitive.Thumb className={switchThumb({ size })} />
       </SwitchPrimitive.Root>

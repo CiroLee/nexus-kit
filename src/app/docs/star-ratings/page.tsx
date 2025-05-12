@@ -4,8 +4,8 @@ import Code from '@/components/business/Code';
 import { Star, StarRating } from '@/components/ui/StarRating';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
-import sourceCode from '@/codes/sources/source.star-rating';
 import { starCode, starRatingCode, sizeCode, customColorsCode } from '@/codes/demos/code.star-ratings';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -26,7 +26,8 @@ const navList: AnchorItem[] = [
   },
 ];
 
-export default function StarRatingPage() {
+export default async function StarRatingPage() {
+  const sourceCode = await getSourceCode('StarRating/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

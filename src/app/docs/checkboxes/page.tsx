@@ -3,10 +3,10 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import { Checkbox, CheckboxCard } from '@/components/ui/Checkbox';
 import { defaultCode, sizeCode, disabledCode, verticalCode, customContentCode, checkboxCardCode } from '@/codes/demos/code.checkboxes';
-import sourceCode from '@/codes/sources/source.checkbox';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import { IconBrandNextjs, IconBrandNuxt, IconBrandVue, IconBrandReact } from '@tabler/icons-react';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -35,7 +35,8 @@ const navList: AnchorItem[] = [
   },
 ];
 
-export default function CheckboxPage() {
+export default async function CheckboxPage() {
+  const sourceCode = await getSourceCode('Checkbox/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

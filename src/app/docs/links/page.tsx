@@ -4,9 +4,9 @@ import Code from '@/components/business/Code';
 import Link from '@/components/ui/Link';
 import OnThisPage, { type AnchorItem } from '@/components/business/OnThisPage';
 import { IconExternalLink } from '@tabler/icons-react';
-import sourceCode from '@/codes/sources/source.link';
 import { defaultCode, disabledCode, externalCode, underlineCode } from '@/codes/demos/code.links';
 import CodeDrawer from '@/components/business/CodeDrawer';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -27,7 +27,8 @@ const navList: AnchorItem[] = [
   },
 ];
 
-export default function LinkPage() {
+export default async function LinkPage() {
+  const sourceCode = await getSourceCode('Link/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

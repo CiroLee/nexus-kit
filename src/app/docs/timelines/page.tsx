@@ -7,8 +7,8 @@ import { Timeline, TimelineIndicator, TimelineItem, TimelineContent, TimelineTit
 import { Avatar } from '@/components/ui/Avatar';
 import Tag from '@/components/ui/Tag';
 import { IconCheck } from '@tabler/icons-react';
-import sourceCode from '@/codes/sources/source.timeline';
 import { defaultCode, colorsCode, customIndicatorCode } from '@/codes/demos/code.timelines';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -16,7 +16,8 @@ const navList: AnchorItem[] = [
   { anchorId: 'custom-indicator', label: 'custom indicator' },
 ];
 
-export default function TimelinePage() {
+export default async function TimelinePage() {
+  const sourceCode = await getSourceCode('Timeline/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

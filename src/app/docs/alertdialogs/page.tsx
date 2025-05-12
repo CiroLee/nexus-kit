@@ -5,8 +5,8 @@ import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import AlertDialog, { AlertDialogAction, AlertDialogCancel } from '@/components/ui/AlertDialog';
 import Button from '@/components/ui/Button';
-import sourceCode from '@/codes/sources/source.alertdialog';
 import { defaultCode, backdropCode, sizeCode, customFooterCode } from '@/codes/demos/code.alertdialogs';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -15,7 +15,8 @@ const navList: AnchorItem[] = [
   { anchorId: 'custom-footer', label: 'custom footer' },
 ];
 
-export default function AlertDialogPage() {
+export default async function AlertDialogPage() {
+  const sourceCode = await getSourceCode('AlertDialog/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

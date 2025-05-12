@@ -3,9 +3,9 @@ import SectionIntro from '../../../components/business/SectionIntro';
 import Code from '@/components/business/Code';
 import Heading from '@/components/ui/Heading';
 import { asCode } from '@/codes/demos/code.headings';
-import sourceCode from '@/codes/sources/source.heading';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -14,7 +14,8 @@ const navList: AnchorItem[] = [
   },
 ];
 
-export default function HeadingPage() {
+export default async function HeadingPage() {
+  const sourceCode = await getSourceCode('Heading/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

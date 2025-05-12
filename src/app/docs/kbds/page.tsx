@@ -3,9 +3,9 @@ import SectionIntro from '../../../components/business/SectionIntro';
 import Code from '@/components/business/Code';
 import Kbd from '@/components/ui/Kbd';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
-import sourceCode from '@/codes/sources/source.kbd';
 import { defaultCode, sizeCode } from '@/codes/demos/code.kbds';
 import CodeDrawer from '@/components/business/CodeDrawer';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -18,7 +18,8 @@ const navList: AnchorItem[] = [
   },
 ];
 
-export default function KbdPage() {
+export default async function KbdPage() {
+  const sourceCode = await getSourceCode('Kbd/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

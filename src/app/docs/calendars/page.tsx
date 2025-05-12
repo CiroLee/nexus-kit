@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import ClientCode from '@/components/business/ClientCode';
@@ -8,9 +8,8 @@ import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import Calendar from '@/components/ui/Calendar';
 import Select from '@/components/ui/Select';
 import Button from '@/components/ui/Button';
-import sourceCode from '@/codes/sources/source.calendar';
-import sourceCalendarCoreCode from '@/codes/sources/source.calendar-core';
 import { defaultCode, startOnSunday, centerMark, defaultValueCode, controlledCode, cellContentCode } from '@/codes/demos/code.calendars';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -45,11 +44,22 @@ const months = [
 ];
 
 export default function CalendarPage() {
+  const [sourceCode, setSourceCode] = useState({ source: '', core: '' });
   const [date, setDate] = useState({
     year: new Date().getFullYear(),
     month: new Date().getMonth(),
     day: new Date().getDate(),
   });
+
+  const getCodes = async () => {
+    const source = await getSourceCode('Calendar/index.tsx');
+    const core = await getSourceCode('Calendar/calendar.ts');
+    setSourceCode({ source, core });
+  };
+
+  useEffect(() => {
+    getCodes();
+  }, []);
   return (
     <div className="flex">
       <div className="main-container">
@@ -57,8 +67,8 @@ export default function CalendarPage() {
         <CodeDrawer
           isClient
           codeTabs={[
-            { id: 'index', label: 'index.tsx', content: sourceCode },
-            { id: 'calendar', label: 'calendar.ts', content: sourceCalendarCoreCode },
+            { id: 'index', label: 'index.tsx', content: sourceCode.source },
+            { id: 'calendar', label: 'calendar.ts', content: sourceCode.core },
           ]}
         />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<ClientCode code={defaultCode} />}>

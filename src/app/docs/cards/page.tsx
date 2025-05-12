@@ -7,8 +7,8 @@ import { Card, CardHeader, CardTitle, CardBody, CardFooter } from '@/components/
 import Button from '@/components/ui/Button';
 import { IconDots } from '@tabler/icons-react';
 import { defaultCode, widthFooterCode } from '@/codes/demos/code.cards';
-import sourceCode from '@/codes/sources/source.card';
 import CodeDrawer from '@/components/business/CodeDrawer';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -20,7 +20,8 @@ const navList: AnchorItem[] = [
     label: 'with footer',
   },
 ];
-export default function CardPage() {
+export default async function CardPage() {
+  const sourceCode = await getSourceCode('Card/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

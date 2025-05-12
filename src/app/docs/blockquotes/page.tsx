@@ -4,8 +4,8 @@ import Code from '@/components/business/Code';
 import Blockquote from '@/components/ui/Blockquote';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import CodeDrawer from '@/components/business/CodeDrawer';
-import sourceCode from '@/codes/sources/source.blockquote';
 import { defaultCode, colorsCode } from '@/codes/demos/code.blockquotes';
+import { getSourceCode } from '@/app/api/github';
 const navList: AnchorItem[] = [
   {
     anchorId: 'default',
@@ -17,7 +17,8 @@ const navList: AnchorItem[] = [
   },
 ];
 
-export default function BlockquotePage() {
+export default async function BlockquotePage() {
+  const sourceCode = await getSourceCode('Blockquote/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

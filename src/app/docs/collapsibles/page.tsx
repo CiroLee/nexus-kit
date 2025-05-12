@@ -5,12 +5,13 @@ import Button from '@/components/ui/Button';
 import Code from '@/components/business/Code';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { type AnchorItem } from '@/components/business/OnThisPage';
-import sourceCode from '@/codes/sources/source.collapsible';
 import { defaultCode } from '@/codes/demos/code.collapsibles';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [{ anchorId: 'default', label: 'default' }];
 
-export default function CollapsiblePage() {
+export default async function CollapsiblePage() {
+  const sourceCode = await getSourceCode('Collapsible/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

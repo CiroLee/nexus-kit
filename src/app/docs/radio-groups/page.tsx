@@ -3,46 +3,23 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import { RadioGroup, Radio, RadioCard } from '@/components/ui/RadioGroup';
 import { defaultCode, orientationHCode, orientationVCode, sizeCode, disabledCode, customContentCode, radioCardCode, radioCardIconCode } from '@/codes/demos/code.radio-groups';
-import sourceCode from '@/codes/sources/source.radio-group';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
-  {
-    anchorId: 'default',
-    label: 'default',
-  },
-  {
-    anchorId: 'orientation-horizontal',
-    label: 'orientation horizontal',
-  },
-  {
-    anchorId: 'orientation vertical',
-    label: 'orientation vertical',
-  },
-  {
-    anchorId: 'size',
-    label: 'size',
-  },
-  {
-    anchorId: 'disabled',
-    label: 'disabled',
-  },
-  {
-    anchorId: 'custom-content',
-    label: 'custom content',
-  },
-  {
-    anchorId: 'radio-card',
-    label: 'Radio Card',
-  },
-  {
-    anchorId: 'radio-card-icon',
-    label: 'Radio Card Icon',
-  },
+  { anchorId: 'default', label: 'default' },
+  { anchorId: 'orientation-horizontal', label: 'orientation horizontal' },
+  { anchorId: 'orientation vertical', label: 'orientation vertical' },
+  { anchorId: 'size', label: 'size' },
+  { anchorId: 'disabled', label: 'disabled' },
+  { anchorId: 'custom-content', label: 'custom content' },
+  { anchorId: 'radio-card', label: 'Radio Card' },
+  { anchorId: 'radio-card-icon', label: 'Radio Card Icon' },
 ];
 
-export default function RadioGroupPage() {
+export default async function RadioGroupPage() {
+  const sourceCode = await getSourceCode('RadioGroup/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

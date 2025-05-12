@@ -5,8 +5,8 @@ import Code from '@/components/business/Code';
 import { Alert, AlertTitle } from '@/components/ui/Alert';
 import OnThisPage, { type AnchorItem } from '@/components/business/OnThisPage';
 import { stateCode, showIconCode, variantCode, customIcon } from '@/codes/demos/code.alerts';
-import sourceCode from '@/codes/sources/source.alert';
 import CodeDrawer from '@/components/business/CodeDrawer';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -27,7 +27,8 @@ const navList: AnchorItem[] = [
   },
 ];
 
-export default function HeadingPage() {
+export default async function HeadingPage() {
+  const sourceCode = await getSourceCode('Alert/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

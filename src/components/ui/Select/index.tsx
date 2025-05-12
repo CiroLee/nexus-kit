@@ -17,7 +17,7 @@ export interface SelectItem extends SelectOption {
 }
 
 const selectTrigger = cva(
-  `inline-flex border border-line items-center justify-between px-2 focus:ring-3 focus:border-primary focus:ring-primary/30 outline-none 
+  `inline-flex border border-line items-center justify-between px-2 focus:ring-3 focus:border-primary focus:ring-primary/30 outline-none
   disabled:opacity-50 disabled:cursor-not-allowed data-placeholder:text-description`,
   {
     variants: {
@@ -34,7 +34,7 @@ const selectTrigger = cva(
 );
 
 const selectContent = cva(
-  `p-1 bg-background border z-(--popup) border-line transition overflow-y-auto overflow-x-hidden data-[state=closed]:animate-fade-out data-[state=open]:animate-fade-in 
+  `p-1 bg-background border z-(--popup) border-line transition overflow-y-auto overflow-x-hidden data-[state=closed]:animate-fade-out data-[state=open]:animate-fade-in
   origin-(--radix-select-content-transform-origin) max-h-(--radix-select-content-available-height) min-w-(--radix-select-trigger-width)`,
   {
     variants: {
@@ -105,7 +105,7 @@ export default function Select({ placeholder, size, items, className, ...props }
 }
 
 const selectItemStyle = cva(
-  `cursor-default rounded-[inherit] flex justify-between items-center p-2 transition-colors data-disabled:opacity-50 data-disabled:cursor-not-allowed  
+  `cursor-default rounded-[inherit] flex justify-between items-center p-2 transition-colors data-disabled:opacity-50 data-disabled:cursor-not-allowed
   outline-none not-data-disabled:focus:text-white not-data-disabled:focus:bg-primary relative`,
   {
     variants: {

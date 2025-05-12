@@ -4,9 +4,9 @@ import Code from '@/components/business/Code';
 import { Tabs, TabsList, TabsItem, TabsContent } from '@/components/ui/Tabs';
 import { IconMusic, IconVideo, IconPhoto } from '@tabler/icons-react';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
-import sourceCode from '@/codes/sources/source.tabs';
 import { defaultCode, verticalCode, disabledCode, widthIconCode } from '@/codes/demos/code.tabs';
 import CodeDrawer from '@/components/business/CodeDrawer';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -27,7 +27,8 @@ const navList: AnchorItem[] = [
   },
 ];
 
-export default function TabsPage() {
+export default async function TabsPage() {
+  const sourceCode = await getSourceCode('Tabs/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

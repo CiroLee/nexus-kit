@@ -4,26 +4,14 @@ import Code from '@/components/business/Code';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import Select, { type SelectItem } from '@/components/ui/Select';
 import CodeDrawer from '@/components/business/CodeDrawer';
-import sourceCode from '@/codes/sources/source.select';
 import { defaultCode, sizeCode, disabledCode, groupCode } from '@/codes/demos/code.selects';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
-  {
-    anchorId: 'default',
-    label: 'default',
-  },
-  {
-    anchorId: 'size',
-    label: 'size',
-  },
-  {
-    anchorId: 'disabled',
-    label: 'disabled',
-  },
-  {
-    anchorId: 'group',
-    label: 'group',
-  },
+  { anchorId: 'default', label: 'default' },
+  { anchorId: 'size', label: 'size' },
+  { anchorId: 'disabled', label: 'disabled' },
+  { anchorId: 'group', label: 'group' },
 ];
 
 const selectItems: SelectItem[] = [
@@ -116,7 +104,8 @@ const groupedItems: SelectItem[] = [
   },
 ];
 
-export default function SelectPage() {
+export default async function SelectPage() {
+  const sourceCode = await getSourceCode('Select/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

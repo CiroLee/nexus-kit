@@ -4,9 +4,9 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import Input from '@/components/ui/Input';
 import { sizeCode, stateCode, preAndSuffixCode, disabledCode } from '@/codes/demos/code.inputs';
-import sourceCode from '@/codes/sources/source.input';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -30,7 +30,8 @@ const navList: AnchorItem[] = [
     label: 'disabled',
   },
 ];
-export default function InputPage() {
+export default async function InputPage() {
+  const sourceCode = await getSourceCode('Input/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

@@ -6,6 +6,7 @@ import Code from '@/components/business/Code';
 import Resizable from '@/components/business/Resizable';
 import Button from '@/components/ui/Button';
 import Link from 'next/link';
+import { getExampleCode } from '@/api/github';
 
 export default async function Page({ params }: { params: Promise<{ repo: string }> }) {
   const { repo } = await params;
@@ -13,35 +14,7 @@ export default async function Page({ params }: { params: Promise<{ repo: string 
   const description = examplesConfig.find((item) => item.id === repo)?.description;
   const children = examplesConfig.find((item) => item.id === repo)?.children;
 
-  const getCode = async (filePath: string) => {
-    const url = `https://api.github.com/repos/CiroLee/${process.env.GITHUB_REPO}/contents/src/app/${filePath}/page.tsx`;
-    try {
-      const response = await fetch(url, {
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-          Accept: 'application/vnd.github.raw',
-        },
-        next: { revalidate: 60 },
-      });
-
-      if (!response.ok) {
-        // detail error info
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(`GitHub API failed: ${response.status} ${response.statusText}\n` + `path: ${filePath}\n` + `detail: ${JSON.stringify(errorData)}`);
-      }
-
-      if (response.headers.get('content-type')?.includes('application/octet-stream')) {
-        const buffer = Buffer.from(await response.arrayBuffer());
-        return buffer.toString('base64');
-      }
-      return await response.text();
-    } catch (error) {
-      console.error('获取代码时出错:', error);
-      return null;
-    }
-  };
-
-  const codesArray = await Promise.all(children?.map((child) => getCode(`${repo}/${child.name}`)) || []);
+  const codesArray = await Promise.all(children?.map((child) => getExampleCode(`${repo}/${child.name}`)) || []);
 
   return (
     <div className="relative mx-auto overflow-auto sm:max-w-[90%]">

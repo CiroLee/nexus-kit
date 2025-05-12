@@ -4,8 +4,8 @@ import Code from '@/components/business/Code';
 import Highlight from '@/components/ui/Highlight';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
-import sourceCode from '@/codes/sources/source.highlight';
 import { defaultCode, multipleCode, customCode } from '@/codes/demos/code.highlights';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -13,7 +13,8 @@ const navList: AnchorItem[] = [
   { anchorId: 'custom-style', label: 'custom highlight style' },
 ];
 
-export default function HighlightPage() {
+export default async function HighlightPage() {
+  const sourceCode = await getSourceCode('Highlight/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

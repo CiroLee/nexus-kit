@@ -3,9 +3,9 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import Switch from '@/components/ui/Switch';
 import { defaultCode, labelCode, sizeCode, disabledCode } from '@/codes/demos/code.switches';
-import sourceCode from '@/codes/sources/source.switch';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -26,7 +26,8 @@ const navList: AnchorItem[] = [
   },
 ];
 
-export default function SwitchPage() {
+export default async function SwitchPage() {
+  const sourceCode = await getSourceCode('Switch/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

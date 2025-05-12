@@ -4,8 +4,8 @@ import Code from '@/components/business/Code';
 import Image from '@/components/ui/Image';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
-import sourceCode from '@/codes/sources/source.image';
 import { defaultCode, roundedCode, aspectRatioCode, fitCode } from '@/codes/demos/code.images';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -14,7 +14,8 @@ const navList: AnchorItem[] = [
   { anchorId: 'fit', label: 'fit' },
 ];
 
-export default function ImagePage() {
+export default async function ImagePage() {
+  const sourceCode = await getSourceCode('Image/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

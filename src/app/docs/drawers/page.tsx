@@ -6,9 +6,9 @@ import Button from '@/components/ui/Button';
 import { Drawer, DrawerClose } from '@/components/ui/Drawer';
 import Heading from '@/components/ui/Heading';
 import { placementCode, backdropCode, widthCode, heightCode, contentCode } from '@/codes/demos/code.drawers';
-import sourceCode from '@/codes/sources/source.drawer';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -33,7 +33,8 @@ const navList: AnchorItem[] = [
   },
 ];
 
-export default function DrawerPage() {
+export default async function DrawerPage() {
+  const sourceCode = await getSourceCode('Drawer/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

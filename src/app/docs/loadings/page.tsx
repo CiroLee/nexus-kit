@@ -1,5 +1,5 @@
 'use client';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import CodeDrawer from '@/components/business/CodeDrawer';
@@ -8,8 +8,8 @@ import Loading from '@/components/ui/Loading';
 import { IconLoader } from '@tabler/icons-react';
 import Button from '@/components/ui/Button';
 import ClientCode from '@/components/business/ClientCode';
-import sourceCode from '@/codes/sources/source.loading';
 import { defaultCode, backdropCode, customIndicatorCode, containLoadingCode } from '@/codes/demos/code.loadings';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -19,6 +19,7 @@ const navList: AnchorItem[] = [
 ];
 
 export default function LoadingPage() {
+  const [sourceCode, setSourceCode] = useState<string>('');
   const [isLoading, setIsLoading] = useState(false);
   const [isLoading2, setIsLoading2] = useState(false);
   const [isLoading3, setIsLoading3] = useState(false);
@@ -33,6 +34,16 @@ export default function LoadingPage() {
       delayFn?.();
     }, 2000);
   };
+
+  const getCode = async () => {
+    const code = await getSourceCode('Loading/index.tsx');
+    setSourceCode(code);
+  };
+
+  useEffect(() => {
+    getCode();
+  }, []);
+
   return (
     <div className="flex">
       <div className="main-container">

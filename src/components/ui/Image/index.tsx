@@ -1,3 +1,4 @@
+'use client';
 import { Avatar } from 'radix-ui';
 import { SkeletonBlock } from '../Skeleton';
 import { cva, type VariantProps } from 'class-variance-authority';

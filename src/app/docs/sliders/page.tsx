@@ -4,8 +4,8 @@ import Slider from '@/components/ui/Slider';
 import Code from '@/components/business/Code';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
-import sourceCode from '@/codes/sources/source.slider';
 import { defaultCode, disabledCode, stepCode, colorsCode, sizeCode, verticalCode, rangeCode } from '@/codes/demos/code.sliders';
+import { getSourceCode } from '@/app/api/github';
 const navList: AnchorItem[] = [
   {
     anchorId: 'default',
@@ -36,7 +36,8 @@ const navList: AnchorItem[] = [
     label: 'range slider',
   },
 ];
-export default function SlidersPage() {
+export default async function SlidersPage() {
+  const sourceCode = await getSourceCode('Slider/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

@@ -6,8 +6,8 @@ import { Avatar } from '@/components/ui/Avatar';
 import { IconBellFilled } from '@tabler/icons-react';
 import { defaultCode, sizeCode, placementCode, contentCode, asDotCode } from '@/codes/demos/code.badges';
 import CodeDrawer from '@/components/business/CodeDrawer';
-import sourceCode from '@/codes/sources/source.badge';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -31,7 +31,8 @@ const navList: AnchorItem[] = [
     label: 'asDot',
   },
 ];
-export default function Page() {
+export default async function BadgePage() {
+  const sourceCode = await getSourceCode('Badge/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

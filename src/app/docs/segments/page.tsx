@@ -5,8 +5,8 @@ import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import Segment, { type Option } from '@/components/ui/Segment';
 import { IconBrandReact, IconBrandVue, IconBrandAngular } from '@tabler/icons-react';
 import CodeDrawer from '@/components/business/CodeDrawer';
-import sourceCode from '@/codes/sources/source.segment';
 import { defaultCode, sizeCode, equaledWidthCode, disabledCode, widthIconCode } from '@/codes/demos/code.segments';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -57,7 +57,8 @@ const option3: Option[] = [
   },
 ];
 
-export default function SegmentPage() {
+export default async function SegmentPage() {
+  const sourceCode = await getSourceCode('Segment/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

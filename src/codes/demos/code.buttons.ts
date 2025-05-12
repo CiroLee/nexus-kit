@@ -134,3 +134,16 @@ export default function Demo() {
     </ButtonGroup>
   )
 }`;
+
+export const buttonGroupPilledCode = `import Button from '@/components/ui/Button';
+import ButtonGroup from '@/components/ui/ButtonGroup';
+
+export default function Demo() {
+  return (
+    <ButtonGroup>
+      <Button pill>One</Button>
+      <Button pill>Two</Button>
+      <Button pill>Three</Button>
+    </ButtonGroup>
+  )
+}`;

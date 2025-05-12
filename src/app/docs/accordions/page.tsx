@@ -5,8 +5,8 @@ import Code from '@/components/business/Code';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { type AnchorItem } from '@/components/business/OnThisPage';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
-import sourceCode from '@/codes/sources/source.accordion';
 import { defaultCode, multipleCode, disabledCode, withIconCode } from '@/codes/demos/code.accordions';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -83,7 +83,8 @@ const accordionItems3: AccordionItem[] = [
     content: 'Accordion Item 3 Content',
   },
 ];
-export default function AccordionPage() {
+export default async function AccordionPage() {
+  const sourceCode = await getSourceCode('Accordion/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

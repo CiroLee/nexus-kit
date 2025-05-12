@@ -5,8 +5,8 @@ import { Avatar, AvatarGroup } from '@/components/ui/Avatar';
 import { IconUserFilled } from '@tabler/icons-react';
 import { defaultCode, sizeCode, borderedCode, fallbackCode, orientationHCode, orientationVCode } from '@/codes/demos/code.avatars';
 import CodeDrawer from '@/components/business/CodeDrawer';
-import sourceCode from '@/codes/sources/source.avatar';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -35,7 +35,8 @@ const navList: AnchorItem[] = [
   },
 ];
 
-export default function AvatarPage() {
+export default async function AvatarPage() {
+  const sourceCode = await getSourceCode('Avatar/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

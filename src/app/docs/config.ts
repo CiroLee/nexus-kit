@@ -59,6 +59,10 @@ export const navConfig = [
         href: '/docs/buttons',
       },
       {
+        name: 'Button Group',
+        href: '/docs/button-groups',
+      },
+      {
         name: 'Input',
         href: '/docs/inputs',
       },

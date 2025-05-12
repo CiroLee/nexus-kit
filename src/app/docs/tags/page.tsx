@@ -3,9 +3,9 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import Tag from '@/components/ui/Tag';
 import { colorsCode, borderedCode, pillCode } from '@/codes/demos/code.tags';
-import sourceCode from '@/codes/sources/source.tag';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -22,7 +22,8 @@ const navList: AnchorItem[] = [
   },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const sourceCode = await getSourceCode('Tag/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

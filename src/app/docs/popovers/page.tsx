@@ -6,8 +6,8 @@ import Divider from '@/components/ui/Divider';
 import { Popover, PopoverClose } from '@/components/ui/Popover';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import CodeDrawer from '@/components/business/CodeDrawer';
-import sourceCode from '@/codes/sources/source.popover';
 import { defaultCode, placementCode, offsetCode, hiddenArrowCode } from '@/codes/demos/code.popovers';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -27,7 +27,8 @@ const navList: AnchorItem[] = [
     label: 'hidden arrow',
   },
 ];
-export default function PopoverPage() {
+export default async function PopoverPage() {
+  const sourceCode = await getSourceCode('Popover/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

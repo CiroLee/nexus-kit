@@ -7,8 +7,8 @@ import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import Link from '@/components/ui/Link';
 import { Avatar } from '@/components/ui/Avatar';
 import { IconExternalLink } from '@tabler/icons-react';
-import sourceCode from '@/codes/sources/source.hover-card';
 import { defaultCode, placementCode, offsetCode, hiddenArrowCode } from '@/codes/demos/code.hover-cards';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -41,7 +41,8 @@ function HoverTrigger() {
     </Link>
   );
 }
-export default function HoverCardPage() {
+export default async function HoverCardPage() {
+  const sourceCode = await getSourceCode('HoverCard/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

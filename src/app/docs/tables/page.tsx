@@ -3,9 +3,9 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
 import { Table, TableHeader, TableHeaderCell, TableBody, TableCell, TableRow } from '@/components/ui/Table';
 import OnThisPage, { type AnchorItem } from '@/components/business/OnThisPage';
-import sourceCode from '@/codes/sources/source.table';
 import { defaultCode, fixedHeaderCode, stripedCode } from '@/codes/demos/code.tables';
 import CodeDrawer from '@/components/business/CodeDrawer';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -44,7 +44,8 @@ const foodData = [
   { name: 'Spinach', price: 1.6, stock: 85, productionDate: '2023-09-30' },
 ];
 
-export default function TablePage() {
+export default async function TablePage() {
+  const sourceCode = await getSourceCode('Table/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

@@ -4,8 +4,8 @@ import Code from '@/components/business/Code';
 import Progress from '@/components/ui/Progress';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import CodeDrawer from '@/components/business/CodeDrawer';
-import sourceCode from '@/codes/sources/source.progress';
 import { defaultCode, sizeCode, colorsCode, stripedCode } from '@/codes/demos/code.progresses';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -14,7 +14,8 @@ const navList: AnchorItem[] = [
   { anchorId: 'striped', label: 'striped' },
 ];
 
-export default function ProgressPage() {
+export default async function ProgressPage() {
+  const sourceCode = await getSourceCode('Progress/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

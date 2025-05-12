@@ -5,8 +5,8 @@ import { IconHome, IconDashboard } from '@tabler/icons-react';
 import { Breadcrumb, BreadcrumbItem } from '@/components/ui/Breadcrumb';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import CodeDrawer from '@/components/business/CodeDrawer';
-import sourceCode from '@/codes/sources/source.breadcrumb';
 import { defaultCode, variantsCode, sizeCode, disabledCode, separatorCode, iconCode } from '@/codes/demos/code.breadcrumbs';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -17,7 +17,8 @@ const navList: AnchorItem[] = [
   { anchorId: 'icon', label: 'icon' },
 ];
 
-export default function BreadcrumbPage() {
+export default async function BreadcrumbPage() {
+  const sourceCode = await getSourceCode('Breadcrumb/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

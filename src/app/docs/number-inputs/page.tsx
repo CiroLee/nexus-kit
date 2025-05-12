@@ -5,8 +5,8 @@ import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import Code from '@/components/business/Code';
 import NumberInput from '@/components/ui/NumberInput';
 import { IconCurrencyDollar } from '@tabler/icons-react';
-import sourceCode from '@/codes/sources/source.number-input';
 import { defaultCode, sizeCode, minMaxCode, stepCode, disabledCode, prefixCode } from '@/codes/demos/code.number-inputs';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -17,7 +17,8 @@ const navList: AnchorItem[] = [
   { anchorId: 'prefix', label: 'prefix' },
 ];
 
-export default function NumberInputPage() {
+export default async function NumberInputPage() {
+  const sourceCode = await getSourceCode('NumberInput/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">

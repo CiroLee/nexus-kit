@@ -1,3 +1,4 @@
+'use client';
 import { Accordion as AccordionPrimitive } from 'radix-ui';
 import { IconChevronUp } from '@tabler/icons-react';
 

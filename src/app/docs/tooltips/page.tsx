@@ -5,8 +5,8 @@ import Button from '@/components/ui/Button';
 import ToolTip from '@/components/ui/Tooltip';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import CodeDrawer from '@/components/business/CodeDrawer';
-import sourceCode from '@/codes/sources/source.tooltip';
 import { defaultCode, placementCode, offsetCode, hiddenArrowCode } from '@/codes/demos/code.tooltips';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   {
@@ -27,7 +27,8 @@ const navList: AnchorItem[] = [
   },
 ];
 
-export default function TooltipPage() {
+export default async function TooltipPage() {
+  const sourceCode = await getSourceCode('Tooltip/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">
