@@ -36,7 +36,7 @@ export function CardBody({ children, className, ref, ...props }: CardGlobalProps
 
 export function CardFooter({ children, className, ref, ...props }: CardGlobalProps) {
   return (
-    <div ref={ref} className={cn('flex items-center px-4', className)} {...props}>
+    <div ref={ref} className={cn('flex items-center px-4 pb-4', className)} {...props}>
       {children}
     </div>
   );
