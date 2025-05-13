@@ -45,7 +45,7 @@ export default async function CardPage() {
         <PreviewAndCode anchorId="with-footer" title="with footer" codeText={widthFooterCode} code={<Code code={widthFooterCode} />}>
           <Card className="sm:w-80">
             <CardBody className="border-line flex items-center gap-3 border-b">
-              <Image src="/images/shoes.jpg" alt="shoes" width={600} height={580} className="size-16 rounded object-cover" />
+              <Image src="/images/shoes.jpg" alt="shoes" width={600} height={580} className="size-20 rounded object-cover" />
               <div className="flex-1 text-sm">
                 <p>Brand Shoe</p>
                 <p className="text-description">Size: 40</p>
@@ -55,7 +55,7 @@ export default async function CardPage() {
                 </div>
               </div>
             </CardBody>
-            <CardFooter className="flex justify-between py-2">
+            <CardFooter className="flex justify-between pt-4">
               <div className="text-sm">
                 <p className="text-description">total</p>
                 <p>$50.0</p>
