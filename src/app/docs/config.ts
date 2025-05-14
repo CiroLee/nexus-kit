@@ -178,6 +178,10 @@ export const navConfig = [
         name: 'NumberInput',
         href: '/docs/number-inputs',
       },
+      {
+        name: 'Statistic',
+        href: '/docs/statistics',
+      },
     ],
   },
 ];
