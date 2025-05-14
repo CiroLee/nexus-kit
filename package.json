@@ -14,7 +14,6 @@
     "@tabler/icons-react": "^3.31.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "motion": "^12.10.5",
     "next": "15.3.2",
     "next-themes": "^0.4.6",
     "radix-ui": "^1.4.1",
