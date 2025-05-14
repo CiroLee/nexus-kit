@@ -1,19 +1,32 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Code from '@/components/business/Code';
+import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import Statistic from '@/components/ui/Statistic';
 import { IconCashRegister, IconTrendingDown } from '@tabler/icons-react';
 import Link from '@/components/ui/Link';
+import { getSourceCode } from '@/app/api/github';
+import { defaultCode, formatCode, trendCode, colorsCode, prefixSuffixCode } from '@/codes/demos/code.statistics';
 
-const navList: AnchorItem[] = [{ anchorId: 'default', label: 'default' }];
+const navList: AnchorItem[] = [
+  { anchorId: 'default', label: 'default' },
+  { anchorId: 'format', label: 'format' },
+  { anchorId: 'trend', label: 'trend' },
+  { anchorId: 'colors', label: 'colors' },
+  { anchorId: 'prefix-suffix', label: 'prefix and suffix' },
+];
 
-export default function StatisticPage() {
+const NUMBERFORMAT_LNK = 'https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat';
+export default async function StatisticPage() {
+  const sourceCode = await getSourceCode('Statistic/index.tsx');
+
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Statistic" description="Statistic is used to display the statistic content width a title and value" />
-        <PreviewAndCode anchorId="default" title="default" codeText="" code={<Code code="" />}>
+        <SectionIntro title="Statistic" description="Statistic is used to display the statistic content width a title and value." />
+        <CodeDrawer code={sourceCode} />
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
           <Statistic title="Total" value="200" helpText="increased by 10% than last week" />
         </PreviewAndCode>
         <PreviewAndCode
@@ -22,23 +35,23 @@ export default function StatisticPage() {
           description={
             <div>
               use{' '}
-              <Link target="_blank" className="italic" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat">
+              <Link target="_blank" className="italic" href={NUMBERFORMAT_LNK}>
                 Intl.NumberFormat
               </Link>{' '}
               to format value
             </div>
           }
-          codeText=""
-          code={<Code code="" />}>
+          codeText={formatCode}
+          code={<Code code={formatCode} />}>
           <Statistic title="Account" value={Intl.NumberFormat().format(12345)} />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="trend" title="trend" codeText="" code={<Code code="" />}>
+        <PreviewAndCode anchorId="trend" title="trend" codeText={trendCode} code={<Code code={trendCode} />}>
           <div className="flex gap-8">
             <Statistic title="Total profit" value="32.4" unit="%" trend="increase" />
             <Statistic title="Total expense" value="12.3" unit="%" trend="decrease" />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="colors" title="colors" codeText="" code={<Code code="" />}>
+        <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<Code code={colorsCode} />}>
           <div className="flex gap-8">
             <Statistic colors="default" title="Total profit" value="32.4" unit="%" trend="increase" />
             <Statistic colors="primary" title="Total profit" value="32.4" unit="%" trend="increase" />
@@ -47,7 +60,7 @@ export default function StatisticPage() {
             <Statistic colors="danger" title="Total profit" value="32.4" unit="%" trend="increase" />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="prefix-suffix" title="prefix and suffix" codeText="" code={<Code code="" />}>
+        <PreviewAndCode anchorId="prefix-suffix" title="prefix and suffix" codeText={prefixSuffixCode} code={<Code code={prefixSuffixCode} />}>
           <div className="flex gap-8">
             <Statistic title="Total expense" value="12.3K" unit="USD" prefix={<IconCashRegister size={18} />} />
             <Statistic title="Total expense" value="12.3K" unit="USD" prefix="$" />

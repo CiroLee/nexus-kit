@@ -1,4 +1,4 @@
-export const starCode = `import { Star } from '@/components/ui/StarRating';";
+export const starCode = `import { Star } from '@/components/ui/StarRating';
 
 export default function Page() {
   return (

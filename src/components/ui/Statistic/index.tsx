@@ -1,5 +1,4 @@
 'use client';
-import { useMemo } from 'react';
 import { cn } from '@/lib/utils';
 import { cva, VariantProps } from 'class-variance-authority';
 import { IconTrendingUp, IconTrendingDown } from '@tabler/icons-react';
@@ -32,23 +31,12 @@ interface StatisticProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'pre
   ref?: React.Ref<HTMLDivElement>;
 }
 export default function Statistic({ className, helpText, title, value, unit, colors, prefix, suffix, trend, ...props }: StatisticProps) {
-  const trendIcon = useMemo(() => {
-    switch (trend) {
-      case 'increase':
-        return <IconTrendingUp className="relative -bottom-[0.1em]" size="1.2em" data-node="statistic-trend" />;
-      case 'decrease':
-        return <IconTrendingDown className="relative -bottom-[0.1em]" size="1.2em" data-node="statistic-trend" />;
-      default:
-        return null;
-    }
-  }, [trend]);
-
   return (
     <div className={cn('flex flex-col gap-1', className)} {...props}>
       <p className="text-description text-sm">{title}</p>
       <div className={statistic({ colors })}>
         {prefix}
-        {trendIcon}
+        <TrendIcon trend={trend} />
         <span data-node="statistic-value" className="text-2xl leading-[1] font-semibold">
           {value}
         </span>
@@ -61,5 +49,14 @@ export default function Statistic({ className, helpText, title, value, unit, col
       </div>
       {helpText ? <span className="text-description text-xs">{helpText}</span> : null}
     </div>
+  );
+}
+
+function TrendIcon({ trend }: { trend?: 'increase' | 'decrease' }) {
+  if (!trend) return null;
+  return trend === 'increase' ? (
+    <IconTrendingUp className="relative -bottom-[0.1em]" size="1.2em" data-node="statistic-trend" />
+  ) : (
+    <IconTrendingDown className="relative -bottom-[0.1em]" size="1.2em" data-node="statistic-trend" />
   );
 }
