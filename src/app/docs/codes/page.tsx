@@ -2,9 +2,9 @@ import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import CodeBox from '@/components/business/CodeBox';
 import Code from '@/components/ui/Code';
-// import CodeDrawer from '@/components/business/CodeDrawer';
+import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
-// import { getSourceCode } from '@/app/api/github';
+import { getSourceCode } from '@/app/api/github';
 import { defaultCode, borderedCode, sizeCode } from '@/codes/demos/code.codes';
 
 const navList: AnchorItem[] = [
@@ -14,12 +14,12 @@ const navList: AnchorItem[] = [
 ];
 
 export default async function CodePage() {
-  // const sourceCode = await getSourceCode('Code/index.tsx');
+  const sourceCode = await getSourceCode('Code/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">
         <SectionIntro title="Code" description="Code is used to display the inline code content." />
-        {/* <CodeDrawer code={sourceCode} /> */}
+        <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Code>hello world!</Code>
         </PreviewAndCode>
