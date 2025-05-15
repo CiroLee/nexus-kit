@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import { Checkbox, CheckboxCard } from '@/components/ui/Checkbox';
 import { defaultCode, sizeCode, disabledCode, verticalCode, customContentCode, checkboxCardCode } from '@/codes/demos/code.checkboxes';
 import CodeDrawer from '@/components/business/CodeDrawer';
@@ -42,12 +42,12 @@ export default async function CheckboxPage() {
       <div className="main-container">
         <SectionIntro title="Checkbox" description="Checkboxes allow user to select multiple items from a list, or mark on item as selected." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<CodeBox code={defaultCode} />}>
           <Checkbox defaultChecked value="one" id="one">
             One
           </Checkbox>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="size" codeText={sizeCode} title="size" code={<Code code={sizeCode} />}>
+        <PreviewAndCode anchorId="size" codeText={sizeCode} title="size" code={<CodeBox code={sizeCode} />}>
           <div className="flex items-center gap-2.5">
             <Checkbox size="sm" value="small" id="small">
               Small
@@ -60,7 +60,7 @@ export default async function CheckboxPage() {
             </Checkbox>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="disabled" codeText={disabledCode} title="disabled" code={<Code code={disabledCode} />}>
+        <PreviewAndCode anchorId="disabled" codeText={disabledCode} title="disabled" code={<CodeBox code={disabledCode} />}>
           <Checkbox value="cookies" defaultChecked disabled>
             Accept All Cookies
           </Checkbox>
@@ -70,7 +70,7 @@ export default async function CheckboxPage() {
           codeText={verticalCode}
           description="orientation,support horizontal and vertical, default is horizontal"
           title="orientation"
-          code={<Code code={verticalCode} />}>
+          code={<CodeBox code={verticalCode} />}>
           <div className="grid gap-2.5">
             <Checkbox value="android" id="android">
               Android
@@ -83,7 +83,7 @@ export default async function CheckboxPage() {
             </Checkbox>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="custom-content" codeText={customContentCode} title="custom content" code={<Code code={customContentCode} />}>
+        <PreviewAndCode anchorId="custom-content" codeText={customContentCode} title="custom content" code={<CodeBox code={customContentCode} />}>
           <div className="flex items-center gap-2.5">
             <Checkbox value="apple-juice" id="apple-juice">
               <p className="font-bold">Apple Juice</p>
@@ -99,7 +99,7 @@ export default async function CheckboxPage() {
             </Checkbox>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="checkbox-card" title="Checkbox Card" codeText={checkboxCardCode} code={<Code code={checkboxCardCode} />}>
+        <PreviewAndCode anchorId="checkbox-card" title="Checkbox Card" codeText={checkboxCardCode} code={<CodeBox code={checkboxCardCode} />}>
           <div className="flex items-center gap-2.5">
             <CheckboxCard value="nextjs" id="nextjs">
               <div className="flex items-center gap-1">

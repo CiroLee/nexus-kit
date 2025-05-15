@@ -2,11 +2,12 @@ import { examplesConfig } from '../config';
 import { IconArrowLeft, IconArrowUpRight } from '@tabler/icons-react';
 import Heading from '@/components/ui/Heading';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import Resizable from '@/components/business/Resizable';
 import Button from '@/components/ui/Button';
 import Link from 'next/link';
 import { getExampleCode } from '@/app/api/github';
+import { removeLastEmptyLine } from '@/utils/utils';
 
 export default async function Page({ params }: { params: Promise<{ repo: string }> }) {
   const { repo } = await params;
@@ -32,8 +33,8 @@ export default async function Page({ params }: { params: Promise<{ repo: string 
             isDiagnoal
             className="[&_.preview-content]:p-0"
             title={item.title}
-            codeText={codesArray[index] || ''}
-            code={<Code code={codesArray[index] || ''} />}
+            codeText={removeLastEmptyLine(codesArray[index]) || ''}
+            code={<CodeBox code={removeLastEmptyLine(codesArray[index]) || ''} />}
             trail={
               <Button icon variant="bordered" colors="neutral" asChild>
                 <Link href={`https://nexus-examples.vercel.app/${repo}/${item.name}`} target="_blank">

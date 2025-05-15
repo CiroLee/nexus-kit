@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import AlertDialog, { AlertDialogAction, AlertDialogCancel } from '@/components/ui/AlertDialog';
@@ -22,24 +22,24 @@ export default async function AlertDialogPage() {
       <div className="main-container">
         <SectionIntro title="Alert Dialog" description="Alert dialogs interrupt users with urgent information, details, or actions." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <AlertDialog trigger={<Button>delete item</Button>} title="Warning" description="Are you sure you want to delete this item?" />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="backdrop" title="backdrop" codeText={backdropCode} code={<Code code={backdropCode} />}>
+        <PreviewAndCode anchorId="backdrop" title="backdrop" codeText={backdropCode} code={<CodeBox code={backdropCode} />}>
           <div className="flex items-center gap-4">
             <AlertDialog backdrop="opaque" trigger={<Button>opaque</Button>} title="Warning" description="Are you sure you want to delete this item?" />
             <AlertDialog backdrop="blur" trigger={<Button>blur</Button>} title="Warning" description="Are you sure you want to delete this item?" />
             <AlertDialog backdrop="transparent" trigger={<Button>transparent</Button>} title="Warning" description="Are you sure you want to delete this item?" />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<Code code={sizeCode} />}>
+        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<CodeBox code={sizeCode} />}>
           <div className="flex items-center gap-4">
             <AlertDialog size="sm" trigger={<Button>small</Button>} title="Warning" description="Are you sure you want to delete this item?" />
             <AlertDialog size="md" trigger={<Button>medium</Button>} title="Warning" description="Are you sure you want to delete this item?" />
             <AlertDialog size="lg" trigger={<Button>large</Button>} title="Warning" description="Are you sure you want to delete this item?" />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="custom-footer" title="custom footer" codeText={customFooterCode} code={<Code code={customFooterCode} />}>
+        <PreviewAndCode anchorId="custom-footer" title="custom footer" codeText={customFooterCode} code={<CodeBox code={customFooterCode} />}>
           <AlertDialog
             trigger={<Button>delete item</Button>}
             title="Warning"

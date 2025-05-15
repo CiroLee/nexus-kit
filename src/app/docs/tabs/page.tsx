@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import { Tabs, TabsList, TabsItem, TabsContent } from '@/components/ui/Tabs';
 import { IconMusic, IconVideo, IconPhoto } from '@tabler/icons-react';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
@@ -34,7 +34,7 @@ export default async function TabsPage() {
       <div className="main-container">
         <SectionIntro title="Tags" description="Tabs are used to categorize content. They are used to group content together and make it easier to find." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Tabs defaultValue="tab-1">
             <TabsList>
               <TabsItem value="tab-1">tab-1</TabsItem>
@@ -46,7 +46,7 @@ export default async function TabsPage() {
             <TabsContent value="tab-3">tab-3 content...</TabsContent>
           </Tabs>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="vertical" title="vertical" codeText={verticalCode} code={<Code code={verticalCode} />}>
+        <PreviewAndCode anchorId="vertical" title="vertical" codeText={verticalCode} code={<CodeBox code={verticalCode} />}>
           <Tabs defaultValue="tab-1" orientation="vertical">
             <TabsList>
               <TabsItem value="tab-1">tab-1</TabsItem>
@@ -58,7 +58,7 @@ export default async function TabsPage() {
             <TabsContent value="tab-3">tab-3 content...</TabsContent>
           </Tabs>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<Code code={disabledCode} />}>
+        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<CodeBox code={disabledCode} />}>
           <Tabs defaultValue="tab-1">
             <TabsList>
               <TabsItem value="tab-1">tab-1</TabsItem>
@@ -72,7 +72,7 @@ export default async function TabsPage() {
             <TabsContent value="tab-3">tab-3 content...</TabsContent>
           </Tabs>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="with-icon" title="with icon" codeText={widthIconCode} code={<Code code={widthIconCode} />}>
+        <PreviewAndCode anchorId="with-icon" title="with icon" codeText={widthIconCode} code={<CodeBox code={widthIconCode} />}>
           <Tabs defaultValue="music">
             <TabsList>
               <TabsItem value="music">

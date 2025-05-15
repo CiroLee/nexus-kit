@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import { RadioGroup, Radio, RadioCard } from '@/components/ui/RadioGroup';
 import { defaultCode, orientationHCode, orientationVCode, sizeCode, disabledCode, customContentCode, radioCardCode, radioCardIconCode } from '@/codes/demos/code.radio-groups';
 import CodeDrawer from '@/components/business/CodeDrawer';
@@ -25,7 +25,7 @@ export default async function RadioGroupPage() {
       <div className="main-container">
         <SectionIntro title="RadioGroup" description="RadioGroup is a group of radio buttons." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <RadioGroup defaultValue="apple">
             <Radio value="banana" id="banana">
               Banana
@@ -38,7 +38,7 @@ export default async function RadioGroupPage() {
             </Radio>
           </RadioGroup>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="orientation-horizontal" title="orientation horizontal" codeText={orientationHCode} code={<Code code={orientationHCode} />}>
+        <PreviewAndCode anchorId="orientation-horizontal" title="orientation horizontal" codeText={orientationHCode} code={<CodeBox code={orientationHCode} />}>
           <RadioGroup orientation="horizontal">
             <Radio value="banana" id="1">
               Banana
@@ -51,7 +51,7 @@ export default async function RadioGroupPage() {
             </Radio>
           </RadioGroup>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="orientation vertical" title="orientation vertical" codeText={orientationVCode} code={<Code code={orientationVCode} />}>
+        <PreviewAndCode anchorId="orientation vertical" title="orientation vertical" codeText={orientationVCode} code={<CodeBox code={orientationVCode} />}>
           <RadioGroup orientation="vertical">
             <Radio value="banana" id="4">
               Banana
@@ -64,14 +64,14 @@ export default async function RadioGroupPage() {
             </Radio>
           </RadioGroup>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<Code code={sizeCode} />}>
+        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<CodeBox code={sizeCode} />}>
           <RadioGroup>
             <Radio size="sm" value="banana" id="7" />
             <Radio size="md" value="apple" id="8" />
             <Radio size="lg" value="orange" id="9" />
           </RadioGroup>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<Code code={disabledCode} />}>
+        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<CodeBox code={disabledCode} />}>
           <RadioGroup disabled defaultValue="apple">
             <Radio value="banana" id="10">
               Banana
@@ -84,7 +84,7 @@ export default async function RadioGroupPage() {
             </Radio>
           </RadioGroup>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="custom-content" title="custom content" codeText={customContentCode} code={<Code code={customContentCode} />}>
+        <PreviewAndCode anchorId="custom-content" title="custom content" codeText={customContentCode} code={<CodeBox code={customContentCode} />}>
           <RadioGroup className="flex-col md:flex-row">
             <Radio value="apple" id="apple-juice">
               <p className="font-bold">🍎 Apple Juice</p>
@@ -100,7 +100,7 @@ export default async function RadioGroupPage() {
             </Radio>
           </RadioGroup>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="radio-card" codeText={radioCardCode} title="Radio Card" code={<Code code={radioCardCode} />}>
+        <PreviewAndCode anchorId="radio-card" codeText={radioCardCode} title="Radio Card" code={<CodeBox code={radioCardCode} />}>
           <RadioGroup className="flex-col md:grid md:max-w-160 md:grid-cols-3 md:flex-row">
             <RadioCard value="free" id="free" className="text-start">
               <p className="font-bold">Free</p>
@@ -116,7 +116,7 @@ export default async function RadioGroupPage() {
             </RadioCard>
           </RadioGroup>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="radio-card-icon" title="Radio Card Icon" codeText={radioCardIconCode} code={<Code code={radioCardIconCode} />}>
+        <PreviewAndCode anchorId="radio-card-icon" title="Radio Card Icon" codeText={radioCardIconCode} code={<CodeBox code={radioCardIconCode} />}>
           <RadioGroup>
             <RadioCard value="s" id="s" className="size-9 p-0">
               S

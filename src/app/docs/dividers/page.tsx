@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import OnThisPage, { type AnchorItem } from '@/components/business/OnThisPage';
 import Divider from '@/components/ui/Divider';
 import Heading from '@/components/ui/Heading';
@@ -26,7 +26,7 @@ export default async function DividerPage() {
       <div className="main-container">
         <SectionIntro title="Divider" description="Divider is used to separate content." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <div className="max-w-80">
             <Heading as="h5">Nexus-Kit</Heading>
             <p className="mt-1 text-sm">beautiful and useful React components</p>
@@ -40,7 +40,7 @@ export default async function DividerPage() {
             </div>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="with-content" title="with content" codeText={withContentCode} code={<Code code={withContentCode} />}>
+        <PreviewAndCode anchorId="with-content" title="with content" codeText={withContentCode} code={<CodeBox code={withContentCode} />}>
           <div className="flex">
             <Divider orientation="horizontal" className="flex-1">
               divider

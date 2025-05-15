@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import Blockquote from '@/components/ui/Blockquote';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import CodeDrawer from '@/components/business/CodeDrawer';
@@ -24,12 +24,12 @@ export default async function BlockquotePage() {
       <div className="main-container">
         <SectionIntro title="Blockquote" description="Blockquote is used to highlight and emphasize text from another source." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Blockquote cite="—— Thomas Edison">
             I want to bring out the secrets of nature and apply them for the happiness of man. I don’t know of any better service to offer for the short time we are in the world.
           </Blockquote>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<Code code={colorsCode} />}>
+        <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<CodeBox code={colorsCode} />}>
           <div className="space-y-4">
             <Blockquote colors="primary" cite="—— Thomas Edison">
               I want to bring out the secrets of nature and apply them for the happiness of man. I don’t know of any better service to offer for the short time we are in the world.

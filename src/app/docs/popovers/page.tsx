@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import Button from '@/components/ui/Button';
 import Divider from '@/components/ui/Divider';
 import { Popover, PopoverClose } from '@/components/ui/Popover';
@@ -34,7 +34,7 @@ export default async function PopoverPage() {
       <div className="main-container">
         <SectionIntro title="Popover" description="Popover is a component that displays a popup content when the user clicks on an element." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Popover side="top" align="start" trigger={<Button colors="danger">Delete</Button>}>
             <p className="font-semibold">Alert</p>
             <p className="text-sm">Make sure to Delete this item?</p>
@@ -56,17 +56,22 @@ export default async function PopoverPage() {
           title="placement"
           description="use side and align props to change the position of the Popover"
           codeText={placementCode}
-          code={<Code code={placementCode} />}>
+          code={<CodeBox code={placementCode} />}>
           <Popover side="right" align="end" trigger={<Button>Click Me</Button>}>
             popover content
           </Popover>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="offset" title="offset" description="use sideOffset and alignOffset props to change the offset of the popover" codeText={offsetCode} code={<Code code={offsetCode} />}>
+        <PreviewAndCode
+          anchorId="offset"
+          title="offset"
+          description="use sideOffset and alignOffset props to change the offset of the popover"
+          codeText={offsetCode}
+          code={<CodeBox code={offsetCode} />}>
           <Popover sideOffset={10} trigger={<Button>Click Me</Button>}>
             popover content
           </Popover>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="hidden-arrow" title="hidden arrow" codeText={hiddenArrowCode} code={<Code code={hiddenArrowCode} />}>
+        <PreviewAndCode anchorId="hidden-arrow" title="hidden arrow" codeText={hiddenArrowCode} code={<CodeBox code={hiddenArrowCode} />}>
           <Popover hiddenArrow trigger={<Button>Click Me</Button>}>
             popover content
           </Popover>

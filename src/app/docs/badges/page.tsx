@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import Badge from '@/components/ui/Badge';
 import { Avatar } from '@/components/ui/Avatar';
 import { IconBellFilled } from '@tabler/icons-react';
@@ -38,12 +38,12 @@ export default async function BadgePage() {
       <div className="main-container">
         <SectionIntro title="Badge" description="Badges are used to display additional information, status, or counts in a compact visual format." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<CodeBox code={defaultCode} />}>
           <Badge content="2">
             <Avatar src="/images/avatar-2.png" />
           </Badge>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="size" codeText={sizeCode} title="size" code={<Code code={sizeCode} />}>
+        <PreviewAndCode anchorId="size" codeText={sizeCode} title="size" code={<CodeBox code={sizeCode} />}>
           <div className="flex gap-4">
             <Badge size="sm" content="2">
               <Avatar rounded src="/images/avatar-2.png" />
@@ -56,7 +56,7 @@ export default async function BadgePage() {
             </Badge>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="placement" codeText={placementCode} title="placements" code={<Code code={placementCode} />}>
+        <PreviewAndCode anchorId="placement" codeText={placementCode} title="placements" code={<CodeBox code={placementCode} />}>
           <div className="flex gap-4">
             <Badge content="2" placement="top-left">
               <Avatar bordered src="/images/avatar-2.png" />
@@ -72,7 +72,7 @@ export default async function BadgePage() {
             </Badge>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="custom-content" codeText={contentCode} title="custom content" code={<Code code={contentCode} />}>
+        <PreviewAndCode anchorId="custom-content" codeText={contentCode} title="custom content" code={<CodeBox code={contentCode} />}>
           <div className="flex gap-4">
             <Badge content={<IconBellFilled size={12} />}>
               <Avatar rounded src="/images/avatar-2.png" />
@@ -82,7 +82,7 @@ export default async function BadgePage() {
             </Badge>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="as-dot" codeText={asDotCode} title="asDot" code={<Code code={asDotCode} />}>
+        <PreviewAndCode anchorId="as-dot" codeText={asDotCode} title="asDot" code={<CodeBox code={asDotCode} />}>
           <Badge asDot>
             <Avatar src="/images/avatar-2.png" />
           </Badge>

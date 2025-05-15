@@ -2,10 +2,11 @@ import { cn } from '@/lib/utils';
 import Button from '../ui/Button';
 import { Drawer, DrawerClose } from '../ui/Drawer';
 import { IconX } from '@tabler/icons-react';
-import Code from './Code';
+import CodeBox from './CodeBox';
 import ClientCode from './ClientCode';
 import ClientCopyButton from './ClientCopyButton';
 import { Tabs, TabsContent, TabsItem, TabsList } from '../ui/Tabs';
+import { removeLastEmptyLine } from '@/utils/utils';
 
 interface CodeDrawerProps {
   code?: string;
@@ -40,23 +41,24 @@ export default function CodeDrawer({ code, isClient, codeTabs, className }: Code
             </TabsList>
             {codeTabs.map((tab) => (
               <TabsContent className="h-full overflow-auto" key={tab.id} value={tab.id}>
-                <CodeBox isClient={isClient} code={tab.content} />
+                <CodeContainer isClient={isClient} code={tab.content} />
               </TabsContent>
             ))}
           </Tabs>
         ) : (
-          <CodeBox isClient={isClient} code={code || ''} />
+          <CodeContainer isClient={isClient} code={code || ''} />
         )}
       </div>
     </Drawer>
   );
 }
 
-function CodeBox({ isClient, code }: { code: string; isClient?: boolean }) {
+function CodeContainer({ isClient, code }: { code: string; isClient?: boolean }) {
+  const _code = removeLastEmptyLine(code);
   return (
     <div className="relative h-full overflow-auto rounded-md">
-      <ClientCopyButton size="sm" asIcon className="absolute top-2 right-2 z-10" text={code} />
-      {isClient ? <ClientCode code={code} /> : <Code code={code} />}
+      <ClientCopyButton size="sm" asIcon className="absolute top-2 right-2 z-10" text={_code} />
+      {isClient ? <ClientCode code={_code} /> : <CodeBox code={_code} />}
     </div>
   );
 }

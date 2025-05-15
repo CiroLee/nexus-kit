@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Button from '@/components/ui/Button';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import { colorsCode, sizeCode, iconCode, variantsCode, disabledCode, withIconCode, loadingCode, pillCode, asChildCode } from '@/codes/demos/code.buttons';
 import SectionIntro from '../../../components/business/SectionIntro';
 import { IconUpload, IconShoppingCart, IconArrowRight, IconLoader } from '@tabler/icons-react';
@@ -34,7 +34,7 @@ export default async function ButtonsPage() {
             { id: 'variant', label: 'buttonVariants.ts', content: buttonVariantsCode },
           ]}
         />
-        <PreviewAndCode anchorId="colors" codeText={colorsCode} title="colors" code={<Code code={colorsCode} />}>
+        <PreviewAndCode anchorId="colors" codeText={colorsCode} title="colors" code={<CodeBox code={colorsCode} />}>
           <div className="flex gap-4">
             <Button colors="primary">Primary</Button>
             <Button colors="secondary">Secondary</Button>
@@ -43,7 +43,7 @@ export default async function ButtonsPage() {
             <Button colors="neutral">Neutral</Button>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="size" codeText={sizeCode} title="size" code={<Code code={sizeCode} />}>
+        <PreviewAndCode anchorId="size" codeText={sizeCode} title="size" code={<CodeBox code={sizeCode} />}>
           <div className="flex items-center gap-4">
             <Button size="xs">Button</Button>
             <Button size="sm">Button</Button>
@@ -51,12 +51,12 @@ export default async function ButtonsPage() {
             <Button size="lg">Button</Button>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="icon" codeText={iconCode} title="icon" code={<Code code={iconCode} />}>
+        <PreviewAndCode anchorId="icon" codeText={iconCode} title="icon" code={<CodeBox code={iconCode} />}>
           <Button icon>
             <IconUpload size={18} />
           </Button>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="variants" codeText={variantsCode} title="variants" code={<Code code={variantsCode} />}>
+        <PreviewAndCode anchorId="variants" codeText={variantsCode} title="variants" code={<CodeBox code={variantsCode} />}>
           <div className="flex gap-4">
             <Button variant="solid" colors="primary">
               Solid
@@ -69,7 +69,7 @@ export default async function ButtonsPage() {
             </Button>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="disabled" codeText={disabledCode} title="disabled" code={<Code code={disabledCode} />}>
+        <PreviewAndCode anchorId="disabled" codeText={disabledCode} title="disabled" code={<CodeBox code={disabledCode} />}>
           <div className="flex gap-4">
             <Button disabled colors="primary">
               Primary
@@ -88,7 +88,7 @@ export default async function ButtonsPage() {
             </Button>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="pill" codeText={pillCode} title="pill shape" code={<Code code={pillCode} />}>
+        <PreviewAndCode anchorId="pill" codeText={pillCode} title="pill shape" code={<CodeBox code={pillCode} />}>
           <div className="flex items-center gap-4">
             <Button size="xs" pill>
               Rounded
@@ -104,7 +104,7 @@ export default async function ButtonsPage() {
             </Button>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="with-icon" codeText={withIconCode} title="with icon" code={<Code code={withIconCode} />}>
+        <PreviewAndCode anchorId="with-icon" codeText={withIconCode} title="with icon" code={<CodeBox code={withIconCode} />}>
           <div className="flex gap-4">
             <Button className="gap-1">
               <IconShoppingCart size={18} />
@@ -116,7 +116,7 @@ export default async function ButtonsPage() {
             </Button>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="loading" codeText={loadingCode} title="loading" code={<Code code={loadingCode} />}>
+        <PreviewAndCode anchorId="loading" codeText={loadingCode} title="loading" code={<CodeBox code={loadingCode} />}>
           <div className="flex gap-4">
             <Button loading className="gap-1">
               <IconLoader className="animate-spin" size={18} />
@@ -124,7 +124,7 @@ export default async function ButtonsPage() {
             </Button>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="asChild" codeText={asChildCode} title="asChild" code={<Code code={asChildCode} />}>
+        <PreviewAndCode anchorId="asChild" codeText={asChildCode} title="asChild" code={<CodeBox code={asChildCode} />}>
           <Button asChild variant="light" className="hover:underline">
             <Link href="https://tailwindcss.com/" target="_blank">
               tailwindcss

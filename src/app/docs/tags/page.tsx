@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import Tag from '@/components/ui/Tag';
 import { colorsCode, borderedCode, pillCode } from '@/codes/demos/code.tags';
 import CodeDrawer from '@/components/business/CodeDrawer';
@@ -27,9 +27,9 @@ export default async function Page() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Tags" description="Tags are used to categorize content." />
+        <SectionIntro title="Tag" description="Tags are used to categorize content." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<Code code={colorsCode} />}>
+        <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<CodeBox code={colorsCode} />}>
           <div className="flex gap-4">
             <Tag colors="primary">primary</Tag>
             <Tag colors="secondary">secondary</Tag>
@@ -38,26 +38,26 @@ export default async function Page() {
             <Tag colors="neutral">neutral</Tag>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="bordered" title="bordered" codeText={borderedCode} code={<Code code={borderedCode} />}>
+        <PreviewAndCode anchorId="bordered" title="bordered" codeText={borderedCode} code={<CodeBox code={borderedCode} />}>
           <div className="flex gap-4">
             <Tag bordered colors="primary">
-              Primary
+              primary
             </Tag>
             <Tag bordered colors="secondary">
-              Secondary
+              secondary
             </Tag>
             <Tag bordered colors="warning">
-              Warning
+              warning
             </Tag>
             <Tag bordered colors="danger">
-              Danger
+              danger
             </Tag>
             <Tag bordered colors="neutral">
-              Neutral
+              neutral
             </Tag>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="pill" title="pill shape" codeText={pillCode} code={<Code code={pillCode} />}>
+        <PreviewAndCode anchorId="pill" title="pill shape" codeText={pillCode} code={<CodeBox code={pillCode} />}>
           <div className="flex gap-4">
             <Tag bordered pill colors="primary">
               Tag

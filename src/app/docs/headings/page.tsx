@@ -1,6 +1,6 @@
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import SectionIntro from '../../../components/business/SectionIntro';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import Heading from '@/components/ui/Heading';
 import { asCode } from '@/codes/demos/code.headings';
 import CodeDrawer from '@/components/business/CodeDrawer';
@@ -21,7 +21,7 @@ export default async function HeadingPage() {
       <div className="main-container">
         <SectionIntro title="Heading" description="Headings are used to display the title content." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="as" codeText={asCode} title="as" code={<Code code={asCode} />}>
+        <PreviewAndCode anchorId="as" codeText={asCode} title="as" code={<CodeBox code={asCode} />}>
           <div className="space-y-3">
             <Heading as="h1">I think therefore I am</Heading>
             <Heading as="h2">I think therefore I am</Heading>

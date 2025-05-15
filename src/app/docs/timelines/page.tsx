@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import { Timeline, TimelineIndicator, TimelineItem, TimelineContent, TimelineTitle } from '@/components/ui/Timeline';
@@ -23,7 +23,7 @@ export default async function TimelinePage() {
       <div className="main-container">
         <SectionIntro title="Timeline" description="Timeline is used to display a series of events in chronological order." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Timeline className="max-w-120">
             <TimelineItem>
               <TimelineIndicator />
@@ -57,7 +57,7 @@ export default async function TimelinePage() {
             </TimelineItem>
           </Timeline>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<Code code={colorsCode} />}>
+        <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<CodeBox code={colorsCode} />}>
           <Timeline className="max-w-120">
             <TimelineItem>
               <TimelineIndicator colors="primary" />
@@ -91,7 +91,7 @@ export default async function TimelinePage() {
             </TimelineItem>
           </Timeline>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="custom-indicator" title="custom indicator" codeText={customIndicatorCode} code={<Code code={customIndicatorCode} />}>
+        <PreviewAndCode anchorId="custom-indicator" title="custom indicator" codeText={customIndicatorCode} code={<CodeBox code={customIndicatorCode} />}>
           <Timeline className="max-w-120">
             <TimelineItem>
               <TimelineIndicator styles="none" className="size-6">

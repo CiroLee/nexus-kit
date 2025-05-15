@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import Textarea from '@/components/ui/Textarea';
 import { defaultCode, stateCode, disabledCode, resizeCode } from '@/codes/demos/code.textarea';
 import CodeDrawer from '@/components/business/CodeDrawer';
@@ -33,19 +33,19 @@ export default async function TextareaPage() {
       <div className="main-container">
         <SectionIntro title="Textarea" description="Inputs allow users to enter large texts, they usually appear in forms." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Textarea className="w-80" placeholder="enter texts here" />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="state" title="state" codeText={stateCode} code={<Code code={stateCode} />}>
+        <PreviewAndCode anchorId="state" title="state" codeText={stateCode} code={<CodeBox code={stateCode} />}>
           <div className="space-y-5">
             <Textarea className="w-80" state="warning" placeholder="warning state" />
             <Textarea className="w-80" state="error" placeholder="error state" />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<Code code={disabledCode} />}>
+        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<CodeBox code={disabledCode} />}>
           <Textarea className="w-80" disabled placeholder="enter texts here" />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="resize" title="resize" codeText={resizeCode} code={<Code code={resizeCode} />}>
+        <PreviewAndCode anchorId="resize" title="resize" codeText={resizeCode} code={<CodeBox code={resizeCode} />}>
           <div className="space-y-5">
             <Textarea className="w-80" resize="both" placeholder="resize both" />
             <Textarea className="w-80" resize="horizontal" placeholder="resize horizontal" />

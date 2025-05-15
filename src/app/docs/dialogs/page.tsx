@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import Button from '@/components/ui/Button';
 import { Dialog, DialogClose } from '@/components/ui/Dialog';
 import { defaultCode, backdropCode, hiddenCode, sizeCode, scrollCode, customFooter } from '@/codes/demos/code.dialogs';
@@ -42,12 +42,12 @@ export default async function DialogPage() {
       <div className="main-container">
         <SectionIntro title="Dialog" description="Dialogs are used to display custom content to the user via a modal." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<CodeBox code={defaultCode} />}>
           <Dialog trigger={<Button>open dialog</Button>} title="dialog title" description="This a description...">
             content...
           </Dialog>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="backdrop" codeText={backdropCode} title="backdrop" code={<Code code={backdropCode} />}>
+        <PreviewAndCode anchorId="backdrop" codeText={backdropCode} title="backdrop" code={<CodeBox code={backdropCode} />}>
           <div className="flex gap-4">
             <Dialog trigger={<Button>opaque</Button>} backdrop="opaque" title="dialog title" description="This a description...">
               content...
@@ -60,12 +60,12 @@ export default async function DialogPage() {
             </Dialog>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="hidden-title" codeText={hiddenCode} title="hidden title/description" code={<Code code={hiddenCode} />}>
+        <PreviewAndCode anchorId="hidden-title" codeText={hiddenCode} title="hidden title/description" code={<CodeBox code={hiddenCode} />}>
           <Dialog trigger={<Button>open dialog</Button>} title="Title">
             omitting title/description will not render
           </Dialog>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="size" codeText={sizeCode} title="size" code={<Code code={sizeCode} />}>
+        <PreviewAndCode anchorId="size" codeText={sizeCode} title="size" code={<CodeBox code={sizeCode} />}>
           <div className="flex gap-4">
             <Dialog size="sm" trigger={<Button>small</Button>} title="dialog title" description="This a description...">
               content...
@@ -78,14 +78,14 @@ export default async function DialogPage() {
             </Dialog>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="content-scroll" codeText={scrollCode} title="content scroll" code={<Code code={scrollCode} />}>
+        <PreviewAndCode anchorId="content-scroll" codeText={scrollCode} title="content scroll" code={<CodeBox code={scrollCode} />}>
           <Dialog trigger={<Button>open dialog</Button>} title="dialog title" description="This a description...">
             {new Array(30).fill(0).map((_, index) => (
               <p key={index}>this is text {index} ...</p>
             ))}
           </Dialog>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="custom-footer" codeText={customFooter} title="custom footer" code={<Code code={customFooter} />}>
+        <PreviewAndCode anchorId="custom-footer" codeText={customFooter} title="custom footer" code={<CodeBox code={customFooter} />}>
           <div className="flex gap-4">
             <Dialog trigger={<Button>hide footer</Button>} title="dialog title" description="This a description..." hideFooter>
               content...

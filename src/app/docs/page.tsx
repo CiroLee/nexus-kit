@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { cva } from 'class-variance-authority';
 import TechnicalGuide, { type GuideItem } from '@/components/business/TechnicalGuide';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import ClientCopyButton from '@/components/business/ClientCopyButton';
 import OnThisPage from '@/components/business/OnThisPage';
 import Heading from '@/components/ui/Heading';
@@ -277,7 +277,7 @@ const guides: GuideItem[] = [
       <div className="relative w-2xl max-w-[82vw]">
         <ClientCopyButton size="sm" text={dependInstall} asIcon className={cn(clientCopyBtn({ className: 'absolute top-1/2 right-2 z-1 -translate-y-1/2' }))} />
         <div className={contentWrap()}>
-          <Code code={dependInstall} lang="bash" />
+          <CodeBox code={dependInstall} lang="bash" />
         </div>
       </div>
     ),
@@ -288,7 +288,7 @@ const guides: GuideItem[] = [
     description: 'add path alias in tsconfig.json',
     content: (
       <div className={contentWrap({ className: 'w-2xl max-w-[82vw]' })}>
-        <Code code={aliasConfig} lang="json" />
+        <CodeBox code={aliasConfig} lang="json" />
       </div>
     ),
   },
@@ -304,7 +304,7 @@ const guides: GuideItem[] = [
           </p>
           <ClientCopyButton size="sm" text={cssConfig} asIcon className={cn(clientCopyBtn({ className: 'absolute top-9 right-2 z-1' }))} />
           <div className="border-line relative mt-2 h-fit max-h-80 overflow-auto rounded-md border bg-[#24292e]">
-            <Code code={cssConfig} lang="css" />
+            <CodeBox code={cssConfig} lang="css" />
           </div>
         </div>
         <div className="relative">
@@ -313,7 +313,7 @@ const guides: GuideItem[] = [
             add <span className="italic">animation.css(optional)</span> if you use components such as Drawer, Dialog, Tooltip etc.
           </p>
           <div className="border-line relative mt-2 h-fit max-h-80 overflow-auto rounded-md border bg-[#24292e]">
-            <Code code={animationConfig} lang="css" />
+            <CodeBox code={animationConfig} lang="css" />
           </div>
         </div>
       </div>
@@ -330,7 +330,7 @@ const guides: GuideItem[] = [
         <div className="rounded-md bg-[#24292e]">
           <ClientCopyButton size="sm" text={utils} asIcon className="absolute top-9 right-2 z-1" />
           <div className="border-line relative mt-2 h-fit max-h-80 overflow-auto rounded-[inherit] border">
-            <Code code={utils} lang="ts" />
+            <CodeBox code={utils} lang="ts" />
           </div>
         </div>
       </div>

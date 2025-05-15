@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import Statistic from '@/components/ui/Statistic';
@@ -26,7 +26,7 @@ export default async function StatisticPage() {
       <div className="main-container">
         <SectionIntro title="Statistic" description="Statistic is used to display the statistic content width a title and value." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Statistic title="Total" value="200" helpText="increased by 10% than last week" />
         </PreviewAndCode>
         <PreviewAndCode
@@ -42,16 +42,16 @@ export default async function StatisticPage() {
             </div>
           }
           codeText={formatCode}
-          code={<Code code={formatCode} />}>
+          code={<CodeBox code={formatCode} />}>
           <Statistic title="Account" value={Intl.NumberFormat().format(12345)} />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="trend" title="trend" codeText={trendCode} code={<Code code={trendCode} />}>
+        <PreviewAndCode anchorId="trend" title="trend" codeText={trendCode} code={<CodeBox code={trendCode} />}>
           <div className="flex gap-8">
             <Statistic title="Total profit" value="32.4" unit="%" trend="increase" />
             <Statistic title="Total expense" value="12.3" unit="%" trend="decrease" />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<Code code={colorsCode} />}>
+        <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<CodeBox code={colorsCode} />}>
           <div className="flex gap-8">
             <Statistic colors="default" title="Total profit" value="32.4" unit="%" trend="increase" />
             <Statistic colors="primary" title="Total profit" value="32.4" unit="%" trend="increase" />
@@ -60,7 +60,7 @@ export default async function StatisticPage() {
             <Statistic colors="danger" title="Total profit" value="32.4" unit="%" trend="increase" />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="prefix-suffix" title="prefix and suffix" codeText={prefixSuffixCode} code={<Code code={prefixSuffixCode} />}>
+        <PreviewAndCode anchorId="prefix-suffix" title="prefix and suffix" codeText={prefixSuffixCode} code={<CodeBox code={prefixSuffixCode} />}>
           <div className="flex gap-8">
             <Statistic title="Total expense" value="12.3K" unit="USD" prefix={<IconCashRegister size={18} />} />
             <Statistic title="Total expense" value="12.3K" unit="USD" prefix="$" />

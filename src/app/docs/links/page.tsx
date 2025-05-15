@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import Link from '@/components/ui/Link';
 import OnThisPage, { type AnchorItem } from '@/components/business/OnThisPage';
 import { IconExternalLink } from '@tabler/icons-react';
@@ -34,20 +34,20 @@ export default async function LinkPage() {
       <div className="main-container">
         <SectionIntro title="Link" description="Links are used to navigate between pages or to external resources, providing interactive elements for user navigation." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Link href="#">Link</Link>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<Code code={disabledCode} />}>
+        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<CodeBox code={disabledCode} />}>
           <Link href="#" disabled>
             Link
           </Link>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="underline" title="underline" codeText={underlineCode} code={<Code code={underlineCode} />}>
+        <PreviewAndCode anchorId="underline" title="underline" codeText={underlineCode} code={<CodeBox code={underlineCode} />}>
           <Link href="#" underline>
             Link
           </Link>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="external" title="external" codeText={externalCode} code={<Code code={externalCode} />}>
+        <PreviewAndCode anchorId="external" title="external" codeText={externalCode} code={<CodeBox code={externalCode} />}>
           <div className="flex gap-4">
             <Link href="https://github.com/CiroLee/nexus-kit" target="_blank">
               Link

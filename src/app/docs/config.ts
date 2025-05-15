@@ -182,6 +182,10 @@ export const navConfig = [
         name: 'Statistic',
         href: '/docs/statistics',
       },
+      {
+        name: 'Code',
+        href: '/docs/codes',
+      },
     ],
   },
 ];

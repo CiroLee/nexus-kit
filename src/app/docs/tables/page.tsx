@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import { Table, TableHeader, TableHeaderCell, TableBody, TableCell, TableRow } from '@/components/ui/Table';
 import OnThisPage, { type AnchorItem } from '@/components/business/OnThisPage';
 import { defaultCode, fixedHeaderCode, stripedCode } from '@/codes/demos/code.tables';
@@ -51,7 +51,7 @@ export default async function TablePage() {
       <div className="main-container">
         <SectionIntro title="Table" description="A table is a set of data that is presented in a grid format, with rows and columns." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Table>
             <TableHeader>
               <TableRow>
@@ -79,7 +79,7 @@ export default async function TablePage() {
             </TableBody>
           </Table>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="header-fixed" title="header fixed" codeText={fixedHeaderCode} code={<Code code={fixedHeaderCode} />}>
+        <PreviewAndCode anchorId="header-fixed" title="header fixed" codeText={fixedHeaderCode} code={<CodeBox code={fixedHeaderCode} />}>
           <Table fixedHeader>
             <TableHeader>
               <TableRow>
@@ -100,7 +100,7 @@ export default async function TablePage() {
             </TableBody>
           </Table>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="striped" title="striped" codeText={stripedCode} code={<Code code={stripedCode} />}>
+        <PreviewAndCode anchorId="striped" title="striped" codeText={stripedCode} code={<CodeBox code={stripedCode} />}>
           <Table fixedHeader>
             <TableHeader>
               <TableRow>

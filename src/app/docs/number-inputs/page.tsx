@@ -2,7 +2,7 @@ import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import NumberInput from '@/components/ui/NumberInput';
 import { IconCurrencyDollar } from '@tabler/icons-react';
 import { defaultCode, sizeCode, minMaxCode, stepCode, disabledCode, prefixCode } from '@/codes/demos/code.number-inputs';
@@ -24,26 +24,26 @@ export default async function NumberInputPage() {
       <div className="main-container">
         <SectionIntro title="NumberInput" description="NumberInput is used to enter a number, and increase or decrease the value using the stepper buttons." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <NumberInput className="max-w-80" defaultValue={2} />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<Code code={sizeCode} />}>
+        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<CodeBox code={sizeCode} />}>
           <div className="flex items-center gap-4">
             <NumberInput size="sm" />
             <NumberInput size="md" />
             <NumberInput size="lg" />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="min-max" title="min and max" codeText={minMaxCode} code={<Code code={minMaxCode} />}>
+        <PreviewAndCode anchorId="min-max" title="min and max" codeText={minMaxCode} code={<CodeBox code={minMaxCode} />}>
           <NumberInput min={2} max={20} className="max-w-80" />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="step" title="step" codeText={stepCode} code={<Code code={stepCode} />}>
+        <PreviewAndCode anchorId="step" title="step" codeText={stepCode} code={<CodeBox code={stepCode} />}>
           <NumberInput step={2} className="max-w-80" />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<Code code={disabledCode} />}>
+        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<CodeBox code={disabledCode} />}>
           <NumberInput disabled className="max-w-80" />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="prefix" title="prefix" codeText={prefixCode} code={<Code code={prefixCode} />}>
+        <PreviewAndCode anchorId="prefix" title="prefix" codeText={prefixCode} code={<CodeBox code={prefixCode} />}>
           <NumberInput className="max-w-80" prefix={<IconCurrencyDollar size={20} />} />
         </PreviewAndCode>
       </div>

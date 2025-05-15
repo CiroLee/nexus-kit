@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import { Card, CardHeader, CardTitle, CardBody, CardFooter } from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
@@ -27,7 +27,7 @@ export default async function CardPage() {
       <div className="main-container">
         <SectionIntro title="Card" description="Cards are used to display related contents and actions." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<CodeBox code={defaultCode} />}>
           <Card className="sm:w-80">
             <CardHeader>
               <CardTitle>Card Title</CardTitle>
@@ -42,7 +42,7 @@ export default async function CardPage() {
             </CardBody>
           </Card>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="with-footer" title="with footer" codeText={widthFooterCode} code={<Code code={widthFooterCode} />}>
+        <PreviewAndCode anchorId="with-footer" title="with footer" codeText={widthFooterCode} code={<CodeBox code={widthFooterCode} />}>
           <Card className="sm:w-80">
             <CardBody className="border-line flex items-center gap-3 border-b">
               <Image src="/images/shoes.jpg" alt="shoes" width={600} height={580} className="size-20 rounded object-cover" />

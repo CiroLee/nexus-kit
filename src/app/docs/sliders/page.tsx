@@ -1,7 +1,7 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import Slider from '@/components/ui/Slider';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import { defaultCode, disabledCode, stepCode, colorsCode, sizeCode, verticalCode, rangeCode } from '@/codes/demos/code.sliders';
@@ -43,16 +43,16 @@ export default async function SlidersPage() {
       <div className="main-container">
         <SectionIntro title="Slider" description="Slider allows users to select values within a range." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Slider defaultValue={[40]} className="max-w-100" />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<Code code={disabledCode} />}>
+        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<CodeBox code={disabledCode} />}>
           <Slider defaultValue={[40]} disabled className="max-w-100" />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="step" title="step" codeText={stepCode} code={<Code code={stepCode} />}>
+        <PreviewAndCode anchorId="step" title="step" codeText={stepCode} code={<CodeBox code={stepCode} />}>
           <Slider defaultValue={[40]} step={20} className="max-w-100" />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<Code code={colorsCode} />}>
+        <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<CodeBox code={colorsCode} />}>
           <div className="space-y-6">
             <Slider defaultValue={[40]} colors="primary" className="max-w-100" />
             <Slider defaultValue={[40]} colors="secondary" className="max-w-100" />
@@ -61,17 +61,17 @@ export default async function SlidersPage() {
             <Slider defaultValue={[40]} colors="neutral" className="max-w-100" />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<Code code={sizeCode} />}>
+        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<CodeBox code={sizeCode} />}>
           <div className="space-y-6">
             <Slider defaultValue={[40]} size="sm" className="max-w-100" />
             <Slider defaultValue={[40]} size="md" className="max-w-100" />
             <Slider defaultValue={[40]} size="lg" className="max-w-100" />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="orientation" title="orientation" description="orientation='vertical'" codeText={verticalCode} code={<Code code={verticalCode} />}>
+        <PreviewAndCode anchorId="orientation" title="orientation" description="orientation='vertical'" codeText={verticalCode} code={<CodeBox code={verticalCode} />}>
           <Slider defaultValue={[40]} orientation="vertical" className="h-60" />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="range-slider" title="range slider" codeText={rangeCode} code={<Code code={rangeCode} />}>
+        <PreviewAndCode anchorId="range-slider" title="range slider" codeText={rangeCode} code={<CodeBox code={rangeCode} />}>
           <Slider defaultValue={[40, 80]} className="max-w-100" />
         </PreviewAndCode>
       </div>

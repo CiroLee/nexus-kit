@@ -1,6 +1,6 @@
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import SectionIntro from '../../../components/business/SectionIntro';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import Kbd from '@/components/ui/Kbd';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import { defaultCode, sizeCode } from '@/codes/demos/code.kbds';
@@ -25,7 +25,7 @@ export default async function KbdPage() {
       <div className="main-container">
         <SectionIntro title="Kbd" description="Kbd is a component that displays keyboard shortcuts." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <div className="flex gap-4">
             <Kbd keys={['command']} />
             <Kbd keys={['command']}>K</Kbd>
@@ -33,7 +33,7 @@ export default async function KbdPage() {
             <Kbd>Command + D</Kbd>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<Code code={sizeCode} />}>
+        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<CodeBox code={sizeCode} />}>
           <div className="flex items-center gap-4">
             <Kbd keys={['command']} size="sm">
               K

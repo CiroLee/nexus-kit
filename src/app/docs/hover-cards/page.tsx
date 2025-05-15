@@ -1,6 +1,6 @@
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import SectionIntro from '../../../components/business/SectionIntro';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import HoverCard from '@/components/ui/HoverCard';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
@@ -48,7 +48,7 @@ export default async function HoverCardPage() {
       <div className="main-container">
         <SectionIntro title="HoverCard" description="HoverCard is used to display content when hovering over an element." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <HoverCard className="min-w-55" align="start" trigger={<HoverTrigger />}>
             <HoverCardContent />
           </HoverCard>
@@ -58,7 +58,7 @@ export default async function HoverCardPage() {
           title="placement"
           description="use side and align props to change the position of the HoverCard"
           codeText={placementCode}
-          code={<Code code={placementCode} />}>
+          code={<CodeBox code={placementCode} />}>
           <HoverCard className="min-w-55" side="top" align="center" trigger={<HoverTrigger />}>
             <HoverCardContent />
           </HoverCard>
@@ -68,12 +68,12 @@ export default async function HoverCardPage() {
           title="offset"
           description="use sideOffset and alignOffset props to change the offset of the HoverCard"
           codeText={offsetCode}
-          code={<Code code={offsetCode} />}>
+          code={<CodeBox code={offsetCode} />}>
           <HoverCard className="min-w-55" align="start" sideOffset={16} trigger={<HoverTrigger />}>
             <HoverCardContent />
           </HoverCard>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="hidden-arrow" title="hiddenArrow" codeText={hiddenArrowCode} code={<Code code={hiddenArrowCode} />}>
+        <PreviewAndCode anchorId="hidden-arrow" title="hiddenArrow" codeText={hiddenArrowCode} code={<CodeBox code={hiddenArrowCode} />}>
           <HoverCard className="min-w-55" align="start" hiddenArrow trigger={<HoverTrigger />}>
             <HoverCardContent />
           </HoverCard>

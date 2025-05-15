@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import Segment, { type Option } from '@/components/ui/Segment';
 import { IconBrandReact, IconBrandVue, IconBrandAngular } from '@tabler/icons-react';
@@ -64,23 +64,23 @@ export default async function SegmentPage() {
       <div className="main-container">
         <SectionIntro title="Segment" description="Segment is a controller to switch between different options." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Segment option={option} />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<Code code={sizeCode} />}>
+        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<CodeBox code={sizeCode} />}>
           <div className="flex items-center gap-4">
             <Segment size="sm" option={option} />
             <Segment size="md" option={option} />
             <Segment size="lg" option={option} />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="equaled-width" title="equaledWidth" codeText={equaledWidthCode} code={<Code code={equaledWidthCode} />}>
+        <PreviewAndCode anchorId="equaled-width" title="equaledWidth" codeText={equaledWidthCode} code={<CodeBox code={equaledWidthCode} />}>
           <Segment equaledWidth option={option} />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="disabled-item" title="disabled" codeText={disabledCode} code={<Code code={disabledCode} />}>
+        <PreviewAndCode anchorId="disabled-item" title="disabled" codeText={disabledCode} code={<CodeBox code={disabledCode} />}>
           <Segment defaultValue="react" option={option2} />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="with-icon" title="with icon" codeText={widthIconCode} code={<Code code={widthIconCode} />}>
+        <PreviewAndCode anchorId="with-icon" title="with icon" codeText={widthIconCode} code={<CodeBox code={widthIconCode} />}>
           <Segment option={option3} />
         </PreviewAndCode>
       </div>

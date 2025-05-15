@@ -1,7 +1,7 @@
 import { IconAccessible, IconAlarm, IconArmchair } from '@tabler/icons-react';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import SectionIntro from '@/components/business/SectionIntro';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { type AnchorItem } from '@/components/business/OnThisPage';
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
@@ -90,16 +90,16 @@ export default async function AccordionPage() {
       <div className="main-container">
         <SectionIntro title="Accordion" description="Accordion displays interactive vertical tabs where each clickable heading displays its corresponding content panel below it." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Accordion type="single" collapsible items={accordionItems} className="max-w-100" />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="multiple" title="multiple" codeText={multipleCode} code={<Code code={multipleCode} />}>
+        <PreviewAndCode anchorId="multiple" title="multiple" codeText={multipleCode} code={<CodeBox code={multipleCode} />}>
           <Accordion type="multiple" items={accordionItems} className="max-w-100" />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<Code code={disabledCode} />}>
+        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<CodeBox code={disabledCode} />}>
           <Accordion type="single" collapsible items={accordionItems2} className="max-w-100" />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="with-icon" title="with icon" codeText={withIconCode} code={<Code code={withIconCode} />}>
+        <PreviewAndCode anchorId="with-icon" title="with icon" codeText={withIconCode} code={<CodeBox code={withIconCode} />}>
           <Accordion type="single" collapsible items={accordionItems3} className="max-w-100" />
         </PreviewAndCode>
       </div>

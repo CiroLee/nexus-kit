@@ -1,6 +1,6 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import Switch from '@/components/ui/Switch';
 import { defaultCode, labelCode, sizeCode, disabledCode } from '@/codes/demos/code.switches';
 import CodeDrawer from '@/components/business/CodeDrawer';
@@ -33,13 +33,13 @@ export default async function SwitchPage() {
       <div className="main-container">
         <SectionIntro title="Switch" description="Switches are used to toggle between two mutually exclusive states." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<Code code={defaultCode} />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Switch defaultChecked />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="width-icon" title="with label" codeText={labelCode} code={<Code code={labelCode} />}>
+        <PreviewAndCode anchorId="width-icon" title="with label" codeText={labelCode} code={<CodeBox code={labelCode} />}>
           <Switch id="auto-trans">Auto Translation</Switch>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<Code code={sizeCode} />}>
+        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<CodeBox code={sizeCode} />}>
           <div className="flex items-center gap-4">
             <Switch size="sm" id="small">
               Small
@@ -52,7 +52,7 @@ export default async function SwitchPage() {
             </Switch>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<Code code={disabledCode} />}>
+        <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<CodeBox code={disabledCode} />}>
           <Switch disabled>disabled</Switch>
         </PreviewAndCode>
       </div>

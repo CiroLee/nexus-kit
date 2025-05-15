@@ -1,7 +1,7 @@
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import { IconTimezone } from '@tabler/icons-react';
 import SectionIntro from '@/components/business/SectionIntro';
-import Code from '@/components/business/Code';
+import CodeBox from '@/components/business/CodeBox';
 import { Alert, AlertTitle } from '@/components/ui/Alert';
 import OnThisPage, { type AnchorItem } from '@/components/business/OnThisPage';
 import { stateCode, showIconCode, variantCode, customIcon } from '@/codes/demos/code.alerts';
@@ -34,7 +34,7 @@ export default async function HeadingPage() {
       <div className="main-container">
         <SectionIntro title="Alert" description="Alerts are used to display brief messages." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode codeText={stateCode} anchorId="state" title="state" className="space-y-3" code={<Code code={stateCode} />}>
+        <PreviewAndCode codeText={stateCode} anchorId="state" title="state" className="space-y-3" code={<CodeBox code={stateCode} />}>
           <div className="space-y-5">
             <Alert state="info">
               <AlertTitle>info - Alert Title</AlertTitle>
@@ -58,7 +58,7 @@ export default async function HeadingPage() {
             </Alert>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="variant" title="variant" codeText={variantCode} code={<Code code={variantCode} />}>
+        <PreviewAndCode anchorId="variant" title="variant" codeText={variantCode} code={<CodeBox code={variantCode} />}>
           <div className="space-y-5">
             <Alert state="info" variant="solid">
               <AlertTitle>solid - Alert Title</AlertTitle>
@@ -74,13 +74,13 @@ export default async function HeadingPage() {
             </Alert>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode codeText={showIconCode} anchorId="hidden-icon" title="hidden icon" code={<Code code={showIconCode} />}>
+        <PreviewAndCode codeText={showIconCode} anchorId="hidden-icon" title="hidden icon" code={<CodeBox code={showIconCode} />}>
           <Alert hiddenIcon>
             <AlertTitle>Alert Title</AlertTitle>
             your can add alert content here
           </Alert>
         </PreviewAndCode>
-        <PreviewAndCode codeText={customIcon} anchorId="custom-icon" title="custom Icon" code={<Code code={customIcon} />}>
+        <PreviewAndCode codeText={customIcon} anchorId="custom-icon" title="custom Icon" code={<CodeBox code={customIcon} />}>
           <Alert state="neutral" icon={<IconTimezone size={24} />}>
             <AlertTitle>Alert Title</AlertTitle>
             your can add alert content here
