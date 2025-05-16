@@ -57,7 +57,7 @@ function CodeContainer({ isClient, code }: { code: string; isClient?: boolean })
   const _code = removeLastEmptyLine(code);
   return (
     <div className="relative h-full overflow-auto rounded-md">
-      <ClientCopyButton size="sm" asIcon className="absolute top-2 right-2 z-10" text={_code} />
+      <ClientCopyButton size="sm" asIcon className="dark:text-foreground absolute top-2 right-2 z-10 text-neutral-300" text={_code} />
       {isClient ? <ClientCode code={_code} /> : <CodeBox code={_code} />}
     </div>
   );
