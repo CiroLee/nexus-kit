@@ -3,9 +3,9 @@
 /* basic semantic colors  base on tailwindcss colors */
 :root {
   --background: #fff;
-  --foreground: oklch(0.269 0 0);
-  --line: oklch(0.922 0 0);
-  --description: oklch(70.8% 0 0);
+  --foreground: var(--color-neutral-800);
+  --line: var(--color-neutral-200);
+  --description: var(--color-neutral-400);
   /* semantic z-index */
   --loading: 60;
   --popup: 50;
@@ -13,10 +13,10 @@
 }
 
 [data-theme='dark'] {
-  --background: oklch(0.269 0 0);
-  --foreground: #fafafa;
-  --line: oklch(0.371 0 0);
-  --description: oklch(55.6% 0 0);
+  --background: var(--color-neutral-800);
+  --foreground: var(--color-neutral-50);
+  --line: var(--color-neutral-700);
+  --description: var(--color-neutral-500);
 }
 
 @theme {
