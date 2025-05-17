@@ -27,7 +27,7 @@ export default function ThemeSwitch() {
         <DropdownMenu.Content
           sideOffset={10}
           align="end"
-          className="border-line bg-background data-[state=open]:animate-zoom-fade-in data-[state=closed]:animate-zoom-fade-out z-(--popup) rounded-md border p-1 outline-none">
+          className="border-line bg-background data-[state=open]:animate-zoom-fade-in data-[state=closed]:animate-zoom-fade-out z-(--popup) origin-(--radix-dropdown-menu-content-transform-origin) rounded-md border p-1 outline-none">
           <DropdownMenu.Item className={item()} onSelect={() => setTheme('light')}>
             <IconSun size={18} />
             Light
