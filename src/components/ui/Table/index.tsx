@@ -20,7 +20,7 @@ export function Table({ fixedHeader, className, ...props }: TableProps) {
 }
 
 export function TableHeader({ className, ...props }: React.ComponentPropsWithRef<'thead'>) {
-  return <thead className={cn('w-full bg-neutral-100 text-sm shadow-[0_1px_0_0] shadow-[rgb(229,229,229)] dark:bg-[#2e2e2e] dark:shadow-[rgb(64,64,64)]', className)} {...props} />;
+  return <thead className={cn('shadow-line w-full bg-neutral-100 text-sm shadow-[0_1px_0_0] dark:bg-[#2e2e2e]', className)} {...props} />;
 }
 export function TableHeaderCell({ className, ...props }: React.ComponentPropsWithRef<'th'>) {
   return (
