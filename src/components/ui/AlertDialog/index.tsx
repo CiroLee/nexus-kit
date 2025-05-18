@@ -52,10 +52,10 @@ export default function AlertDialog({ trigger, size, className, title, descripti
       <AlertDialogPrimitive.Portal>
         <AlertDialogPrimitive.Overlay className={alertDialogOverlay({ backdrop })} />
         <AlertDialogPrimitive.Content className={cn(alertDialogContent({ size }), className)} ref={ref}>
-          <AlertDialogPrimitive.Title data-node="alert-dialog-title" aria-label="alert dialog title" className={cn('px-3.5 text-xl font-semibold', { hidden: !title })}>
+          <AlertDialogPrimitive.Title data-slot="alert-dialog-title" aria-label="alert dialog title" className={cn('px-3.5 text-xl font-semibold', { hidden: !title })}>
             {title}
           </AlertDialogPrimitive.Title>
-          <AlertDialogPrimitive.Description data-node="alert-dialog-description" aria-label="alert dialog description" className={cn('text-foreground/60 mt-2 mb-3 px-3.5', { hidden: !description })}>
+          <AlertDialogPrimitive.Description data-slot="alert-dialog-description" aria-label="alert dialog description" className={cn('text-foreground/60 mt-2 mb-3 px-3.5', { hidden: !description })}>
             {description}
           </AlertDialogPrimitive.Description>
           <div className="max-h-[65vh] overflow-auto px-3.5">{children}</div>

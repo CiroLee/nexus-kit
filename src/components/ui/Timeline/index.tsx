@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { cva, VariantProps } from 'class-variance-authority';
 
 export function Timeline({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div data-node="timeline" className={className} {...props} />;
+  return <div data-slot="timeline" className={className} {...props} />;
 }
 
 export function TimelineItem({ className, style, ...props }: React.HTMLAttributes<HTMLDivElement>) {
@@ -18,11 +18,11 @@ export function TimelineItem({ className, style, ...props }: React.HTMLAttribute
     }
   }, []);
 
-  return <div ref={ref} data-node="timeline-item" className={cn('group flex gap-3', className)} style={{ '--timeline-item-height': `${h}px`, ...style } as CSSProperties} {...props} />;
+  return <div ref={ref} data-slot="timeline-item" className={cn('group flex gap-3', className)} style={{ '--timeline-item-height': `${h}px`, ...style } as CSSProperties} {...props} />;
 }
 
 const timelineIndicator = cva(
-  `relative rounded-full flex shrink-0 items-center justify-center before:absolute before:top-[calc(100%_+_4px)] before:w-px before:bg-line 
+  `relative rounded-full flex shrink-0 items-center justify-center before:absolute before:top-[calc(100%_+_4px)] before:w-px before:bg-line
    before:h-[calc(var(--timeline-item-height)_-_var(--timeline-indicator-height)_-_8px)] before:-translate-x-1/2 before:left-1/2 group-last:before:w-0`,
   {
     variants: {
@@ -59,7 +59,7 @@ export function TimelineIndicator({ className, colors, styles, style, ...props }
   return (
     <div
       ref={ref}
-      data-node="timeline-indicator"
+      data-slot="timeline-indicator"
       className={cn(timelineIndicator({ colors, styles, className }))}
       style={{ '--timeline-indicator-height': `${h}px`, ...style } as CSSProperties}
       {...props}
@@ -68,8 +68,8 @@ export function TimelineIndicator({ className, colors, styles, style, ...props }
 }
 
 export function TimelineTitle({ className, ...props }: React.HTMLAttributes<HTMLHeadElement>) {
-  return <h3 data-node="timeline-title" className={cn('text-sm leading-[1em] font-semibold', className)} {...props} />;
+  return <h3 data-slot="timeline-title" className={cn('text-sm leading-[1em] font-semibold', className)} {...props} />;
 }
 export function TimelineContent({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div data-node="timeline-content" className={cn('flex flex-col gap-2 pb-6', className)} {...props} />;
+  return <div data-slot="timeline-content" className={cn('flex flex-col gap-2 pb-6', className)} {...props} />;
 }

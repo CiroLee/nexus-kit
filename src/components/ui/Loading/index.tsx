@@ -59,7 +59,7 @@ export default function Loading({ className, open, backdrop, indicator, isFullsc
       {children}
       {visible || open ? (
         <div ref={loadingRef} className={cn(loading({ backdrop, isFullscreen, className }))} {...props}>
-          <div data-node="loading-indicator" className="z-2">
+          <div data-slot="loading-indicator" className="z-2">
             {indicator ? <>{indicator}</> : <IconLoader2 className="text-primary animate-spin" size={36} />}
           </div>
         </div>

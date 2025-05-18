@@ -37,11 +37,11 @@ export default function Statistic({ className, helpText, title, value, unit, col
       <div className={statistic({ colors })}>
         {prefix}
         <TrendIcon trend={trend} />
-        <span data-node="statistic-value" className="text-2xl leading-[1] font-semibold">
+        <span data-slot="statistic-value" className="text-2xl leading-[1] font-semibold">
           {value}
         </span>
         {unit ? (
-          <span data-node="statistic-unit" className="self-end text-sm">
+          <span data-slot="statistic-unit" className="self-end text-sm">
             {unit}
           </span>
         ) : null}
@@ -55,8 +55,8 @@ export default function Statistic({ className, helpText, title, value, unit, col
 function TrendIcon({ trend }: { trend?: 'increase' | 'decrease' }) {
   if (!trend) return null;
   return trend === 'increase' ? (
-    <IconTrendingUp className="relative -bottom-[0.1em]" size="1.2em" data-node="statistic-trend" />
+    <IconTrendingUp className="relative -bottom-[0.1em]" size="1.2em" data-slot="statistic-trend" />
   ) : (
-    <IconTrendingDown className="relative -bottom-[0.1em]" size="1.2em" data-node="statistic-trend" />
+    <IconTrendingDown className="relative -bottom-[0.1em]" size="1.2em" data-slot="statistic-trend" />
   );
 }

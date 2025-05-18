@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { IconX } from '@tabler/icons-react';
 
 const dialogContent = cva(
-  `fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-(--popup) w-[90%] sm:max-w-[90%] bg-background py-3.5 
+  `fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-(--popup) w-[90%] sm:max-w-[90%] bg-background py-3.5
   rounded-lg border border-line shadow-lg overflow-hidden data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out`,
   {
     variants: {
@@ -61,10 +61,10 @@ export function Dialog({ trigger, size, className, title, description, footer, h
               <IconX size={18} className="opacity-40 transition-colors group-hover:opacity-100" />
             </Button>
           </DialogPrimitive.Close>
-          <DialogPrimitive.Title data-node="dialog-title" aria-label="dialog title" className={cn('px-3.5 text-xl font-semibold', { hidden: !title })}>
+          <DialogPrimitive.Title data-slot="dialog-title" aria-label="dialog title" className={cn('px-3.5 text-xl font-semibold', { hidden: !title })}>
             {title}
           </DialogPrimitive.Title>
-          <DialogPrimitive.Description data-node="dialog-description" aria-label="dialog description" className={cn('text-foreground/60 mt-2 mb-3 px-3.5', { hidden: !description })}>
+          <DialogPrimitive.Description data-slot="dialog-description" aria-label="dialog description" className={cn('text-foreground/60 mt-2 mb-3 px-3.5', { hidden: !description })}>
             {description}
           </DialogPrimitive.Description>
           <div className="max-h-[65vh] overflow-auto px-3.5">{children}</div>

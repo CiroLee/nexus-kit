@@ -29,7 +29,7 @@ export default function Highlight({ children, query, highlightClassName, classNa
           newResult.push(part);
           if (i < parts.length - 1) {
             newResult.push(
-              <span key={`${i}-${q}`} data-node="highlight" className={cn('bg-yellow-500', highlightClassName)}>
+              <span key={`${i}-${q}`} data-slot="highlight" className={cn('bg-yellow-500', highlightClassName)}>
                 {node.match(regex)?.[i] || ''}
               </span>,
             );
