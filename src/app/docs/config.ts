@@ -186,6 +186,10 @@ export const navConfig = [
         name: 'Code',
         href: '/docs/codes',
       },
+      {
+        name: 'SignaturePanel',
+        href: '/docs/signature-panels',
+      },
     ],
   },
 ];
