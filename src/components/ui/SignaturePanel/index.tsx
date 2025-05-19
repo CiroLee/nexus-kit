@@ -25,9 +25,13 @@ export default function SignaturePanel({ className, panelColor = '#f0f0f0', line
   const containerRef = useRef<HTMLDivElement>(null);
   const [isPending, setIsPending] = useState(false);
   const [startPosition, setStartPosition] = useState<Position>({ x: 0, y: 0 });
+  const isPainted = useRef<boolean>(false);
 
   const recordStartPosition = useCallback(
     (e: PointerEvent) => {
+      if (!isPainted.current) {
+        isPainted.current = true;
+      }
       setStartPosition({ x: e.offsetX, y: e.offsetY });
       setIsPending(true);
       onDrawStart?.();
@@ -56,6 +60,7 @@ export default function SignaturePanel({ className, panelColor = '#f0f0f0', line
   );
 
   const endDrawLine = useCallback(() => {
+    if (!isPainted.current) return;
     setIsPending(false);
     setStartPosition({ x: 0, y: 0 });
     onDrawEnd?.();
@@ -72,6 +77,7 @@ export default function SignaturePanel({ className, panelColor = '#f0f0f0', line
 
   const handleClear = async (): Promise<void> => {
     const ctx = canvasRef.current?.getContext('2d');
+    isPainted.current = false;
     if (!ctx) return;
     return new Promise((resolve) => {
       ctx.clearRect(0, 0, canvasRef.current?.width || 0, canvasRef.current?.height || 0);

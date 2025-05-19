@@ -1,7 +1,7 @@
 {
-  "name": "next-ts-tpl",
+  "name": "nexus-kit",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

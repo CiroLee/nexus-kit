@@ -1,5 +1,5 @@
 'use client';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import ClientCode from '@/components/business/ClientCode';
@@ -7,6 +7,8 @@ import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import SignaturePanel, { type SignaturePanelMethod } from '@/components/ui/SignaturePanel';
 import Button from '@/components/ui/Button';
 import { defaultCode, clearAndSaveCode, customCode } from '@/codes/demos/code.signature-panel';
+import { getSourceCode } from '@/app/api/github';
+import CodeDrawer from '@/components/business/CodeDrawer';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -15,6 +17,7 @@ const navList: AnchorItem[] = [
 ];
 
 export default function SignaturePanelPage() {
+  const [sourceCode, setSourceCode] = useState('');
   const [isEmptySignature, setIsEmptySignature] = useState(true);
   const signatureMethodRef = useRef<SignaturePanelMethod>(null);
   const handleClear = async () => {
@@ -30,10 +33,15 @@ export default function SignaturePanelPage() {
       a.click();
     }
   };
+
+  useEffect(() => {
+    getSourceCode('SignaturePanel/index.tsx').then((code) => setSourceCode(code));
+  });
   return (
     <div className="flex">
       <div className="main-container">
         <SectionIntro title="SignaturePanel" description="SignaturePanel is a component that allows users to draw signatures." />
+        <CodeDrawer isClient code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<ClientCode code={defaultCode} />}>
           <SignaturePanel className="h-80 overflow-hidden rounded" />
         </PreviewAndCode>
