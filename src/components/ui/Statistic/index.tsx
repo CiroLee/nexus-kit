@@ -2,6 +2,7 @@
 import { cn } from '@/lib/utils';
 import { cva, VariantProps } from 'class-variance-authority';
 import { IconTrendingUp, IconTrendingDown } from '@tabler/icons-react';
+import React from 'react';
 
 const statistic = cva('inline-flex items-center gap-1', {
   variants: {
@@ -20,11 +21,11 @@ const statistic = cva('inline-flex items-center gap-1', {
 });
 
 type StatisticVariants = VariantProps<typeof statistic>;
-interface StatisticProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'prefix'>, StatisticVariants {
-  value: string | number;
-  title?: string;
-  unit?: string;
-  helpText?: string;
+interface StatisticProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'prefix' | 'title'>, StatisticVariants {
+  value: React.ReactNode;
+  title?: React.ReactNode;
+  unit?: React.ReactNode;
+  helpText?: React.ReactNode;
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
   trend?: 'increase' | 'decrease';
@@ -33,21 +34,27 @@ interface StatisticProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'pre
 export default function Statistic({ className, helpText, title, value, unit, colors, prefix, suffix, trend, ...props }: StatisticProps) {
   return (
     <div className={cn('flex flex-col gap-1', className)} {...props}>
-      <p className="text-description text-sm">{title}</p>
+      <div data-slot="statistic-title" className="text-description text-sm">
+        {title}
+      </div>
       <div className={statistic({ colors })}>
         {prefix}
         <TrendIcon trend={trend} />
-        <span data-slot="statistic-value" className="text-2xl leading-[1] font-semibold">
+        <div data-slot="statistic-value" className="text-2xl leading-[1] font-semibold">
           {value}
-        </span>
+        </div>
         {unit ? (
-          <span data-slot="statistic-unit" className="self-end text-sm">
+          <div data-slot="statistic-unit" className="self-end text-sm">
             {unit}
-          </span>
+          </div>
         ) : null}
         {suffix}
       </div>
-      {helpText ? <span className="text-description text-xs">{helpText}</span> : null}
+      {helpText ? (
+        <div data-slot="statistic-help-text" className="text-description text-xs">
+          {helpText}
+        </div>
+      ) : null}
     </div>
   );
 }
