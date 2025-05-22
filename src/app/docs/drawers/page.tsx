@@ -84,7 +84,7 @@ export default async function DrawerPage() {
             <div className="flex items-center justify-between">
               <Heading as="h4">Title</Heading>
               <DrawerClose>
-                <Button variant="light" size="sm" pill colors="neutral" icon>
+                <Button variant="light" size="sm" pill colors="neutral" asIcon>
                   <IconX size={18} />
                 </Button>
               </DrawerClose>

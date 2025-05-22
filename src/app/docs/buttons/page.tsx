@@ -52,7 +52,7 @@ export default async function ButtonsPage() {
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="icon" codeText={iconCode} title="icon" code={<CodeBox code={iconCode} />}>
-          <Button icon>
+          <Button asIcon>
             <IconUpload size={18} />
           </Button>
         </PreviewAndCode>

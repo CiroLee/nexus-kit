@@ -19,7 +19,7 @@ const button = cva(`inline-flex items-center justify-center transition not-disab
       light: 'text-foreground bg-transparent dark:bg-transparent',
       bordered: 'border bg-transparent dark:bg-transparent',
     },
-    icon: {
+    asIcon: {
       true: 'aspect-square p-0',
     },
     disabled: {
@@ -54,10 +54,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, Omi
   ref?: React.Ref<HTMLButtonElement>;
 }
 export default function Button(props: ButtonProps) {
-  const { colors, size, icon, variant, disabled, loading, pill, className, asChild, children, ref, ...rest } = props;
+  const { colors, size, asIcon, variant, disabled, loading, pill, className, asChild, children, ref, ...rest } = props;
   const Component = asChild ? Slot : 'button';
   return (
-    <Component ref={ref} disabled={disabled || !!loading} className={cn(button({ colors, size, icon, variant, disabled, loading, pill, className }))} {...rest}>
+    <Component ref={ref} disabled={disabled || !!loading} className={cn(button({ colors, size, asIcon, variant, disabled, loading, pill, className }))} {...rest}>
       {children}
     </Component>
   );

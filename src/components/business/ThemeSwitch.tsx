@@ -19,7 +19,7 @@ export default function ThemeSwitch() {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
-        <Button variant="light" colors="neutral" size="sm" icon>
+        <Button variant="light" colors="neutral" size="sm" asIcon>
           {themeMap[theme as keyof typeof themeMap]}
         </Button>
       </DropdownMenu.Trigger>

@@ -36,7 +36,7 @@ export default async function Page({ params }: { params: Promise<{ repo: string 
             codeText={removeLastEmptyLine(codesArray[index]) || ''}
             code={<CodeBox code={removeLastEmptyLine(codesArray[index]) || ''} />}
             trail={
-              <Button icon variant="bordered" colors="neutral" asChild>
+              <Button asIcon variant="bordered" colors="neutral" asChild>
                 <Link href={`https://nexus-examples.vercel.app/${repo}/${item.name}`} target="_blank">
                   <IconArrowUpRight size={20} />
                 </Link>

@@ -31,7 +31,7 @@ export default async function CardPage() {
           <Card className="sm:w-80">
             <CardHeader>
               <CardTitle>Card Title</CardTitle>
-              <Button icon size="sm" variant="light" colors="neutral">
+              <Button asIcon size="sm" variant="light" colors="neutral">
                 <IconDots size={16} />
               </Button>
             </CardHeader>

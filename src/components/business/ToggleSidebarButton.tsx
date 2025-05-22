@@ -5,7 +5,7 @@ import { useSidebar } from '@/contexts/doc-context';
 export default function ToggleSidebarButton({ className }: { className?: string }) {
   const { toggleSidebar } = useSidebar();
   return (
-    <Button variant="light" size="sm" colors="neutral" className={className} icon onClick={toggleSidebar}>
+    <Button variant="light" size="sm" colors="neutral" className={className} asIcon onClick={toggleSidebar}>
       <IconMenuDeep size={20} />
     </Button>
   );

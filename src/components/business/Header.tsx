@@ -22,12 +22,12 @@ export default function DocHeader({ showToggleSidebar }: { showToggleSidebar?: b
         <Link href="/docs" className={cn('hover:text-primary block text-sm transition-colors', { hidden: pathname === '/' || pathname.startsWith('/docs') })}>
           Documents
         </Link>
-        <Button variant="light" size="sm" colors="neutral" name="github" icon asChild>
+        <Button variant="light" size="sm" colors="neutral" name="github" asIcon asChild>
           <Link href="https://github.com/CiroLee/nexus-kit" target="_blank">
             <IconBrandGithub size={20} />
           </Link>
         </Button>
-        <Button variant="light" size="sm" name="twitter" asChild colors="neutral" icon>
+        <Button variant="light" size="sm" name="twitter" asChild colors="neutral" asIcon>
           <Link href="https://x.com/threeLollipop" target="_blank">
             <IconBrandX size={20} />
           </Link>

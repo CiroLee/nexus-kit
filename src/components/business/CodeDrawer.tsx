@@ -26,7 +26,7 @@ export default function CodeDrawer({ code, isClient, codeTabs, className }: Code
       className={cn('w-[84%] sm:w-[40%]', className)}>
       <div className="relative grid h-full grid-rows-[auto_1fr] overflow-hidden">
         <DrawerClose>
-          <Button variant="light" className="mb-4" colors="neutral" icon>
+          <Button variant="light" className="mb-4" colors="neutral" asIcon>
             <IconX size={20} />
           </Button>
         </DrawerClose>
