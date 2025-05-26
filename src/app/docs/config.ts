@@ -15,29 +15,66 @@ export const navConfig = [
     ],
   },
   {
-    title: 'Components',
+    title: 'Layout',
+    category: 'components',
+    key: 'layout',
+    children: [
+      {
+        name: 'Center',
+        href: '/docs/centers',
+      },
+    ],
+  },
+  {
+    title: 'Typography',
+    category: 'components',
+    key: 'typography',
+    children: [
+      {
+        name: 'Blockquote',
+        href: '/docs/blockquotes',
+      },
+      {
+        name: 'Heading',
+        href: '/docs/headings',
+      },
+      {
+        name: 'Code',
+        href: '/docs/codes',
+      },
+      {
+        name: 'Highlight',
+        href: '/docs/highlights',
+      },
+      {
+        name: 'Kbd',
+        href: '/docs/kbds',
+      },
+      {
+        name: 'Link',
+        href: '/docs/links',
+      },
+      {
+        name: 'Divider',
+        href: '/docs/dividers',
+      },
+    ],
+  },
+  {
+    title: 'Base Components',
+    category: 'components',
     key: 'base',
     children: [
       {
         name: 'Accordion',
         href: '/docs/accordions',
       },
-      {
-        name: 'Alert',
-        href: '/docs/alerts',
-      },
-      {
-        name: 'AlertDialog',
-        href: '/docs/alertdialogs',
-      },
+
       {
         name: 'Avatar',
         href: '/docs/avatars',
       },
-      {
-        name: 'Breadcrumb',
-        href: '/docs/breadcrumbs',
-      },
+
       {
         name: 'Collapsible',
         href: '/docs/collapsibles',
@@ -46,10 +83,7 @@ export const navConfig = [
         name: 'Calendar',
         href: '/docs/calendars',
       },
-      {
-        name: 'Heading',
-        href: '/docs/headings',
-      },
+
       {
         name: 'Image',
         href: '/docs/images',
@@ -62,30 +96,7 @@ export const navConfig = [
         name: 'Button Group',
         href: '/docs/button-groups',
       },
-      {
-        name: 'Input',
-        href: '/docs/inputs',
-      },
-      {
-        name: 'Textarea',
-        href: '/docs/textarea',
-      },
-      {
-        name: 'Radio Group',
-        href: '/docs/radio-groups',
-      },
-      {
-        name: 'Checkbox',
-        href: '/docs/checkboxes',
-      },
-      {
-        name: 'Dialog',
-        href: '/docs/dialogs',
-      },
-      {
-        name: 'Switch',
-        href: '/docs/switches',
-      },
+
       {
         name: 'Tag',
         href: '/docs/tags',
@@ -94,10 +105,7 @@ export const navConfig = [
         name: 'Badge',
         href: '/docs/badges',
       },
-      {
-        name: 'Drawer',
-        href: '/docs/drawers',
-      },
+
       {
         name: 'Card',
         href: '/docs/cards',
@@ -106,34 +114,12 @@ export const navConfig = [
         name: 'Segment',
         href: '/docs/segments',
       },
-      {
-        name: 'Tabs',
-        href: '/docs/tabs',
-      },
-      {
-        name: 'Select',
-        href: '/docs/selects',
-      },
-      {
-        name: 'Divider',
-        href: '/docs/dividers',
-      },
+
       {
         name: 'Table',
         href: '/docs/tables',
       },
-      {
-        name: 'Link',
-        href: '/docs/links',
-      },
-      {
-        name: 'Kbd',
-        href: '/docs/kbds',
-      },
-      {
-        name: 'Blockquote',
-        href: '/docs/blockquotes',
-      },
+
       {
         name: 'Tooltip',
         href: '/docs/tooltips',
@@ -146,22 +132,12 @@ export const navConfig = [
         name: 'Popover',
         href: '/docs/popovers',
       },
-      {
-        name: 'Progress',
-        href: '/docs/progresses',
-      },
+
       {
         name: 'Slider',
         href: '/docs/sliders',
       },
-      {
-        name: 'Skeleton',
-        href: '/docs/skeletons',
-      },
-      {
-        name: 'Highlight',
-        href: '/docs/highlights',
-      },
+
       {
         name: 'Hover Card',
         href: '/docs/hover-cards',
@@ -170,25 +146,100 @@ export const navConfig = [
         name: 'Timeline',
         href: '/docs/timelines',
       },
+
       {
-        name: 'Loading',
-        href: '/docs/loadings',
+        name: 'Statistic',
+        href: '/docs/statistics',
       },
+
+      {
+        name: 'SignaturePanel',
+        href: '/docs/signature-panels',
+      },
+    ],
+  },
+  {
+    title: 'Form',
+    category: 'components',
+    key: 'form',
+    children: [
       {
         name: 'NumberInput',
         href: '/docs/number-inputs',
       },
       {
-        name: 'Statistic',
-        href: '/docs/statistics',
+        name: 'Input',
+        href: '/docs/inputs',
       },
       {
-        name: 'Code',
-        href: '/docs/codes',
+        name: 'Textarea',
+        href: '/docs/textarea',
       },
       {
-        name: 'SignaturePanel',
-        href: '/docs/signature-panels',
+        name: 'Checkbox',
+        href: '/docs/checkboxes',
+      },
+      {
+        name: 'Radio Group',
+        href: '/docs/radio-groups',
+      },
+      {
+        name: 'Switch',
+        href: '/docs/switches',
+      },
+      {
+        name: 'Select',
+        href: '/docs/selects',
+      },
+    ],
+  },
+  {
+    title: 'Navigation',
+    category: 'components',
+    key: 'navigation',
+    children: [
+      {
+        name: 'Breadcrumb',
+        href: '/docs/breadcrumbs',
+      },
+      {
+        name: 'Tabs',
+        href: '/docs/tabs',
+      },
+    ],
+  },
+  {
+    title: 'Feedback',
+    category: 'components',
+    key: 'feedback',
+    children: [
+      {
+        name: 'Alert',
+        href: '/docs/alerts',
+      },
+      {
+        name: 'AlertDialog',
+        href: '/docs/alertdialogs',
+      },
+      {
+        name: 'Drawer',
+        href: '/docs/drawers',
+      },
+      {
+        name: 'Dialog',
+        href: '/docs/dialogs',
+      },
+      {
+        name: 'Progress',
+        href: '/docs/progresses',
+      },
+      {
+        name: 'Skeleton',
+        href: '/docs/skeletons',
+      },
+      {
+        name: 'Loading',
+        href: '/docs/loadings',
       },
     ],
   },

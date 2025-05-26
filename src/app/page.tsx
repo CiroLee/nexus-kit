@@ -5,7 +5,7 @@ import Heading from '@/components/ui/Heading';
 import Header from '@/components/business/Header';
 import Link from 'next/link';
 import { navConfig } from '@/app/docs/config';
-const componentsAmounts = navConfig?.filter((item) => item.key === 'base')[0].children?.length;
+const componentsAmounts = navConfig?.filter((item) => item.category === 'components').reduce((prev, cur) => prev + (cur?.children?.length ?? 0), 0);
 
 export default function Home() {
   return (
@@ -16,10 +16,10 @@ export default function Home() {
         <span className="absolute top-0 right-0 size-2.5 bg-teal-400 dark:bg-teal-500"></span>
         <span className="absolute right-0 bottom-0 size-2.5 bg-teal-400 dark:bg-teal-500"></span>
         <span className="absolute bottom-0 left-0 size-2.5 bg-teal-400 dark:bg-teal-500"></span>
-        <Heading as="h1" className="sm:text-7xl">
+        <Heading as="h1" className="text-center sm:text-7xl">
           Nexus-Kit
         </Heading>
-        <p className="mt-4 text-gray-600 dark:text-gray-200">
+        <p className="mt-4 text-center text-gray-600 dark:text-gray-200">
           A practical and beautiful component library, built based on radix-ui and tailwind css v4, just <span className="font-bold">Copy</span> codes and <span className="font-bold">Paste</span> to
           your project.
         </p>

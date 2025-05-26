@@ -32,16 +32,19 @@ export default function SideNavBar() {
               {nav.title}
             </Link>
           ) : (
-            <h4>{nav.title}</h4>
+            <h4 className="mb-2 text-sm font-semibold">{nav.title}</h4>
           )}
           <div className="before:bg-line/80 relative h-fit space-y-1 before:absolute before:left-0 before:h-full before:w-0.5">
             {nav.children
               ?.sort((a, b) => a.name.localeCompare(b.name))
               .map((item) => (
                 <Link
-                  className={cn('hover:before:bg-primary relative flex items-center rounded p-2 text-sm transition before:absolute before:left-0 before:h-full before:w-0.5', {
-                    'before:bg-primary text-primary font-semibold': pathname === item.href,
-                  })}
+                  className={cn(
+                    'hover:before:bg-primary relative flex items-center rounded p-2 text-sm text-neutral-500 transition before:absolute before:left-0 before:h-full before:w-0.5 dark:text-neutral-400',
+                    {
+                      'before:bg-primary text-primary font-semibold': pathname === item.href,
+                    },
+                  )}
                   key={item.href}
                   href={item.href}
                   onClick={handleCloseSidebar}>
