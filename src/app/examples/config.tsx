@@ -1,3 +1,5 @@
+import { title } from 'process';
+
 export const examplesConfig = [
   {
     id: 'auth',
@@ -132,6 +134,19 @@ export const examplesConfig = [
       {
         title: 'Appearance Setting',
         name: 'setting-02',
+      },
+    ],
+  },
+  {
+    id: 'sidebar',
+    href: '/examples/sidebar',
+    cover: <Sidebar />,
+    title: 'Sidebar',
+    description: 'Components about sidebar',
+    children: [
+      {
+        title: 'Sidebar 01',
+        name: 'sidebar-01',
       },
     ],
   },
@@ -313,6 +328,23 @@ function Setting() {
       <rect y="46" width="210" height="16" rx="2.41611" fill="var(--example-skeleton-item)" />
       <rect y="69" width="210" height="16" rx="2.41611" fill="var(--example-skeleton-item)" />
       <rect y="92" width="144" height="16" rx="2.41611" fill="var(--example-skeleton-item)" />
+    </svg>
+  );
+}
+
+function Sidebar() {
+  return (
+    <svg width="150" height="213" viewBox="0 0 150 213" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0.25" y="0.25" width="149.5" height="212.5" rx="3.75" fill="var(--example-skeleton-bg)" stroke="var(--example-skeleton-item)" strokeWidth="0.5" />
+      <circle cx="26" cy="26" r="10" fill="#2B7FFF" />
+      <rect x="43" y="20" width="55" height="12" fill="var(--example-skeleton-item)" />
+      <rect x="16" y="48" width="82" height="10" fill="var(--example-skeleton-item)" />
+      <rect x="16" y="66" width="90" height="10" fill="var(--example-skeleton-item)" />
+      <rect x="16" y="120" width="90" height="10" fill="var(--example-skeleton-item)" />
+      <rect x="16" y="138" width="90" height="10" fill="var(--example-skeleton-item)" />
+      <rect x="16" y="156" width="90" height="10" fill="var(--example-skeleton-item)" />
+      <rect x="16" y="84" width="99" height="10" fill="var(--example-skeleton-item)" />
+      <line x1="9" y1="106.75" x2="141" y2="106.75" stroke="var(--example-skeleton-item)" strokeWidth="0.5" />
     </svg>
   );
 }
