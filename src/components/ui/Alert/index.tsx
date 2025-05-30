@@ -10,7 +10,7 @@ const alert = cva('rounded-lg p-4 flex bg-background', {
       success: 'border-secondary/70 [&_svg]:text-secondary',
       warning: 'border-warning/70 [&_svg]:text-warning',
       danger: 'border-danger/70 [&_svg]:text-danger',
-      neutral: 'border-line',
+      neutral: 'border-neutral',
     },
     variant: {
       bordered: 'border',

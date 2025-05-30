@@ -3,7 +3,7 @@ import { Progress as ProgressPrimitive } from 'radix-ui';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 
-const progress = cva('rounded-full bg-neutral-200 dark:bg-neutral-700 overflow-hidden', {
+const progress = cva('rounded-full bg-neutral overflow-hidden', {
   variants: {
     size: {
       sm: 'h-1.5',
@@ -16,7 +16,7 @@ const progress = cva('rounded-full bg-neutral-200 dark:bg-neutral-700 overflow-h
   },
 });
 
-const progressIndicator = cva('progress-indicator size-full rounded-full transition-transform', {
+const progressIndicator = cva('size-full rounded-full transition-transform', {
   variants: {
     colors: {
       primary: 'bg-primary',
@@ -40,7 +40,7 @@ interface ProgressProps extends React.ComponentPropsWithoutRef<typeof ProgressPr
 export default function Progress({ size, colors, value, max = 100, striped, className, style, ...props }: ProgressProps) {
   return (
     <ProgressPrimitive.Root value={value} max={max} className={cn(progress({ size, className }))} style={{ transform: 'translateZ(0)', ...style }} {...props}>
-      <ProgressPrimitive.Indicator className={cn(progressIndicator({ colors, striped }))} style={{ transform: `translateX(-${100 - (value || 0)}%)` }} />
+      <ProgressPrimitive.Indicator data-slot="progress-indicator" className={cn(progressIndicator({ colors, striped }))} style={{ transform: `translateX(-${100 - (value || 0)}%)` }} />
     </ProgressPrimitive.Root>
   );
 }

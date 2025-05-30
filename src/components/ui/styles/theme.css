@@ -6,6 +6,10 @@
   --foreground: var(--color-neutral-800);
   --line: var(--color-neutral-200);
   --description: var(--color-neutral-400);
+
+  /* for neutral theme */
+  --neutral: var(--color-neutral-200);
+  --neutral-active: var(--color-neutral-300);
   /* semantic z-index */
   --loading: 60;
   --popup: 50;
@@ -17,6 +21,10 @@
   --foreground: var(--color-neutral-50);
   --line: var(--color-neutral-700);
   --description: var(--color-neutral-500);
+
+  /* for neutral theme of dark mode */
+  --neutral: var(--color-neutral-700);
+  --neutral-active: #343333;
 }
 
 @theme {
@@ -33,6 +41,8 @@
   --color-secondary-active: var(--color-green-600);
   --color-warning: var(--color-orange-500);
   --color-warning-active: var(--color-orange-600);
+  --color-neutral: var(--neutral);
+  --color-neutral-active: var(--neutral-active);
 }
 
 body {

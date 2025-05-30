@@ -10,7 +10,7 @@ const blockquote = cva('relative w-fit flex-col gap-4 flex pl-4 border-l-4', {
       success: 'border-success/60',
       warning: 'border-warning/60',
       danger: 'border-danger/60',
-      neutral: 'border-line',
+      neutral: 'border-neutral',
     },
   },
   defaultVariants: {

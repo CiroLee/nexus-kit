@@ -35,7 +35,7 @@ const timelineIndicator = cva(
         secondary: 'bg-secondary',
         danger: 'bg-danger',
         warning: 'bg-warning',
-        neutral: 'bg-neutral-300 dark:bg-neutral-600',
+        neutral: 'bg-neutral',
       },
     },
     defaultVariants: {
