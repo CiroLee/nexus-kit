@@ -23,6 +23,10 @@ export const navConfig = [
         name: 'Center',
         href: '/docs/centers',
       },
+      {
+        name: 'Divider',
+        href: '/docs/dividers',
+      },
     ],
   },
   {
@@ -54,10 +58,6 @@ export const navConfig = [
         name: 'Link',
         href: '/docs/links',
       },
-      {
-        name: 'Divider',
-        href: '/docs/dividers',
-      },
     ],
   },
   {
@@ -69,24 +69,9 @@ export const navConfig = [
         name: 'Accordion',
         href: '/docs/accordions',
       },
-
-      {
-        name: 'Avatar',
-        href: '/docs/avatars',
-      },
-
       {
         name: 'Collapsible',
         href: '/docs/collapsibles',
-      },
-      {
-        name: 'Calendar',
-        href: '/docs/calendars',
-      },
-
-      {
-        name: 'Image',
-        href: '/docs/images',
       },
       {
         name: 'Button',
@@ -96,7 +81,6 @@ export const navConfig = [
         name: 'Button Group',
         href: '/docs/button-groups',
       },
-
       {
         name: 'Tag',
         href: '/docs/tags',
@@ -105,56 +89,80 @@ export const navConfig = [
         name: 'Badge',
         href: '/docs/badges',
       },
+      {
+        name: 'Segment',
+        href: '/docs/segments',
+      },
+      {
+        name: 'Tooltip',
+        href: '/docs/tooltips',
+      },
 
+      {
+        name: 'Popover',
+        href: '/docs/popovers',
+      },
+      {
+        name: 'Hover Card',
+        href: '/docs/hover-cards',
+      },
+      {
+        name: 'SignaturePanel',
+        href: '/docs/signature-panels',
+      },
+    ],
+  },
+  {
+    title: 'Navigation',
+    category: 'components',
+    key: 'navigation',
+    children: [
+      {
+        name: 'Breadcrumb',
+        href: '/docs/breadcrumbs',
+      },
+      {
+        name: 'Tabs',
+        href: '/docs/tabs',
+      },
+    ],
+  },
+  {
+    title: 'Data Display',
+    category: 'components',
+    key: 'data-display',
+    children: [
+      {
+        name: 'Avatar',
+        href: '/docs/avatars',
+      },
+      {
+        name: 'Calendar',
+        href: '/docs/calendars',
+      },
+      {
+        name: 'Image',
+        href: '/docs/images',
+      },
       {
         name: 'Card',
         href: '/docs/cards',
       },
       {
-        name: 'Segment',
-        href: '/docs/segments',
-      },
-
-      {
         name: 'Table',
         href: '/docs/tables',
-      },
-
-      {
-        name: 'Tooltip',
-        href: '/docs/tooltips',
       },
       {
         name: 'StarRating',
         href: '/docs/star-ratings',
       },
       {
-        name: 'Popover',
-        href: '/docs/popovers',
-      },
-
-      {
-        name: 'Slider',
-        href: '/docs/sliders',
-      },
-
-      {
-        name: 'Hover Card',
-        href: '/docs/hover-cards',
+        name: 'Statistic',
+        href: '/docs/statistics',
       },
       {
         name: 'Timeline',
         href: '/docs/timelines',
-      },
-
-      {
-        name: 'Statistic',
-        href: '/docs/statistics',
-      },
-
-      {
-        name: 'SignaturePanel',
-        href: '/docs/signature-panels',
       },
     ],
   },
@@ -191,20 +199,9 @@ export const navConfig = [
         name: 'Select',
         href: '/docs/selects',
       },
-    ],
-  },
-  {
-    title: 'Navigation',
-    category: 'components',
-    key: 'navigation',
-    children: [
       {
-        name: 'Breadcrumb',
-        href: '/docs/breadcrumbs',
-      },
-      {
-        name: 'Tabs',
-        href: '/docs/tabs',
+        name: 'Slider',
+        href: '/docs/sliders',
       },
     ],
   },
