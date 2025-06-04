@@ -64,6 +64,42 @@ export default function Page() {
   )
 }`;
 
+export const prefixCode = `import Select, { type SelectItem } from "@/components/ui/Select";
+import { IconFilter, IconSortAZ } from '@tabler/icons-react';
+
+const selectItems: SelectItem[] = [
+  {
+    id: '1',
+    label: 'Apple',
+    value: 'apple',
+  },
+  {
+    id: '2',
+    label: 'Orange',
+    value: 'orange',
+  },
+  {
+    id: '3',
+    label: 'Banana',
+    value: 'banana',
+  },
+  {
+    id: '4',
+    label: 'Pineapple',
+    value: 'pineapple',
+  },
+];
+
+export default function Page() {
+  return (
+    <div className="grid items-center gap-4 md:grid-cols-3">
+      <Select size="sm" prefix="$" placeholder="select sth..." items={selectItems} />
+      <Select size="md" prefix={<IconFilter size={18} />} placeholder="select sth..." items={selectItems} />
+      <Select size="lg" prefix={<IconSortAZ size={24} />} placeholder="select sth..." items={selectItems} />
+    </div>
+  )
+}`;
+
 export const disabledCode = `import Select, { type SelectItem } from "@/components/ui/Select";
 
 const selectItems: SelectItem[] = [

@@ -4,7 +4,8 @@ import CodeBox from '@/components/business/CodeBox';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import Select, { type SelectItem } from '@/components/ui/Select';
 import CodeDrawer from '@/components/business/CodeDrawer';
-import { defaultCode, sizeCode, disabledCode, groupCode } from '@/codes/demos/code.selects';
+import { IconFilter, IconSortAZ } from '@tabler/icons-react';
+import { defaultCode, sizeCode, disabledCode, groupCode, prefixCode } from '@/codes/demos/code.selects';
 import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
@@ -119,6 +120,13 @@ export default async function SelectPage() {
             <Select size="sm" placeholder="small size..." items={selectItems} />
             <Select size="md" placeholder="medium size..." items={selectItems} />
             <Select size="lg" placeholder="large size..." items={selectItems} />
+          </div>
+        </PreviewAndCode>
+        <PreviewAndCode anchorId="prefix" title="prefix" codeText={prefixCode} code={<CodeBox code={prefixCode} />}>
+          <div className="grid items-center gap-4 md:grid-cols-3">
+            <Select size="sm" prefix="$" placeholder="select sth..." items={selectItems} />
+            <Select size="md" prefix={<IconFilter size={18} />} placeholder="select sth..." items={selectItems} />
+            <Select size="lg" prefix={<IconSortAZ size={24} />} placeholder="select sth..." items={selectItems} />
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<CodeBox code={disabledCode} />}>

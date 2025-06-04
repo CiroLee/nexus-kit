@@ -53,15 +53,21 @@ const selectContent = cva(
 type SelectTriggerVariants = VariantProps<typeof selectTrigger>;
 
 interface SelectProps extends React.ComponentPropsWithRef<typeof SelectPrimitive.Root>, SelectTriggerVariants {
+  prefix?: React.ReactNode;
   className?: string;
-  placeholder?: string;
+  placeholder?: React.ReactNode;
   items: SelectItem[];
 }
-export default function Select({ placeholder, size, items, className, ...props }: SelectProps) {
+export default function Select({ placeholder, prefix, size, items, className, ...props }: SelectProps) {
   return (
     <SelectPrimitive.Root {...props}>
       <SelectPrimitive.Trigger className={cn('group', selectTrigger({ size, className }))}>
-        <SelectPrimitive.Value placeholder={placeholder} />
+        <div className="flex items-center gap-2">
+          <SelectPrimitive.Icon asChild className="text-description">
+            <div>{prefix}</div>
+          </SelectPrimitive.Icon>
+          <SelectPrimitive.Value placeholder={placeholder} />
+        </div>
         <SelectPrimitive.Icon asChild className="transition-transform group-data-[state=closed]:rotate-0 group-data-[state=open]:rotate-180">
           <IconChevronDown size="14px" />
         </SelectPrimitive.Icon>
