@@ -53,6 +53,10 @@ export default function Loading({ className, open, backdrop, indicator, isFullsc
         document.body.removeAttribute('style');
       };
     }
+
+    return () => {
+      document.body.removeAttribute('style');
+    };
   }, [open]);
   return (
     <div className="relative">
