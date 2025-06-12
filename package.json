@@ -20,17 +20,17 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-resizable-panels": "^3.0.2",
-    "shiki": "^3.4.2",
-    "tailwind-merge": "^3.3.0",
+    "shiki": "^3.6.0",
+    "tailwind-merge": "^3.3.1",
     "usehooks-ts": "^3.1.1"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/eslintrc": "^3.3.1",
-    "@tailwindcss/postcss": "^4.1.8",
-    "@types/node": "^22.15.29",
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5",
+    "@tailwindcss/postcss": "^4.1.9",
+    "@types/node": "^24.0.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
     "commitlint": "^19.8.1",
     "eslint": "^9.28.0",
     "eslint-config-next": "15.4.0-canary.51",
@@ -38,7 +38,7 @@
     "lint-staged": "^16.1.0",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.12",
-    "tailwindcss": "^4.1.8",
+    "tailwindcss": "^4.1.9",
     "typescript": "^5.8.3"
   }
 }

@@ -164,6 +164,10 @@ export const navConfig = [
         name: 'Timeline',
         href: '/docs/timelines',
       },
+      {
+        name: 'DataList',
+        href: '/docs/data-lists',
+      },
     ],
   },
   {

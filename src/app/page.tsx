@@ -1,8 +1,10 @@
+import NextLink from 'next/link';
 import { cn } from '@/lib/utils';
 import { IconComponents, IconMoonStars, IconBrandTailwind, IconBrush } from '@tabler/icons-react';
 import Button from '@/components/ui/Button';
 import Heading from '@/components/ui/Heading';
 import Header from '@/components/business/Header';
+import Tag from '@/components/ui/Tag';
 import Link from 'next/link';
 import { navConfig } from '@/app/docs/config';
 const componentsAmounts = navConfig?.filter((item) => item.category === 'components').reduce((prev, cur) => prev + (cur?.children?.length ?? 0), 0);
@@ -20,8 +22,19 @@ export default function Home() {
           Nexus-Kit
         </Heading>
         <p className="mt-4 text-center text-gray-600 dark:text-gray-200">
-          A practical and beautiful component library, built based on radix-ui and tailwind css v4, just <span className="font-bold">Copy</span> codes and <span className="font-bold">Paste</span> to
-          your project.
+          A practical and beautiful component library, built based on{' '}
+          <NextLink href="https://www.radix-ui.com/">
+            <Tag pill bordered>
+              Radix-UI
+            </Tag>
+          </NextLink>{' '}
+          and{' '}
+          <NextLink href="https://tailwindcss.com/">
+            <Tag pill bordered>
+              TailwindCSS
+            </Tag>
+          </NextLink>
+          , just <span className="font-bold">Copy</span> codes and <span className="font-bold">Paste</span> to your project.
         </p>
       </div>
       <div className="relative mx-4 mt-8 flex sm:justify-center">
