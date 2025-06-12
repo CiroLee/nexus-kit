@@ -2,11 +2,13 @@ import { IconCopy } from '@tabler/icons-react';
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import CodeBox from '@/components/business/CodeBox';
+import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import { DataList, DataListItem, DataListLabel, DataListValue } from '@/components/ui/DataList';
 import Tag from '@/components/ui/Tag';
 import Link from '@/components/ui/Link';
 import { defaultCode, orientationCode, combineCode } from '@/codes/demos/code.datalist';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -32,11 +34,13 @@ const dataListGroup = [
   ],
 ];
 
-export default function DataListPage() {
+export default async function DataListPage() {
+  const sourceCode = await getSourceCode('DataList/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">
         <SectionIntro title="DataList" description="DataList is used to display the list of data." />
+        <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <DataList orientation="horizontal">
             <DataListItem>
