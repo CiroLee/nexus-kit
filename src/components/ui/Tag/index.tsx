@@ -1,7 +1,7 @@
 'use client';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
-const tag = cva(' inline-flex items-center rounded-sm outline-none focus-visible:ring-3', {
+const tag = cva('inline-flex items-center rounded-sm outline-none focus-visible:ring-3', {
   variants: {
     colors: {
       primary: 'text-primary border-primary bg-blue-100 dark:border-blue-700 dark:text-foreground dark:bg-blue-900 ring-primary/20',
