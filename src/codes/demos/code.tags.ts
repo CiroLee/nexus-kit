@@ -12,6 +12,18 @@ export default function Page() {
   )
 }`;
 
+export const sizeCode = `import Tag from "@/components/ui/Tag";
+
+export default function Page() {
+  return (
+    <div className="flex items-center gap-4">
+      <Tag colors="neutral" size="sm">Tag</Tag>
+      <Tag colors="neutral" size="md">Tag</Tag>
+      <Tag colors="neutral" size="lg">Tag</Tag>
+    </div>
+  )
+}`;
+
 export const borderedCode = `import Tag from "@/components/ui/Tag";
 
 export default function Page() {

@@ -2,24 +2,16 @@ import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import CodeBox from '@/components/business/CodeBox';
 import Tag from '@/components/ui/Tag';
-import { colorsCode, borderedCode, pillCode } from '@/codes/demos/code.tags';
+import { colorsCode, borderedCode, pillCode, sizeCode } from '@/codes/demos/code.tags';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
-  {
-    anchorId: 'colors',
-    label: 'colors',
-  },
-  {
-    anchorId: 'bordered',
-    label: 'bordered',
-  },
-  {
-    anchorId: 'pill',
-    label: 'pill shape',
-  },
+  { anchorId: 'colors', label: 'colors' },
+  { anchorId: 'size', label: 'size' },
+  { anchorId: 'bordered', label: 'bordered' },
+  { anchorId: 'pill', label: 'pill shape' },
 ];
 
 export default async function Page() {
@@ -36,6 +28,19 @@ export default async function Page() {
             <Tag colors="warning">warning</Tag>
             <Tag colors="danger">danger</Tag>
             <Tag colors="neutral">neutral</Tag>
+          </div>
+        </PreviewAndCode>
+        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<CodeBox code={sizeCode} />}>
+          <div className="flex items-center gap-4">
+            <Tag colors="neutral" size="sm">
+              Tag
+            </Tag>
+            <Tag colors="neutral" size="md">
+              Tag
+            </Tag>
+            <Tag colors="neutral" size="lg">
+              Tag
+            </Tag>
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="bordered" title="bordered" codeText={borderedCode} code={<CodeBox code={borderedCode} />}>
