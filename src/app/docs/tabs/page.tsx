@@ -32,7 +32,7 @@ export default async function TabsPage() {
   return (
     <div className="flex">
       <div className="main-container">
-        <SectionIntro title="Tags" description="Tabs are used to categorize content. They are used to group content together and make it easier to find." />
+        <SectionIntro title="Tabs" description="Tabs are used to categorize content. They are used to group content together and make it easier to find." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Tabs defaultValue="tab-1">
