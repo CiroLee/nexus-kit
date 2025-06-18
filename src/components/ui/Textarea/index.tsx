@@ -30,15 +30,16 @@ const textarea = cva('outline-none size-full box-border p-2 text-sm', {
 
 type TextAreaVariants = VariantProps<typeof textareaWrap>;
 interface TextareaProps extends Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, 'disabled'>, TextAreaVariants {
+  rootClassName?: string;
   state?: 'warning' | 'error';
   resize?: 'none' | 'both' | 'vertical' | 'horizontal';
   disabled?: boolean;
   ref?: React.Ref<HTMLTextAreaElement>;
 }
 export default function Textarea(props: TextareaProps) {
-  const { state, disabled, className, style, resize = 'horizontal', rows = 3, ref, ...rest } = props;
+  const { state, disabled, rootClassName, className, style, resize = 'horizontal', rows = 3, ref, ...rest } = props;
   return (
-    <div data-disabled={disabled} data-slot="textarea-wrap" className={cn(textareaWrap({ state, disabled }))} style={style}>
+    <div data-disabled={disabled} data-slot="textarea-wrap" className={cn(textareaWrap({ state, disabled, className: rootClassName }))} style={style}>
       <textarea ref={ref} rows={rows} className={textarea({ resize, className })} disabled={!!disabled} {...rest} />
     </div>
   );
