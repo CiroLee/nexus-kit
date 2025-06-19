@@ -53,7 +53,7 @@ export default function CalendarPage() {
 
   const getCodes = async () => {
     const source = await getSourceCode('Calendar/index.tsx');
-    const core = await getSourceCode('Calendar/calendar.ts');
+    const core = await getSourceCode('shared/calendar.ts');
     setSourceCode({ source, core });
   };
 
