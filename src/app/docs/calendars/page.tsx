@@ -13,7 +13,7 @@ import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
-  { anchorId: 'star-week-on-sunday', label: 'starWeekOnSunday' },
+  { anchorId: 'start-week-on-sunday', label: 'starWeekOnSunday' },
   { anchorId: 'show-center-mark', label: 'showCenterMark' },
   { anchorId: 'default-value', label: 'defaultValue' },
   { anchorId: 'controlled', label: 'controlled' },
@@ -74,7 +74,7 @@ export default function CalendarPage() {
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<ClientCode code={defaultCode} />}>
           <Calendar />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="star-week-on-sunday" title="starWeekOnSunday" codeText={startOnSunday} code={<ClientCode code={startOnSunday} />}>
+        <PreviewAndCode anchorId="start-week-on-sunday" title="starWeekOnSunday" codeText={startOnSunday} code={<ClientCode code={startOnSunday} />}>
           <Calendar startWeekOnSunday />
         </PreviewAndCode>
         <PreviewAndCode anchorId="show-center-mark" title="showCenterMark" codeText={centerMark} code={<ClientCode code={centerMark} />}>

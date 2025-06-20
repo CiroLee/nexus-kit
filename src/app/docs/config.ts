@@ -141,6 +141,10 @@ export const navConfig = [
         href: '/docs/calendars',
       },
       {
+        name: 'CardCalendar',
+        href: '/docs/card-calendars',
+      },
+      {
         name: 'Image',
         href: '/docs/images',
       },

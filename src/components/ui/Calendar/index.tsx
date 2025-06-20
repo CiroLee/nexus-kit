@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
-import CalendarGenerator from './calendar';
+import CalendarGenerator from '../shared/calendar';
+import { isInCurrentMonth, isSameDate } from '../shared/dateUtils';
 import { cn } from '@/lib/utils';
 import { cva } from 'class-variance-authority';
 const calendar = new CalendarGenerator();
@@ -28,14 +29,6 @@ interface CalendarProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'defa
   ref?: React.Ref<HTMLDivElement>;
 }
 const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-
-function isInCurrentMonth(first: Date, second: Date): boolean {
-  return first.getFullYear() === second.getFullYear() && first.getMonth() === second.getMonth();
-}
-
-function isSameDate(first: Date, second: Date): boolean {
-  return first.getFullYear() === second.getFullYear() && first.getMonth() === second.getMonth() && first.getDate() === second.getDate();
-}
 
 export default function Calendar({ defaultValue, value, cellContent, startWeekOnSunday, showCenterMark, markType = 'month', onValueChange, className, ...props }: CalendarProps) {
   const [selectedValue, setSelectedValue] = useState(value || defaultValue || new Date());

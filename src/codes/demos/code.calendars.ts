@@ -19,7 +19,7 @@ export default function Page() {
 export const defaultValueCode = `import Calendar from '@/components/ui/Calendar';
 
 export default function Page() {
-  return <Calendar showCenterMark defaultValue={new Date('2020-1-2')} />;
+  return <Calendar showCenterMark defaultValue={new Date('2020/1/2')} />;
 }`;
 
 export const controlledCode = `import { useState } from 'react';
