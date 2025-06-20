@@ -16,7 +16,7 @@ const calendarItem = cva(`flex size-8 items-center justify-center rounded text-s
     },
     isSelected: {
       true: 'bg-primary text-white',
-      false: 'hover:bg-line/20 dark:hover:bg-line/40',
+      false: 'hover:bg-neutral/50',
     },
   },
 });
@@ -85,12 +85,12 @@ export default function CardCalendar({ defaultValue, value, startWeekOnSunday, o
           <IconChevronLeft size={18} className="rotate-180" />
         </Button>
       </div>
-      <div data-slot="card-calendar-week-header" className="grid h-10 grid-cols-7 items-center justify-items-center text-sm font-semibold">
+      <div data-slot="card-calendar-week-header" className="grid h-11 grid-cols-7 items-center justify-items-center text-sm font-semibold">
         {weekHeader.map((weekday, i) => (
           <div key={i}>{weekday}</div>
         ))}
       </div>
-      <ul className="grid grid-cols-7 gap-1">
+      <ul className="grid grid-cols-7 gap-2">
         {dateList.map((date) => (
           <button
             key={date.getTime()}

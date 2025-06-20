@@ -8,7 +8,7 @@ const calendar = new CalendarGenerator();
 
 const calendarItem = cva(
   `border-line transition-colors relative h-25 border-r border-b p-2 nth-[7n]:border-r-0 nth-last-[-n+7]:border-b-0
-  hover:bg-line/20 dark:hover:bg-line/10 cursor-pointer overflow-hidden`,
+  hover:bg-neutral/50 cursor-pointer overflow-hidden`,
   {
     variants: {
       isIncurrentMonth: {
@@ -73,7 +73,7 @@ export default function Calendar({ defaultValue, value, cellContent, startWeekOn
     }
   }, [value]);
   return (
-    <div className={cn('border-line relative rounded border', className)} {...props}>
+    <div className={cn('border-line bg-background relative rounded border', className)} {...props}>
       <div data-slot="calendar-week-header" className="border-line grid h-9 grid-cols-7 border-b">
         {weekHeader.map((weekday, i) => (
           <div key={i} className="flex h-full items-center justify-center text-sm font-semibold">
