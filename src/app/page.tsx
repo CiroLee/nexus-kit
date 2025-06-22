@@ -4,7 +4,6 @@ import { IconComponents, IconMoonStars, IconBrandTailwind, IconBrush } from '@ta
 import Button from '@/components/ui/Button';
 import Heading from '@/components/ui/Heading';
 import Header from '@/components/business/Header';
-import Tag from '@/components/ui/Tag';
 import Link from 'next/link';
 import { navConfig } from '@/app/docs/config';
 const componentsAmounts = navConfig?.filter((item) => item.category === 'components').reduce((prev, cur) => prev + (cur?.children?.length ?? 0), 0);
@@ -23,16 +22,12 @@ export default function Home() {
         </Heading>
         <p className="mt-4 text-center text-gray-600 dark:text-gray-200">
           A practical and beautiful component library, built based on{' '}
-          <NextLink href="https://www.radix-ui.com/">
-            <Tag pill bordered>
-              Radix-UI
-            </Tag>
+          <NextLink className="font-bold" href="https://www.radix-ui.com/">
+            Radix-UI
           </NextLink>{' '}
           and{' '}
-          <NextLink href="https://tailwindcss.com/">
-            <Tag pill bordered>
-              TailwindCSS
-            </Tag>
+          <NextLink href="https://tailwindcss.com/" className="font-bold">
+            TailwindCSS
           </NextLink>
           , just <span className="font-bold">Copy</span> codes and <span className="font-bold">Paste</span> to your project.
         </p>

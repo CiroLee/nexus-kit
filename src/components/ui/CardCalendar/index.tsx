@@ -78,9 +78,7 @@ export default function CardCalendar({ defaultValue, value, startWeekOnSunday, o
         <Button size="sm" asIcon variant="light" colors="neutral" onClick={() => changeMonth('prev')}>
           <IconChevronLeft size={18} />
         </Button>
-        <span>
-          {selectedValue.toLocaleString('en-US', { month: 'short' })} {selectedValue.getFullYear()}
-        </span>
+        <span>{selectedValue.toLocaleString('en-US', { month: 'short', year: 'numeric' })}</span>
         <Button size="sm" asIcon variant="light" colors="neutral" onClick={() => changeMonth('next')}>
           <IconChevronLeft size={18} className="rotate-180" />
         </Button>
