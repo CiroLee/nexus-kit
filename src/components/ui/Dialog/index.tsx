@@ -36,7 +36,7 @@ const dialogOverlay = cva('data-[state=open]:animate-fade-in data-[state=closed]
 export type DialogOverlayVariants = VariantProps<typeof dialogOverlay>;
 
 interface DialogProps extends React.ComponentPropsWithoutRef<typeof DialogPrimitive.Root>, DialogOverlayVariants, DialogContentVariants {
-  trigger: React.ReactNode;
+  trigger?: React.ReactNode;
   title?: React.ReactNode;
   description?: React.ReactNode;
   hideFooter?: boolean;
@@ -52,7 +52,7 @@ export const DialogClose = ({ children }: { children: React.ReactNode }) => <Dia
 export function Dialog({ trigger, size, className, title, description, footer, hideFooter, cancelText = 'Cancel', confirmText = 'Confirm', backdrop, children, ref, ...props }: DialogProps) {
   return (
     <DialogPrimitive.Root {...props}>
-      <DialogPrimitive.Trigger asChild>{trigger}</DialogPrimitive.Trigger>
+      {trigger ? <DialogPrimitive.Trigger asChild>{trigger}</DialogPrimitive.Trigger> : null}
       <DialogPrimitive.Portal>
         <DialogPrimitive.Overlay className={dialogOverlay({ backdrop })} />
         <DialogPrimitive.Content ref={ref} className={cn(dialogContent({ size, className }))}>

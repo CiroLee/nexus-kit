@@ -36,7 +36,7 @@ const alertDialogOverlay = cva('data-[state=open]:animate-fade-in data-[state=cl
 export type AlertDialogOverlayVariants = VariantProps<typeof alertDialogOverlay>;
 
 interface AlertDialogProps extends React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Root>, AlertDialogContentVariants, AlertDialogOverlayVariants {
-  trigger: React.ReactNode;
+  trigger?: React.ReactNode;
   title: React.ReactNode;
   description?: React.ReactNode;
   footer?: React.ReactNode;
@@ -48,7 +48,7 @@ interface AlertDialogProps extends React.ComponentPropsWithoutRef<typeof AlertDi
 export default function AlertDialog({ trigger, size, className, title, description, footer, cancelText = 'Cancel', confirmText = 'Confirm', backdrop, children, ref, ...props }: AlertDialogProps) {
   return (
     <AlertDialogPrimitive.Root {...props}>
-      <AlertDialogPrimitive.Trigger asChild>{trigger}</AlertDialogPrimitive.Trigger>
+      {trigger ? <AlertDialogPrimitive.Trigger asChild>{trigger}</AlertDialogPrimitive.Trigger> : null}
       <AlertDialogPrimitive.Portal>
         <AlertDialogPrimitive.Overlay className={alertDialogOverlay({ backdrop })} />
         <AlertDialogPrimitive.Content className={cn(alertDialogContent({ size }), className)} ref={ref}>
