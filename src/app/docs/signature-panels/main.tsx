@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import ClientCode from '@/components/business/ClientCode';
@@ -7,7 +7,6 @@ import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import SignaturePanel, { type SignaturePanelMethod } from '@/components/ui/SignaturePanel';
 import Button from '@/components/ui/Button';
 import { defaultCode, clearAndSaveCode, customCode } from '@/codes/demos/code.signature-panel';
-import { getSourceCode } from '@/app/api/github';
 import CodeDrawer from '@/components/business/CodeDrawer';
 
 const navList: AnchorItem[] = [

@@ -24,6 +24,48 @@ code > span.line::before {
   @apply text-zinc-500;
 }
 
+.highlight-line {
+  @apply inline-block w-full bg-[#1d2027];
+}
+.diff.add {
+  display: inline-block;
+  width: 100%;
+  background-color: rgb(39 79 57 / 60%);
+  position: relative;
+}
+.diff.add::after {
+  content: '+';
+  position: absolute;
+  top: 0;
+  left: 1.2em;
+  width: 1rem;
+  height: 100%;
+  color: #3d8769;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diff.remove {
+  display: inline-block;
+  width: 100%;
+  background-color: rgb(46 21 21 / 73%);
+  position: relative;
+}
+
+.diff.remove::after {
+  content: '-';
+  position: absolute;
+  top: 0;
+  left: 1.2em;
+  width: 1rem;
+  height: 100%;
+  color: #934747;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .diagnoal {
   background-image: repeating-linear-gradient(-45deg, #e0e0e0, #e0e0e0 1px, #fefefe 1px, #fefefe 14px);
 }

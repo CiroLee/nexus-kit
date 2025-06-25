@@ -7,6 +7,7 @@ import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import { defaultCode, variantsCode, sizeCode, disabledCode, separatorCode, iconCode } from '@/codes/demos/code.breadcrumbs';
 import { getSourceCode } from '@/app/api/github';
+import Link from 'next/link';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -26,68 +27,90 @@ export default async function BreadcrumbPage() {
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Breadcrumb>
-            <BreadcrumbItem href="/docs/buttons">Button</BreadcrumbItem>
-            <BreadcrumbItem href="/docs/avatars">Avatar</BreadcrumbItem>
-            <BreadcrumbItem asCurrent>Breadcrumb</BreadcrumbItem>
+            <BreadcrumbItem asChild>
+              <Link href="/docs/buttons">Button</Link>
+            </BreadcrumbItem>
+            <BreadcrumbItem asChild>
+              <Link href="/docs/avatars">Avatar</Link>
+            </BreadcrumbItem>
+            <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
           </Breadcrumb>
         </PreviewAndCode>
         <PreviewAndCode anchorId="variant" title="variant" codeText={variantsCode} code={<CodeBox code={variantsCode} />}>
           <Breadcrumb variant="underline">
-            <BreadcrumbItem href="/docs/buttons">Button</BreadcrumbItem>
-            <BreadcrumbItem href="/docs/avatars">Avatar</BreadcrumbItem>
-            <BreadcrumbItem asCurrent>Breadcrumb</BreadcrumbItem>
+            <BreadcrumbItem asChild>
+              <Link href="/docs/buttons">Button</Link>
+            </BreadcrumbItem>
+            <BreadcrumbItem asChild>
+              <Link href="/docs/avatars">Avatar</Link>
+            </BreadcrumbItem>
+            <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
           </Breadcrumb>
         </PreviewAndCode>
         <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<CodeBox code={sizeCode} />}>
           <div className="space-y-4">
             <Breadcrumb size="sm">
-              <BreadcrumbItem href="/docs/buttons">Button</BreadcrumbItem>
-              <BreadcrumbItem href="/docs/avatars">Avatar</BreadcrumbItem>
-              <BreadcrumbItem asCurrent>Breadcrumb</BreadcrumbItem>
+              <BreadcrumbItem asChild>
+                <Link href="/docs/buttons">Button</Link>
+              </BreadcrumbItem>
+              <BreadcrumbItem asChild>
+                <Link href="/docs/avatars">Avatar</Link>
+              </BreadcrumbItem>
+              <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
             </Breadcrumb>
             <Breadcrumb size="md">
-              <BreadcrumbItem href="/docs/buttons">Button</BreadcrumbItem>
-              <BreadcrumbItem href="/docs/avatars">Avatar</BreadcrumbItem>
-              <BreadcrumbItem asCurrent>Breadcrumb</BreadcrumbItem>
+              <BreadcrumbItem asChild>
+                <Link href="/docs/buttons">Button</Link>
+              </BreadcrumbItem>
+              <BreadcrumbItem asChild>
+                <Link href="/docs/avatars">Avatar</Link>
+              </BreadcrumbItem>
+              <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
             </Breadcrumb>
             <Breadcrumb size="lg">
-              <BreadcrumbItem href="/docs/buttons">Button</BreadcrumbItem>
-              <BreadcrumbItem href="/docs/avatars">Avatar</BreadcrumbItem>
-              <BreadcrumbItem asCurrent>Breadcrumb</BreadcrumbItem>
+              <BreadcrumbItem asChild>
+                <Link href="/docs/buttons">Button</Link>
+              </BreadcrumbItem>
+              <BreadcrumbItem asChild>
+                <Link href="/docs/avatars">Avatar</Link>
+              </BreadcrumbItem>
+              <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
             </Breadcrumb>
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<CodeBox code={disabledCode} />}>
           <Breadcrumb>
-            <BreadcrumbItem disabled href="/docs/buttons">
-              Button
+            <BreadcrumbItem asChild disabled>
+              <Link href="/docs/buttons">Button</Link>
             </BreadcrumbItem>
-            <BreadcrumbItem href="/docs/avatars">Avatar</BreadcrumbItem>
-            <BreadcrumbItem asCurrent>Breadcrumb</BreadcrumbItem>
+            <BreadcrumbItem asChild>
+              <Link href="/docs/avatars">Avatar</Link>
+            </BreadcrumbItem>
+            <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
           </Breadcrumb>
         </PreviewAndCode>
         <PreviewAndCode anchorId="custom-separator" title="custom separator" codeText={separatorCode} code={<CodeBox code={separatorCode} />}>
           <Breadcrumb>
-            <BreadcrumbItem href="/docs/buttons" separator="/">
-              Button
+            <BreadcrumbItem asChild separator="/">
+              <Link href="/docs/buttons">Button</Link>
             </BreadcrumbItem>
-            <BreadcrumbItem href="/docs/avatars" separator="/">
-              Avatar
+            <BreadcrumbItem asChild separator="/">
+              <Link href="/docs/avatars">Avatar</Link>
             </BreadcrumbItem>
-            <BreadcrumbItem asCurrent>Breadcrumb</BreadcrumbItem>
+            <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
           </Breadcrumb>
         </PreviewAndCode>
         <PreviewAndCode anchorId="icon" title="icon" codeText={iconCode} code={<CodeBox code={iconCode} />}>
           <Breadcrumb>
-            <BreadcrumbItem href="#">
+            <BreadcrumbItem>
               <IconHome size="1em" />
               Home
             </BreadcrumbItem>
-            <BreadcrumbItem href="#">
+            <BreadcrumbItem>
               <IconDashboard size="1em" />
               Dashboard
             </BreadcrumbItem>
-            <BreadcrumbItem asCurrent>Data</BreadcrumbItem>
+            <BreadcrumbItem>Data</BreadcrumbItem>
           </Breadcrumb>
         </PreviewAndCode>
       </div>

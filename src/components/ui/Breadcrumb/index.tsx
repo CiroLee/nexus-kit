@@ -1,4 +1,5 @@
 'use client';
+import { Slot } from '@radix-ui/react-slot';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { IconChevronRight } from '@tabler/icons-react';
@@ -45,32 +46,29 @@ const breadcrumbLink = cva('flex items-center gap-1 transition-colors outline-no
 type BreadcrumbItemVariants = VariantProps<typeof breadcrumbItem>;
 interface BreadcrumbItemProps extends React.HTMLAttributes<HTMLElement>, BreadcrumbItemVariants {
   disabled?: boolean;
-  href?: string;
-  asCurrent?: boolean;
+  asChild?: boolean;
   separator?: React.ReactNode;
+  ref?: React.Ref<HTMLLIElement>;
 }
 
-export function BreadcrumbItem({ className, disabled, separator, href, asCurrent, children, onClick, ...props }: BreadcrumbItemProps) {
+export function BreadcrumbItem({ className, disabled, separator, asChild, children, onClick, ...props }: BreadcrumbItemProps) {
+  const Component = asChild ? Slot : 'span';
   return (
     <li className={cn(breadcrumbItem({ className }))} {...props}>
-      {href && !asCurrent ? (
-        <a
-          href={href}
-          {...(disabled ? { 'data-disabled': '' } : {})}
-          className={breadcrumbLink({ disabled })}
-          onClick={(e) => {
-            if (disabled) {
-              e.preventDefault();
-              e.stopPropagation();
-              return;
-            }
-            onClick?.(e);
-          }}>
-          {children}
-        </a>
-      ) : (
-        <span className="flex items-center gap-1">{children}</span>
-      )}
+      <Component
+        {...(disabled ? { 'data-disabled': '' } : {})}
+        className={breadcrumbLink({ disabled })}
+        onClick={(e) => {
+          // use this to adjust disabled status and mouse style
+          if (disabled) {
+            e.preventDefault();
+            e.stopPropagation();
+            return;
+          }
+          onClick?.(e);
+        }}>
+        {children}
+      </Component>
       {separator ? <span className="text-[1em] group-last:hidden">{separator}</span> : <IconChevronRight size="1em" className="group-last:hidden" />}
     </li>
   );
