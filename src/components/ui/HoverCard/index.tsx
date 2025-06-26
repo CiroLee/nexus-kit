@@ -9,13 +9,13 @@ const hoverCardContent = cva(
 );
 
 interface HoverCardProps extends React.ComponentPropsWithRef<typeof HoverCardPrimitive.Root>, React.ComponentPropsWithRef<typeof HoverCardPrimitive.Content> {
-  trigger: React.ReactNode;
+  trigger?: React.ReactNode;
   hiddenArrow?: boolean;
 }
 export default function HoverCard({ trigger, hiddenArrow, defaultOpen, open, sideOffset = 5, alignOffset = 1, onOpenChange, openDelay, closeDelay, className, children, ...props }: HoverCardProps) {
   return (
     <HoverCardPrimitive.Root defaultOpen={defaultOpen} open={open} onOpenChange={onOpenChange} openDelay={openDelay} closeDelay={closeDelay}>
-      <HoverCardPrimitive.Trigger asChild>{trigger}</HoverCardPrimitive.Trigger>
+      {trigger && <HoverCardPrimitive.Trigger asChild>{trigger}</HoverCardPrimitive.Trigger>}
       <HoverCardPrimitive.Portal>
         <HoverCardPrimitive.Content className={cn(hoverCardContent({ className }))} alignOffset={alignOffset} sideOffset={sideOffset} {...props}>
           {children}
