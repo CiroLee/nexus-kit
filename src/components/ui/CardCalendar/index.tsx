@@ -51,7 +51,6 @@ export default function CardCalendar({ defaultValue, value, startWeekOnSunday, o
 
   const onValueChangeHandler = (date: Date) => {
     setSelectedValue(date);
-    console.log('test:', date);
     onValueChange?.(date);
   };
 
