@@ -9,13 +9,13 @@ const popoverContent = cva(
 );
 
 interface PopoverProps extends React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Root>, React.ComponentPropsWithRef<typeof PopoverPrimitive.Content> {
-  trigger?: React.ReactNode;
+  trigger: React.ReactNode;
   hiddenArrow?: boolean;
 }
 export function Popover({ trigger, children, hiddenArrow, className, sideOffset = 5, alignOffset = 1, defaultOpen, open, onOpenChange, modal, ...props }: PopoverProps) {
   return (
     <PopoverPrimitive.Root defaultOpen={defaultOpen} open={open} onOpenChange={onOpenChange} modal={modal}>
-      {trigger && <PopoverPrimitive.Trigger asChild>{trigger}</PopoverPrimitive.Trigger>}
+      <PopoverPrimitive.Trigger asChild>{trigger}</PopoverPrimitive.Trigger>
       <PopoverPrimitive.Portal>
         <PopoverPrimitive.Content className={cn(popoverContent({ className }))} sideOffset={sideOffset} alignOffset={alignOffset} {...props}>
           {children}
