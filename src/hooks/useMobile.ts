@@ -1,4 +1,3 @@
-'use client';
 import { useState, useEffect } from 'react';
 
 export const useMobile = (breakPoint: number = 640): boolean => {

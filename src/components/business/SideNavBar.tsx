@@ -28,7 +28,7 @@ export default function SideNavBar() {
       {navConfig.map((nav) => (
         <div key={nav.key} className="not-last:mb-4">
           {nav.href ? (
-            <Link href={nav.href} className="hover:text-primary transition-colors">
+            <Link href={nav.href} className="hover:text-primary text-sm transition-colors">
               {nav.title}
             </Link>
           ) : (
