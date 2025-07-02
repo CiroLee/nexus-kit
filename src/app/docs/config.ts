@@ -189,6 +189,10 @@ export const navConfig = [
         href: '/docs/number-inputs',
       },
       {
+        name: 'NumberStepper',
+        href: '/docs/number-steppers',
+      },
+      {
         name: 'Input',
         href: '/docs/inputs',
       },
