@@ -3,8 +3,10 @@ import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import CodeBox from '@/components/business/CodeBox';
+import CodeDrawer from '@/components/business/CodeDrawer';
 import NumberStepper from '@/components/ui/NumberStepper';
 import { defaultCode, sizeCode, prefixCode, disabledCode, minMaxCode, stepCode } from '@/codes/demos/code.number-stepper';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -16,10 +18,12 @@ const navList: AnchorItem[] = [
 ];
 
 export default async function NumberStepperPage() {
+  const sourceCode = await getSourceCode('NumberStepper/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">
         <SectionIntro title="NumberStepper" description="A stepper component for number inputs, and increase or decrease the value using the stepper buttons." />
+        <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <NumberStepper className="w-50" />
         </PreviewAndCode>
