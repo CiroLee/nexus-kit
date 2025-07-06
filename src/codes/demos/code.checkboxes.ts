@@ -6,6 +6,58 @@ export default function Page() {
   )
 }`;
 
+export const indeterminateCode = `import { useEffect, useState } from 'react';
+import { Checkbox } from "@/components/ui/Checkbox";
+
+const CHECKBOX_LIST = ['apple', 'banana', 'pear'];
+
+export default function Page() {
+  const [checked, setChecked] = useState<boolean | 'indeterminate'>(false);
+  const [checkedList, setCheckedList] = useState<string[]>([]);
+
+  const toggleCheckAll = (val: boolean | 'indeterminate') => {
+    setChecked(val);
+    if (val === true) {
+      setCheckedList(CHECKBOX_LIST);
+    } else {
+      setCheckedList([]);
+    }
+  };
+
+  const handleOnCheckedChange = (value: string) => {
+    if (checkedList.includes(value)) {
+      setCheckedList((prev) => prev.filter((item) => item !== value));
+    } else {
+      setCheckedList((prev) => [...prev, value]);
+    }
+  };
+
+  useEffect(() => {
+    if (checkedList.length === 3) {
+      setChecked(true);
+    } else if (checkedList.length === 0) {
+      setChecked(false);
+    } else {
+      setChecked('indeterminate');
+    }
+  }, [checkedList, setChecked]);
+
+  return (
+    <div>
+      <Checkbox checked={checked} value="all" id="all" onCheckedChange={toggleCheckAll}>
+        Select All
+      </Checkbox>
+      <div className="mt-4 flex items-center gap-4">
+        {CHECKBOX_LIST.map((item) => (
+          <Checkbox key={item} value={item} id={item} checked={checkedList.includes(item)} onCheckedChange={() => handleOnCheckedChange(item)}>
+            {item}
+          </Checkbox>
+        ))}
+      </div>
+    </div>
+  )
+}`;
+
 export const sizeCode = `import { Checkbox } from "@/components/ui/Checkbox";
 
 export default function Page() {
