@@ -45,7 +45,7 @@ interface AlertDialogProps extends React.ComponentPropsWithoutRef<typeof AlertDi
   className?: string;
   ref?: React.Ref<HTMLDivElement>;
 }
-export default function AlertDialog({ trigger, size, className, title, description, footer, cancelText = 'Cancel', confirmText = 'Confirm', backdrop, children, ref, ...props }: AlertDialogProps) {
+export function AlertDialog({ trigger, size, className, title, description, footer, cancelText = 'Cancel', confirmText = 'Confirm', backdrop, children, ref, ...props }: AlertDialogProps) {
   return (
     <AlertDialogPrimitive.Root {...props}>
       {trigger ? <AlertDialogPrimitive.Trigger asChild>{trigger}</AlertDialogPrimitive.Trigger> : null}
@@ -55,8 +55,12 @@ export default function AlertDialog({ trigger, size, className, title, descripti
           <AlertDialogPrimitive.Title data-slot="alert-dialog-title" aria-label="alert dialog title" className={cn('px-3.5 text-xl font-semibold', { hidden: !title })}>
             {title}
           </AlertDialogPrimitive.Title>
-          <AlertDialogPrimitive.Description data-slot="alert-dialog-description" aria-label="alert dialog description" className={cn('text-foreground/60 mt-2 mb-3 px-3.5', { hidden: !description })}>
-            {description}
+          <AlertDialogPrimitive.Description
+            asChild
+            data-slot="alert-dialog-description"
+            aria-label="alert dialog description"
+            className={cn('text-foreground/60 mt-2 mb-3 px-3.5', { hidden: !description })}>
+            <div>{description}</div>
           </AlertDialogPrimitive.Description>
           <div className="max-h-[65vh] overflow-auto px-3.5">{children}</div>
           {footer ? (

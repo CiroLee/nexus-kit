@@ -64,8 +64,8 @@ export function Dialog({ trigger, size, className, title, description, footer, h
           <DialogPrimitive.Title data-slot="dialog-title" aria-label="dialog title" className={cn('px-3.5 text-xl font-semibold', { hidden: !title })}>
             {title}
           </DialogPrimitive.Title>
-          <DialogPrimitive.Description data-slot="dialog-description" aria-label="dialog description" className={cn('text-foreground/60 mt-2 mb-3 px-3.5', { hidden: !description })}>
-            {description}
+          <DialogPrimitive.Description data-slot="dialog-description" asChild aria-label="dialog description" className={cn('text-foreground/60 mt-2 mb-3 px-3.5', { hidden: !description })}>
+            <div>{description}</div>
           </DialogPrimitive.Description>
           <div className="max-h-[65vh] overflow-auto px-3.5">{children}</div>
           {!hideFooter ? (

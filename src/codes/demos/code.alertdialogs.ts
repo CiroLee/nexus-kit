@@ -1,4 +1,4 @@
-export const defaultCode = `import AlertDialog from '@/components/ui/AlertDialog';
+export const defaultCode = `import { AlertDialog } from '@/components/ui/AlertDialog';
 import Button from '@/components/ui/Button';
 
 export default function Page() {
@@ -9,7 +9,7 @@ export default function Page() {
   )
 }`;
 
-export const backdropCode = `import AlertDialog from '@/components/ui/AlertDialog';
+export const backdropCode = `import { AlertDialog } from '@/components/ui/AlertDialog';
 import Button from '@/components/ui/Button';
 
 export default function Page() {
@@ -22,7 +22,7 @@ export default function Page() {
   )
 }`;
 
-export const sizeCode = `import AlertDialog from '@/components/ui/AlertDialog';
+export const sizeCode = `import { AlertDialog } from '@/components/ui/AlertDialog';
 import Button from '@/components/ui/Button';
 
 export default function Page() {
@@ -35,7 +35,7 @@ export default function Page() {
   )
 }`;
 
-export const customFooterCode = `import AlertDialog, { AlertDialogAction, AlertDialogCancel } from '@/components/ui/AlertDialog';
+export const customFooterCode = `import  { AlertDialog, AlertDialogAction, AlertDialogCancel } from '@/components/ui/AlertDialog';
 import Button from '@/components/ui/Button';
 
 export default function Page() {
