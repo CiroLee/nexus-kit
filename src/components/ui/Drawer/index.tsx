@@ -31,7 +31,7 @@ const drawerOverlay = cva('data-[state=open]:animate-fade-in data-[state=closed]
 });
 export type DrawerOverlayVariants = VariantProps<typeof drawerOverlay>;
 
-interface DialogProps extends React.ComponentPropsWithRef<typeof DrawerPrimitive.Root>, DrawerOverlayVariants, DrawerContentVariants {
+interface DrawerProps extends React.ComponentPropsWithRef<typeof DrawerPrimitive.Root>, DrawerOverlayVariants, DrawerContentVariants {
   trigger?: React.ReactNode;
   width?: string;
   height?: string;
@@ -42,7 +42,7 @@ interface DialogProps extends React.ComponentPropsWithRef<typeof DrawerPrimitive
 
 export const DrawerClose = ({ children }: { children: React.ReactNode }) => <DrawerPrimitive.Close asChild>{children}</DrawerPrimitive.Close>;
 
-export function Drawer({ trigger, width, height, style, className, backdrop, placement, children, ref, ...props }: DialogProps) {
+export function Drawer({ trigger, width, height, style, className, backdrop, placement, children, ref, ...props }: DrawerProps) {
   return (
     <DrawerPrimitive.Root {...props}>
       {trigger ? <DrawerPrimitive.Trigger asChild>{trigger}</DrawerPrimitive.Trigger> : null}
