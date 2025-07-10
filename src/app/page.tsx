@@ -4,15 +4,19 @@ import { IconComponents, IconMoonStars, IconBrandTailwind, IconBrush } from '@ta
 import Button from '@/components/ui/Button';
 import Heading from '@/components/ui/Heading';
 import Header from '@/components/business/Header';
-import Link from 'next/link';
+import LoginDemo from '@/components/demos/Login';
 import { navConfig } from '@/app/docs/config';
+import NotificationDemo from '@/components/demos/Notification';
+import MiniMusicDemo from '@/components/demos/MiniMusic';
+import UserDemo from '@/components/demos/User';
+
 const componentsAmounts = navConfig?.filter((item) => item.category === 'components').reduce((prev, cur) => prev + (cur?.children?.length ?? 0), 0);
 
 export default function Home() {
   return (
     <div className="relative px-4 sm:px-8">
       <Header showToggleSidebar={false} />
-      <div className="relative mx-auto mt-25 w-[90vw] border border-teal-400/50 p-5 sm:max-w-3xl dark:border-teal-500/50">
+      <div className="relative mx-auto mt-25 w-[90vw] border border-dashed border-teal-400/50 p-5 sm:max-w-3xl dark:border-teal-500/50">
         <span className="absolute top-0 left-0 size-2.5 bg-teal-400 dark:bg-teal-500"></span>
         <span className="absolute top-0 right-0 size-2.5 bg-teal-400 dark:bg-teal-500"></span>
         <span className="absolute right-0 bottom-0 size-2.5 bg-teal-400 dark:bg-teal-500"></span>
@@ -34,11 +38,14 @@ export default function Home() {
       </div>
       <div className="relative mx-4 mt-8 flex sm:justify-center">
         <Button className="w-full sm:w-fit" asChild>
-          <Link href="/docs">Get Started</Link>
+          <NextLink href="/docs">Get Started</NextLink>
+        </Button>
+        <Button className="ml-4 w-full sm:w-fit" variant="light" colors="neutral" asChild>
+          <NextLink href="/examples">View Examples</NextLink>
         </Button>
       </div>
       <section>
-        <Heading as="h3" className="mt-16 text-center">
+        <Heading as="h2" className="mt-20 text-center">
           Get Started for Free
         </Heading>
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:mx-auto xl:max-w-7xl">
@@ -52,6 +59,12 @@ export default function Home() {
           <ShowCard icon={<IconBrandTailwind size={28} />} title="Tailwindcss v4" description="support the latest tailwindcss v4" className="w-full" />
           <ShowCard icon={<IconBrush size={28} />} title="Themes" description="easy to customize themes just by css" className="w-full" />
         </ul>
+      </section>
+      <section className="my-20 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:mx-auto xl:max-w-7xl">
+        <LoginDemo />
+        <NotificationDemo />
+        <MiniMusicDemo />
+        <UserDemo />
       </section>
     </div>
   );
