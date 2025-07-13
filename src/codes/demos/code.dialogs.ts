@@ -101,3 +101,18 @@ export default function Page() {
     </div>
   )
 }`;
+
+export const controlledCode = `import { useState } from 'react';
+import { Dialog } from "@/components/ui/Dialog";
+import Button from "@/components/ui/Button";
+
+export default function Page() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <Button onClick={() => setOpen(true)}>open dialog</Button>
+    <Dialog open={open} onOpenChange={setOpen} title="dialog title" description="This a description...">
+      this is a controlled dialog
+    </Dialog>
+  )
+}`;

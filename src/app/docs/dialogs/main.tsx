@@ -1,13 +1,13 @@
 'use client';
+import { useState } from 'react';
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import ClientCode from '@/components/business/ClientCode';
 import Button from '@/components/ui/Button';
 import { Dialog, DialogClose } from '@/components/ui/Dialog';
-import { defaultCode, backdropCode, hiddenCode, sizeCode, scrollCode, customFooter } from '@/codes/demos/code.dialogs';
+import { defaultCode, backdropCode, hiddenCode, sizeCode, scrollCode, customFooter, controlledCode } from '@/codes/demos/code.dialogs';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
-import { useState } from 'react';
 import Code from '@/components/ui/Code';
 
 const navList: AnchorItem[] = [
@@ -103,8 +103,8 @@ export default function DialogPage({ sourceCode }: { sourceCode?: string }) {
               controlled Dialog must use <Code className="text-white">open</Code> and <Code className="text-white">onOpenChange</Code> to control the dialog visibility.
             </p>
           }
-          codeText=""
-          code={<ClientCode code="" />}>
+          codeText={controlledCode}
+          code={<ClientCode code={controlledCode} />}>
           <Button onClick={() => setOpen(true)}>open dialog</Button>
           <Dialog open={open} onOpenChange={setOpen} title="dialog title" description="This a description...">
             this is a controlled dialog
