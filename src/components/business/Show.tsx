@@ -1,10 +1,10 @@
 import React from 'react';
 
 interface ShowProps {
-  if: unknown;
-  else?: React.ReactNode;
+  when: unknown;
+  fallback?: React.ReactNode;
   children: React.ReactNode;
 }
-export default function Show({ if: cond, else: elseContent, children }: ShowProps) {
-  return cond ? <>{children}</> : elseContent;
+export default function Show({ when: cond, fallback, children }: ShowProps) {
+  return cond ? <>{children}</> : fallback;
 }
