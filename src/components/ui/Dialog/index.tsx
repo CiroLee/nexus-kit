@@ -40,6 +40,7 @@ interface DialogProps extends React.ComponentPropsWithoutRef<typeof DialogPrimit
   title?: React.ReactNode;
   description?: React.ReactNode;
   hideFooter?: boolean;
+  hideCloseButton?: boolean;
   footer?: React.ReactNode;
   className?: string;
   cancelText?: string;
@@ -49,25 +50,44 @@ interface DialogProps extends React.ComponentPropsWithoutRef<typeof DialogPrimit
 
 export const DialogClose = ({ children }: { children: React.ReactNode }) => <DialogPrimitive.Close asChild>{children}</DialogPrimitive.Close>;
 
-export function Dialog({ trigger, size, className, title, description, footer, hideFooter, cancelText = 'Cancel', confirmText = 'Confirm', backdrop, children, ref, ...props }: DialogProps) {
+export function Dialog({
+  trigger,
+  size,
+  className,
+  title,
+  description,
+  footer,
+  hideFooter,
+  hideCloseButton,
+  cancelText = 'Cancel',
+  confirmText = 'Confirm',
+  backdrop,
+  children,
+  ref,
+  ...props
+}: DialogProps) {
   return (
     <DialogPrimitive.Root {...props}>
       {trigger ? <DialogPrimitive.Trigger asChild>{trigger}</DialogPrimitive.Trigger> : null}
       <DialogPrimitive.Portal>
         <DialogPrimitive.Overlay className={dialogOverlay({ backdrop })} />
-        <DialogPrimitive.Content ref={ref} className={cn(dialogContent({ size, className }))}>
-          <DialogPrimitive.Close asChild className="absolute top-1.5 right-1.5">
-            <Button asIcon colors="neutral" size="sm" pill variant="light" className="group text-lg">
-              <IconX size={18} className="opacity-40 transition-colors group-hover:opacity-100" />
-            </Button>
-          </DialogPrimitive.Close>
+        <DialogPrimitive.Content data-slot="dialog-content" ref={ref} className={cn(dialogContent({ size, className }))}>
+          {hideCloseButton ? null : (
+            <DialogPrimitive.Close asChild className="absolute top-1.5 right-1.5">
+              <Button asIcon colors="neutral" size="sm" pill variant="light" className="group text-lg">
+                <IconX size={18} className="opacity-40 transition-colors group-hover:opacity-100" />
+              </Button>
+            </DialogPrimitive.Close>
+          )}
           <DialogPrimitive.Title data-slot="dialog-title" aria-label="dialog title" className={cn('px-3.5 text-xl font-semibold', { hidden: !title })}>
             {title}
           </DialogPrimitive.Title>
           <DialogPrimitive.Description data-slot="dialog-description" asChild aria-label="dialog description" className={cn('text-foreground/60 mt-2 mb-3 px-3.5', { hidden: !description })}>
             <div>{description}</div>
           </DialogPrimitive.Description>
-          <div className="max-h-[65vh] overflow-auto px-3.5">{children}</div>
+          <div data-slot="dialog-children" className="max-h-[65vh] overflow-auto px-3.5">
+            {children}
+          </div>
           {!hideFooter ? (
             footer ? (
               <>{footer}</>

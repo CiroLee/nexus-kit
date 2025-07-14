@@ -7,6 +7,7 @@ import Button from '@/components/ui/Button';
 import ThemeSwitch from '@/components/business/ThemeSwitch';
 import ToggleSidebarButton from './ToggleSidebarButton';
 import Show from './Show';
+import GlobalSearch from './GlobalSearch';
 import { cn } from '@/lib/utils';
 
 export default function DocHeader({ showToggleSidebar }: { showToggleSidebar?: boolean }) {
@@ -19,6 +20,7 @@ export default function DocHeader({ showToggleSidebar }: { showToggleSidebar?: b
         Nexus Kit
       </Link>
       <div className="flex h-full items-center gap-2">
+        <GlobalSearch />
         <Link href="/docs" className={cn('hover:text-primary block text-sm transition-colors', { hidden: pathname === '/' || pathname.startsWith('/docs') })}>
           Documents
         </Link>

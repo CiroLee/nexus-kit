@@ -72,3 +72,9 @@ code > span.line::before {
 [data-theme='dark'] .diagnoal {
   background-image: repeating-linear-gradient(-45deg, #4a4a4a, #4a4a4a 1px, rgb(61 61 61 / 50%) 1px, rgb(61 61 61 / 50%) 14px);
 }
+
+@utility hidden-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -7,3 +7,10 @@ export function removeLastEmptyLine(str: string) {
 
   return lines.join('\n');
 }
+
+export function isWindows() {
+  if (typeof window === 'undefined') {
+    return false;
+  }
+  return /Windows/i.test(window.navigator.userAgent);
+}
