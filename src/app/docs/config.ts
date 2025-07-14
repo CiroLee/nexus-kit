@@ -177,6 +177,10 @@ export const navConfig = [
         name: 'DataList',
         href: '/docs/data-lists',
       },
+      {
+        name: 'Empty',
+        href: '/docs/empties',
+      },
     ],
   },
   {
