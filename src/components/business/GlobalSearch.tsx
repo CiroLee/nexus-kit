@@ -25,8 +25,7 @@ export default function GlobalSearch() {
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      // window: ctrl + k and macos: command + K
-      if (e.key === 'k' && ((isWindowPC && e.ctrlKey) || (!isWindowPC && e.metaKey))) {
+      if (e.key === 'k' && (e.ctrlKey || e.metaKey)) {
         e.preventDefault();
         setOpen((open) => !open);
       }
