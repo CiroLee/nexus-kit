@@ -2,10 +2,12 @@ import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import CodeBox from '@/components/business/CodeBox';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
+import CodeDrawer from '@/components/business/CodeDrawer';
 import Empty from '@/components/ui/Empty';
 import Image from 'next/image';
 import { Table, TableHeader, TableHeaderCell, TableBody, TableRow } from '@/components/ui/Table';
 import { defaultCode, indicatorCode, descriptionCode, inTableCode } from '@/codes/demos/code.empties';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -14,11 +16,13 @@ const navList: AnchorItem[] = [
   { anchorId: 'use-in-table', label: 'use in table' },
 ];
 
-export default function EmptyPage() {
+export default async function EmptyPage() {
+  const sourceCode = await getSourceCode('Empty/index.tsx');
   return (
     <div className="flex">
       <div className="main-container">
         <SectionIntro title="Empty" description="Empty is a component that displays an empty placeholder when no data is available." />
+        <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Empty className="h-40" />
         </PreviewAndCode>
