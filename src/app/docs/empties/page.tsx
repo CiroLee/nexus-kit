@@ -43,8 +43,8 @@ export default async function EmptyPage() {
                 <TableHeaderCell>Status</TableHeaderCell>
               </TableRow>
             </TableHeader>
-            <TableBody className="relative h-40">
-              <Empty inTable />
+            <TableBody>
+              <Empty inTable className="h-40" />
             </TableBody>
           </Table>
         </PreviewAndCode>
