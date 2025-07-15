@@ -1,26 +1,47 @@
 'use client';
 import { cn } from '@/lib/utils';
+import { cva } from 'class-variance-authority';
 interface EmptyProps extends React.HTMLAttributes<HTMLDivElement> {
   indicator?: React.ReactNode;
   inTable?: boolean;
   indicatorSize?: number | string;
   description?: React.ReactNode;
+  colSpan?: number;
 }
 
-export default function Empty({ className, indicator, indicatorSize, description, inTable, ...props }: EmptyProps) {
-  const Component = inTable ? 'tr' : 'div';
-  const Child = inTable ? 'td' : 'div';
+const empty = cva('relative', {
+  variants: {
+    inTable: {
+      false: 'flex flex-col items-center justify-center gap-2',
+    },
+  },
+  defaultVariants: {
+    inTable: false,
+  },
+});
+
+export default function Empty({ className, indicator, indicatorSize, description, inTable, colSpan = 999, ...props }: EmptyProps) {
+  const indicatorNode = indicator ?? <DefaultIndicator size={indicatorSize} className="dark:opacity-80" />;
+  const descriptionNode = description ?? <div className="text-description text-sm">No Data</div>;
+
+  if (inTable) {
+    return (
+      <tr className={cn(empty({ inTable }), className)} {...props}>
+        <td colSpan={colSpan} className="p-4 text-center">
+          <div className="inline-flex flex-col items-center justify-center gap-2">
+            {indicatorNode}
+            {descriptionNode}
+          </div>
+        </td>
+      </tr>
+    );
+  }
+
   return (
-    <Component className={cn('relative flex flex-col items-center justify-center gap-2', { 'absolute size-full': inTable }, className)} {...props}>
-      {indicator ? (
-        indicator
-      ) : (
-        <Child>
-          <DefaultIndicator size={indicatorSize} className="dark:opacity-80" />
-        </Child>
-      )}
-      {description ? <>{description}</> : <Child className="text-description text-sm">No Data</Child>}
-    </Component>
+    <div className={cn(empty({ inTable }), className)} {...props}>
+      {indicatorNode}
+      {descriptionNode}
+    </div>
   );
 }
 

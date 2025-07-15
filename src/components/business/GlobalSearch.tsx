@@ -10,7 +10,7 @@ import Kbd from '../ui/Kbd';
 import { isWindows } from '@/utils/utils';
 import { navConfig } from '@/app/docs/config';
 
-const groupHeading = cva('[&_[cmdk-group-heading]]:text-description [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:p-2');
+const commandGroup = cva('[&_[cmdk-group-items]]:pt-2 [&_[cmdk-group-heading]]:text-description [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:p-2');
 
 export default function GlobalSearch() {
   const [open, setOpen] = useState(false);
@@ -58,7 +58,7 @@ export default function GlobalSearch() {
           {navConfig.map((nav) => {
             if (nav.children?.length) {
               return (
-                <Command.Group key={nav.key} heading={nav.title} className={groupHeading()}>
+                <Command.Group key={nav.key} heading={nav.title} className={commandGroup()}>
                   {nav.children.map((item) => (
                     <CommandItem key={item.name} value={item.name} onSelect={() => handleCommandSelect(item.href)}>
                       {item.name}
