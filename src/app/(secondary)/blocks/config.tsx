@@ -4,7 +4,7 @@ export const examplesConfig = [
     cover: <Authentication />,
     title: 'Authentication',
     description: 'Components about auths, such as create account, login',
-    href: '/examples/auth',
+    href: '/blocks/auth',
     children: [
       {
         title: 'Create Account 01',
@@ -18,7 +18,7 @@ export const examplesConfig = [
   },
   {
     id: 'profile',
-    href: '/examples/profile',
+    href: '/blocks/profile',
     cover: <Profile />,
     title: 'Profile',
     description: 'Components about user profiles',
@@ -35,7 +35,7 @@ export const examplesConfig = [
   },
   {
     id: 'pricing',
-    href: '/examples/pricing',
+    href: '/blocks/pricing',
     cover: <Pricing />,
     title: 'Pricing',
     description: 'Components about pricing',
@@ -52,7 +52,7 @@ export const examplesConfig = [
   },
   {
     id: 'faq',
-    href: '/examples/faq',
+    href: '/blocks/faq',
     cover: <FAQ />,
     title: 'FAQs',
     description: 'Components about FAQ',
@@ -69,7 +69,7 @@ export const examplesConfig = [
   },
   {
     id: 'team',
-    href: '/examples/team',
+    href: '/blocks/team',
     cover: <Team />,
     title: 'Teams',
     description: 'Components about teams',
@@ -86,7 +86,7 @@ export const examplesConfig = [
   },
   {
     id: 'payment',
-    href: '/examples/payment',
+    href: '/blocks/payment',
     cover: <Payment />,
     title: 'Payment',
     description: 'Components about payment',
@@ -103,7 +103,7 @@ export const examplesConfig = [
   },
   {
     id: 'blog',
-    href: '/examples/blog',
+    href: '/blocks/blog',
     cover: <Blog />,
     title: 'Blog',
     description: 'Components about blog',
@@ -120,7 +120,7 @@ export const examplesConfig = [
   },
   {
     id: 'setting',
-    href: '/examples/setting',
+    href: '/blocks/setting',
     cover: <Setting />,
     title: 'Setting',
     description: 'Components about setting',
@@ -137,7 +137,7 @@ export const examplesConfig = [
   },
   {
     id: 'sidebar',
-    href: '/examples/sidebar',
+    href: '/blocks/sidebar',
     cover: <Sidebar />,
     title: 'Sidebar',
     description: 'Components about sidebar',
@@ -150,7 +150,7 @@ export const examplesConfig = [
   },
   {
     id: 'ai-chat',
-    href: '/examples/ai-chat',
+    href: '/blocks/ai-chat',
     cover: <Ai />,
     title: 'AI Chat',
     description: 'Components about AI Chat',

@@ -1,8 +1,8 @@
 export const navConfig = [
   {
-    title: 'Examples',
-    key: 'examples',
-    href: '/examples',
+    title: 'Blocks',
+    key: 'blocks',
+    href: '/blocks',
   },
   {
     title: 'Templates',

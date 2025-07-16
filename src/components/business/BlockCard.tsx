@@ -2,7 +2,7 @@ import { Card } from '@/components/ui/Card';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import Heading from '../ui/Heading';
-interface ExampleCardProps {
+interface BlockCardProps {
   href: string;
   cover?: React.ReactNode;
   title?: string;
@@ -10,7 +10,7 @@ interface ExampleCardProps {
   className?: string;
 }
 
-export default function ExampleCard({ cover, href, title, account, className }: ExampleCardProps) {
+export default function BlockCard({ cover, href, title, account, className }: BlockCardProps) {
   return (
     <Link href={href} className={cn('group [&_svg]:aspect-video [&_svg]:h-40 [&_svg]:w-full', className)}>
       <Card className="group-hover:border-primary p-4 transition-colors">
@@ -18,7 +18,7 @@ export default function ExampleCard({ cover, href, title, account, className }: 
         <Heading as="h5" className="mt-3">
           {title}
         </Heading>
-        <p className="text-description mt-2">{account} components</p>
+        <p className="text-description mt-2">{account} blocks</p>
       </Card>
     </Link>
   );

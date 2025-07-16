@@ -41,7 +41,7 @@ export default function Home() {
           <NextLink href="/docs">Get Started</NextLink>
         </Button>
         <Button className="ml-4 w-full sm:w-fit" variant="light" colors="neutral" asChild>
-          <NextLink href="/examples">View Examples</NextLink>
+          <NextLink href="/blocks">View Blocks</NextLink>
         </Button>
       </div>
       <section>
