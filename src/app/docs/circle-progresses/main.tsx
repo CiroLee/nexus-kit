@@ -8,13 +8,18 @@ import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import CircleProgress from '@/components/ui/CircleProgress';
 import Button from '@/components/ui/Button';
 import ButtonGroup from '@/components/ui/ButtonGroup';
+import { defaultCode, sizeCode, colorsCode, controlledCode } from '@/codes/demos/code.circle-progresses';
 
-const list: AnchorItem[] = [{ anchorId: 'default', label: 'default' }];
+const list: AnchorItem[] = [
+  { anchorId: 'default', label: 'default' },
+  { anchorId: 'size', label: 'size' },
+  { anchorId: 'colors', label: 'colors' },
+  { anchorId: 'controlled', label: 'controlled' },
+];
 const MIN = 10;
 const MAX = 90;
 export default function CircleProgressPage({ sourceCode }: { sourceCode?: string }) {
   const [percent, setPercent] = useState(10);
-
   const changePercent = (step: number) => {
     const newPercent = percent + step;
     if (newPercent < MIN || newPercent > MAX) {
@@ -27,17 +32,17 @@ export default function CircleProgressPage({ sourceCode }: { sourceCode?: string
       <div className="main-container">
         <SectionIntro title="CircleProgress" description="CircleProgress is a progress indicator component that displays the progress of a task in a circular shape." />
         <CodeDrawer isClient code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText="" code={<ClientCode code="" />}>
+        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<ClientCode code={defaultCode} />}>
           <CircleProgress percent={30} />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="size" title="size" codeText="" code={<ClientCode code="" />}>
+        <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<ClientCode code={sizeCode} />}>
           <div className="flex items-center gap-4">
             <CircleProgress size="sm" percent={30} />
             <CircleProgress size="md" percent={30} />
             <CircleProgress size="lg" percent={30} />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="colors" title="colors" codeText="" code={<ClientCode code="" />}>
+        <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<ClientCode code={colorsCode} />}>
           <div className="flex items-center gap-4">
             <CircleProgress colors="primary" percent={30} />
             <CircleProgress colors="secondary" percent={30} />
@@ -46,7 +51,7 @@ export default function CircleProgressPage({ sourceCode }: { sourceCode?: string
             <CircleProgress colors="neutral" percent={30} />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="controlled" title="controlled" codeText="" code={<ClientCode code="" />}>
+        <PreviewAndCode anchorId="controlled" title="controlled" codeText={controlledCode} code={<ClientCode code={controlledCode} />}>
           <div className="flex flex-col justify-center gap-2">
             <CircleProgress percent={percent} min={MIN} max={MAX}>
               <span className="text-sm">{percent}%</span>
