@@ -1,5 +1,5 @@
 import { IconHeartFilled, IconUser, IconUsers } from '@tabler/icons-react';
-import { Card, CardBody, CardHeader, CardTitle } from '../ui/Card';
+import { Card } from '../ui/Card';
 import Image from 'next/image';
 import Button from '../ui/Button';
 import Heading from '../ui/Heading';

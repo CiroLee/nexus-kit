@@ -237,7 +237,7 @@ export const navConfig = [
       },
       {
         name: 'AlertDialog',
-        href: '/docs/alertdialogs',
+        href: '/docs/alert-dialogs',
       },
       {
         name: 'Drawer',
@@ -250,6 +250,10 @@ export const navConfig = [
       {
         name: 'Progress',
         href: '/docs/progresses',
+      },
+      {
+        name: 'Circle Progress',
+        href: '/docs/circle-progresses',
       },
       {
         name: 'Skeleton',

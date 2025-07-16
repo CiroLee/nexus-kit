@@ -13,7 +13,7 @@ interface Props {
   diffRemoveLines?: number[];
 }
 
-export default function ClientCode({ code, highlightLines, diffAddLines, diffRemoveLines, highlightRange, lang = 'tsx', className }: Props) {
+export default function ClientCodeBox({ code, highlightLines, diffAddLines, diffRemoveLines, highlightRange, lang = 'tsx', className }: Props) {
   const [out, setOut] = useState('');
 
   const getCode = useCallback(

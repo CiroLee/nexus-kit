@@ -11,7 +11,7 @@ interface Props {
   diffRemoveLines?: number[];
 }
 
-export default async function Code({ code, highlightLines, diffAddLines, diffRemoveLines, highlightRange, lang = 'tsx', className }: Props) {
+export default async function CodeBox({ code, highlightLines, diffAddLines, diffRemoveLines, highlightRange, lang = 'tsx', className }: Props) {
   const out = await codeToHtml(code, {
     lang,
     theme: 'github-dark',
