@@ -1,9 +1,11 @@
+import { title } from 'process';
+
 export const examplesConfig = [
   {
     id: 'auth',
     cover: <Authentication />,
     title: 'Authentication',
-    description: 'Components about auths, such as create account, login',
+    description: 'about auths, such as create account, login',
     href: '/blocks/auth',
     children: [
       {
@@ -21,7 +23,7 @@ export const examplesConfig = [
     href: '/blocks/profile',
     cover: <Profile />,
     title: 'Profile',
-    description: 'Components about user profiles',
+    description: 'user profiles such as profile data list, profile card.',
     children: [
       {
         title: 'Profile 01',
@@ -38,7 +40,7 @@ export const examplesConfig = [
     href: '/blocks/pricing',
     cover: <Pricing />,
     title: 'Pricing',
-    description: 'Components about pricing',
+    description: 'pricing blocks shows pricing options in a clean and organized way.',
     children: [
       {
         title: 'Pricing 01',
@@ -55,7 +57,7 @@ export const examplesConfig = [
     href: '/blocks/faq',
     cover: <FAQ />,
     title: 'FAQs',
-    description: 'Components about FAQ',
+    description: 'FAQ blocks shows frequently asked questions using Accordion or grid layout.',
     children: [
       {
         title: 'FAQ 01',
@@ -72,7 +74,7 @@ export const examplesConfig = [
     href: '/blocks/team',
     cover: <Team />,
     title: 'Teams',
-    description: 'Components about teams',
+    description: 'teams blocks show a list of team members.',
     children: [
       {
         title: 'Team 01',
@@ -89,7 +91,7 @@ export const examplesConfig = [
     href: '/blocks/payment',
     cover: <Payment />,
     title: 'Payment',
-    description: 'Components about payment',
+    description: 'payment blocks show Common forms of payment.',
     children: [
       {
         title: 'Payment 01',
@@ -106,7 +108,7 @@ export const examplesConfig = [
     href: '/blocks/blog',
     cover: <Blog />,
     title: 'Blog',
-    description: 'Components about blog',
+    description: 'blog blocks show articles, news, and other content.',
     children: [
       {
         title: 'Blog 01',
@@ -123,7 +125,7 @@ export const examplesConfig = [
     href: '/blocks/setting',
     cover: <Setting />,
     title: 'Setting',
-    description: 'Components about setting',
+    description: 'setting blocks show settings about user, notification and more.',
     children: [
       {
         title: 'Notification Setting',
@@ -140,7 +142,7 @@ export const examplesConfig = [
     href: '/blocks/sidebar',
     cover: <Sidebar />,
     title: 'Sidebar',
-    description: 'Components about sidebar',
+    description: 'common sidebar blocks',
     children: [
       {
         title: 'Sidebar 01',
@@ -153,7 +155,7 @@ export const examplesConfig = [
     href: '/blocks/ai-chat',
     cover: <Ai />,
     title: 'AI Chat',
-    description: 'Components about AI Chat',
+    description: 'AI Chat blocks.',
     children: [
       {
         title: 'AI Chat 01',
@@ -162,6 +164,23 @@ export const examplesConfig = [
       {
         title: 'AI Chat 02',
         name: 'ai-chat-02',
+      },
+    ],
+  },
+  {
+    id: 'cookie',
+    href: '/blocks/cookie',
+    cover: <Cookies />,
+    title: 'Cookies',
+    description: 'cookies blocks show tips to users when they first visit your site.',
+    children: [
+      {
+        title: 'Cookie 01',
+        name: 'cookie-01',
+      },
+      {
+        title: 'Cookie 02',
+        name: 'cookie-02',
       },
     ],
   },
@@ -379,6 +398,40 @@ function Ai() {
         d="M95.548 60.7084C96.4566 57.9666 100.335 57.9666 101.243 60.7084L109.357 85.1922C109.655 86.0921 110.361 86.798 111.261 87.0962L135.745 95.2098C138.487 96.1183 138.487 99.9966 135.745 100.905L111.261 109.019C110.361 109.317 109.655 110.023 109.357 110.923L101.243 135.407C100.335 138.148 96.4566 138.148 95.548 135.407L87.4345 110.923C87.1363 110.023 86.4303 109.317 85.5305 109.019L61.0467 100.905C58.3049 99.9966 58.3049 96.1183 61.0467 95.2098L85.5305 87.0962C86.4303 86.798 87.1363 86.0921 87.4345 85.1922L95.548 60.7084Z"
         fill="#2B7FFF"
       />
+    </svg>
+  );
+}
+
+function Cookies() {
+  return (
+    <svg width="267" height="175" viewBox="0 0 267 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clipPath="url(#clip0_163_24)">
+        <path d="M33.4322 37.3333V37.3463" stroke="var(--example-skeleton-item)" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M38.6483 42.6667V42.6798" stroke="var(--example-skeleton-item)" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M38.6483 36V36.0131" stroke="var(--example-skeleton-item)" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M43.8645 38.6667V38.6798" stroke="var(--example-skeleton-item)" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M37.3443 30.6667V30.6798" stroke="var(--example-skeleton-item)" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round" />
+        <path
+          d="M40.1454 24.6345L43.6232 26.1065C42.934 27.0338 42.5605 28.1662 42.5598 29.3309C42.5592 30.4955 42.9314 31.6284 43.6197 32.5564C44.3079 33.4844 45.2744 34.1566 46.3714 34.4702C47.4684 34.7838 48.6356 34.7216 49.6948 34.2932L49.7639 34.4692C50.1609 35.4493 50.1609 36.5505 49.7639 37.5305C49.1162 38.5794 48.6711 39.4025 48.4286 39.9999C48.1825 40.6079 47.8957 41.5928 47.5679 42.9545C47.1706 43.9345 46.4088 44.7129 45.4502 45.1185C44.0835 45.4688 43.1203 45.7625 42.5604 45.9999C41.9415 46.2621 41.1364 46.7172 40.1454 47.3652C39.1868 47.7711 38.1099 47.7711 37.1513 47.3652C36.1055 46.695 35.3005 46.2399 34.7363 45.9999C34.1216 45.7403 33.1584 45.447 31.8465 45.1199C30.8882 44.7136 30.1269 43.9347 29.7301 42.9545C29.385 41.5528 29.0976 40.5679 28.8681 39.9999C28.6091 39.3616 28.164 38.5385 27.5328 37.5305C27.1358 36.5505 27.1358 35.4493 27.5328 34.4692C28.1579 33.4772 28.603 32.6541 28.8681 31.9999C29.0916 31.4488 29.3784 30.4639 29.7288 29.0452C30.1261 28.0653 30.8879 27.2869 31.8465 26.8812C33.1914 26.5399 34.1547 26.2461 34.7363 25.9999C35.3335 25.7465 36.1385 25.2914 37.1513 24.6345C38.1099 24.2286 39.1868 24.2286 40.1454 24.6345Z"
+          stroke="var(--example-skeleton-item)"
+          strokeWidth="2.66667"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+      <rect x="66.033" y="30" width="86.0659" height="12" rx="2.41611" fill="var(--example-skeleton-item)" />
+      <rect x="23" y="63" width="191" height="12" rx="2.41611" fill="var(--example-skeleton-item)" />
+      <rect x="23" y="83" width="221" height="12" rx="2.41611" fill="var(--example-skeleton-item)" />
+      <rect x="0.5" y="0.5" width="266" height="174" rx="3.5" stroke="var(--example-skeleton-item)" />
+      <rect x="133" y="126" width="100" height="28.9933" rx="4.83221" fill="#2B7FFF" />
+      <rect x="148.038" y="135.664" width="69.9248" height="9.66443" rx="2.41611" fill="#6EA5F9" />
+      <rect x="23" y="126" width="100" height="28.9933" rx="4.83221" fill="var(--example-skeleton-item)" />
+      <rect x="38.0376" y="135.664" width="69.9248" height="9.66443" rx="2.41611" fill="var(--example-skeleton-stroke)" />
+      <defs>
+        <clipPath id="clip0_163_24">
+          <rect width="31.2967" height="32" fill="white" transform="translate(23 20)" />
+        </clipPath>
+      </defs>
     </svg>
   );
 }

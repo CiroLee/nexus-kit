@@ -4,27 +4,16 @@ import CodeBox from '@/components/business/CodeBox';
 import Link from '@/components/ui/Link';
 import OnThisPage, { type AnchorItem } from '@/components/business/OnThisPage';
 import { IconExternalLink } from '@tabler/icons-react';
-import { defaultCode, disabledCode, externalCode, underlineCode } from '@/codes/demos/code.links';
+import { defaultCode, colorsCode, disabledCode, externalCode, underlineCode } from '@/codes/demos/code.links';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
-  {
-    anchorId: 'default',
-    label: 'default',
-  },
-  {
-    anchorId: 'disabled',
-    label: 'disabled',
-  },
-  {
-    anchorId: 'underline',
-    label: 'underline',
-  },
-  {
-    anchorId: 'external',
-    label: 'external',
-  },
+  { anchorId: 'default', label: 'default' },
+  { anchorId: 'colors', label: 'colors' },
+  { anchorId: 'disabled', label: 'disabled' },
+  { anchorId: 'underline', label: 'underline' },
+  { anchorId: 'external', label: 'external' },
 ];
 
 export default async function LinkPage() {
@@ -36,6 +25,25 @@ export default async function LinkPage() {
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Link href="#">Link</Link>
+        </PreviewAndCode>
+        <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<CodeBox code={colorsCode} />}>
+          <div className="space-x-4">
+            <Link href="#" colors="primary">
+              Primary
+            </Link>
+            <Link href="#" colors="secondary">
+              Secondary
+            </Link>
+            <Link href="#" colors="warning">
+              Warning
+            </Link>
+            <Link href="#" colors="danger">
+              Danger
+            </Link>
+            <Link href="#" colors="neutral">
+              Neutral
+            </Link>
+          </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<CodeBox code={disabledCode} />}>
           <Link href="#" disabled>

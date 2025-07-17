@@ -6,6 +6,20 @@ export default function Page() {
   )
 }`;
 
+export const colorsCode = `import Link from "@/components/ui/Link";
+
+export default function Page() {
+  return (
+     <div className="space-x-4">
+      <Link href="#" colors="primary">Primary</Link>
+      <Link href="#" colors="secondary">Secondary</Link>
+      <Link href="#" colors="warning">Warning</Link>
+      <Link href="#" colors="danger">Danger</Link>
+      <Link href="#" colors="neutral">Neutral</Link>
+    </div>
+  )
+}`;
+
 export const disabledCode = `import Link from "@/components/ui/Link";
 
 export default function Page() {
