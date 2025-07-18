@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export interface Option {
   label: React.ReactNode;
-  value: string | number;
+  value: string;
   disabled?: boolean;
 }
 
