@@ -115,11 +115,11 @@ const guides: GuideItem[] = [
 export default function Page() {
   return (
     <div className="flex">
-      <div className="sm:mr-90">
+      <div className="main-container">
         <Heading as="h1" className="mb-8">
           Installation
         </Heading>
-        <TechnicalGuide className="max-w-[90vw]" guides={guides} />
+        <TechnicalGuide guides={guides} />
       </div>
       <OnThisPage list={guides.map((item) => ({ anchorId: item.id, label: item.title as string }))} />
     </div>
