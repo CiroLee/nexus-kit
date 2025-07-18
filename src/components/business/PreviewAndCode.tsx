@@ -18,7 +18,7 @@ interface PreviewAndCodeProps {
   trail?: React.ReactNode;
 }
 
-const option: Option[] = [
+const options: Option[] = [
   {
     label: (
       <>
@@ -39,7 +39,7 @@ const option: Option[] = [
   },
 ];
 export default function PreviewAndCode({ anchorId, title, description, codeText = '', trail, isDiagnoal, children, code, className }: PreviewAndCodeProps) {
-  const [value, setValue] = useState('preview');
+  const [value, setValue] = useState<Option['value']>('preview');
   return (
     <div className={cn('mb-8 w-[calc(100vw_-_32px)] sm:w-full', className)} id={anchorId}>
       <Heading as="h3" className="whitespace-pre-wrap">
@@ -47,7 +47,7 @@ export default function PreviewAndCode({ anchorId, title, description, codeText 
       </Heading>
       <div className="mb-4 text-sm text-gray-400">{description}</div>
       <div className="flex items-center justify-between">
-        <Segment defaultValue="preview" option={option} onValueChange={setValue} />
+        <Segment defaultValue="preview" options={options} onValueChange={setValue} />
         <div className="flex gap-2">
           <ClientCopyButton text={codeText} />
           {trail}

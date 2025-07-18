@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export interface Option {
   label: React.ReactNode;
-  value: string;
+  value: string | number;
   disabled?: boolean;
 }
 
@@ -41,7 +41,7 @@ const segmentItem = cva(`h-full flex gap-0.5 items-center justify-center select-
   },
 });
 const segmentIndicator = cva(
-  `h-full transition ease-linear rounded box-border  absolute top-0 shadow outline-none bg-white dark:bg-neutral-800 disabled:cursor-not-allowed
+  `h-full transition ease-linear rounded box-border absolute top-0 shadow outline-none bg-white dark:bg-neutral-800/80 disabled:cursor-not-allowed
   not-disabled:focus-visible:ring-3 not-disabled:focus-visible:ring-primary/50 not-disabled:focus-visible:transition-none`,
 );
 
@@ -49,12 +49,12 @@ type SegmentBaseVariants = VariantProps<typeof segmentBase>;
 interface SegmentProps extends React.HTMLAttributes<HTMLDivElement>, SegmentBaseVariants {
   defaultValue?: Option['value'];
   equaledWidth?: boolean;
-  option: Option[];
+  options: Option[];
   ref?: React.Ref<HTMLDivElement>;
   onValueChange?: (value: Option['value']) => void;
 }
-export default function Segment({ defaultValue, size, option, equaledWidth, className, ref, onValueChange, ...props }: SegmentProps) {
-  const [activeValue, setActiveValue] = useState(defaultValue ?? option[0].value);
+export default function Segment({ defaultValue, size, options = [], equaledWidth, className, ref, onValueChange, ...props }: SegmentProps) {
+  const [activeValue, setActiveValue] = useState(defaultValue ?? options[0]?.value);
   const segmentRef = useRef<HTMLDivElement>(null);
   const indicatorRef = useRef<HTMLDivElement>(null);
   const clickHandler = (item: Option) => {
@@ -64,13 +64,15 @@ export default function Segment({ defaultValue, size, option, equaledWidth, clas
   };
 
   const calcIndicatorStyle = useCallback(() => {
-    if (!indicatorRef.current) return;
-    const children = segmentRef.current?.children || [];
-    const activeIndex = option.findIndex((item) => item.value === activeValue);
-    const activeEl = Array.from(children)[activeIndex] as HTMLDivElement;
+    if (!indicatorRef.current || !segmentRef.current) return;
+    const children = segmentRef.current.children;
+    const activeIndex = options.findIndex((item) => item.value === activeValue);
+    if (activeIndex === -1) return;
+    const activeEl = children[activeIndex] as HTMLDivElement;
+    if (!activeEl) return;
     indicatorRef.current.style.width = `${activeEl.offsetWidth}px`;
     indicatorRef.current.style.transform = `translateX(${activeEl.offsetLeft}px)`;
-  }, [activeValue, option]);
+  }, [activeValue, options]);
 
   useEffect(() => {
     calcIndicatorStyle();
@@ -78,8 +80,8 @@ export default function Segment({ defaultValue, size, option, equaledWidth, clas
 
   return (
     <div ref={ref} className={cn(segmentBase({ size, className }))} {...props}>
-      <div ref={segmentRef} className={cn('relative flex w-full', { grid: equaledWidth })} style={{ gridTemplateColumns: `repeat(${option.length}, minmax(0, 1fr)` }}>
-        {option.map((opt, index) => (
+      <div ref={segmentRef} className={cn('relative flex w-full', { grid: equaledWidth })} style={{ gridTemplateColumns: `repeat(${options.length}, minmax(0, 1fr)` }}>
+        {options.map((opt, index) => (
           <button
             key={index}
             data-segment-item="segment-item"
@@ -89,7 +91,7 @@ export default function Segment({ defaultValue, size, option, equaledWidth, clas
             {opt.label}
           </button>
         ))}
-        <div ref={indicatorRef} data-segment-item="segment-indicator" className={segmentIndicator()} tabIndex={0}></div>
+        {options.length > 0 && <div ref={indicatorRef} data-segment-item="segment-indicator" className={segmentIndicator()} tabIndex={0}></div>}
       </div>
     </div>
   );

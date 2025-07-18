@@ -16,18 +16,18 @@ const navList: AnchorItem[] = [
   { anchorId: 'with-icon', label: 'with icon' },
 ];
 
-const option: Option[] = [
+const options: Option[] = [
   { label: 'React', value: 'react' },
   { label: 'Vue', value: 'vue' },
   { label: 'Angular', value: 'angular' },
 ];
 
-const option2: Option[] = [
+const options2: Option[] = [
   { label: 'React', value: 'react' },
   { label: 'Vue', value: 'vue', disabled: true },
   { label: 'Angular', value: 'angular' },
 ];
-const option3: Option[] = [
+const options3: Option[] = [
   {
     label: (
       <>
@@ -65,23 +65,23 @@ export default async function SegmentPage() {
         <SectionIntro title="Segment" description="Segment is a controller to switch between different options." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
-          <Segment option={option} />
+          <Segment options={options} />
         </PreviewAndCode>
         <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<CodeBox code={sizeCode} />}>
           <div className="flex items-center gap-4">
-            <Segment size="sm" option={option} />
-            <Segment size="md" option={option} />
-            <Segment size="lg" option={option} />
+            <Segment size="sm" options={options} />
+            <Segment size="md" options={options} />
+            <Segment size="lg" options={options} />
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="equaled-width" title="equaledWidth" codeText={equaledWidthCode} code={<CodeBox code={equaledWidthCode} />}>
-          <Segment equaledWidth option={option} />
+          <Segment equaledWidth options={options} />
         </PreviewAndCode>
         <PreviewAndCode anchorId="disabled-item" title="disabled" codeText={disabledCode} code={<CodeBox code={disabledCode} />}>
-          <Segment defaultValue="react" option={option2} />
+          <Segment defaultValue="react" options={options2} />
         </PreviewAndCode>
         <PreviewAndCode anchorId="with-icon" title="with icon" codeText={widthIconCode} code={<CodeBox code={widthIconCode} />}>
-          <Segment option={option3} />
+          <Segment options={options3} />
         </PreviewAndCode>
       </div>
       <OnThisPage list={navList} />
