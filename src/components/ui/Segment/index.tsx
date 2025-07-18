@@ -75,8 +75,16 @@ export default function Segment({ defaultValue, size, options = [], equaledWidth
   }, [activeValue, options]);
 
   useEffect(() => {
+    const segmentEl = segmentRef.current;
+    if (!segmentEl) return;
+    // observer self size changes to recalculate indicator
     calcIndicatorStyle();
-  }, [activeValue, calcIndicatorStyle]);
+    const resizeObserver = new ResizeObserver(calcIndicatorStyle);
+    resizeObserver.observe(segmentEl);
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [calcIndicatorStyle]);
 
   return (
     <div ref={ref} className={cn(segmentBase({ size, className }))} {...props}>
