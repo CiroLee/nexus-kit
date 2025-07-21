@@ -15,7 +15,7 @@ const clientCopyBtn = cva('dark:text-foreground text-neutral-300');
 const cssConfig = await getSourceCode('styles/theme.css');
 const animationConfig = await getSourceCode('styles/animation.css');
 
-const dependInstall = 'npm install class-variance-authority clsx tailwind-merge @tabler/icons-react';
+const dependInstall = 'npm install radix-ui class-variance-authority clsx tailwind-merge @tabler/icons-react';
 const aliasConfig = `{
   compilerOptions: {
     "paths": {
