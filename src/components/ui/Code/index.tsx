@@ -1,7 +1,7 @@
 'use client';
 import { cva, VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
-const code = cva('rounded px-1 inline-flex items-center bg-neutral-100 dark:bg-neutral-700', {
+const code = cva('rounded px-1 inline-flex items-center bg-neutral', {
   variants: {
     size: {
       sm: 'text-xs h-5',

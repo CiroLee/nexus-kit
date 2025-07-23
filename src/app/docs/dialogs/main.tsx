@@ -100,7 +100,7 @@ export default function DialogPage({ sourceCode }: { sourceCode?: string }) {
           title="controlled mode"
           description={
             <p>
-              controlled Dialog must use <Code className="text-white">open</Code> and <Code className="text-white">onOpenChange</Code> to control the dialog visibility.
+              controlled Dialog must use <Code className="text-foreground">open</Code> and <Code className="text-foreground">onOpenChange</Code> to control the dialog visibility.
             </p>
           }
           codeText={controlledCode}

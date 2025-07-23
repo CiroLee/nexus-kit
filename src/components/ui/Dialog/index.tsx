@@ -74,7 +74,7 @@ export function Dialog({
         <DialogPrimitive.Content data-slot="dialog-content" ref={ref} className={cn(dialogContent({ size, className }))}>
           {hideCloseButton ? null : (
             <DialogPrimitive.Close asChild className="absolute top-1.5 right-1.5">
-              <Button asIcon colors="neutral" size="sm" pill variant="light" className="group text-lg">
+              <Button asIcon colors="neutral" size="sm" variant="light" className="group text-lg">
                 <IconX size={18} className="opacity-40 transition-colors group-hover:opacity-100" />
               </Button>
             </DialogPrimitive.Close>
