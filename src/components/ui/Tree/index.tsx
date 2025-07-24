@@ -2,20 +2,19 @@
 import { useMemo, useState } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
-import { Slot } from '@radix-ui/react-slot';
 import Collapsible from '../Collapsible';
-import React from 'react';
 interface TreeProps extends React.HTMLAttributes<HTMLDivElement> {
   ref?: React.Ref<HTMLDivElement>;
 }
+/** Tree Root */
 export function Tree({ className, ...props }: TreeProps) {
   return <div className={cn('relative', className)} {...props} />;
 }
 
-const treeBranch = cva('relative pl-4 group/branch', {
+const treeBranch = cva('relative pl-2.5 group/branch', {
   variants: {
     hideLine: {
-      false: 'before:w-px before:h-full before:absolute before:left-3 before:bg-line',
+      false: 'before:w-px before:h-full before:absolute before:left-3 before:bg-line pl-4',
     },
   },
   defaultVariants: {
@@ -23,11 +22,13 @@ const treeBranch = cva('relative pl-4 group/branch', {
   },
 });
 type TreeBranchVariants = VariantProps<typeof treeBranch>;
-interface TreeBranchProps extends Omit<React.ComponentProps<typeof Collapsible>, 'trigger'>, TreeBranchVariants {
+interface TreeBranchProps extends Omit<React.ComponentProps<typeof Collapsible>, 'trigger' | 'asChild'>, TreeBranchVariants {
   label?: React.ReactNode;
+  indicatorAlign?: 'start' | 'end';
   indicator?: React.ReactNode | ((open: boolean) => React.ReactNode);
 }
-export function TreeBranch({ label, hideLine, children, className, indicator, onOpenChange, ...props }: TreeBranchProps) {
+/** TreeBranch */
+export function TreeBranch({ label, hideLine, children, className, indicator, indicatorAlign = 'start', onOpenChange, ...props }: TreeBranchProps) {
   const [open, setOpen] = useState(false);
   const handleOnOpenChange = (open: boolean) => {
     setOpen(open);
@@ -38,38 +39,64 @@ export function TreeBranch({ label, hideLine, children, className, indicator, on
     return typeof indicator === 'function' ? indicator(open) : indicator;
   }, [indicator, open]);
   return (
-    <Collapsible onOpenChange={handleOnOpenChange} className={cn(treeBranch({ hideLine, className }))} trigger={<TreeItem indicator={indicatorEl}>{label}</TreeItem>} {...props}>
+    <Collapsible
+      onOpenChange={handleOnOpenChange}
+      className={cn(treeBranch({ hideLine, className }))}
+      trigger={
+        <TreeItem indicatorAlign={indicatorAlign} indicator={indicatorEl}>
+          {label}
+        </TreeItem>
+      }
+      {...props}>
       {children}
     </Collapsible>
   );
 }
 
-interface TreeItemProps extends React.HTMLAttributes<HTMLButtonElement> {
-  asChild?: boolean;
+/** TreeItem */
+const treeItem = cva(
+  `outline-none w-full py-1 px-1.5 text-sm rounded-xs transition-colors data-disabled:cursor-not-allowed flex items-center gap-1 justify-start
+  data-disabled:opacity-50 not-data-disabled:hover:bg-neutral/60`,
+  {
+    variants: {
+      indicatorAlign: {
+        start: '',
+        end: 'flex-row-reverse justify-between',
+      },
+    },
+    defaultVariants: {
+      indicatorAlign: 'start',
+    },
+  },
+);
+
+type TreeItemVariants = VariantProps<typeof treeItem>;
+
+interface TreeItemProps<T extends React.ElementType = 'button'> extends TreeItemVariants {
+  as?: T;
   disabled?: boolean;
   indicator?: React.ReactNode;
+  children?: React.ReactNode;
+  className?: string;
 }
-const treeItem = cva(
-  'outline-none w-full py-1 px-1.5 text-sm rounded-xs transition-colors data-disabled:cursor-not-allowed flex items-center gap-1 justify-start data-disabled:opacity-50 not-data-disabled:hover:bg-neutral/60',
-);
-export function TreeItem({ asChild, className, indicator, children, disabled, ...props }: TreeItemProps) {
-  const Component = asChild ? Slot : 'button';
+/**
+ * polymorphic type to support both button, anchor and other elements via as prop
+ */
+type PolymorphicTreeItem = <T extends React.ElementType = 'button'>(props: TreeItemProps<T> & Omit<React.ComponentProps<T>, keyof TreeItemProps<T>>) => React.ReactElement | null;
+
+export const TreeItem: PolymorphicTreeItem = ({ as: Component = 'button', className, indicator, indicatorAlign, children, disabled, ...props }) => {
   return (
-    <Component {...(disabled ? { 'data-disabled': '' } : {})} className={cn(treeItem({ className }))} disabled={disabled} {...props}>
+    <Component {...(disabled ? { 'data-disabled': '' } : {})} className={cn(treeItem({ className, indicatorAlign }))} disabled={disabled} {...props}>
       {indicator ? <>{indicator}</> : null}
       {children}
     </Component>
   );
-}
+};
 
-interface TreeNodeItemBase {
-  label?: React.ReactNode;
-  className?: string;
-  disabled?: boolean;
-}
-
+/** TreeNode */
 export interface TreeNodeItem extends Omit<TreeBranchProps, 'children'> {
   children?: TreeNodeItem[];
+  [key: string]: unknown;
 }
 
 interface TreeNodeProps {

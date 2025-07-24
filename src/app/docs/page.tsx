@@ -102,7 +102,7 @@ const guides: GuideItem[] = [
           <span className="italic">src/lib/utils.ts</span>
         </p>
         <div className="rounded-md bg-[#24292e]">
-          <ClientCopyButton size="sm" text={utils} asIcon className="absolute top-9 right-2 z-1" />
+          <ClientCopyButton size="sm" text={utils} asIcon className={cn(clientCopyBtn({ className: 'absolute top-14 right-2 z-1 sm:top-9' }))} />
           <div className="border-line relative mt-2 h-fit max-h-80 overflow-auto rounded-[inherit] border">
             <CodeBox code={utils} lang="ts" />
           </div>

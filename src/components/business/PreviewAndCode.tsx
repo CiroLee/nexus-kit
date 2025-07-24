@@ -41,7 +41,7 @@ const options: Option[] = [
 export default function PreviewAndCode({ anchorId, title, description, codeText = '', trail, isDiagnoal, children, code, className }: PreviewAndCodeProps) {
   const [value, setValue] = useState<Option['value']>('preview');
   return (
-    <div className={cn('mb-8 w-[calc(100vw_-_32px)] sm:w-full', className)} id={anchorId}>
+    <div className={cn('mb-8 w-[calc(100vw_-_32px)] sm:w-full xl:max-w-5xl', className)} id={anchorId}>
       <Heading as="h3" className="whitespace-pre-wrap">
         {title}
       </Heading>

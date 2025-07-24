@@ -60,7 +60,7 @@ export function Checkbox({ className, id, size, children, defaultChecked, checke
     if (checked !== innerChecked && checked !== undefined) {
       setInnerChecked(checked);
     }
-  }, [checked, setInnerChecked]);
+  }, [checked, setInnerChecked, innerChecked]);
   return (
     <div className={cn('relative flex items-center gap-2.5 select-none', className)}>
       <CheckboxPrimitive.Root
