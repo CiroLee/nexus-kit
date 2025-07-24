@@ -7,7 +7,7 @@ export default function Collapsible({ trigger, children, className, ...props }: 
   return (
     <CollapsiblePrimitive.Root {...props}>
       <CollapsiblePrimitive.Trigger asChild>{trigger}</CollapsiblePrimitive.Trigger>
-      <CollapsiblePrimitive.Content className="data-[state=open]:animate-collapsible-slide-down data-[state=closed]:animate-collapsible-slide-up">
+      <CollapsiblePrimitive.Content className="data-[state=open]:animate-collapsible-slide-down data-[state=closed]:animate-collapsible-slide-up overflow-hidden">
         <div className={className}>{children}</div>
       </CollapsiblePrimitive.Content>
     </CollapsiblePrimitive.Root>

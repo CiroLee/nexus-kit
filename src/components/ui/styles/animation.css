@@ -146,28 +146,18 @@
   @keyframes collapsible-slide-down {
     from {
       height: 0;
-      opacity: 0;
-    }
-    90% {
-      opacity: 1;
     }
     to {
-      opacity: 1;
       height: var(--radix-collapsible-content-height);
     }
   }
 
   @keyframes collapsible-slide-up {
     from {
-      opacity: 1;
       height: var(--radix-collapsible-content-height);
-    }
-    90% {
-      opacity: 0;
     }
     to {
       height: 0;
-      opacity: 0;
     }
   }
 

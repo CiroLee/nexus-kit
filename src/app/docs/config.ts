@@ -181,6 +181,10 @@ export const navConfig = [
         name: 'Empty',
         href: '/docs/empties',
       },
+      {
+        name: 'Tree',
+        href: '/docs/trees',
+      },
     ],
   },
   {
