@@ -3,7 +3,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { IconAlertSquareRoundedFilled, IconInfoSquareRoundedFilled, IconSquareRoundedCheckFilled, IconCircleXFilled, IconNotification } from '@tabler/icons-react';
 import { cn } from '@/lib/utils';
 
-const alert = cva('rounded-lg p-4 flex bg-background', {
+const alert = cva('rounded-md p-3 flex bg-background', {
   variants: {
     state: {
       info: 'border-primary/70 [&_svg]:text-primary',
@@ -42,32 +42,32 @@ const alert = cva('rounded-lg p-4 flex bg-background', {
     {
       state: 'neutral',
       variant: 'solid',
-      className: 'text-foreground bg-neutral-300 dark:bg-line',
+      className: 'text-foreground bg-neutral',
     },
     {
       state: 'info',
       variant: 'light',
-      className: 'bg-primary/30',
+      className: 'bg-primary/20',
     },
     {
       state: 'success',
       variant: 'light',
-      className: 'bg-secondary/30',
+      className: 'bg-secondary/20',
     },
     {
       state: 'warning',
       variant: 'light',
-      className: 'bg-warning/30',
+      className: 'bg-warning/20',
     },
     {
       state: 'danger',
       variant: 'light',
-      className: 'bg-danger/30',
+      className: 'bg-danger/20',
     },
     {
       state: 'neutral',
       variant: 'light',
-      className: 'bg-neutral-300/60 dark:bg-line/30',
+      className: 'bg-neutral/50',
     },
   ],
   defaultVariants: {
@@ -85,21 +85,21 @@ interface AlertProps extends React.HTMLAttributes<HTMLDivElement>, AlertVariants
 }
 
 const defaultIconsMap = {
-  info: <IconInfoSquareRoundedFilled size={26} />,
-  success: <IconSquareRoundedCheckFilled size={26} />,
-  warning: <IconAlertSquareRoundedFilled size={26} />,
-  danger: <IconCircleXFilled size={26} />,
-  neutral: <IconNotification size={26} />,
+  info: <IconInfoSquareRoundedFilled size={24} />,
+  success: <IconSquareRoundedCheckFilled size={24} />,
+  warning: <IconAlertSquareRoundedFilled size={24} />,
+  danger: <IconCircleXFilled size={24} />,
+  neutral: <IconNotification size={24} />,
 };
 export function Alert({ className, state = 'info', variant, hiddenIcon, icon, children, ref, ...props }: AlertProps) {
   return (
     <div ref={ref} role="alert" className={cn(alert({ state, variant, className }))} {...props}>
-      {hiddenIcon ? null : <div className="pr-4">{icon ? <>{icon}</> : <>{defaultIconsMap[state as keyof typeof defaultIconsMap]}</>}</div>}
-      <div className="flex-1">{children}</div>
+      {hiddenIcon ? null : <div className="pr-2">{icon ? <>{icon}</> : <>{defaultIconsMap[state as keyof typeof defaultIconsMap]}</>}</div>}
+      <div className="flex-1 text-sm">{children}</div>
     </div>
   );
 }
 
 export function AlertTitle({ children, className }: { className?: string; children?: React.ReactNode }) {
-  return <p className={cn('text-lg font-semibold', className)}>{children}</p>;
+  return <p className={cn('text-base font-semibold', className)}>{children}</p>;
 }

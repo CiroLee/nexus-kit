@@ -37,23 +37,23 @@ export default async function HeadingPage() {
         <PreviewAndCode codeText={stateCode} anchorId="state" title="state" className="space-y-3" code={<CodeBox code={stateCode} />}>
           <div className="space-y-5">
             <Alert state="info">
-              <AlertTitle>info - Alert Title</AlertTitle>
+              <AlertTitle>Alert Title - info</AlertTitle>
               your can add alert content here
             </Alert>
             <Alert state="success">
-              <AlertTitle>success - Alert Title</AlertTitle>
+              <AlertTitle>Alert Title - success</AlertTitle>
               your can add alert content here
             </Alert>
             <Alert state="warning">
-              <AlertTitle>warning - Alert Title</AlertTitle>
+              <AlertTitle>Alert Title - warning</AlertTitle>
               your can add alert content here
             </Alert>
             <Alert state="danger">
-              <AlertTitle>danger - Alert Title</AlertTitle>
+              <AlertTitle>Alert Title - danger</AlertTitle>
               your can add alert content here
             </Alert>
             <Alert state="neutral">
-              <AlertTitle>default - Alert Title</AlertTitle>
+              <AlertTitle>Alert Title - default</AlertTitle>
               your can add alert content here
             </Alert>
           </div>
@@ -61,15 +61,15 @@ export default async function HeadingPage() {
         <PreviewAndCode anchorId="variant" title="variant" codeText={variantCode} code={<CodeBox code={variantCode} />}>
           <div className="space-y-5">
             <Alert state="info" variant="solid">
-              <AlertTitle>solid - Alert Title</AlertTitle>
+              <AlertTitle>Alert Title - solid</AlertTitle>
               your can add alert content here
             </Alert>
             <Alert state="info" variant="bordered">
-              <AlertTitle>bordered - Alert Title</AlertTitle>
+              <AlertTitle>Alert Title - bordered</AlertTitle>
               your can add alert content here
             </Alert>
             <Alert state="info" variant="light">
-              <AlertTitle>light - Alert Title</AlertTitle>
+              <AlertTitle>Alert Title - light</AlertTitle>
               your can add alert content here
             </Alert>
           </div>
@@ -81,7 +81,7 @@ export default async function HeadingPage() {
           </Alert>
         </PreviewAndCode>
         <PreviewAndCode codeText={customIcon} anchorId="custom-icon" title="custom Icon" code={<CodeBox code={customIcon} />}>
-          <Alert state="neutral" icon={<IconTimezone size={24} />}>
+          <Alert state="neutral" icon={<IconTimezone size={20} className="mt-0.5" />}>
             <AlertTitle>Alert Title</AlertTitle>
             your can add alert content here
           </Alert>

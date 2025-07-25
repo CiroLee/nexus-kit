@@ -30,7 +30,7 @@ const segmentItem = cva(`h-full flex gap-0.5 items-center justify-center select-
     },
     active: {
       true: 'text-neutral-800 dark:text-neutral-50',
-      false: 'not-disabled:hover:text-neutral-600 not-disabled:dark:hover:text-neutral-400',
+      false: 'not-disabled:hover:text-neutral-800 not-disabled:dark:hover:text-neutral-300',
     },
     equaledWidth: {
       true: 'flex-1',
