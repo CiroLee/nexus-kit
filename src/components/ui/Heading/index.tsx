@@ -15,21 +15,14 @@ const heading = cva('font-normal', {
   },
 });
 
-interface HeadingProps {
+interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  className?: string;
-  style?: React.CSSProperties;
-  children?: React.ReactNode;
   ref?: React.Ref<HTMLHeadingElement>;
 }
-export default function Heading({ as: Tag, className, style, children, ref }: HeadingProps) {
+export default function Heading({ as: Tag, className, ...props }: HeadingProps) {
   const getLevel = () => {
     const match = Tag.match(/\d+/g);
     return match ? Number(match[0]) : 1;
   };
-  return (
-    <Tag ref={ref} className={cn(heading({ as: Tag, className }))} role="heading" aria-level={getLevel()} style={style}>
-      {children}
-    </Tag>
-  );
+  return <Tag className={cn(heading({ as: Tag, className }))} role="heading" aria-level={getLevel()} {...props} />;
 }
