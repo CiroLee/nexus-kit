@@ -26,6 +26,16 @@ export const customColorsCode = `import { StarRating } from '@/components/ui/Sta
 
 export default function Page() {
   return (
-    <StarRating defaultColor="gray" fillColor="red" value={3.4} max={5} />
+    <div className="space-y-4">
+      <StarRating
+        size={24}
+        defaultColor={{ light: 'var(--color-purple-200)', dark: 'var(--color-purple-900)' }}
+        fillColor={{ light: 'var(--color-purple-500)', dark: 'var(--color-purple-700)' }}
+        value={3.4}
+        max={5}
+      />
+      <StarRating size={24} defaultColor={{ light: '#ffc7d1', dark: '#0d1a3e' }} fillColor={{ light: '#fa1818', dark: '#0d39b1' }} value={3.4} max={5} />
+      <StarRating size={24} defaultColor="gray" fillColor="black" value={3.4} max={5} />
+    </div>
   )
 }`;

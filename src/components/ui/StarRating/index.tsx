@@ -19,22 +19,37 @@ export function StarRating({ value, max, className, ref, ...props }: StarRatingP
 
 export interface IStar {
   value: number;
-  defaultColor?: string;
-  fillColor?: string;
+  defaultColor?: string | { light: string; dark: string };
+  fillColor?: string | { light: string; dark: string };
   size?: number;
 }
-export function Star({ value = 0, defaultColor = '#a7a7a7', fillColor = '#ff6900', size = 16 }: IStar) {
+export function Star({ value = 0, defaultColor = { light: '#d1d1d1', dark: '#525151' }, fillColor = '#ff6900', size = 16 }: IStar) {
   // make sure the score is between 0 and 1
   const clampedValue = Math.min(1, Math.max(0, value));
   const gradientId = useId(); // unique id for the gradient
 
+  const _defaultColor = typeof defaultColor === 'string' ? { light: defaultColor, dark: defaultColor } : defaultColor;
+  const _fillColor = typeof fillColor === 'string' ? { light: fillColor, dark: fillColor } : fillColor;
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      style={
+        {
+          '--default-light-color': _defaultColor.light,
+          '--default-dark-color': _defaultColor.dark,
+          '--fill-light-color': _fillColor.light,
+          '--fill-dark-color': _fillColor.dark,
+        } as React.CSSProperties
+      }>
       {/* define the gradient */}
       <defs>
         <linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="0">
-          <stop offset={`${clampedValue * 100}%`} stopColor={fillColor} />
-          <stop offset={`${clampedValue * 100}%`} stopColor={defaultColor} />
+          <stop offset={`${clampedValue * 100}%`} className="[stop-color:var(--fill-light-color)] dark:[stop-color:var(--fill-dark-color)]" />
+          <stop offset={`${clampedValue * 100}%`} className="[stop-color:var(--default-light-color)] dark:[stop-color:var(--default-dark-color)]" />
         </linearGradient>
       </defs>
       <path

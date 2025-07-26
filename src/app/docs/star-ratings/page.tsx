@@ -42,8 +42,23 @@ export default async function StarRatingPage() {
         <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<CodeBox code={sizeCode} />}>
           <StarRating size={24} value={3.4} max={5} />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="custom-colors" title="custom colors" codeText={customColorsCode} code={<CodeBox code={customColorsCode} />}>
-          <StarRating defaultColor="gray" fillColor="red" value={3.4} max={5} />
+        <PreviewAndCode
+          anchorId="custom-colors"
+          title="custom colors"
+          description="fillColor and defaultColor support both light and dark mode, also support css variable colors"
+          codeText={customColorsCode}
+          code={<CodeBox code={customColorsCode} />}>
+          <div className="space-y-4">
+            <StarRating
+              size={24}
+              defaultColor={{ light: 'var(--color-purple-200)', dark: 'var(--color-purple-900)' }}
+              fillColor={{ light: 'var(--color-purple-500)', dark: 'var(--color-purple-700)' }}
+              value={3.4}
+              max={5}
+            />
+            <StarRating size={24} defaultColor={{ light: '#ffc7d1', dark: '#0d1a3e' }} fillColor={{ light: '#fa1818', dark: '#0d39b1' }} value={3.4} max={5} />
+            <StarRating size={24} defaultColor="gray" fillColor="black" value={3.4} max={5} />
+          </div>
         </PreviewAndCode>
       </div>
       <OnThisPage list={navList} />
