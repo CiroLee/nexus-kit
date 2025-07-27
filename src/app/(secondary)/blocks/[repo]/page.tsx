@@ -19,9 +19,11 @@ export default async function Page({ params }: { params: Promise<{ repo: string 
 
   return (
     <div className="relative mx-auto overflow-auto sm:max-w-[90%]">
-      <Link href="/blocks" className="absolute flex items-center gap-2">
-        <IconArrowLeft size={24} /> Back to examples
-      </Link>
+      <div className="bg-background fixed top-16 left-0 z-10 mx-auto w-full px-[5%] py-4">
+        <Link href="/blocks" className="hover:text-primary flex items-center gap-2 transition-colors">
+          <IconArrowLeft size={20} /> Back to examples
+        </Link>
+      </div>
       <Heading as="h1" className="mt-12 mb-3 text-center">
         {title}
       </Heading>
@@ -31,12 +33,12 @@ export default async function Page({ params }: { params: Promise<{ repo: string 
           <PreviewAndCode
             key={index}
             isDiagnoal
-            className="[&_.preview-content]:p-0"
+            className="xl:max-w-full [&_.preview-content]:p-0"
             title={item.title}
             codeText={removeLastEmptyLine(codesArray[index]) || ''}
             code={<CodeBox code={removeLastEmptyLine(codesArray[index]) || ''} />}
             trail={
-              <Button asIcon variant="bordered" colors="neutral" asChild>
+              <Button key={index} asIcon variant="bordered" colors="neutral" asChild>
                 <Link href={`https://nexus-examples.vercel.app/${repo}/${item.name}`} target="_blank">
                   <IconArrowUpRight size={20} />
                 </Link>
