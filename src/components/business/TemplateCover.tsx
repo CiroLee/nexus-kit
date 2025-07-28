@@ -12,7 +12,6 @@ export interface TemplateCoverProps {
   className?: string;
 }
 
-const coverStyle = ' object-cover';
 export default function TemplateCover({ cover, title, content, types, href, className }: TemplateCoverProps) {
   const coverImage =
     typeof cover === 'string' ? (
