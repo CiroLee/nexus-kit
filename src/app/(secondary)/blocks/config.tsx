@@ -195,6 +195,10 @@ export const examplesConfig = [
         title: 'Shopping Cart 01',
         name: 'cart-01',
       },
+      {
+        title: 'Drawer shopping cart',
+        name: 'cart-02',
+      },
     ],
   },
 ];
