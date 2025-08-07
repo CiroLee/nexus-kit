@@ -30,7 +30,7 @@ import Button from '@/components/ui/Button';
 
 export default function Demo() {
   return (
-    <Button icon>
+    <Button asIcon>
       <IconUpload size={20} />
     </Button>
   )

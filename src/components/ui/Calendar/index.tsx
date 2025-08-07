@@ -92,7 +92,7 @@ export default function Calendar({ defaultValue, value, cellContent, startWeekOn
         ))}
       </ul>
       {showCenterMark ? (
-        <div date-node="center-mark" className="text-description/15 absolute top-1/2 left-1/2 -z-1 -translate-x-1/2 -translate-y-1/2 text-8xl font-bold">
+        <div date-node="center-mark" className="text-description/15 pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-8xl font-bold">
           {markStr}
         </div>
       ) : null}

@@ -22,7 +22,7 @@ export default function Accordion({ className, items, ...props }: AccordionProps
               <IconChevronUp size="1em" className="transition-transform group-data-[state=closed]:rotate-0 group-data-[state=open]:rotate-180" />
             </AccordionPrimitive.Trigger>
           </AccordionPrimitive.Header>
-          <AccordionPrimitive.Content data-slot="accordion-content" className="data-[state=open]:animate-accordion-slide-down data-[state=closed]:animate-accordion-slide-up text-sm">
+          <AccordionPrimitive.Content data-slot="accordion-content" className="data-[state=open]:animate-accordion-slide-down data-[state=closed]:animate-accordion-slide-up overflow-hidden text-sm">
             <div className="pb-4">{item.content}</div>
           </AccordionPrimitive.Content>
         </AccordionPrimitive.Item>

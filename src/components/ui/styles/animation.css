@@ -117,28 +117,18 @@
   @keyframes accordion-slide-down {
     from {
       height: 0;
-      opacity: 0;
-    }
-    90% {
-      opacity: 1;
     }
     to {
-      opacity: 1;
       height: var(--radix-accordion-content-height);
     }
   }
 
   @keyframes accordion-slide-up {
     from {
-      opacity: 1;
       height: var(--radix-accordion-content-height);
-    }
-    90% {
-      opacity: 0;
     }
     to {
       height: 0;
-      opacity: 0;
     }
   }
 

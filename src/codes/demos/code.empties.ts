@@ -35,7 +35,6 @@ import { Table, TableHeader, TableHeaderCell, TableBody, TableRow, TableCell } f
 export default function Page() {
   return (
     <>
-       <Empty className="h-40" description={<p className="text-sm text-red-500">Ops! No data available</p>} />
        <Table>
           <TableHeader>
             <TableRow>
