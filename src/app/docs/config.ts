@@ -115,6 +115,10 @@ export const navConfig = [
         name: 'SignaturePanel',
         href: '/docs/signature-panels',
       },
+      {
+        name: 'Toggle',
+        href: '/docs/toggles',
+      },
     ],
   },
   {
