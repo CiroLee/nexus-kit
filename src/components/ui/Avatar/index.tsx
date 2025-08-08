@@ -7,6 +7,13 @@ import { cva, type VariantProps } from 'class-variance-authority';
 const AvatarGroupContext = createContext<{ size: AvatarVariants['size'] }>({
   size: 'md',
 });
+
+interface AvatarGroupProps {
+  size?: AvatarVariants['size'];
+  children?: React.ReactNode;
+  className?: string;
+  orientation?: 'horizontal' | 'vertical';
+}
 export function AvatarGroup({ children, className, size, orientation = 'horizontal' }: AvatarGroupProps) {
   return (
     <div className={cn('flex flex-row -space-x-2', { 'flex-col -space-y-2 space-x-0': orientation === 'vertical' }, className)}>
@@ -57,11 +64,4 @@ export function Avatar({ src, alt, bordered, rounded, fallback, width, height, s
       <AvatarPrimitive.Fallback className={cn(fallbackStyle({ className: fallbackClassName }))}>{fallback}</AvatarPrimitive.Fallback>
     </AvatarPrimitive.Root>
   );
-}
-
-interface AvatarGroupProps {
-  size?: AvatarVariants['size'];
-  children?: React.ReactNode;
-  className?: string;
-  orientation?: 'horizontal' | 'vertical';
 }

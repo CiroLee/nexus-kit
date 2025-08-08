@@ -4,6 +4,7 @@ import { Slot } from '@radix-ui/react-slot';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { colors, colorsBorderedVariants, colorsLightVariants } from './buttonVariants';
+
 type TightenButtonVariants = Omit<ButtonVariants, 'loading'>;
 interface ButtonGroupProps extends React.HTMLAttributes<HTMLDivElement>, TightenButtonVariants {
   ref?: React.Ref<HTMLDivElement>;
