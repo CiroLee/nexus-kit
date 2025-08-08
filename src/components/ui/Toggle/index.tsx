@@ -1,3 +1,4 @@
+'use client';
 import { Toggle as TogglePrimitive } from 'radix-ui';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
@@ -18,7 +19,7 @@ const toggle = cva(
       },
       disabled: {
         true: 'opacity-50 cursor-not-allowed',
-        false: 'hover:bg-neutral/30 hover:text-foreground/50',
+        false: 'hover:bg-neutral/50 hover:text-foreground/50',
       },
     },
     defaultVariants: {

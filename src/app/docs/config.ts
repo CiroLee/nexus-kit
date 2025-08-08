@@ -119,6 +119,10 @@ export const navConfig = [
         name: 'Toggle',
         href: '/docs/toggles',
       },
+      {
+        name: 'Toggle Group',
+        href: '/docs/toggle-groups',
+      },
     ],
   },
   {
