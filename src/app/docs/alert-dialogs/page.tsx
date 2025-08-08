@@ -4,7 +4,7 @@ import CodeBox from '@/components/business/CodeBox';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel } from '@/components/ui/AlertDialog';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import { defaultCode, backdropCode, sizeCode, customFooterCode } from '@/codes/demos/code.alertdialogs';
 import { getSourceCode } from '@/app/api/github';
 

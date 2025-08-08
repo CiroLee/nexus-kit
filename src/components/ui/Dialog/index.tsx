@@ -1,5 +1,5 @@
 import { Dialog as DialogPrimitive } from 'radix-ui';
-import Button from '../Button';
+import { Button } from '../Button';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { IconX } from '@tabler/icons-react';

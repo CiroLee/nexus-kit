@@ -5,7 +5,7 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import ClientCode from '@/components/business/ClientCode';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import SignaturePanel, { type SignaturePanelMethod } from '@/components/ui/SignaturePanel';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import { defaultCode, clearAndSaveCode, customCode } from '@/codes/demos/code.signature-panel';
 import CodeDrawer from '@/components/business/CodeDrawer';
 

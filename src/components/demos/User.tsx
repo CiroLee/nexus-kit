@@ -1,7 +1,7 @@
 import { IconHeartFilled, IconUser, IconUsers } from '@tabler/icons-react';
 import { Card } from '../ui/Card';
 import Image from 'next/image';
-import Button from '../ui/Button';
+import { Button } from '../ui/Button';
 import Heading from '../ui/Heading';
 export default function UserDemo() {
   return (

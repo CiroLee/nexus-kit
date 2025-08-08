@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import CodeBox from '@/components/business/CodeBox';
 import { colorsCode, sizeCode, iconCode, variantsCode, disabledCode, withIconCode, loadingCode, pillCode, asChildCode } from '@/codes/demos/code.buttons';
 import SectionIntro from '../../../components/business/SectionIntro';
@@ -13,7 +13,7 @@ const navList: AnchorItem[] = [
   { anchorId: 'colors', label: 'colors' },
   { anchorId: 'size', label: 'size' },
   { anchorId: 'icon', label: 'icon' },
-  { anchorId: 'variants', label: 'variants' },
+  { anchorId: 'variant', label: 'variant' },
   { anchorId: 'disabled', label: 'disabled' },
   { anchorId: 'pill', label: 'pill shape' },
   { anchorId: 'with-icon', label: 'with icon' },
@@ -56,7 +56,7 @@ export default async function ButtonsPage() {
             <IconUpload size={18} />
           </Button>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="variants" codeText={variantsCode} title="variants" code={<CodeBox code={variantsCode} />}>
+        <PreviewAndCode anchorId="variant" codeText={variantsCode} title="variant" code={<CodeBox code={variantsCode} />}>
           <div className="flex gap-4">
             <Button variant="solid" colors="primary">
               Solid

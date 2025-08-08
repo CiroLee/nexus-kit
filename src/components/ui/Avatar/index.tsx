@@ -1,7 +1,19 @@
 'use client';
+import { createContext, useContext } from 'react';
 import { Avatar as AvatarPrimitive } from 'radix-ui';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
+
+const AvatarGroupContext = createContext<{ size: AvatarVariants['size'] }>({
+  size: 'md',
+});
+export function AvatarGroup({ children, className, size, orientation = 'horizontal' }: AvatarGroupProps) {
+  return (
+    <div className={cn('flex flex-row -space-x-2', { 'flex-col -space-y-2 space-x-0': orientation === 'vertical' }, className)}>
+      <AvatarGroupContext.Provider value={{ size }}>{children}</AvatarGroupContext.Provider>
+    </div>
+  );
+}
 
 const avatar = cva('relative block', {
   variants: {
@@ -27,7 +39,7 @@ const avatar = cva('relative block', {
 
 const fallbackStyle = cva('text-foreground relative flex size-full items-center justify-center rounded-[inherit] bg-neutral-300 dark:bg-neutral-700');
 
-type AvatarVariants = VariantProps<typeof avatar>;
+export type AvatarVariants = VariantProps<typeof avatar>;
 interface AvatarProps extends React.ComponentPropsWithRef<typeof AvatarPrimitive.Root>, AvatarVariants {
   src?: string;
   alt?: string;
@@ -37,8 +49,10 @@ interface AvatarProps extends React.ComponentPropsWithRef<typeof AvatarPrimitive
   fallbackClassName?: string;
 }
 export function Avatar({ src, alt, bordered, rounded, fallback, width, height, size, className, fallbackClassName, ...props }: AvatarProps) {
+  const context = useContext(AvatarGroupContext);
+  const _size = size ?? context.size;
   return (
-    <AvatarPrimitive.Root className={cn(avatar({ size, bordered, rounded, className }))} {...props}>
+    <AvatarPrimitive.Root className={cn(avatar({ size: _size, bordered, rounded, className }))} {...props}>
       <AvatarPrimitive.Image className="size-full rounded-[inherit]" alt={alt} width={width} height={height} src={src} />
       <AvatarPrimitive.Fallback className={cn(fallbackStyle({ className: fallbackClassName }))}>{fallback}</AvatarPrimitive.Fallback>
     </AvatarPrimitive.Root>
@@ -46,11 +60,8 @@ export function Avatar({ src, alt, bordered, rounded, fallback, width, height, s
 }
 
 interface AvatarGroupProps {
+  size?: AvatarVariants['size'];
   children?: React.ReactNode;
   className?: string;
   orientation?: 'horizontal' | 'vertical';
-}
-
-export function AvatarGroup({ children, className, orientation = 'horizontal' }: AvatarGroupProps) {
-  return <div className={cn('flex flex-row -space-x-2', { 'flex-col -space-y-2 space-x-0': orientation === 'vertical' }, className)}>{children}</div>;
 }

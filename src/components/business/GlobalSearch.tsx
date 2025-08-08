@@ -5,7 +5,7 @@ import { cva } from 'class-variance-authority';
 import { Command } from 'cmdk';
 import { Dialog } from '../ui/Dialog';
 import Input from '../ui/Input';
-import Button from '../ui/Button';
+import { Button } from '../ui/Button';
 import Kbd from '../ui/Kbd';
 import { isWindows } from '@/utils/utils';
 import { navConfig } from '@/app/docs/config';

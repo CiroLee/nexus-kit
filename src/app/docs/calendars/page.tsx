@@ -7,7 +7,7 @@ import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import Calendar from '@/components/ui/Calendar';
 import Select from '@/components/ui/Select';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import { defaultCode, startOnSunday, centerMark, defaultValueCode, controlledCode, cellContentCode } from '@/codes/demos/code.calendars';
 import { getSourceCode } from '@/app/api/github';
 

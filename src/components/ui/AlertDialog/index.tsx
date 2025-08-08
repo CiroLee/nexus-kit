@@ -2,7 +2,7 @@
 import { AlertDialog as AlertDialogPrimitive } from 'radix-ui';
 import { cva, VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
-import Button from '../Button';
+import { Button } from '../Button';
 
 const alertDialogContent = cva(
   `fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-(--popup) w-[90%] sm:max-w-[90%] bg-background py-3.5

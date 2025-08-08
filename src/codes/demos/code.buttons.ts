@@ -1,6 +1,6 @@
-export const colorsCode = `import Button from '@/components/ui/Button';
+export const colorsCode = `import { Button } from '@/components/ui/Button';
 
-export default function Demo() {
+export default function Page() {
   return (
     <div className="flex gap-4">
       <Button colors="primary">Primary</Button>
@@ -12,9 +12,9 @@ export default function Demo() {
   )
 }`;
 
-export const sizeCode = `import Button from '@/components/ui/Button';
+export const sizeCode = `import { Button } from '@/components/ui/Button';
 
-export default function Demo() {
+export default function Page() {
   return (
     <div className="flex items-center gap-4">
       <Button size="xs">Button</Button>
@@ -26,9 +26,9 @@ export default function Demo() {
 }`;
 
 export const iconCode = `import { IconUpload } from '@tabler/icons-react';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 
-export default function Demo() {
+export default function Page() {
   return (
     <Button asIcon>
       <IconUpload size={20} />
@@ -36,9 +36,9 @@ export default function Demo() {
   )
 }`;
 
-export const variantsCode = `import Button from '@/components/ui/Button';
+export const variantsCode = `import { Button } from '@/components/ui/Button';
 
-export default function Demo() {
+export default function Page() {
   return (
     <div className="flex gap-4">
       <Button variant="solid" colors="primary">Solid</Button>
@@ -48,9 +48,9 @@ export default function Demo() {
   )
 }`;
 
-export const disabledCode = `import Button from '@/components/ui/Button';
+export const disabledCode = `import { Button } from '@/components/ui/Button';
 
-export default function Demo() {
+export default function Page() {
   return (
     <div className="flex gap-4">
       <Button disabled variant="primary">Primary</Button>
@@ -62,9 +62,9 @@ export default function Demo() {
   )
 }`;
 
-export const pillCode = `import Button from '@/components/ui/Button';
+export const pillCode = `import { Button } from '@/components/ui/Button';
 
-export default function Demo() {
+export default function Page() {
   return (
     <div className="flex items-center gap-4">
       <Button size="xs" pill>Rounded</Button>
@@ -76,9 +76,9 @@ export default function Demo() {
 }`;
 
 export const withIconCode = `import { IconShoppingCart, IconArrowRight } from '@tabler/icons-react';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 
-export default function Demo() {
+export default function Page() {
   return (
     <div className="flex gap-4">
       <Button className="gap-1">
@@ -94,9 +94,9 @@ export default function Demo() {
 }`;
 
 export const loadingCode = `import { IconLoader } from '@tabler/icons-react';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 
-export default function Demo() {
+export default function Page() {
   return (
     <div className="flex gap-4">
       <Button loading className="gap-1">
@@ -108,9 +108,9 @@ export default function Demo() {
 }`;
 
 export const asChildCode = `import Link from 'next/link';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 
-export default function Demo() {
+export default function Page() {
   return (
     <>
       <Button asChild variant="ghost" className="hover:underline">
@@ -122,28 +122,105 @@ export default function Demo() {
   )
 }`;
 
-export const buttonGroupCode = `import Button from '@/components/ui/Button';
-import ButtonGroup from '@/components/ui/ButtonGroup';
+export const buttonGroupCode = `import { Button, ButtonGroup } from '@/components/ui/Button';
 
-export default function Demo() {
+export default function Page() {
   return (
     <ButtonGroup>
       <Button>One</Button>
       <Button>Two</Button>
       <Button>Three</Button>
+      <Button>Four</Button>
     </ButtonGroup>
   )
 }`;
 
-export const buttonGroupPilledCode = `import Button from '@/components/ui/Button';
-import ButtonGroup from '@/components/ui/ButtonGroup';
+export const buttonGroupPilledCode = `import { Button, ButtonGroup } from '@/components/ui/Button';
 
-export default function Demo() {
+export default function Page() {
   return (
-    <ButtonGroup>
-      <Button pill>One</Button>
-      <Button pill>Two</Button>
-      <Button pill>Three</Button>
+    <ButtonGroup pill>
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+      <Button>Four</Button>
+    </ButtonGroup>
+  )
+}`;
+
+export const buttonGroupVariantCode = `import { Button, ButtonGroup, type ButtonVariants } from '@/components/ui/Button';
+
+export default function Page() {
+  return (
+    <div className="space-y-4">
+      {['solid', 'light', 'bordered'].map((item) => (
+        <ButtonGroup key={item} variant={item as ButtonVariants['variant']}>
+          <Button>One</Button>
+          <Button>Two</Button>
+          <Button>Three</Button>
+          <Button>Four</Button>
+        </ButtonGroup>
+      ))}
+    </div>
+  )
+}`;
+
+export const buttonGroupColorsCode = `import { Button, ButtonGroup, type ButtonVariants } from '@/components/ui/Button';
+
+export default function Page() {
+  return (
+    <div className="space-y-4">
+      {['primary', 'secondary', 'warning', 'danger', 'neutral'].map((item) => (
+        <ButtonGroup key={item} colors={item as ButtonVariants['colors']}>
+          <Button>One</Button>
+          <Button>Two</Button>
+          <Button>Three</Button>
+          <Button>Four</Button>
+        </ButtonGroup>
+      ))}
+    </div>
+  )
+}`;
+
+export const buttonGroupSizeCode = `import { Button, ButtonGroup, type ButtonVariants } from '@/components/ui/Button';
+
+export default function Page() {
+  return (
+    <div className="space-y-4">
+      {['xs', 'sm', 'md', 'lg'].map((item) => (
+        <ButtonGroup key={item} size={item as ButtonVariants['size']}>
+          <Button>One</Button>
+          <Button>Two</Button>
+          <Button>Three</Button>
+          <Button>Four</Button>
+        </ButtonGroup>
+      ))}
+    </div>
+  )
+}`;
+
+export const buttonGroupAsIconCode = `import { Button, ButtonGroup, type ButtonVariants } from '@/components/ui/Button';
+
+export default function Page() {
+  return (
+    <ButtonGroup asIcon>
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+      <Button>Four</Button>
+    </ButtonGroup>
+  )
+}`;
+
+export const buttonGroupDisabledCode = `import { Button, ButtonGroup, type ButtonVariants } from '@/components/ui/Button';
+
+export default function Page() {
+  return (
+    <ButtonGroup asIcon>
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+      <Button>Four</Button>
     </ButtonGroup>
   )
 }`;

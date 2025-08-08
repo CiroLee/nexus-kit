@@ -3,7 +3,7 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IconBrandGithub, IconBrandX } from '@tabler/icons-react';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import ThemeSwitch from '@/components/business/ThemeSwitch';
 import ToggleSidebarButton from './ToggleSidebarButton';
 import Show from './Show';

@@ -4,7 +4,7 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import CodeBox from '@/components/business/CodeBox';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import { Card, CardHeader, CardTitle, CardBody, CardFooter } from '@/components/ui/Card';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import { IconDots } from '@tabler/icons-react';
 import { defaultCode, widthFooterCode } from '@/codes/demos/code.cards';
 import CodeDrawer from '@/components/business/CodeDrawer';

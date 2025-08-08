@@ -150,6 +150,10 @@ export const navConfig = [
         href: '/docs/avatars',
       },
       {
+        name: 'Avatar Group',
+        href: '/docs/avatar-groups',
+      },
+      {
         name: 'Calendar',
         href: '/docs/calendars',
       },

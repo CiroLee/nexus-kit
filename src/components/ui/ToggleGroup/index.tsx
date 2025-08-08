@@ -3,7 +3,7 @@ import { createContext, useContext } from 'react';
 import { ToggleGroup as ToggleGroupPrimitive } from 'radix-ui';
 import { cn } from '@/lib/utils';
 import { cva } from 'class-variance-authority';
-interface ToggleGroupVariants {
+export interface ToggleGroupVariants {
   variant?: 'light' | 'bordered';
   size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;

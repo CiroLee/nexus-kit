@@ -2,7 +2,7 @@
 import { IconTrash, IconDots, IconPlayerTrackNextFilled, IconPlayerPauseFilled, IconPlayerPlayFilled } from '@tabler/icons-react';
 import Image from 'next/image';
 import { Card, CardBody, CardHeader } from '../ui/Card';
-import Button from '../ui/Button';
+import { Button } from '../ui/Button';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 

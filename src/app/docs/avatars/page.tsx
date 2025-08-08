@@ -1,38 +1,18 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import CodeBox from '@/components/business/CodeBox';
-import { Avatar, AvatarGroup } from '@/components/ui/Avatar';
+import { Avatar } from '@/components/ui/Avatar';
 import { IconUserFilled } from '@tabler/icons-react';
-import { defaultCode, sizeCode, borderedCode, fallbackCode, orientationHCode, orientationVCode } from '@/codes/demos/code.avatars';
+import { defaultCode, sizeCode, borderedCode, fallbackCode } from '@/codes/demos/code.avatars';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
-  {
-    anchorId: 'default',
-    label: 'default',
-  },
-  {
-    anchorId: 'size',
-    label: 'size',
-  },
-  {
-    anchorId: 'bordered',
-    label: 'bordered',
-  },
-  {
-    anchorId: 'fallback',
-    label: 'fallback',
-  },
-  {
-    anchorId: 'orientation-horizontal',
-    label: 'orientation horizontal',
-  },
-  {
-    anchorId: 'orientation-vertical',
-    label: 'orientation vertical',
-  },
+  { anchorId: 'default', label: 'default' },
+  { anchorId: 'size', label: 'size' },
+  { anchorId: 'bordered', label: 'bordered' },
+  { anchorId: 'fallback', label: 'fallback' },
 ];
 
 export default async function AvatarPage() {
@@ -69,24 +49,6 @@ export default async function AvatarPage() {
             <Avatar alt="avatar 2" fallback={<IconUserFilled size={20} />} />
             <Avatar alt="avatar 3" fallbackClassName="!bg-orange-400" fallback={<IconUserFilled size={20} />} />
           </div>
-        </PreviewAndCode>
-        <PreviewAndCode anchorId="orientation-horizontal" codeText={orientationHCode} title="avatar group" description="orientation='horizontal'" code={<CodeBox code={orientationHCode} />}>
-          <AvatarGroup orientation="horizontal">
-            <Avatar bordered src="/images/avatar-1.png" alt="avatar 1" />
-            <Avatar bordered src="/images/avatar-2.png" alt="avatar 2" />
-            <Avatar bordered src="/images/avatar-3.png" alt="avatar 3" />
-            <Avatar bordered src="/images/avatar-4.png" alt="avatar 4" />
-            <Avatar bordered alt="more" fallback="+2" />
-          </AvatarGroup>
-        </PreviewAndCode>
-        <PreviewAndCode anchorId="orientation-vertical" codeText={orientationVCode} title="avatar group" description="orientation='vertical'" code={<CodeBox code={orientationVCode} />}>
-          <AvatarGroup orientation="vertical">
-            <Avatar bordered src="/images/avatar-1.png" alt="avatar 1" />
-            <Avatar bordered src="/images/avatar-2.png" alt="avatar 2" />
-            <Avatar bordered src="/images/avatar-3.png" alt="avatar 3" />
-            <Avatar bordered src="/images/avatar-4.png" alt="avatar 4" />
-            <Avatar bordered alt="more" fallback="+2" />
-          </AvatarGroup>
         </PreviewAndCode>
       </div>
       <OnThisPage list={navList} />

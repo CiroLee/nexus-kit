@@ -1,7 +1,7 @@
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import SectionIntro from '@/components/business/SectionIntro';
 import Collapsible from '@/components/ui/Collapsible';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import CodeBox from '@/components/business/CodeBox';
 import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { type AnchorItem } from '@/components/business/OnThisPage';

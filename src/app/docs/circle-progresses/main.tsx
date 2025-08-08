@@ -6,8 +6,7 @@ import CodeDrawer from '@/components/business/CodeDrawer';
 import ClientCode from '@/components/business/ClientCode';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import CircleProgress from '@/components/ui/CircleProgress';
-import Button from '@/components/ui/Button';
-import ButtonGroup from '@/components/ui/ButtonGroup';
+import { Button, ButtonGroup } from '@/components/ui/Button';
 import { defaultCode, sizeCode, colorsCode, controlledCode } from '@/codes/demos/code.circle-progresses';
 
 const list: AnchorItem[] = [
@@ -52,17 +51,13 @@ export default function CircleProgressPage({ sourceCode }: { sourceCode?: string
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="controlled" title="controlled" codeText={controlledCode} code={<ClientCode code={controlledCode} />}>
-          <div className="flex flex-col justify-center gap-2">
-            <CircleProgress percent={percent} min={MIN} max={MAX}>
+          <div className="flex w-fit flex-col items-center gap-2">
+            <CircleProgress percent={percent} min={MIN} max={MAX} size="lg">
               <span className="text-sm">{percent}%</span>
             </CircleProgress>
-            <ButtonGroup>
-              <Button size="sm" onClick={() => changePercent(-10)}>
-                -
-              </Button>
-              <Button size="sm" onClick={() => changePercent(10)}>
-                +
-              </Button>
+            <ButtonGroup size="sm">
+              <Button onClick={() => changePercent(-10)}>-</Button>
+              <Button onClick={() => changePercent(10)}>+</Button>
             </ButtonGroup>
           </div>
         </PreviewAndCode>
