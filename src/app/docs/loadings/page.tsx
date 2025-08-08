@@ -6,7 +6,7 @@ import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import Loading from '@/components/ui/Loading';
 import { IconLoader } from '@tabler/icons-react';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import ClientCode from '@/components/business/ClientCode';
 import { defaultCode, backdropCode, customIndicatorCode, containLoadingCode } from '@/codes/demos/code.loadings';
 import { getSourceCode } from '@/app/api/github';

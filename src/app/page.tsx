@@ -1,7 +1,7 @@
 import NextLink from 'next/link';
 import { cn } from '@/lib/utils';
 import { IconComponents, IconMoonStars, IconBrandTailwind, IconBrush } from '@tabler/icons-react';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import Heading from '@/components/ui/Heading';
 import Header from '@/components/business/Header';
 import LoginDemo from '@/components/demos/Login';

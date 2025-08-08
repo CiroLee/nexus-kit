@@ -4,7 +4,7 @@ import Heading from '@/components/ui/Heading';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import CodeBox from '@/components/business/CodeBox';
 import Resizable from '@/components/business/Resizable';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 import { getExampleCode } from '@/app/api/github';
 import { removeLastEmptyLine } from '@/utils/utils';

@@ -54,7 +54,9 @@ export default function PreviewAndCode({ anchorId, title, description, codeText 
         </div>
       </div>
       <div className={cn('border-line mt-4 overflow-auto rounded-md border', { 'bg-[#24292e]': value === 'code' })}>
-        <div className={cn('preview-content p-3', { diagnoal: isDiagnoal }, { hidden: value === 'code' })}>{children}</div>
+        <div data-slot="preview-content" className={cn('p-3', { diagnoal: isDiagnoal }, { hidden: value === 'code' })}>
+          {children}
+        </div>
         <div className={cn('max-h-140', { hidden: value === 'preview' })}>{code}</div>
       </div>
     </div>

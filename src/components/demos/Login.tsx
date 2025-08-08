@@ -1,6 +1,6 @@
 import { IconBrandGoogleFilled, IconMail, IconLock } from '@tabler/icons-react';
 import { Card, CardBody, CardHeader, CardTitle } from '../ui/Card';
-import Button from '../ui/Button';
+import { Button } from '../ui/Button';
 import Divider from '../ui/Divider';
 import Input from '../ui/Input';
 

@@ -30,9 +30,11 @@ export function getExampleCode(filePath: string) {
 }
 
 export function getSourceCode(name: string) {
-  const url = `https://api.github.com/repos/CiroLee/nexus-kit/contents/src/components/ui/${name}`;
+  const env = process.env.NODE_ENV;
+  const url = `https://api.github.com/repos/CiroLee/nexus-kit/contents/src/components/ui/${name}${env === 'development' ? '?ref=dev' : ''}`;
   return getGithubCode(url, {
     headers: {
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
       Accept: 'application/vnd.github.raw',
     },
     next: { revalidate: 3600 },

@@ -2,7 +2,7 @@
 import { useMemo, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { IconCopy, IconCheck } from '@tabler/icons-react';
-import Button from '../ui/Button';
+import { Button } from '../ui/Button';
 import Show from './Show';
 
 interface ClientCopyButtonProps {

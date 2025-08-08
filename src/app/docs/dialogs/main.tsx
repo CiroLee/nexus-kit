@@ -3,7 +3,7 @@ import { useState } from 'react';
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import ClientCode from '@/components/business/ClientCode';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import { Dialog, DialogClose } from '@/components/ui/Dialog';
 import { defaultCode, backdropCode, hiddenCode, sizeCode, scrollCode, customFooter, controlledCode } from '@/codes/demos/code.dialogs';
 import CodeDrawer from '@/components/business/CodeDrawer';

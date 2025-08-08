@@ -115,6 +115,14 @@ export const navConfig = [
         name: 'SignaturePanel',
         href: '/docs/signature-panels',
       },
+      {
+        name: 'Toggle',
+        href: '/docs/toggles',
+      },
+      {
+        name: 'Toggle Group',
+        href: '/docs/toggle-groups',
+      },
     ],
   },
   {
@@ -140,6 +148,10 @@ export const navConfig = [
       {
         name: 'Avatar',
         href: '/docs/avatars',
+      },
+      {
+        name: 'Avatar Group',
+        href: '/docs/avatar-groups',
       },
       {
         name: 'Calendar',

@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import Button from '../ui/Button';
+import { Button } from '../ui/Button';
 import { Drawer, DrawerClose } from '../ui/Drawer';
 import { IconX } from '@tabler/icons-react';
 import CodeBox from './CodeBox';

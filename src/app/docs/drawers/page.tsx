@@ -2,7 +2,7 @@ import { IconX } from '@tabler/icons-react';
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import CodeBox from '@/components/business/CodeBox';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import { Drawer, DrawerClose } from '@/components/ui/Drawer';
 import Heading from '@/components/ui/Heading';
 import { placementCode, backdropCode, widthCode, heightCode, contentCode } from '@/codes/demos/code.drawers';

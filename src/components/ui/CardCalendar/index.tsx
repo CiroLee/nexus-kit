@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { cva } from 'class-variance-authority';
 import { IconChevronLeft } from '@tabler/icons-react';
-import Button from '../Button';
+import { Button } from '../Button';
 import CalendarGenerator from '../shared/calendar';
 import { cn } from '@/lib/utils';
 import { isInCurrentMonth, isSameDate } from '../shared/dateUtils';

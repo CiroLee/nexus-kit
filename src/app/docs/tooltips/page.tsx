@@ -1,7 +1,7 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import CodeBox from '@/components/business/CodeBox';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import ToolTip from '@/components/ui/Tooltip';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import CodeDrawer from '@/components/business/CodeDrawer';

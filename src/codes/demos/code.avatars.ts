@@ -47,17 +47,21 @@ export default function Page() {
   )
 }`;
 
-export const orientationHCode = `import { Avatar, AvatarGroup } from "@/components/ui/Avatar";
+export const orientationHCode = `import { Avatar, AvatarGroup, type AvatarVariants } from "@/components/ui/Avatar";
 
 export default function Page() {
   return (
-    <AvatarGroup orientation="horizontal">
-      <Avatar bordered src="/images/avatar-1.png" alt="avatar 1" />
-      <Avatar bordered src="/images/avatar-2.png" alt="avatar 2" />
-      <Avatar bordered src="/images/avatar-3.png" alt="avatar 3" />
-      <Avatar bordered src="/images/avatar-4.png" alt="avatar 4" />
-      <Avatar bordered alt="more" fallback="+2" />
-    </AvatarGroup>
+    <div className="space-y-8">
+      {['sm', 'md', 'lg', 'xl'].map((size) => (
+        <AvatarGroup orientation="horizontal" key={size} size={size as AvatarVariants['size']}>
+          <Avatar bordered src="/images/avatar-1.png" alt="avatar 1" />
+          <Avatar bordered src="/images/avatar-2.png" alt="avatar 2" />
+          <Avatar bordered src="/images/avatar-3.png" alt="avatar 3" />
+          <Avatar bordered src="/images/avatar-4.png" alt="avatar 4" />
+          <Avatar bordered alt="more" fallback="+2" />
+        </AvatarGroup>
+      ))}
+</div>
   )
 }`;
 

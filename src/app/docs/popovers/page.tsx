@@ -1,7 +1,7 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import CodeBox from '@/components/business/CodeBox';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import Divider from '@/components/ui/Divider';
 import { Popover, PopoverClose } from '@/components/ui/Popover';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
