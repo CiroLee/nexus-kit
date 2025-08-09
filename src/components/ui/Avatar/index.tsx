@@ -31,7 +31,7 @@ const avatarGroup = cva('flex data-[orientation=horizontal]:-space-x-2 data-[ori
 });
 export function AvatarGroup({ children, className, orientation = 'horizontal', size, ...props }: AvatarGroupProps) {
   return (
-    <div data-orientation={orientation} className={cn(avatarGroup({ orientation, size, ...props }))}>
+    <div data-orientation={orientation} className={cn(avatarGroup({ orientation, size, className, ...props }))}>
       <AvatarGroupContext.Provider value={{ size, ...props }}>{children}</AvatarGroupContext.Provider>
     </div>
   );
