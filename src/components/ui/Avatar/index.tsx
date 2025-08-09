@@ -4,20 +4,35 @@ import { Avatar as AvatarPrimitive } from 'radix-ui';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 
-const AvatarGroupContext = createContext<{ size: AvatarVariants['size'] }>({
+const AvatarGroupContext = createContext<AvatarVariants>({
   size: 'md',
+  rounded: false,
+  bordered: false,
 });
 
-interface AvatarGroupProps {
-  size?: AvatarVariants['size'];
+interface AvatarGroupProps extends AvatarVariants {
   children?: React.ReactNode;
   className?: string;
   orientation?: 'horizontal' | 'vertical';
 }
-export function AvatarGroup({ children, className, size, orientation = 'horizontal' }: AvatarGroupProps) {
+const avatarGroup = cva('flex data-[orientation=horizontal]:-space-x-2 data-[orientation=vertical]:-space-y-2', {
+  variants: {
+    orientation: {
+      horizontal: 'flex-row',
+      vertical: 'flex-col',
+    },
+    size: {
+      sm: '',
+      md: '',
+      lg: 'data-[orientation=horizontal]:-space-x-3 data-[orientation=vertical]:-space-y-3',
+      xl: 'data-[orientation=horizontal]:-space-x-4 data-[orientation=vertical]:-space-y-4',
+    },
+  },
+});
+export function AvatarGroup({ children, className, orientation = 'horizontal', size, ...props }: AvatarGroupProps) {
   return (
-    <div className={cn('flex flex-row -space-x-2', { 'flex-col -space-y-2 space-x-0': orientation === 'vertical' }, className)}>
-      <AvatarGroupContext.Provider value={{ size }}>{children}</AvatarGroupContext.Provider>
+    <div data-orientation={orientation} className={cn(avatarGroup({ orientation, size, ...props }))}>
+      <AvatarGroupContext.Provider value={{ size, ...props }}>{children}</AvatarGroupContext.Provider>
     </div>
   );
 }
@@ -57,9 +72,13 @@ interface AvatarProps extends React.ComponentPropsWithRef<typeof AvatarPrimitive
 }
 export function Avatar({ src, alt, bordered, rounded, fallback, width, height, size, className, fallbackClassName, ...props }: AvatarProps) {
   const context = useContext(AvatarGroupContext);
-  const _size = size ?? context.size;
+  const _props = {
+    size: size ?? context?.size,
+    bordered: bordered ?? context?.bordered,
+    rounded: rounded ?? context?.rounded,
+  };
   return (
-    <AvatarPrimitive.Root className={cn(avatar({ size: _size, bordered, rounded, className }))} {...props}>
+    <AvatarPrimitive.Root className={cn(avatar({ ..._props, className }))} {...props}>
       <AvatarPrimitive.Image className="size-full rounded-[inherit]" alt={alt} width={width} height={height} src={src} />
       <AvatarPrimitive.Fallback className={cn(fallbackStyle({ className: fallbackClassName }))}>{fallback}</AvatarPrimitive.Fallback>
     </AvatarPrimitive.Root>

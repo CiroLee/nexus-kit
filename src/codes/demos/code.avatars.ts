@@ -47,7 +47,7 @@ export default function Page() {
   )
 }`;
 
-export const orientationHCode = `import { Avatar, AvatarGroup, type AvatarVariants } from "@/components/ui/Avatar";
+export const avatarGroupSizeCode = `import { Avatar, AvatarGroup, type AvatarVariants } from "@/components/ui/Avatar";
 
 export default function Page() {
   return (
@@ -75,6 +75,20 @@ export default function Page() {
       <Avatar bordered src="/images/avatar-3.png" alt="avatar 3" />
       <Avatar bordered src="/images/avatar-4.png" alt="avatar 4" />
       <Avatar bordered alt="more" fallback="+2" />
+    </AvatarGroup>
+  )
+}`;
+
+export const roundedCode = `import { Avatar, AvatarGroup } from "@/components/ui/Avatar";
+
+export default function Page() {
+  return (
+    <AvatarGroup bordered rounded>
+      <Avatar src="/images/avatar-1.png" alt="avatar 1" />
+      <Avatar src="/images/avatar-2.png" alt="avatar 2" />
+      <Avatar src="/images/avatar-3.png" alt="avatar 3" />
+      <Avatar src="/images/avatar-4.png" alt="avatar 4" />
+      <Avatar alt="more" fallback="+2" />
     </AvatarGroup>
   )
 }`;
