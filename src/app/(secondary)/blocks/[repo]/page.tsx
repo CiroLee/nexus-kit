@@ -33,7 +33,7 @@ export default async function Page({ params }: { params: Promise<{ repo: string 
           <PreviewAndCode
             key={index}
             isDiagnoal
-            className="xl:max-w-full [&_.preview-content]:p-0"
+            className="xl:max-w-full [&_.preview-content]:p-0 [&_[data-slot=preview-content]]:p-0"
             title={item.title}
             codeText={removeLastEmptyLine(codesArray[index]) || ''}
             code={<CodeBox code={removeLastEmptyLine(codesArray[index]) || ''} />}
