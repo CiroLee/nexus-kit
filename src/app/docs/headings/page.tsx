@@ -18,7 +18,7 @@ export default async function HeadingPage() {
   const sourceCode = await getSourceCode('Heading/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Heading" description="Headings are used to display the title content." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="as" codeText={asCode} title="as" code={<CodeBox code={asCode} />}>

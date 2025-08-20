@@ -38,7 +38,7 @@ export default async function DataListPage() {
   const sourceCode = await getSourceCode('DataList/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="DataList" description="DataList is used to display the list of data." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

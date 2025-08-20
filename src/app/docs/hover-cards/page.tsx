@@ -45,7 +45,7 @@ export default async function HoverCardPage() {
   const sourceCode = await getSourceCode('HoverCard/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="HoverCard" description="HoverCard is used to display content when hovering over an element." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

@@ -17,7 +17,7 @@ export default async function AvatarPage() {
   const sourceCode = await getSourceCode('Avatar/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Avatar Group" description="Avatar Group is a group of avatars." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="size" codeText={avatarGroupSizeCode} title="size" code={<CodeBox code={avatarGroupSizeCode} />}>

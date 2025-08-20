@@ -20,7 +20,7 @@ export default async function EmptyPage() {
   const sourceCode = await getSourceCode('Empty/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Empty" description="Empty is a component that displays an empty placeholder when no data is available." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
@@ -32,7 +32,7 @@ export default async function EmptyPage() {
         <PreviewAndCode anchorId="custom-description" title="custom description" codeText={descriptionCode} code={<CodeBox code={descriptionCode} />}>
           <Empty className="h-40" description={<p className="text-sm text-red-500">Ops! No data available</p>} />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="use-in-table" title="use in table" codeText={inTableCode} code={<CodeBox code={inTableCode} />}>
+        <PreviewAndCode center={false} anchorId="use-in-table" title="use in table" codeText={inTableCode} code={<CodeBox code={inTableCode} />}>
           <Table>
             <TableHeader>
               <TableRow>

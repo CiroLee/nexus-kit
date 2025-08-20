@@ -17,7 +17,7 @@ export default async function CenterPage() {
   const sourceCode = await getSourceCode('Center/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Center" description="Center is a layout component that centers its children." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

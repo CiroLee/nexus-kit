@@ -18,7 +18,7 @@ export default async function ImagePage() {
   const sourceCode = await getSourceCode('Image/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Image" description="Image is used to display the image content." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

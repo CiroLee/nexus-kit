@@ -18,7 +18,7 @@ export default async function Page() {
   const sourceCode = await getSourceCode('Tag/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Tag" description="Tags are used to categorize content." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="colors" title="colors" codeText={colorsCode} code={<CodeBox code={colorsCode} />}>

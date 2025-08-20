@@ -26,7 +26,7 @@ export default async function ButtonsPage() {
   const buttonVariantsCode = await getSourceCode('Button/buttonVariants.ts');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Button" description="Buttons are used to trigger actions." />
         <CodeDrawer
           codeTabs={[

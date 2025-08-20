@@ -22,7 +22,7 @@ export default async function KbdPage() {
   const sourceCode = await getSourceCode('Kbd/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Kbd" description="Kbd is a component that displays keyboard shortcuts." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

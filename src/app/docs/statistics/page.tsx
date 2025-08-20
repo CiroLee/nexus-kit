@@ -23,7 +23,7 @@ export default async function StatisticPage() {
 
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Statistic" description="Statistic is used to display the statistic content width a title and value." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

@@ -17,7 +17,7 @@ export default async function HighlightPage() {
   const sourceCode = await getSourceCode('Highlight/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Highlight" description="Highlight is used to highlight subsets of text." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

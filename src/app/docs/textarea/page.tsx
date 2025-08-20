@@ -30,7 +30,7 @@ export default async function TextareaPage() {
   const sourceCode = await getSourceCode('Textarea/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Textarea" description="Inputs allow users to enter large texts, they usually appear in forms." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

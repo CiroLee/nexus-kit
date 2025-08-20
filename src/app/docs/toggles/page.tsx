@@ -20,7 +20,7 @@ export default async function TogglePage() {
   const sourceCode = await getSourceCode('Toggle/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Toggle" description="Toggle component is a two-state button that can be either on or off." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

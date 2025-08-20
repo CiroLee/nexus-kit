@@ -14,10 +14,10 @@ export default async function CollapsiblePage() {
   const sourceCode = await getSourceCode('Collapsible/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Collapsible" description="Collapsible is an interactive element that toggles a panel's visibility." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
+        <PreviewAndCode center={false} anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Collapsible className="pt-4" trigger={<Button>toggle</Button>}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquet nisl, eu aliquam nisl nunc eu nisl.
           </Collapsible>

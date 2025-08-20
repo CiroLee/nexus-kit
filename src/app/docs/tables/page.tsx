@@ -48,10 +48,10 @@ export default async function TablePage() {
   const sourceCode = await getSourceCode('Table/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Table" description="A table is a set of data that is presented in a grid format, with rows and columns." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
+        <PreviewAndCode center={false} anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <Table>
             <TableHeader>
               <TableRow>
@@ -79,7 +79,7 @@ export default async function TablePage() {
             </TableBody>
           </Table>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="header-fixed" title="header fixed" codeText={fixedHeaderCode} code={<CodeBox code={fixedHeaderCode} />}>
+        <PreviewAndCode center={false} anchorId="header-fixed" title="header fixed" codeText={fixedHeaderCode} code={<CodeBox code={fixedHeaderCode} />}>
           <Table fixedHeader>
             <TableHeader>
               <TableRow>
@@ -100,7 +100,7 @@ export default async function TablePage() {
             </TableBody>
           </Table>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="striped" title="striped" codeText={stripedCode} code={<CodeBox code={stripedCode} />}>
+        <PreviewAndCode center={false} anchorId="striped" title="striped" codeText={stripedCode} code={<CodeBox code={stripedCode} />}>
           <Table fixedHeader>
             <TableHeader>
               <TableRow>

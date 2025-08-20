@@ -62,7 +62,7 @@ export default function CalendarPage() {
   }, []);
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Calendar" description="Calendar is a component to display date in calendar form." />
         <CodeDrawer
           isClient
@@ -71,19 +71,19 @@ export default function CalendarPage() {
             { id: 'calendar', label: 'calendar.ts', content: sourceCode.core },
           ]}
         />
-        <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<ClientCode code={defaultCode} />}>
+        <PreviewAndCode center={false} anchorId="default" title="default" codeText={defaultCode} code={<ClientCode code={defaultCode} />}>
           <Calendar />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="start-week-on-sunday" title="starWeekOnSunday" codeText={startOnSunday} code={<ClientCode code={startOnSunday} />}>
+        <PreviewAndCode center={false} anchorId="start-week-on-sunday" title="starWeekOnSunday" codeText={startOnSunday} code={<ClientCode code={startOnSunday} />}>
           <Calendar startWeekOnSunday />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="show-center-mark" title="showCenterMark" codeText={centerMark} code={<ClientCode code={centerMark} />}>
+        <PreviewAndCode center={false} anchorId="show-center-mark" title="showCenterMark" codeText={centerMark} code={<ClientCode code={centerMark} />}>
           <Calendar showCenterMark markType="month" />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="default-value" title="defaultValue" codeText={defaultValueCode} code={<ClientCode code={defaultValueCode} />}>
+        <PreviewAndCode center={false} anchorId="default-value" title="defaultValue" codeText={defaultValueCode} code={<ClientCode code={defaultValueCode} />}>
           <Calendar showCenterMark defaultValue={new Date('2020/1/2')} />
         </PreviewAndCode>
-        <PreviewAndCode anchorId="controlled" title="controlled" codeText={controlledCode} code={<ClientCode code={controlledCode} />}>
+        <PreviewAndCode center={false} anchorId="controlled" title="controlled" codeText={controlledCode} code={<ClientCode code={controlledCode} />}>
           <div>
             <div className="mb-4 flex justify-end gap-2">
               <Select className="w-24" value={`${date.year}`} items={years} onValueChange={(val) => setDate((pre) => ({ ...pre, year: Number(val) }))} />
@@ -109,7 +109,7 @@ export default function CalendarPage() {
             />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="custom-cell-content" title="cellContent" codeText={cellContentCode} code={<ClientCode code={cellContentCode} />}>
+        <PreviewAndCode center={false} anchorId="custom-cell-content" title="cellContent" codeText={cellContentCode} code={<ClientCode code={cellContentCode} />}>
           <Calendar
             showCenterMark
             cellContent={(date) =>

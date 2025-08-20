@@ -17,7 +17,7 @@ export default async function SkeletonPage() {
   const sourceCode = await getSourceCode('Skeleton/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Skeleton" description="Skeleton is a placeholder component that is used to display a loading state." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

@@ -24,7 +24,7 @@ export default async function CardPage() {
   const sourceCode = await getSourceCode('Card/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Card" description="Cards are used to display related contents and actions." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<CodeBox code={defaultCode} />}>

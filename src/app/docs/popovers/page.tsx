@@ -31,7 +31,7 @@ export default async function PopoverPage() {
   const sourceCode = await getSourceCode('Popover/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Popover" description="Popover is a component that displays a popup content when the user clicks on an element." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

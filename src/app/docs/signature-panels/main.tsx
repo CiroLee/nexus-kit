@@ -34,21 +34,23 @@ export default function SignaturePanelMain({ sourceCode }: { sourceCode?: string
 
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="SignaturePanel" description="SignaturePanel is a component that allows users to draw signatures." />
         <CodeDrawer isClient code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<ClientCode code={defaultCode} />}>
           <SignaturePanel className="h-80 overflow-hidden rounded" />
         </PreviewAndCode>
         <PreviewAndCode anchorId="save-clear" title="save and clear" codeText={clearAndSaveCode} code={<ClientCode code={clearAndSaveCode} />}>
-          <SignaturePanel ref={signatureMethodRef} className="h-80 overflow-hidden rounded" onDrawEnd={() => setIsEmptySignature(false)} />
-          <div className="mt-4 flex gap-2">
-            <Button disabled={isEmptySignature} onClick={handleClear}>
-              Clear
-            </Button>
-            <Button disabled={isEmptySignature} onClick={handleSave}>
-              Save
-            </Button>
+          <div>
+            <SignaturePanel ref={signatureMethodRef} className="h-80 overflow-hidden rounded" onDrawEnd={() => setIsEmptySignature(false)} />
+            <div className="mt-4 flex gap-2">
+              <Button disabled={isEmptySignature} onClick={handleClear}>
+                Clear
+              </Button>
+              <Button disabled={isEmptySignature} onClick={handleSave}>
+                Save
+              </Button>
+            </div>
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="custom" title="custom" codeText={customCode} code={<ClientCode code={customCode} />}>

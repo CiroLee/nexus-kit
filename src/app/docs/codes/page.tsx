@@ -17,7 +17,7 @@ export default async function CodePage() {
   const sourceCode = await getSourceCode('Code/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Code" description="Code is used to display the inline code content." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

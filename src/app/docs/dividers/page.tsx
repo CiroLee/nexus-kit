@@ -23,7 +23,7 @@ export default async function DividerPage() {
   const sourceCode = await getSourceCode('Divider/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Divider" description="Divider is used to separate content." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
@@ -41,7 +41,7 @@ export default async function DividerPage() {
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="with-content" title="with content" codeText={withContentCode} code={<CodeBox code={withContentCode} />}>
-          <div className="flex">
+          <div className="flex w-full md:w-[40%]">
             <Divider orientation="horizontal" className="flex-1">
               divider
             </Divider>

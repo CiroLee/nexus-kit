@@ -31,7 +31,7 @@ export default async function TabsPage() {
   const sourceCode = await getSourceCode('Tabs/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Tabs" description="Tabs are used to categorize content. They are used to group content together and make it easier to find." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

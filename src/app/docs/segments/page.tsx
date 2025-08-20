@@ -61,7 +61,7 @@ export default async function SegmentPage() {
   const sourceCode = await getSourceCode('Segment/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Segment" description="Segment is a controller to switch between different options." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

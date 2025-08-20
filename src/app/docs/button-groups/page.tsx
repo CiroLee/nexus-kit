@@ -22,7 +22,7 @@ export default async function ButtonGroupPage() {
   const buttonVariantsCode = await getSourceCode('Button/buttonVariants.ts');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="ButtonGroup" description="ButtonGroup is a group of buttons." />
         <CodeDrawer
           codeTabs={[

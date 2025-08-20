@@ -87,20 +87,20 @@ export default async function AccordionPage() {
   const sourceCode = await getSourceCode('Accordion/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Accordion" description="Accordion displays interactive vertical tabs where each clickable heading displays its corresponding content panel below it." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
-          <Accordion type="single" collapsible items={accordionItems} className="max-w-100" />
+          <Accordion type="single" collapsible items={accordionItems} className="w-80" />
         </PreviewAndCode>
         <PreviewAndCode anchorId="multiple" title="multiple" codeText={multipleCode} code={<CodeBox code={multipleCode} />}>
-          <Accordion type="multiple" items={accordionItems} className="max-w-100" />
+          <Accordion type="multiple" items={accordionItems} className="w-80" />
         </PreviewAndCode>
         <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<CodeBox code={disabledCode} />}>
-          <Accordion type="single" collapsible items={accordionItems2} className="max-w-100" />
+          <Accordion type="single" collapsible items={accordionItems2} className="w-80" />
         </PreviewAndCode>
         <PreviewAndCode anchorId="with-icon" title="with icon" codeText={withIconCode} code={<CodeBox code={withIconCode} />}>
-          <Accordion type="single" collapsible items={accordionItems3} className="max-w-100" />
+          <Accordion type="single" collapsible items={accordionItems3} className="w-80" />
         </PreviewAndCode>
       </div>
       <OnThisPage list={navList} />
