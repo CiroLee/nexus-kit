@@ -115,7 +115,7 @@ const guides: GuideItem[] = [
 export default function Page() {
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <Heading as="h1" className="mb-8">
           Installation
         </Heading>

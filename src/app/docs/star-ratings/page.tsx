@@ -30,7 +30,7 @@ export default async function StarRatingPage() {
   const sourceCode = await getSourceCode('StarRating/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="StarRating" description="StarRating is a component that shows star ratings in a detailed way." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="star" title="star" codeText={starCode} code={<CodeBox code={starCode} />}>

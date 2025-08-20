@@ -3,10 +3,7 @@
 @import '../components/ui/styles/animation.css';
 
 @utility main-container {
-  flex: 1;
-  @media (width >= 80rem /* 1280px */) {
-    padding-right: 10vw;
-  }
+  @apply relative flex-1 lg:mr-10 xl:pr-0;
 }
 
 code {

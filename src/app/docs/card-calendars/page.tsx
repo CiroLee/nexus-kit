@@ -18,7 +18,7 @@ export default async function CardCalendarPage() {
   const core = await getSourceCode('shared/calendar.ts');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="CardCalendar" description="CardCalendar is a calendar component that displays a calendar with cards form." />
         <CodeDrawer
           isClient

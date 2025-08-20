@@ -87,11 +87,11 @@ const treeNodesWithLinks: TreeNodeItem[] = [
 export default function TreePage({ sourceCode }: { sourceCode?: string }) {
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Tree" description="A tree component for displaying hierarchical data." />
         <CodeDrawer isClient code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<ClientCode code={defaultCode} />}>
-          <Tree className="max-w-60">
+          <Tree className="min-w-30">
             <TreeBranch label="root">
               <TreeItem>page 1</TreeItem>
               <TreeItem>page 2</TreeItem>
@@ -101,7 +101,7 @@ export default function TreePage({ sourceCode }: { sourceCode?: string }) {
           </Tree>
         </PreviewAndCode>
         <PreviewAndCode anchorId="hide-line" title="hide line" codeText={hideLineCode} code={<ClientCode code={hideLineCode} />}>
-          <Tree className="max-w-60">
+          <Tree className="min-w-30">
             <TreeBranch label="root" hideLine>
               <TreeItem>page 1</TreeItem>
               <TreeItem>page 2</TreeItem>
@@ -110,7 +110,7 @@ export default function TreePage({ sourceCode }: { sourceCode?: string }) {
           </Tree>
         </PreviewAndCode>
         <PreviewAndCode anchorId="indicator" title="indicator" codeText={indicatorCode} code={<ClientCode code={indicatorCode} />}>
-          <Tree className="max-w-60">
+          <Tree className="min-w-30">
             <TreeBranch indicator={<IconFolder size={16} />} defaultOpen label="src">
               <TreeItem indicator={<IconFile size={16} />}>index.html</TreeItem>
               <TreeItem indicator={<IconFile size={16} />}>style.css</TreeItem>
@@ -129,7 +129,7 @@ export default function TreePage({ sourceCode }: { sourceCode?: string }) {
           }
           codeText={indicatorFnCode}
           code={<ClientCode code={indicatorFnCode} />}>
-          <Tree className="max-w-60">
+          <Tree className="min-w-30">
             <TreeBranch indicator={(open) => (open ? <IconFolderOpen size={16} /> : <IconFolder size={16} />)} label="src">
               <TreeItem indicator={<IconFile size={16} />}>index.html</TreeItem>
               <TreeItem indicator={<IconFile size={16} />}>style.css</TreeItem>
@@ -139,7 +139,7 @@ export default function TreePage({ sourceCode }: { sourceCode?: string }) {
           </Tree>
         </PreviewAndCode>
         <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<ClientCode code={disabledCode} />}>
-          <Tree className="max-w-60">
+          <Tree className="min-w-30">
             <TreeBranch indicator={<IconFolder size={16} />} label="front-end">
               <TreeItem indicator={<IconFile size={16} />} disabled>
                 index.html
@@ -164,12 +164,12 @@ export default function TreePage({ sourceCode }: { sourceCode?: string }) {
           }
           codeText={treeNodeCode}
           code={<ClientCode code={treeNodeCode} />}>
-          <Tree className="max-w-60">
+          <Tree className="min-w-30">
             <TreeNode nodes={treeNodes} />
           </Tree>
         </PreviewAndCode>
         <PreviewAndCode anchorId="as-link" title="as link" codeText={asLinkCode} code={<ClientCode code={asLinkCode} />}>
-          <Tree className="max-w-60">
+          <Tree className="min-w-30">
             <TreeBranch indicator={(open) => (open ? <IconFolderOpen size={16} /> : <IconFolder size={16} />)} label="Documentation">
               <TreeItem indicator={<IconFile size={16} />} as={Link} href="/docs">
                 Installation
@@ -184,7 +184,7 @@ export default function TreePage({ sourceCode }: { sourceCode?: string }) {
           </Tree>
         </PreviewAndCode>
         <PreviewAndCode anchorId="as-link-tree-node" title="as link in TreeNode" codeText={asLink2Code} code={<ClientCode code={asLink2Code} />}>
-          <Tree className="max-w-60">
+          <Tree className="min-w-40">
             <TreeNode nodes={treeNodesWithLinks} />
           </Tree>
         </PreviewAndCode>

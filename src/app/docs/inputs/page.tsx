@@ -34,7 +34,7 @@ export default async function InputPage() {
   const sourceCode = await getSourceCode('Input/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Input" description="Inputs allow users to enter text, they usually appear in forms." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="size" codeText={sizeCode} title="size" code={<CodeBox code={sizeCode} />}>

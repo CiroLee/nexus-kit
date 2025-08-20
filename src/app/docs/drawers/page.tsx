@@ -37,7 +37,7 @@ export default async function DrawerPage() {
   const sourceCode = await getSourceCode('Drawer/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Drawer" description="Drawers are used to display additional content on top of the main content." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="placement" codeText={placementCode} title="placement" code={<CodeBox code={placementCode} />}>

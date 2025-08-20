@@ -20,7 +20,7 @@ export default async function TimelinePage() {
   const sourceCode = await getSourceCode('Timeline/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Timeline" description="Timeline is used to display a series of events in chronological order." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

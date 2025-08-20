@@ -21,11 +21,11 @@ export default async function NumberInputPage() {
   const sourceCode = await getSourceCode('NumberInput/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="NumberInput" description="NumberInput is used to enter a number, and increase or decrease the value using the stepper buttons." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
-          <NumberInput className="max-w-80" defaultValue={2} />
+          <NumberInput className="w-50" defaultValue={2} />
         </PreviewAndCode>
         <PreviewAndCode anchorId="size" title="size" codeText={sizeCode} code={<CodeBox code={sizeCode} />}>
           <div className="flex items-center gap-4">
@@ -35,16 +35,16 @@ export default async function NumberInputPage() {
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="min-max" title="min and max" codeText={minMaxCode} code={<CodeBox code={minMaxCode} />}>
-          <NumberInput min={2} max={20} className="max-w-80" />
+          <NumberInput min={2} max={20} className="w-50" />
         </PreviewAndCode>
         <PreviewAndCode anchorId="step" title="step" codeText={stepCode} code={<CodeBox code={stepCode} />}>
-          <NumberInput step={2} className="max-w-80" />
+          <NumberInput step={2} className="w-50" />
         </PreviewAndCode>
         <PreviewAndCode anchorId="disabled" title="disabled" codeText={disabledCode} code={<CodeBox code={disabledCode} />}>
-          <NumberInput disabled className="max-w-80" />
+          <NumberInput disabled className="w-50" />
         </PreviewAndCode>
         <PreviewAndCode anchorId="prefix" title="prefix" codeText={prefixCode} code={<CodeBox code={prefixCode} />}>
-          <NumberInput className="max-w-80" prefix={<IconCurrencyDollar size={20} />} />
+          <NumberInput className="w-50" prefix={<IconCurrencyDollar size={20} />} />
         </PreviewAndCode>
       </div>
       <OnThisPage list={navList} />

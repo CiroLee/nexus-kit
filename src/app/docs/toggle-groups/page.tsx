@@ -20,7 +20,7 @@ export default async function ToggleGroupPage() {
   const sourceCode = await getSourceCode('ToggleGroup/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="ToggleGroup" description="ToggleGroup component is a set of two-state buttons that can be either on or off." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode title="default" anchorId="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

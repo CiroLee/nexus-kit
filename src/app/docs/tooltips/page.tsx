@@ -31,7 +31,7 @@ export default async function TooltipPage() {
   const sourceCode = await getSourceCode('Tooltip/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Tooltip" description="Tooltip is a floating text that appears when a user hovers over an element." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

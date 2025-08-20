@@ -20,7 +20,7 @@ export default async function LinkPage() {
   const sourceCode = await getSourceCode('Link/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Link" description="Links are used to navigate between pages or to external resources, providing interactive elements for user navigation." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

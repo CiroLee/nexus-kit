@@ -19,7 +19,7 @@ export default async function AlertDialogPage() {
   const sourceCode = await getSourceCode('AlertDialog/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Alert Dialog" description="Alert dialogs interrupt users with urgent information, details, or actions." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

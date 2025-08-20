@@ -22,7 +22,7 @@ export default async function RadioGroupPage() {
   const sourceCode = await getSourceCode('RadioGroup/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="RadioGroup" description="RadioGroup is a group of radio buttons." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

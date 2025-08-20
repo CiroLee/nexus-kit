@@ -16,6 +16,7 @@ interface PreviewAndCodeProps {
   className?: string;
   isDiagnoal?: boolean;
   trail?: React.ReactNode;
+  center?: boolean;
 }
 
 const options: Option[] = [
@@ -38,10 +39,10 @@ const options: Option[] = [
     value: 'code',
   },
 ];
-export default function PreviewAndCode({ anchorId, title, description, codeText = '', trail, isDiagnoal, children, code, className }: PreviewAndCodeProps) {
+export default function PreviewAndCode({ anchorId, title, description, codeText = '', trail, isDiagnoal, children, code, center = true, className }: PreviewAndCodeProps) {
   const [value, setValue] = useState<Option['value']>('preview');
   return (
-    <div className={cn('mb-8 w-[calc(100vw_-_var(--spacing)*8)] sm:w-full xl:max-w-5xl', className)} id={anchorId}>
+    <div className={cn('mb-8 w-[calc(100vw_-_var(--spacing)*8)] sm:w-full xl:max-w-4xl', className)} id={anchorId}>
       <Heading as="h3" className="whitespace-pre-wrap">
         {title}
       </Heading>
@@ -54,7 +55,7 @@ export default function PreviewAndCode({ anchorId, title, description, codeText 
         </div>
       </div>
       <div className={cn('border-line mt-4 overflow-auto rounded-md border', { 'bg-[#24292e]': value === 'code' })}>
-        <div data-slot="preview-content" className={cn('p-3', { diagnoal: isDiagnoal }, { hidden: value === 'code' })}>
+        <div data-slot="preview-content" className={cn('p-3', { diagnoal: isDiagnoal }, { 'flex items-center justify-center': center }, { hidden: value === 'code' })}>
           {children}
         </div>
         <div className={cn('max-h-140', { hidden: value === 'preview' })}>{code}</div>

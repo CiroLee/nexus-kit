@@ -109,7 +109,7 @@ export default async function SelectPage() {
   const sourceCode = await getSourceCode('Select/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Select" description="Selects are used to select one option from a list." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

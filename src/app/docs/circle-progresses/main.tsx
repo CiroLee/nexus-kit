@@ -28,7 +28,7 @@ export default function CircleProgressPage({ sourceCode }: { sourceCode?: string
   };
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="CircleProgress" description="CircleProgress is a progress indicator component that displays the progress of a task in a circular shape." />
         <CodeDrawer isClient code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<ClientCode code={defaultCode} />}>

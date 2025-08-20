@@ -21,7 +21,7 @@ export default async function NumberStepperPage() {
   const sourceCode = await getSourceCode('NumberStepper/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="NumberStepper" description="A stepper component for number inputs, and increase or decrease the value using the stepper buttons." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

@@ -21,7 +21,7 @@ export default async function BlockquotePage() {
   const sourceCode = await getSourceCode('Blockquote/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Blockquote" description="Blockquote is used to highlight and emphasize text from another source." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

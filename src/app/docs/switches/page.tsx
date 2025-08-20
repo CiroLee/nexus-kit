@@ -30,7 +30,7 @@ export default async function SwitchPage() {
   const sourceCode = await getSourceCode('Switch/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Switch" description="Switches are used to toggle between two mutually exclusive states." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

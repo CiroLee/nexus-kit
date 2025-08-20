@@ -24,7 +24,7 @@ export default function DialogPage({ sourceCode }: { sourceCode?: string }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Dialog" description="Dialogs are used to display custom content to the user via a modal." />
         <CodeDrawer isClient code={sourceCode} />
         <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<ClientCode code={defaultCode} />}>

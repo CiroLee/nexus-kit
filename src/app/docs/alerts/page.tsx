@@ -31,10 +31,10 @@ export default async function HeadingPage() {
   const sourceCode = await getSourceCode('Alert/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Alert" description="Alerts are used to display brief messages." />
         <CodeDrawer code={sourceCode} />
-        <PreviewAndCode codeText={stateCode} anchorId="state" title="state" className="space-y-3" code={<CodeBox code={stateCode} />}>
+        <PreviewAndCode center={false} codeText={stateCode} anchorId="state" title="state" className="space-y-3" code={<CodeBox code={stateCode} />}>
           <div className="space-y-5">
             <Alert state="info">
               <AlertTitle>Alert Title - info</AlertTitle>
@@ -58,7 +58,7 @@ export default async function HeadingPage() {
             </Alert>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="variant" title="variant" codeText={variantCode} code={<CodeBox code={variantCode} />}>
+        <PreviewAndCode center={false} anchorId="variant" title="variant" codeText={variantCode} code={<CodeBox code={variantCode} />}>
           <div className="space-y-5">
             <Alert state="info" variant="solid">
               <AlertTitle>Alert Title - solid</AlertTitle>
@@ -74,13 +74,13 @@ export default async function HeadingPage() {
             </Alert>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode codeText={showIconCode} anchorId="hidden-icon" title="hidden icon" code={<CodeBox code={showIconCode} />}>
+        <PreviewAndCode center={false} codeText={showIconCode} anchorId="hidden-icon" title="hidden icon" code={<CodeBox code={showIconCode} />}>
           <Alert hiddenIcon>
             <AlertTitle>Alert Title</AlertTitle>
             your can add alert content here
           </Alert>
         </PreviewAndCode>
-        <PreviewAndCode codeText={customIcon} anchorId="custom-icon" title="custom Icon" code={<CodeBox code={customIcon} />}>
+        <PreviewAndCode center={false} codeText={customIcon} anchorId="custom-icon" title="custom Icon" code={<CodeBox code={customIcon} />}>
           <Alert state="neutral" icon={<IconTimezone size={20} className="mt-0.5" />}>
             <AlertTitle>Alert Title</AlertTitle>
             your can add alert content here

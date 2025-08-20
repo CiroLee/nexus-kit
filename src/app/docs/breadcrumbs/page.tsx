@@ -22,7 +22,7 @@ export default async function BreadcrumbPage() {
   const sourceCode = await getSourceCode('Breadcrumb/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Breadcrumb" description="Breadcrumb is used to navigate to the current location." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>

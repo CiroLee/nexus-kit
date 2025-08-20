@@ -53,7 +53,7 @@ export default function CheckboxPage({ sourceCode }: { sourceCode?: string }) {
   }, [checkedList, setChecked]);
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Checkbox" description="Checkboxes allow user to select multiple items from a list, or mark on item as selected." />
         <CodeDrawer isClient code={sourceCode} />
         <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<ClientCode code={defaultCode} />}>

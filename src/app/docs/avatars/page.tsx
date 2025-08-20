@@ -19,7 +19,7 @@ export default async function AvatarPage() {
   const sourceCode = await getSourceCode('Avatar/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Avatar" description="Avatars are used to represent a user, and the profile picture." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<CodeBox code={defaultCode} />}>

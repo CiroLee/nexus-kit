@@ -35,7 +35,7 @@ export default async function BadgePage() {
   const sourceCode = await getSourceCode('Badge/index.tsx');
   return (
     <div className="flex">
-      <div className="main-container">
+      <div className="main-container @container">
         <SectionIntro title="Badge" description="Badges are used to display additional information, status, or counts in a compact visual format." />
         <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" codeText={defaultCode} title="default" code={<CodeBox code={defaultCode} />}>
