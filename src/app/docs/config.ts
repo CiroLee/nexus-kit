@@ -197,6 +197,10 @@ export const navConfig = [
         name: 'Tree',
         href: '/docs/trees',
       },
+      {
+        name: 'BrowserFrame',
+        href: '/docs/browser-frames',
+      },
     ],
   },
   {
