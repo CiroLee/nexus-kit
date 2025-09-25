@@ -3,7 +3,10 @@ import PreviewAndCode from '@/components/business/PreviewAndCode';
 import CodeBox from '@/components/business/CodeBox';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import BrowserFrame from '@/components/ui/BrowserFrame';
+import CodeDrawer from '@/components/business/CodeDrawer';
 import { macOSCode, windowsCode, showUrlCode, showTitleCode, asIFrameCode, customContentCode } from '@/codes/demos/code.browser-frames';
+import { getSourceCode } from '@/app/api/github';
+
 const navList: AnchorItem[] = [
   { anchorId: 'macOS', label: 'macOS' },
   { anchorId: 'windows', label: 'windows' },
@@ -14,10 +17,12 @@ const navList: AnchorItem[] = [
 ];
 
 export default async function BrowserFramePage() {
+  const sourceCode = await getSourceCode('BrowserFrame/index.tsx');
   return (
     <div className="flex">
       <div className="main-container @container">
         <SectionIntro title="BrowserFrame" description="BrowserFrame is a component that shows the browser device frame with custom content or iframe inside." />
+        <CodeDrawer code={sourceCode} />
         <PreviewAndCode center={false} anchorId="macOS" title="macOS" codeText={macOSCode} code={<CodeBox code={macOSCode} />}>
           <BrowserFrame browserType="macOS" />
         </PreviewAndCode>
