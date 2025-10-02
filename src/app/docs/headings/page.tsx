@@ -25,6 +25,7 @@ export default async function HeadingPage() {
           <div className="space-y-3">
             <Heading as="h1">I think therefore I am</Heading>
             <Heading as="h2">I think therefore I am</Heading>
+            <Heading as="h3">I think therefore I am</Heading>
             <Heading as="h4">I think therefore I am</Heading>
             <Heading as="h4">I think therefore I am</Heading>
             <Heading as="h5">I think therefore I am</Heading>
