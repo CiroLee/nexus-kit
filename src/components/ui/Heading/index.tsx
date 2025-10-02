@@ -8,7 +8,7 @@ const heading = cva('font-normal', {
       h1: 'text-[2.5rem]/[1.3] tracking-[0.5px] font-bold',
       h2: 'text-[2rem]/[1.4] tracking-[0.3px] font-semibold',
       h3: 'text-[1.75rem]/[1.5] tracking-[0.2px] font-semibold',
-      h4: 'text-[1.5rem]/[1,5] tracking-[0.1px] font-medium',
+      h4: 'text-[1.5rem]/[1.5] tracking-[0.1px] font-medium',
       h5: 'text-[1,25rem]/[1.6] tracking-0 font-medium',
       h6: 'text-[1rem]/[1.5] -tracking-[0.2px]',
     },
