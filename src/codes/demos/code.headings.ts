@@ -7,7 +7,6 @@ export default function Page() {
       <Heading as="h2">I think therefore I am</Heading>
       <Heading as="h3">I think therefore I am</Heading>
       <Heading as="h4">I think therefore I am</Heading>
-      <Heading as="h4">I think therefore I am</Heading>
       <Heading as="h5">I think therefore I am</Heading>
       <Heading as="h6">I think therefore I am</Heading>
     </>
