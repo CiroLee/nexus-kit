@@ -35,7 +35,7 @@ export function TableHeaderCell({ className, ...props }: React.ComponentPropsWit
 }
 
 export function TableRow({ className, ...props }: React.ComponentPropsWithRef<'tr'>) {
-  return <tr className={cn('borer-b border-line border-b transition-colors group-data-striped:even:bg-neutral-50 dark:group-data-striped:even:bg-neutral-700/30', className)} {...props} />;
+  return <tr className={cn('border-line border-b transition-colors group-data-striped:even:bg-neutral-50 dark:group-data-striped:even:bg-neutral-700/30', className)} {...props} />;
 }
 
 export function TableCell({ className, ...props }: React.ComponentPropsWithRef<'td'>) {
