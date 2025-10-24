@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { cva } from 'class-variance-authority';
 import { IconChevronLeft } from '@tabler/icons-react';
 import { Button } from '../Button';
@@ -30,7 +30,11 @@ interface CardCalendarProps extends Omit<React.HTMLAttributes<HTMLDivElement>, '
 }
 const weekdays = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
 export default function CardCalendar({ defaultValue, value, startWeekOnSunday, onValueChange, className, ...props }: CardCalendarProps) {
-  const [selectedValue, setSelectedValue] = useState(value || defaultValue || new Date());
+  const isControlled = value !== undefined;
+  const [uncontrolledValue, setUncontrolledValue] = useState(defaultValue || new Date());
+
+  const selectedValue = isControlled ? value : uncontrolledValue;
+
   const weekHeader = useMemo(() => {
     if (!startWeekOnSunday) {
       const weekCopied = [...weekdays];
@@ -50,7 +54,9 @@ export default function CardCalendar({ defaultValue, value, startWeekOnSunday, o
   }, [selectedValue, startWeekOnSunday]);
 
   const onValueChangeHandler = (date: Date) => {
-    setSelectedValue(date);
+    if (!isControlled) {
+      setUncontrolledValue(date);
+    }
     onValueChange?.(date);
   };
 
@@ -62,14 +68,11 @@ export default function CardCalendar({ defaultValue, value, startWeekOnSunday, o
       clonedDate.setMonth(clonedDate.getMonth() + 1);
     }
 
-    setSelectedValue(clonedDate);
-  };
-
-  useEffect(() => {
-    if (value) {
-      setSelectedValue(value);
+    if (!isControlled) {
+      setUncontrolledValue(clonedDate);
     }
-  }, [value]);
+    onValueChange?.(clonedDate);
+  };
 
   return (
     <div className={cn('border-line bg-background w-70 rounded-md border p-2', className)} {...props}>

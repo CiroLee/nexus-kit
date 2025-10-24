@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import CodeDrawer from '@/components/business/CodeDrawer';
@@ -9,7 +9,6 @@ import { IconLoader } from '@tabler/icons-react';
 import { Button } from '@/components/ui/Button';
 import ClientCode from '@/components/business/ClientCode';
 import { defaultCode, backdropCode, customIndicatorCode, containLoadingCode } from '@/codes/demos/code.loadings';
-import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },

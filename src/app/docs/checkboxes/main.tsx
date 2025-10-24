@@ -25,6 +25,10 @@ export default function CheckboxPage({ sourceCode }: { sourceCode?: string }) {
   const [checked, setChecked] = useState<boolean | 'indeterminate'>(false);
   const [checkedList, setCheckedList] = useState<string[]>([]);
 
+  const isCheckedAll = checkedList.length === CHECKBOX_LIST.length;
+  const isCheckedNone = checkedList.length === 0;
+  const nextCheckedState: boolean | 'indeterminate' = isCheckedAll ? true : isCheckedNone ? false : 'indeterminate';
+
   const toggleCheckAll = (val: boolean | 'indeterminate') => {
     setChecked(val);
     if (val === true) {
@@ -43,14 +47,9 @@ export default function CheckboxPage({ sourceCode }: { sourceCode?: string }) {
   };
 
   useEffect(() => {
-    if (checkedList.length === 3) {
-      setChecked(true);
-    } else if (checkedList.length === 0) {
-      setChecked(false);
-    } else {
-      setChecked('indeterminate');
-    }
-  }, [checkedList, setChecked]);
+    setChecked(nextCheckedState);
+  }, [nextCheckedState]);
+
   return (
     <div className="flex">
       <div className="main-container @container">

@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { Checkbox as CheckboxPrimitive } from 'radix-ui';
@@ -56,23 +56,19 @@ export function Checkbox({ className, id, size, children, defaultChecked, checke
     onCheckedChange?.(checked);
   };
 
-  useEffect(() => {
-    if (checked !== innerChecked && checked !== undefined) {
-      setInnerChecked(checked);
-    }
-  }, [checked, setInnerChecked, innerChecked]);
+  const currentChecked = checked !== innerChecked && checked !== undefined ? checked : innerChecked;
   return (
     <div className={cn('relative flex items-center gap-2.5 select-none', className)}>
       <CheckboxPrimitive.Root
         id={id}
-        checked={innerChecked}
+        checked={currentChecked}
         defaultChecked={defaultChecked}
         onCheckedChange={handleCheckedChange}
         className={cn('peer focus-visible:ring-primary/50 not-disabled:hover:border-primary focus-visible:ring-3', checkbox({ size }))}
         {...props}>
         <CheckboxPrimitive.Indicator className={checkboxIndicator({ size })}>
-          {(innerChecked === true || defaultChecked === true) && <IconCheck size="1em" />}
-          {innerChecked === 'indeterminate' && <IconSquareMinusFilled size="1em" />}
+          {(currentChecked === true || defaultChecked === true) && <IconCheck size="1em" />}
+          {currentChecked === 'indeterminate' && <IconSquareMinusFilled size="1em" />}
         </CheckboxPrimitive.Indicator>
       </CheckboxPrimitive.Root>
       <label className={label({ size })} htmlFor={id}>
@@ -83,8 +79,8 @@ export function Checkbox({ className, id, size, children, defaultChecked, checke
 }
 
 const checkboxCard = cva(
-  `has-[*:focus-visible]:ring-primary/50 relative flex items-center gap-2.5 rounded-md border p-2 select-none
-  has-[*:focus-visible]:ring-3 has-[*:disabled]:cursor-not-allowed border-line has-[*:disabled]:opacity-50`,
+  `has-focus-visible:ring-primary/50 relative flex items-center gap-2.5 rounded-md border p-2 select-none
+  has-focus-visible:ring-3 has-disabled:cursor-not-allowed border-line has-disabled:opacity-50`,
 );
 export function CheckboxCard({ className, ...props }: CheckboxProps) {
   return (

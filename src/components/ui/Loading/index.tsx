@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { IconLoader2 } from '@tabler/icons-react';
 import { cn } from '@/lib/utils';
 import { cva, VariantProps } from 'class-variance-authority';
@@ -32,20 +32,23 @@ export default function Loading({ className, open, backdrop, indicator, isFullsc
   const [visible, setVisible] = useState(false);
   const loadingRef = useRef<HTMLDivElement>(null);
   const animation = useRef<Animation>(null);
-  useEffect(() => {
+
+  useLayoutEffect(() => {
     if (open) {
-      setVisible(true);
-      document.body.setAttribute('style', 'overflow: hidden');
-      if (loadingRef.current) {
-        animation.current = loadingRef.current.animate(
-          { opacity: [0, 1] },
-          {
-            duration: 200,
-            fill: 'both',
-            easing: 'linear',
-          },
-        );
-      }
+      requestAnimationFrame(() => {
+        setVisible(true);
+        document.body.setAttribute('style', 'overflow: hidden');
+        if (loadingRef.current) {
+          animation.current = loadingRef.current.animate(
+            { opacity: [0, 1] },
+            {
+              duration: 200,
+              fill: 'both',
+              easing: 'linear',
+            },
+          );
+        }
+      });
     } else if (loadingRef.current && animation.current) {
       animation.current.reverse();
       animation.current.onfinish = () => {
@@ -58,6 +61,7 @@ export default function Loading({ className, open, backdrop, indicator, isFullsc
       document.body.removeAttribute('style');
     };
   }, [open]);
+
   return (
     <div className="relative">
       {children}

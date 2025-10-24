@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import CalendarGenerator from '../shared/calendar';
 import { isInCurrentMonth, isSameDate } from '../shared/dateUtils';
 import { cn } from '@/lib/utils';
@@ -31,7 +31,10 @@ interface CalendarProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'defa
 const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 export default function Calendar({ defaultValue, value, cellContent, startWeekOnSunday, showCenterMark, markType = 'month', onValueChange, className, ...props }: CalendarProps) {
-  const [selectedValue, setSelectedValue] = useState(value || defaultValue || new Date());
+  const isControlled = value !== undefined;
+  const [uncontrolledValue, setUncontrolledValue] = useState(defaultValue || new Date());
+
+  const selectedValue = isControlled ? value : uncontrolledValue;
 
   const weekHeader = useMemo(() => {
     if (!startWeekOnSunday) {
@@ -63,15 +66,12 @@ export default function Calendar({ defaultValue, value, cellContent, startWeekOn
   }, [markType, selectedValue]);
 
   const onValueChangeHandler = (date: Date) => {
-    setSelectedValue(date);
+    if (!isControlled) {
+      setUncontrolledValue(date);
+    }
     onValueChange?.(date);
   };
 
-  useEffect(() => {
-    if (value) {
-      setSelectedValue(value);
-    }
-  }, [value]);
   return (
     <div className={cn('border-line bg-background relative rounded border', className)} {...props}>
       <div data-slot="calendar-week-header" className="border-line grid h-9 grid-cols-7 border-b">
