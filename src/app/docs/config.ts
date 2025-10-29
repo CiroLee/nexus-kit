@@ -268,6 +268,10 @@ export const navConfig = [
         href: '/docs/dialogs',
       },
       {
+        name: 'Dialog(native)',
+        href: '/docs/native-dialogs',
+      },
+      {
         name: 'Progress',
         href: '/docs/progresses',
       },
