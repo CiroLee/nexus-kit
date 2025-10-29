@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useEffectEvent, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { Button } from '../Button';
@@ -97,6 +97,24 @@ export default function NativeDialog({
     } else {
       closeAnimation();
     }
+  }, [open]);
+
+  const onCloseEvent = useEffectEvent(onClose);
+
+  useEffect(() => {
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        onCloseEvent();
+      }
+    }
+
+    // add listener when open
+    if (open) {
+      document.addEventListener('keydown', handleEscape);
+    }
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+    };
   }, [open]);
   return (
     <dialog data-slot="native-dialog" ref={dialogRef} className={cn(dialog({ className, size, backdrop }))} onClick={overlayClick} {...props}>

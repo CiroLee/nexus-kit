@@ -26,6 +26,12 @@ export default function NativeDialogPage({ sourceCode }: { sourceCode?: string }
   const [size, setSize] = useState<'sm' | 'md' | 'lg'>('md');
   const [backdrop, setBackdrop] = useState<'opaque' | 'blur' | 'transparent'>('opaque');
   const [hideFooter, setHideFooter] = useState(false);
+
+  const reset = () => {
+    setSize('md');
+    setBackdrop('opaque');
+    setHideFooter(false);
+  };
   return (
     <div className="flex">
       <div className="main-container @container">
@@ -34,9 +40,7 @@ export default function NativeDialogPage({ sourceCode }: { sourceCode?: string }
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<ClientCode code={defaultCode} />}>
           <Button
             onClick={() => {
-              setBackdrop('opaque');
-              setSize('md');
-              setHideFooter(false);
+              reset();
               setOpen1(true);
             }}>
             open dialog
@@ -46,6 +50,7 @@ export default function NativeDialogPage({ sourceCode }: { sourceCode?: string }
           <div className="flex gap-4">
             <Button
               onClick={() => {
+                reset();
                 setSize('sm');
                 setOpen1(true);
               }}>
@@ -53,6 +58,7 @@ export default function NativeDialogPage({ sourceCode }: { sourceCode?: string }
             </Button>
             <Button
               onClick={() => {
+                reset();
                 setSize('md');
                 setOpen1(true);
               }}>
@@ -60,6 +66,7 @@ export default function NativeDialogPage({ sourceCode }: { sourceCode?: string }
             </Button>
             <Button
               onClick={() => {
+                reset();
                 setSize('lg');
                 setOpen1(true);
               }}>
@@ -71,6 +78,7 @@ export default function NativeDialogPage({ sourceCode }: { sourceCode?: string }
           <div className="flex gap-4">
             <Button
               onClick={() => {
+                reset();
                 setBackdrop('opaque');
                 setOpen1(true);
               }}>
@@ -78,6 +86,7 @@ export default function NativeDialogPage({ sourceCode }: { sourceCode?: string }
             </Button>
             <Button
               onClick={() => {
+                reset();
                 setBackdrop('blur');
                 setOpen1(true);
               }}>
@@ -85,6 +94,7 @@ export default function NativeDialogPage({ sourceCode }: { sourceCode?: string }
             </Button>
             <Button
               onClick={() => {
+                reset();
                 setBackdrop('transparent');
                 setOpen1(true);
               }}>
@@ -101,6 +111,7 @@ export default function NativeDialogPage({ sourceCode }: { sourceCode?: string }
         <PreviewAndCode anchorId="hide-footer" title="hide footer" codeText={hideFooterCode} code={<ClientCode code={hideFooterCode} />}>
           <Button
             onClick={() => {
+              reset();
               setHideFooter(true);
               setOpen1(true);
             }}>
