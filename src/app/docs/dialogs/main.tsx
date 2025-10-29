@@ -13,7 +13,7 @@ import Code from '@/components/ui/Code';
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
   { anchorId: 'backdrop', label: 'backdrop' },
-  { anchorId: 'hidden-title', label: 'hidden title/description' },
+  { anchorId: 'hidden-title', label: 'hidden title or description' },
   { anchorId: 'size', label: 'size' },
   { anchorId: 'content-scroll', label: 'content scroll' },
   { anchorId: 'custom-footer', label: 'custom footer' },
@@ -45,7 +45,7 @@ export default function DialogPage({ sourceCode }: { sourceCode?: string }) {
             </Dialog>
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="hidden-title" codeText={hiddenCode} title="hidden title/description" code={<ClientCode code={hiddenCode} />}>
+        <PreviewAndCode anchorId="hidden-title" codeText={hiddenCode} title="hidden title or description" code={<ClientCode code={hiddenCode} />}>
           <Dialog trigger={<Button>open dialog</Button>} title="Title">
             omitting title/description will not render
           </Dialog>
