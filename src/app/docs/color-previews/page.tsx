@@ -1,9 +1,11 @@
 import SectionIntro from '@/components/business/SectionIntro';
 import PreviewAndCode from '@/components/business/PreviewAndCode';
 import CodeBox from '@/components/business/CodeBox';
+import CodeDrawer from '@/components/business/CodeDrawer';
 import OnThisPage, { AnchorItem } from '@/components/business/OnThisPage';
 import ColorPreview from '@/components/ui/ColorPreview';
 import { defaultCode, alphaCode, inTypographyCode } from '@/codes/demos/color-previews';
+import { getSourceCode } from '@/app/api/github';
 
 const navList: AnchorItem[] = [
   { anchorId: 'default', label: 'default' },
@@ -11,11 +13,13 @@ const navList: AnchorItem[] = [
   { anchorId: 'use-in-typography', label: 'use in typography' },
 ];
 
-export default function ColorPreviewPage() {
+export default async function ColorPreviewPage() {
+  const sourceCode = await getSourceCode('ColorPreview/index.tsx');
   return (
     <div className="flex">
       <div className="main-container @container">
         <SectionIntro title="Color Preview" description="ColorPreview is used to preview colors. It is usually used in typography." />
+        <CodeDrawer code={sourceCode} />
         <PreviewAndCode anchorId="default" title="default" codeText={defaultCode} code={<CodeBox code={defaultCode} />}>
           <div className="flex flex-col gap-2">
             <ColorPreview color="#b02525" />
