@@ -10,6 +10,7 @@
   /* for neutral theme */
   --neutral: var(--color-neutral-200);
   --neutral-active: var(--color-neutral-300);
+  --lattice: hsla(0, 0%, 16%, 0.3);
   /* semantic z-index */
   --loading: 60;
   --popup: 50;
@@ -25,6 +26,7 @@
   /* for neutral theme of dark mode */
   --neutral: var(--color-neutral-700);
   --neutral-active: #343333;
+  --lattice: hsla(0, 0%, 100%, 0.3);
 }
 
 @theme {
@@ -43,6 +45,11 @@
   --color-warning-active: var(--color-orange-600);
   --color-neutral: var(--neutral);
   --color-neutral-active: var(--neutral-active);
+
+  /* lattice gradient */
+  --background-image-lattice:
+    linear-gradient(45deg, var(--lattice) 25%, transparent 25%), linear-gradient(-45deg, var(--lattice) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, var(--lattice) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--lattice) 75%);
 }
 
 body {

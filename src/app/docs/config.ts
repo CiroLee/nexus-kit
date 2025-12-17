@@ -63,6 +63,10 @@ export const navConfig = [
         name: 'Link',
         href: '/docs/links',
       },
+      {
+        name: 'ColorPreview',
+        href: '/docs/color-previews',
+      },
     ],
   },
   {
