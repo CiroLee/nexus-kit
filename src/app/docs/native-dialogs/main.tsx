@@ -106,7 +106,7 @@ export default function NativeDialogPage({ sourceCode }: { sourceCode?: string }
           <Button onClick={() => setOpen2(true)}>open dialog</Button>
         </PreviewAndCode>
         <PreviewAndCode anchorId="content-scroll" title="content scroll" codeText={scrollContentCode} code={<ClientCode code={scrollContentCode} />}>
-          <Button onClick={() => setOpen1(true)}>open dialog</Button>
+          <Button onClick={() => setOpen3(true)}>open dialog</Button>
         </PreviewAndCode>
         <PreviewAndCode anchorId="hide-footer" title="hide footer" codeText={hideFooterCode} code={<ClientCode code={hideFooterCode} />}>
           <Button
@@ -130,10 +130,10 @@ export default function NativeDialogPage({ sourceCode }: { sourceCode?: string }
           title="Title"
           description="This is a description..."
           onCancel={() => {
-            console.log('NativeDialog: you click cancel');
+            console.log('NativeDialog: you trigger cancel');
           }}
           onConfirm={() => {
-            console.log('nativeDialog: you click confirm');
+            console.log('nativeDialog: you trigger confirm');
           }}>
           content...
         </NativeDialog>
