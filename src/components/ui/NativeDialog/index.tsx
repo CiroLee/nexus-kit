@@ -5,24 +5,32 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { Button } from '../Button';
 import { IconX } from '@tabler/icons-react';
 
-const dialog = cva('bg-background border border-line fixed top-1/2 left-1/2 -translate-1/2 py-3.5 w-[90%] sm:max-w-[90%] rounded-lg shadow-lg overflow-hidden', {
-  variants: {
-    size: {
-      sm: 'w-[76%] sm:w-100',
-      md: 'w-[86%] sm:w-150',
-      lg: 'w-[96%] sm:w-240',
+const backdropAni = cn(
+  `backdrop:bg-black/45 dark:backdrop:bg-black/55 backdrop:transition-all
+  backdrop:opacity-0 starting:open:backdrop:opacity-0 open:backdrop:opacity-100 backdrop:transition-discrete`,
+);
+const dialog = cva(
+  `bg-background border opacity-0 scale-[0.96] open:opacity-100 open:scale-100 starting:open:opacity-0 starting:open:scale-[0.96] border-line
+  fixed top-1/2 left-1/2 -translate-1/2 py-3.5 w-[90%] sm:max-w-[90%] rounded-lg shadow-lg overflow-hidden transition-all transition-discrete`,
+  {
+    variants: {
+      size: {
+        sm: 'w-[76%] sm:w-100',
+        md: 'w-[86%] sm:w-150',
+        lg: 'w-[96%] sm:w-240',
+      },
+      backdrop: {
+        opaque: backdropAni,
+        blur: `backdrop:backdrop-blur-sm ${backdropAni}`,
+        transparent: 'backdrop:bg-transparent',
+      },
     },
-    backdrop: {
-      opaque: 'backdrop:bg-black/45 dark:backdrop:bg-black/55',
-      blur: 'backdrop:bg-black/45 dark:backdrop:bg-black/55 backdrop:backdrop-blur-sm',
-      transparent: 'backdrop:bg-transparent',
+    defaultVariants: {
+      size: 'md',
+      backdrop: 'opaque',
     },
   },
-  defaultVariants: {
-    size: 'md',
-    backdrop: 'opaque',
-  },
-});
+);
 
 type NativeDialogVariants = VariantProps<typeof dialog>;
 
@@ -56,22 +64,13 @@ export default function NativeDialog({
   ...props
 }: NativeDialogProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
-  const openAnimation = () => {
+  const openHandler = () => {
     dialogRef.current?.showModal();
     document.body.setAttribute('style', 'overflow: hidden');
-    dialogRef.current?.animate({ opacity: [0, 1] }, { duration: 200, fill: 'both', easing: 'ease-in', pseudoElement: '::backdrop' });
-    dialogRef.current?.animate({ opacity: [0, 1] }, { duration: 200, fill: 'both', easing: 'ease-in' });
   };
-  const closeAnimation = () => {
-    const animations = [
-      dialogRef.current?.animate({ opacity: [1, 0] }, { duration: 200, fill: 'both', easing: 'ease-out' }),
-      dialogRef.current?.animate({ opacity: [1, 0] }, { duration: 200, fill: 'both', easing: 'ease-out', pseudoElement: '::backdrop' }),
-    ];
-
-    Promise.all(animations.map((ani) => ani?.finished)).then(() => {
-      dialogRef.current?.close();
-      document.body.removeAttribute('style');
-    });
+  const closeHandler = () => {
+    dialogRef.current?.close();
+    document.body.removeAttribute('style');
   };
 
   const onCancelHandler = () => {
@@ -93,13 +92,13 @@ export default function NativeDialog({
   };
   useEffect(() => {
     if (open) {
-      openAnimation();
+      openHandler();
     } else {
-      closeAnimation();
+      closeHandler();
     }
   }, [open]);
 
-  const onCloseEvent = useEffectEvent(onClose);
+  const onCloseEvent = useEffectEvent(onCancelHandler);
 
   useEffect(() => {
     function handleEscape(event: KeyboardEvent) {
@@ -116,6 +115,7 @@ export default function NativeDialog({
       document.removeEventListener('keydown', handleEscape);
     };
   }, [open]);
+
   return (
     <dialog data-slot="native-dialog" ref={dialogRef} className={cn(dialog({ className, size, backdrop }))} onClick={overlayClick} {...props}>
       <Button asIcon colors="neutral" size="sm" variant="light" className="group absolute top-2.5 right-2.5 text-lg" onClick={onClose}>
