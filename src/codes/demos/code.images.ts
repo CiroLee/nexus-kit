@@ -10,7 +10,7 @@ export const roundedCode = `import Image from "@/components/ui/Image";
 
 export default function Page() {
   return (
-    <Image src="https://dub.sh/mUoRWra" className="h-70 w-50" alt="demo image" />
+    <Image src="https://dub.sh/mUoRWra" className="h-70 w-50 rounded-md" alt="demo image" />
   )
 }`;
 
