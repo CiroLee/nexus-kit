@@ -68,7 +68,7 @@ export function Checkbox({ className, id, size, children, defaultChecked, checke
         {...props}>
         <CheckboxPrimitive.Indicator className={checkboxIndicator({ size })}>
           {(currentChecked === true || defaultChecked === true) && <IconCheck size="1em" />}
-          {currentChecked === 'indeterminate' && <IconSquareMinusFilled size="1em" />}
+          {currentChecked === 'indeterminate' && <IconSquareMinusFilled className="text-primary" size="1em" />}
         </CheckboxPrimitive.Indicator>
       </CheckboxPrimitive.Root>
       <label className={label({ size })} htmlFor={id}>
