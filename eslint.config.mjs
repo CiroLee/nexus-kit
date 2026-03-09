@@ -22,6 +22,10 @@ const eslintConfig = defineConfig([
       '@next/next/no-img-element': 'off',
       'jsx-a11y/alt-text': 'off',
     },
+    settings: {
+      // Fix for ESLint 10+: eslint-plugin-react uses context.getFilename() (legacy API) 2026/3/9
+      react: { version: '19' },
+    },
   },
 ]);
 
