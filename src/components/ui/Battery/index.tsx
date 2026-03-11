@@ -59,7 +59,7 @@ export default function Battery({ className, size, value, isCharing, lowBatteryT
   return (
     <div className={cn(battery({ size, className }), batteryDot({ fullCharged: value >= 100 }))} {...props}>
       <div className="absolute inset-0 overflow-hidden rounded-[inherit] text-white">
-        <div data-slot="battery-text" className="absolute z-1 flex h-full w-full items-center justify-center">
+        <div data-slot="battery-text" className="absolute z-1 flex size-full items-center justify-center">
           <div className={batteryText({ size })}>{value}</div>
           {isCharing && value < 100 ? <IconBoltFilled size={iconSize} className="text-inherit" /> : null}
         </div>
