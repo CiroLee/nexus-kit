@@ -35,8 +35,9 @@ export const lowBatteryCode = `import Battery from '@/components/ui/Battery';
 
 export default function Page() {
   return (
-    <>
-      <Battery value={19} lowBatteryThreshold={20} />
-    </>
+    <div className="flex gap-3">
+      <Battery value={18} lowBatteryThreshold={20} />
+      <Battery value={18} lowBatteryThreshold={20} isCharging />
+    </div>
   )
 }`;

@@ -32,12 +32,15 @@ export default async function BatteryPage() {
         </PreviewAndCode>
         <PreviewAndCode anchorId="charging" title="charging" codeText={chargingCode} code={<CodeBox code={chargingCode} />}>
           <div className="flex items-center gap-3">
-            <Battery value={60} isCharing />
-            <Battery value={100} isCharing />
+            <Battery value={60} isCharging />
+            <Battery value={100} isCharging />
           </div>
         </PreviewAndCode>
         <PreviewAndCode anchorId="low-battery-threshold" title="low-battery" codeText={lowBatteryCode} code={<CodeBox code={lowBatteryCode} />}>
-          <Battery value={18} lowBatteryThreshold={20} />
+          <div className="flex gap-3">
+            <Battery value={18} lowBatteryThreshold={20} />
+            <Battery value={18} lowBatteryThreshold={20} isCharging />
+          </div>
         </PreviewAndCode>
       </div>
       <OnThisPage list={navList} />
