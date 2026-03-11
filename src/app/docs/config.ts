@@ -79,6 +79,10 @@ export const navConfig = [
         href: '/docs/accordions',
       },
       {
+        name: 'Battery',
+        href: '/docs/batteries',
+      },
+      {
         name: 'Collapsible',
         href: '/docs/collapsibles',
       },

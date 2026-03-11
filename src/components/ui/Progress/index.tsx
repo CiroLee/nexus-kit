@@ -26,7 +26,7 @@ const progressIndicator = cva('size-full rounded-full transition-transform', {
       neutral: 'bg-neutral-400 dark:bg-neutral-500',
     },
     striped: {
-      true: 'bg-[length:1.25rem_1.25rem] bg-[linear-gradient(45deg,rgba(0,0,0,.1)_25%,transparent_0,transparent_50%,rgba(0,0,0,.1)_0,rgba(0,0,0,.1)_75%,transparent_0,transparent)]',
+      true: 'bg-size-[1.25rem_1.25rem] bg-[linear-gradient(45deg,rgba(0,0,0,.1)_25%,transparent_0,transparent_50%,rgba(0,0,0,.1)_0,rgba(0,0,0,.1)_75%,transparent_0,transparent)]',
     },
   },
   defaultVariants: {
