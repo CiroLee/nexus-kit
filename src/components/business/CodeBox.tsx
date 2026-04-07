@@ -39,7 +39,7 @@ export default async function CodeBox({ code, highlightLines, diffAddLines, diff
   });
 
   return (
-    <div className={cn('relative h-full overflow-auto bg-[#24292e] text-sm [&_pre]:h-full [&_pre]:p-3', className)}>
+    <div className={cn('relative h-full overflow-auto bg-[#2e2f31] text-sm [&_pre]:h-full [&_pre]:bg-[#2e2f31]! [&_pre]:p-3', className)}>
       <div dangerouslySetInnerHTML={{ __html: out }}></div>
     </div>
   );
