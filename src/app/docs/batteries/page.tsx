@@ -36,7 +36,7 @@ export default async function BatteryPage() {
             <Battery value={100} isCharging />
           </div>
         </PreviewAndCode>
-        <PreviewAndCode anchorId="low-battery-threshold" title="low-battery" codeText={lowBatteryCode} code={<CodeBox code={lowBatteryCode} />}>
+        <PreviewAndCode anchorId="low-battery-threshold" title="low battery" codeText={lowBatteryCode} code={<CodeBox code={lowBatteryCode} />}>
           <div className="flex gap-3">
             <Battery value={18} lowBatteryThreshold={20} />
             <Battery value={18} lowBatteryThreshold={20} isCharging />
